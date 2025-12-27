@@ -691,6 +691,45 @@ export const notificationService = {
 
 type EventCallback<T = any> = (data: T) => void;
 
+// Order update payload type
+export interface OrderUpdate {
+  id: string;
+  userId: string;
+  merchantId: string;
+  driverId?: string;
+  status: string;
+  totalAmount: number;
+  currency: string;
+  address: string;
+  paymentMethod: string;
+  paymentStatus: string;
+  items: unknown[];
+  eventType?: string;
+  newStatus?: string;
+  timestamp: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+// Driver location update payload
+export interface DriverLocationUpdate {
+  orderId: string;
+  latitude: number;
+  longitude: number;
+  timestamp: string;
+}
+
+// Payment update payload type
+export interface PaymentUpdate {
+  orderId: string;
+  transactionId?: string;
+  amount?: number;
+  paymentMethod?: string;
+  status: 'pending' | 'completed' | 'failed' | 'refunded';
+  reason?: string;
+  timestamp: string;
+}
+
 interface RealtimeSubscriptions {
   'product:update': EventCallback<Product>;
   'product:delete': EventCallback<{ productId: string }>;
@@ -700,7 +739,21 @@ interface RealtimeSubscriptions {
   'delivery:update': EventCallback<DeliveryAssignment>;
   'delivery:location': EventCallback<DriverLocation>;
   'notification:new': EventCallback<Notification>;
-  'order:update': EventCallback<unknown>;
+  // Order events - real-time sync across all apps
+  'order:update': EventCallback<OrderUpdate>;
+  'order:created': EventCallback<OrderUpdate>;
+  'order:status_changed': EventCallback<OrderUpdate>;
+  'order:ready_for_pickup': EventCallback<OrderUpdate>;
+  'order:delivered': EventCallback<OrderUpdate>;
+  'order:cancelled': EventCallback<OrderUpdate>;
+  // Driver events
+  'driver:assigned': EventCallback<OrderUpdate>;
+  'driver:location_updated': EventCallback<DriverLocationUpdate>;
+  // Payment events - real-time sync across all apps
+  'payment:completed': EventCallback<PaymentUpdate>;
+  'payment:failed': EventCallback<PaymentUpdate>;
+  'payment:pending': EventCallback<PaymentUpdate>;
+  'payment:refunded': EventCallback<PaymentUpdate>;
 }
 
 const subscriptions: Map<keyof RealtimeSubscriptions, Set<EventCallback>> = new Map();
