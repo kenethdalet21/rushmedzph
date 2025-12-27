@@ -125,13 +125,6 @@ export default function AdminLogin({ onSwitchToSignup, onBackToRoleSelector }: A
                 <Text style={styles.loginButtonText}>Sign In</Text>
               )}
             </TouchableOpacity>
-
-            {/* Demo Credentials */}
-            <View style={styles.demoBox}>
-              <Text style={styles.demoTitle}>Demo Credentials:</Text>
-              <Text style={styles.demoText}>Email: admin@epharma.com</Text>
-              <Text style={styles.demoText}>Password: admin123</Text>
-            </View>
           </View>
 
           {/* Sign Up Link */}
@@ -260,24 +253,6 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 16,
     fontWeight: 'bold',
-  },
-  demoBox: {
-    backgroundColor: '#E8F8F5',
-    borderRadius: 8,
-    padding: 12,
-    borderWidth: 1,
-    borderColor: '#A9DFBF',
-  },
-  demoTitle: {
-    fontSize: 12,
-    fontWeight: 'bold',
-    color: '#27AE60',
-    marginBottom: 4,
-  },
-  demoText: {
-    fontSize: 11,
-    color: '#229954',
-    fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace',
   },
   footer: {
     flexDirection: 'row',

@@ -3,17 +3,6 @@
     <div class="auth-card">
       <h1>Admin Login</h1>
       
-      <div class="demo-credentials">
-        <h3>🎯 Demo Credentials</h3>
-        <div class="demo-info">
-          <p><strong>Username:</strong> admin</p>
-          <p><strong>Password:</strong> admin123</p>
-        </div>
-        <button @click="useDemoCredentials" class="demo-btn" type="button">
-          Use Demo Credentials
-        </button>
-      </div>
-
       <form @submit.prevent="handleLogin">
         <div class="form-group">
           <label for="username">Username</label>
@@ -60,27 +49,21 @@ const password = ref('');
 const loading = ref(false);
 const errorMessage = ref('');
 
-const useDemoCredentials = () => {
-  username.value = 'admin';
-  password.value = 'admin123';
-};
-
 const handleLogin = async () => {
   loading.value = true;
   errorMessage.value = '';
   
   try {
-    // Demo login - bypass backend for testing
-    if (username.value === 'admin' && password.value === 'admin123') {
-      localStorage.setItem('adminToken', 'demo-token-12345');
+    const response = await login(username.value, password.value);
+    if (response && response.token) {
+      localStorage.setItem('adminToken', response.token);
+      localStorage.setItem('adminUser', JSON.stringify(response.user));
       router.push('/dashboard');
-      return;
+    } else {
+      throw new Error('Invalid response from server');
     }
-    
-    await login(username.value, password.value);
-    router.push('/dashboard');
   } catch (error: any) {
-    errorMessage.value = error.response?.data?.message || 'Login failed. Please try again.';
+    errorMessage.value = error.response?.data?.message || error.message || 'Login failed. Please check your credentials.';
   } finally {
     loading.value = false;
   }
@@ -187,52 +170,5 @@ button:disabled {
 
 .signup-link a:hover {
   text-decoration: underline;
-}
-
-.demo-credentials {
-  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-  border: 2px dashed #667eea;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-.demo-credentials h3 {
-  margin: 0 0 12px 0;
-  color: #667eea;
-  font-size: 16px;
-}
-
-.demo-info {
-  margin-bottom: 16px;
-  font-size: 14px;
-}
-
-.demo-info p {
-  margin: 6px 0;
-  color: #555;
-}
-
-.demo-info strong {
-  color: #333;
-}
-
-.demo-btn {
-  width: 100%;
-  padding: 10px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.demo-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 </style>

@@ -119,7 +119,9 @@ const navigateTo = (path: string) => {
 };
 
 onMounted(async () => {
-  // Refresh data on mount
+  // Fetch real-time dashboard statistics from backend
+  await store.fetchDashboardStats();
+  // Refresh other data on mount
   await store.refreshOrders();
   await store.refreshMerchants();
   await store.refreshDrivers();

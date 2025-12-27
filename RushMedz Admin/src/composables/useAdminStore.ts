@@ -1,6 +1,9 @@
 import { ref, computed } from 'vue';
 import { useApi } from './useApi';
 
+// API Base URL
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080/api';
+
 // Types matching React Native AdminDataContext
 export interface Order {
   id: number;
@@ -150,18 +153,51 @@ const initializeMockData = () => {
     { id: 5, orderId: 1006, amount: 340.00, method: 'GCash', status: 'processing', merchant: 'Mercury Drug - Makati', date: '2025-12-26T12:00:00' },
   ];
 
-  // Metrics
+  // Metrics - starting from zero for real-time counting
   metrics.value = {
-    totalRevenue: 145250.50,
-    totalOrders: 1247,
-    activeMerchants: 5,
-    activeDrivers: 4,
-    totalUsers: 3842,
-    totalDoctors: 127,
-    pendingOrders: 17,
-    completedToday: 83,
-    avgDeliveryTime: 28,
+    totalRevenue: 0,
+    totalOrders: 0,
+    activeMerchants: 0,
+    activeDrivers: 0,
+    totalUsers: 0,
+    totalDoctors: 0,
+    pendingOrders: 0,
+    completedToday: 0,
+    avgDeliveryTime: 0,
   };
+};
+
+// Fetch real-time dashboard stats from backend
+const fetchDashboardStats = async () => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/dashboard/stats`);
+    if (response.ok) {
+      const data = await response.json();
+      
+      // Update metrics with real counts from database
+      if (data.userCounts) {
+        metrics.value = {
+          ...metrics.value,
+          totalUsers: data.userCounts.users || 0,
+          activeMerchants: data.activeUserCounts?.merchants || data.userCounts.merchants || 0,
+          activeDrivers: data.activeUserCounts?.drivers || data.userCounts.drivers || 0,
+          totalDoctors: data.userCounts.doctors || 0,
+          totalOrders: data.totalOrders || 0,
+          totalRevenue: data.totalRevenue || 0,
+        } as DashboardMetrics;
+      }
+      
+      // Update merchant list counts
+      if (merchants.value.length === 0) {
+        merchants.value = [];
+      }
+      
+      return data;
+    }
+  } catch (error) {
+    console.error('Error fetching dashboard stats:', error);
+  }
+  return null;
 };
 
 // Initialize data on first import
@@ -390,6 +426,9 @@ export const useAdminStore = () => {
     activeOrders,
     activeMerchantsCount,
     onlineDriversCount,
+    
+    // Methods - Dashboard
+    fetchDashboardStats,
     
     // Methods - Orders
     refreshOrders,

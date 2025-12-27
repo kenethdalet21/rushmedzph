@@ -29,28 +29,31 @@ export const useAuth = () => {
   const currentUser = ref(null);
 
   const login = async (username: string, password: string) => {
-    const response = await api.post('/auth/login', { username, password });
-    const { token, user } = response.data;
+    const response = await api.post('/api/auth/login', { username, password });
+    const { token } = response.data;
     localStorage.setItem('adminToken', token);
-    currentUser.value = user;
+    localStorage.setItem('adminUser', JSON.stringify(response.data));
+    currentUser.value = response.data;
     isAuthenticated.value = true;
     return response.data;
   };
 
   const register = async (userData: any) => {
-    const response = await api.post('/auth/register', userData);
+    const role = (userData.role || 'admin').toLowerCase();
+    const response = await api.post(`/api/auth/register/${role}`, userData);
     return response.data;
   };
 
   const logout = () => {
     localStorage.removeItem('adminToken');
+    localStorage.removeItem('adminUser');
     currentUser.value = null;
     isAuthenticated.value = false;
   };
 
   const checkAuth = async () => {
     try {
-      const response = await api.get('/auth/me');
+      const response = await api.get('/api/auth/me');
       currentUser.value = response.data;
       isAuthenticated.value = true;
     } catch {

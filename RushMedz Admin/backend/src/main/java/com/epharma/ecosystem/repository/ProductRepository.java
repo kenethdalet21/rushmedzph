@@ -51,4 +51,10 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     
     // Count products by category
     long countByCategory(String category);
+    
+    // Count active products
+    long countByIsActiveTrue();
+    
+    // Find all active products
+    List<Product> findByIsActiveTrue();
 }
