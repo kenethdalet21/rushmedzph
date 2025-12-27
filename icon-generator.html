@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RushMedz App Icon Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .app-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .app-icon-preview {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+        
+        .app-icon-preview canvas {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .app-title {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 700;
+        }
+        
+        .app-subtitle {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .icons-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .icon-item {
+            text-align: center;
+        }
+        
+        .icon-item canvas {
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .icon-label {
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 8px;
+        }
+        
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .instructions {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        
+        .instructions h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .instructions ol {
+            color: #555;
+            padding-left: 25px;
+        }
+        
+        .instructions li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .instructions code {
+            background: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 RushMedz App Icons</h1>
+        <p class="subtitle">Click "Download All Icons" to save PNG icons for each app</p>
+        
+        <div class="apps-grid" id="appsGrid"></div>
+        
+        <div class="instructions">
+            <h2>📋 How to Use These Icons</h2>
+            <ol>
+                <li><strong>Download icons</strong> for each app by clicking the download button</li>
+                <li><strong>Extract the ZIP file</strong> (or save individual files)</li>
+                <li><strong>Copy icons to assets folder:</strong>
+                    <ul>
+                        <li><code>icon.png</code> → Main app icon (1024x1024)</li>
+                        <li><code>adaptive-icon.png</code> → Android adaptive icon foreground (1024x1024)</li>
+                        <li><code>splash.png</code> → Splash screen image (2048x2048)</li>
+                        <li><code>favicon.png</code> → Web favicon (48x48)</li>
+                    </ul>
+                </li>
+                <li><strong>Rebuild your app</strong> with <code>npx expo prebuild --clean</code> then build</li>
+            </ol>
+        </div>
+    </div>
+    
+    <script>
+        const apps = [
+            {
+                name: 'User_Customer',
+                displayName: 'User',
+                fullName: 'RushMedz User',
+                color: '#10B981',
+                darkColor: '#059669',
+                description: 'Customer ordering app'
+            },
+            {
+                name: 'Doctor',
+                displayName: 'Doctor',
+                fullName: 'RushMedz Doctor',
+                color: '#3B82F6',
+                darkColor: '#2563EB',
+                description: 'Doctor consultation app'
+            },
+            {
+                name: 'Driver',
+                displayName: 'Driver',
+                fullName: 'RushMedz Driver',
+                color: '#F59E0B',
+                darkColor: '#D97706',
+                description: 'Delivery driver app'
+            },
+            {
+                name: 'Merchant',
+                displayName: 'Merchant',
+                fullName: 'RushMedz Merchant',
+                color: '#8B5CF6',
+                darkColor: '#7C3AED',
+                description: 'Pharmacy merchant app'
+            }
+        ];
+        
+        function drawIcon(canvas, app, size) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = size;
+            canvas.height = size;
+            
+            const scale = size / 1024;
+            
+            // Create gradient
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, app.color);
+            gradient.addColorStop(1, app.darkColor);
+            
+            // Background rounded rect
+            ctx.fillStyle = gradient;
+            roundRect(ctx, 0, 0, size, size, 220 * scale);
+            ctx.fill();
+            
+            // Inner stroke
+            ctx.strokeStyle = 'rgba(255,255,255,0.2)';
+            ctx.lineWidth = 2 * scale;
+            roundRect(ctx, 40 * scale, 40 * scale, size - 80 * scale, size - 80 * scale, 190 * scale);
+            ctx.stroke();
+            
+            // Medical cross
+            ctx.fillStyle = 'rgba(255,255,255,0.95)';
+            
+            // Vertical bar
+            roundRect(ctx, 452 * scale, 200 * scale, 120 * scale, 320 * scale, 20 * scale);
+            ctx.fill();
+            
+            // Horizontal bar
+            roundRect(ctx, 352 * scale, 300 * scale, 320 * scale, 120 * scale, 20 * scale);
+            ctx.fill();
+            
+            // RushMedz text
+            ctx.fillStyle = 'rgba(255,255,255,0.95)';
+            ctx.font = `bold ${100 * scale}px -apple-system, BlinkMacSystemFont, Arial, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.fillText('RushMedz', size / 2, 620 * scale);
+            
+            // App type
+            ctx.fillStyle = 'rgba(255,255,255,0.85)';
+            ctx.font = `600 ${70 * scale}px -apple-system, BlinkMacSystemFont, Arial, sans-serif`;
+            ctx.fillText(app.displayName, size / 2, 720 * scale);
+            
+            // Pill icon
+            drawPill(ctx, size / 2, 850 * scale, scale);
+        }
+        
+        function drawAdaptiveIcon(canvas, app, size) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = size;
+            canvas.height = size;
+            
+            const scale = size / 1024;
+            
+            // Transparent background
+            ctx.clearRect(0, 0, size, size);
+            
+            // White circle background for contrast
+            ctx.fillStyle = 'white';
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size * 0.42, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Medical cross
+            ctx.fillStyle = app.color;
+            
+            // Vertical bar
+            roundRect(ctx, 452 * scale, 230 * scale, 120 * scale, 320 * scale, 20 * scale);
+            ctx.fill();
+            
+            // Horizontal bar
+            roundRect(ctx, 352 * scale, 330 * scale, 320 * scale, 120 * scale, 20 * scale);
+            ctx.fill();
+            
+            // RushMedz text
+            ctx.fillStyle = app.color;
+            ctx.font = `bold ${80 * scale}px -apple-system, BlinkMacSystemFont, Arial, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.fillText('RushMedz', size / 2, 700 * scale);
+            
+            // App type
+            ctx.fillStyle = app.darkColor;
+            ctx.font = `600 ${55 * scale}px -apple-system, BlinkMacSystemFont, Arial, sans-serif`;
+            ctx.fillText(app.displayName, size / 2, 780 * scale);
+        }
+        
+        function drawSplash(canvas, app, size) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = size;
+            canvas.height = size;
+            
+            const scale = size / 2048;
+            
+            // White background
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Medical cross
+            const centerY = 800 * scale;
+            ctx.fillStyle = app.color;
+            
+            // Vertical
+            roundRect(ctx, (1024 - 60) * scale, (centerY - 160 * scale), 120 * scale, 320 * scale, 20 * scale);
+            ctx.fill();
+            
+            // Horizontal
+            roundRect(ctx, (1024 - 160) * scale, (centerY - 60 * scale), 320 * scale, 120 * scale, 20 * scale);
+            ctx.fill();
+            
+            // RushMedz text
+            ctx.fillStyle = app.color;
+            ctx.font = `bold ${120 * scale}px -apple-system, BlinkMacSystemFont, Arial, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.fillText('RushMedz', size / 2, 1200 * scale);
+            
+            // App name
+            ctx.fillStyle = app.darkColor;
+            ctx.font = `600 ${80 * scale}px -apple-system, BlinkMacSystemFont, Arial, sans-serif`;
+            ctx.fillText(app.displayName + ' App', size / 2, 1320 * scale);
+            
+            // Tagline
+            ctx.fillStyle = '#666666';
+            ctx.font = `${50 * scale}px -apple-system, BlinkMacSystemFont, Arial, sans-serif`;
+            ctx.fillText('Your Health, Delivered', size / 2, 1420 * scale);
+        }
+        
+        function drawFavicon(canvas, app, size) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = size;
+            canvas.height = size;
+            
+            const scale = size / 48;
+            
+            // Gradient background
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, app.color);
+            gradient.addColorStop(1, app.darkColor);
+            
+            ctx.fillStyle = gradient;
+            roundRect(ctx, 0, 0, size, size, 10 * scale);
+            ctx.fill();
+            
+            // Mini cross
+            ctx.fillStyle = 'white';
+            roundRect(ctx, 21 * scale, 10 * scale, 6 * scale, 16 * scale, 2 * scale);
+            ctx.fill();
+            roundRect(ctx, 16 * scale, 15 * scale, 16 * scale, 6 * scale, 2 * scale);
+            ctx.fill();
+            
+            // Letter
+            ctx.font = `bold ${10 * scale}px -apple-system, BlinkMacSystemFont, Arial, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.fillText(app.displayName[0], size / 2, 40 * scale);
+        }
+        
+        function drawPill(ctx, x, y, scale) {
+            ctx.fillStyle = 'rgba(255,255,255,0.9)';
+            
+            // Left half
+            ctx.beginPath();
+            ctx.ellipse(x - 60 * scale, y, 50 * scale, 25 * scale, 0, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Right half (slightly transparent)
+            ctx.fillStyle = 'rgba(255,255,255,0.7)';
+            ctx.beginPath();
+            ctx.ellipse(x + 60 * scale, y, 50 * scale, 25 * scale, 0, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Center rectangle
+            ctx.fillStyle = 'rgba(255,255,255,0.9)';
+            ctx.fillRect(x - 60 * scale, y - 25 * scale, 60 * scale, 50 * scale);
+            
+            ctx.fillStyle = 'rgba(255,255,255,0.7)';
+            ctx.fillRect(x, y - 25 * scale, 60 * scale, 50 * scale);
+        }
+        
+        function roundRect(ctx, x, y, width, height, radius) {
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + width - radius, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+            ctx.lineTo(x + width, y + height - radius);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            ctx.lineTo(x + radius, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.closePath();
+        }
+        
+        function downloadCanvas(canvas, filename) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        function downloadAllIcons(app) {
+            // Create canvases and download
+            const iconCanvas = document.createElement('canvas');
+            drawIcon(iconCanvas, app, 1024);
+            downloadCanvas(iconCanvas, `${app.name}-icon.png`);
+            
+            setTimeout(() => {
+                const adaptiveCanvas = document.createElement('canvas');
+                drawAdaptiveIcon(adaptiveCanvas, app, 1024);
+                downloadCanvas(adaptiveCanvas, `${app.name}-adaptive-icon.png`);
+            }, 500);
+            
+            setTimeout(() => {
+                const splashCanvas = document.createElement('canvas');
+                drawSplash(splashCanvas, app, 2048);
+                downloadCanvas(splashCanvas, `${app.name}-splash.png`);
+            }, 1000);
+            
+            setTimeout(() => {
+                const faviconCanvas = document.createElement('canvas');
+                drawFavicon(faviconCanvas, app, 48);
+                downloadCanvas(faviconCanvas, `${app.name}-favicon.png`);
+            }, 1500);
+        }
+        
+        // Render app cards
+        const grid = document.getElementById('appsGrid');
+        
+        apps.forEach(app => {
+            const card = document.createElement('div');
+            card.className = 'app-card';
+            
+            // Create preview canvases
+            const iconCanvas = document.createElement('canvas');
+            iconCanvas.id = `preview-${app.name}`;
+            drawIcon(iconCanvas, app, 80);
+            
+            const largeIconCanvas = document.createElement('canvas');
+            drawIcon(largeIconCanvas, app, 120);
+            
+            const adaptiveCanvas = document.createElement('canvas');
+            drawAdaptiveIcon(adaptiveCanvas, app, 100);
+            
+            const splashCanvas = document.createElement('canvas');
+            drawSplash(splashCanvas, app, 150);
+            
+            const faviconCanvas = document.createElement('canvas');
+            drawFavicon(faviconCanvas, app, 48);
+            
+            card.innerHTML = `
+                <div class="app-header">
+                    <div class="app-icon-preview" id="icon-${app.name}"></div>
+                    <div>
+                        <div class="app-title">${app.fullName}</div>
+                        <div class="app-subtitle">${app.description}</div>
+                    </div>
+                </div>
+                <div class="icons-row">
+                    <div class="icon-item">
+                        <div id="large-${app.name}"></div>
+                        <div class="icon-label">icon.png<br>1024×1024</div>
+                    </div>
+                    <div class="icon-item">
+                        <div id="adaptive-${app.name}"></div>
+                        <div class="icon-label">adaptive-icon.png<br>1024×1024</div>
+                    </div>
+                    <div class="icon-item">
+                        <div id="splash-${app.name}"></div>
+                        <div class="icon-label">splash.png<br>2048×2048</div>
+                    </div>
+                    <div class="icon-item">
+                        <div id="favicon-${app.name}"></div>
+                        <div class="icon-label">favicon.png<br>48×48</div>
+                    </div>
+                </div>
+                <button class="download-btn" onclick="downloadAllIcons(apps.find(a => a.name === '${app.name}'))">
+                    📥 Download All Icons for ${app.displayName}
+                </button>
+            `;
+            
+            grid.appendChild(card);
+            
+            // Append canvases
+            document.getElementById(`icon-${app.name}`).appendChild(iconCanvas);
+            document.getElementById(`large-${app.name}`).appendChild(largeIconCanvas);
+            document.getElementById(`adaptive-${app.name}`).appendChild(adaptiveCanvas);
+            document.getElementById(`splash-${app.name}`).appendChild(splashCanvas);
+            document.getElementById(`favicon-${app.name}`).appendChild(faviconCanvas);
+        });
+    </script>
+</body>
+</html>
