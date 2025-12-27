@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#45B7D1" rx="6"/>
+  <circle cx="16" cy="14" r="5" fill="white"/>
+  <path d="M16 9 L16 19 M11 14 L21 14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <text x="16" y="28" font-family="Arial" font-size="8" font-weight="bold" 
+        fill="white" text-anchor="middle">E</text>
+</svg>

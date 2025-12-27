@@ -1,0 +1,11 @@
+<svg width="1024" height="1024" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="white"/>
+  <!-- Left leg of M (dark green with arrow) -->
+  <path d="M 65 325 L 95 130 L 145 215 L 195 100 L 220 50 L 270 30 L 290 70 L 250 120 L 215 215 L 165 325 Z" 
+        fill="#10B981" 
+        stroke="none"/>
+  <!-- Right leg of M (light green) -->
+  <path d="M 215 165 L 245 240 L 275 325 L 335 325 L 305 240 L 275 165 Z" 
+        fill="#86EFAC" 
+        stroke="none"/>
+</svg>

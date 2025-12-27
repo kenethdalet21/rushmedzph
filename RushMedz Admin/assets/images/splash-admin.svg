@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1284" height="2778" viewBox="0 0 1284 2778" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1284" height="2778" fill="#F39C12"/>
+  <text x="642" y="1300" font-family="Arial, sans-serif" font-size="150" font-weight="bold" 
+        fill="white" text-anchor="middle">EPHARMA</text>
+  <text x="642" y="1500" font-family="Arial, sans-serif" font-size="100" font-weight="bold" 
+        fill="rgba(255,255,255,0.9)" text-anchor="middle">ADMIN</text>
+  <circle cx="642" cy="1000" r="120" fill="white" opacity="0.9"/>
+  <path d="M642 880 L642 1120 M522 1000 L762 1000" stroke="white" stroke-width="40" 
+        stroke-linecap="round"/>
+</svg>

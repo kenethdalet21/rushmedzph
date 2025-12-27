@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "RushMedz Merchant"
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic",
+		"github.copilot.nextEditSuggestions.enabled": true
+	}
+}

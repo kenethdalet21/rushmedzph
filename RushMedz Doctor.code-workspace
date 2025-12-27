@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "RushMedz Doctor"
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}
