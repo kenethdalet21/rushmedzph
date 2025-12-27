@@ -4,6 +4,7 @@ import {
   View,
   Text,
   TouchableOpacity,
+  TouchableWithoutFeedback,
   StyleSheet,
   ActivityIndicator,
 } from 'react-native';
@@ -101,10 +102,12 @@ export default function OTPVerificationModal({
   };
 
   return (
-    <Modal visible={visible} transparent animationType="fade">
-      <View style={styles.overlay}>
-        <View style={styles.container}>
-          <Text style={styles.title}>Verify {contactType === 'email' ? 'Email' : 'Phone'}</Text>
+    <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
+      <TouchableWithoutFeedback onPress={onClose}>
+        <View style={styles.overlay}>
+          <TouchableWithoutFeedback onPress={(e) => e.stopPropagation()}>
+            <View style={styles.container}>
+              <Text style={styles.title}>Verify {contactType === 'email' ? 'Email' : 'Phone'}</Text>
 
           <Text style={styles.message}>
             Enter the OTP sent to{'\n'}
@@ -168,8 +171,10 @@ export default function OTPVerificationModal({
           >
             <Text style={styles.closeButtonText}>Cancel</Text>
           </TouchableOpacity>
+            </View>
+          </TouchableWithoutFeedback>
         </View>
-      </View>
+      </TouchableWithoutFeedback>
     </Modal>
   );
 }

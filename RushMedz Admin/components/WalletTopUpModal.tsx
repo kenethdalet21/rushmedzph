@@ -11,6 +11,7 @@ import {
   Modal,
   StyleSheet,
   TouchableOpacity,
+  TouchableWithoutFeedback,
   TextInput,
   ScrollView,
   Alert,
@@ -366,8 +367,10 @@ export const WalletTopUpModal: React.FC<WalletTopUpModalProps> = ({
       transparent={true}
       onRequestClose={onClose}
     >
-      <View style={styles.modalOverlay}>
-        <View style={styles.modalContent}>
+      <TouchableWithoutFeedback onPress={onClose}>
+        <View style={styles.modalOverlay}>
+          <TouchableWithoutFeedback onPress={(e) => e.stopPropagation()}>
+            <View style={styles.modalContent}>
           {/* Header */}
           <View style={styles.header}>
             <Text style={styles.headerTitle}>
@@ -386,8 +389,10 @@ export const WalletTopUpModal: React.FC<WalletTopUpModalProps> = ({
             {step === 'processing' && renderProcessingStep()}
             {step === 'success' && renderSuccessStep()}
           </ScrollView>
+            </View>
+          </TouchableWithoutFeedback>
         </View>
-      </View>
+      </TouchableWithoutFeedback>
     </Modal>
   );
 };
