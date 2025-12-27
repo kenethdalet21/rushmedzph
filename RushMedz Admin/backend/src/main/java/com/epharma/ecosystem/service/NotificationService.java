@@ -1,8 +1,15 @@
 package com.epharma.ecosystem.service;
 
+import com.epharma.ecosystem.model.Notification;
+import com.epharma.ecosystem.model.Notification.NotificationType;
+import com.epharma.ecosystem.model.Notification.UserRole;
+import com.epharma.ecosystem.repository.NotificationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.UUID;
 import java.util.regex.Pattern;
 
 /**
@@ -31,6 +38,12 @@ public class NotificationService {
 
     @Autowired
     private EmailGatewayService emailGatewayService;
+    
+    @Autowired(required = false)
+    private NotificationRepository notificationRepository;
+    
+    @Autowired(required = false)
+    private RealTimeEventService realTimeEventService;
     
     @Value("${sms.gateway.enabled:false}")
     private boolean smsEnabled;
@@ -118,5 +131,179 @@ public class NotificationService {
      */
     public boolean isProductionMode() {
         return smsEnabled && emailEnabled;
+    }
+
+    // ==================== ECOSYSTEM NOTIFICATION METHODS ====================
+
+    /**
+     * Create a general notification and save to database
+     */
+    public Notification createNotification(String userId, UserRole userRole, 
+            String title, String message, NotificationType type, 
+            String referenceId, String referenceType) {
+        if (notificationRepository == null) return null;
+        
+        Notification notification = new Notification();
+        notification.setId(UUID.randomUUID().toString());
+        notification.setUserId(userId);
+        notification.setUserRole(userRole);
+        notification.setTitle(title);
+        notification.setMessage(message);
+        notification.setNotificationType(type);
+        notification.setReferenceId(referenceId);
+        notification.setReferenceType(referenceType);
+        notification.setRead(false);
+        notification.setCreatedAt(LocalDateTime.now());
+        
+        Notification saved = notificationRepository.save(notification);
+        
+        // Broadcast real-time notification if service available
+        if (realTimeEventService != null) {
+            realTimeEventService.broadcastNotification(saved);
+        }
+        
+        return saved;
+    }
+
+    /**
+     * Send prescription-related notification
+     */
+    public void sendPrescriptionNotification(String userId, String title, 
+            String message, String prescriptionId, String notificationType) {
+        UserRole role = UserRole.USER;
+        NotificationType type = NotificationType.PRESCRIPTION_UPLOADED;
+        
+        switch (notificationType) {
+            case "PRESCRIPTION_UPLOADED":
+                role = UserRole.DOCTOR;
+                type = NotificationType.PRESCRIPTION_UPLOADED;
+                break;
+            case "PRESCRIPTION_APPROVED":
+                role = UserRole.USER;
+                type = NotificationType.PRESCRIPTION_APPROVED;
+                break;
+            case "PRESCRIPTION_REJECTED":
+                role = UserRole.USER;
+                type = NotificationType.PRESCRIPTION_REJECTED;
+                break;
+            case "PRESCRIPTION_EXPIRING":
+                role = UserRole.USER;
+                type = NotificationType.PRESCRIPTION_EXPIRING;
+                break;
+        }
+        
+        createNotification(userId, role, title, message, type, prescriptionId, "PRESCRIPTION");
+    }
+
+    /**
+     * Send consultation-related notification
+     */
+    public void sendConsultationNotification(String userId, String title, 
+            String message, String consultationId, String notificationType) {
+        UserRole role = UserRole.USER;
+        NotificationType type = NotificationType.CONSULTATION_REQUESTED;
+        
+        switch (notificationType) {
+            case "CONSULTATION_REQUESTED":
+                role = UserRole.DOCTOR;
+                type = NotificationType.CONSULTATION_REQUESTED;
+                break;
+            case "CONSULTATION_ACCEPTED":
+                role = UserRole.USER;
+                type = NotificationType.CONSULTATION_ACCEPTED;
+                break;
+            case "CONSULTATION_STARTED":
+                role = UserRole.USER;
+                type = NotificationType.CONSULTATION_STARTED;
+                break;
+            case "CONSULTATION_ENDED":
+                role = UserRole.USER;
+                type = NotificationType.CONSULTATION_ENDED;
+                break;
+            case "CONSULTATION_CANCELLED":
+                role = UserRole.USER;
+                type = NotificationType.CONSULTATION_CANCELLED;
+                break;
+        }
+        
+        createNotification(userId, role, title, message, type, consultationId, "CONSULTATION");
+    }
+
+    /**
+     * Send delivery-related notification
+     */
+    public void sendDeliveryNotification(String userId, String title, 
+            String message, String deliveryId, String notificationType) {
+        UserRole role = UserRole.USER;
+        NotificationType type = NotificationType.DELIVERY_ASSIGNED;
+        
+        switch (notificationType) {
+            case "DELIVERY_ASSIGNED":
+                role = UserRole.DRIVER;
+                type = NotificationType.DELIVERY_ASSIGNED;
+                break;
+            case "DELIVERY_ACCEPTED":
+                role = UserRole.USER;
+                type = NotificationType.DELIVERY_ACCEPTED;
+                break;
+            case "DELIVERY_PICKED_UP":
+                role = UserRole.USER;
+                type = NotificationType.DELIVERY_PICKED_UP;
+                break;
+            case "DELIVERY_EN_ROUTE":
+                role = UserRole.USER;
+                type = NotificationType.DELIVERY_EN_ROUTE;
+                break;
+            case "DELIVERY_ARRIVED":
+                role = UserRole.USER;
+                type = NotificationType.DELIVERY_ARRIVED;
+                break;
+            case "DELIVERY_COMPLETED":
+                role = UserRole.USER;
+                type = NotificationType.DELIVERY_COMPLETED;
+                break;
+            case "DRIVER_DELIVERY_COMPLETED":
+                role = UserRole.DRIVER;
+                type = NotificationType.DELIVERY_COMPLETED;
+                break;
+        }
+        
+        createNotification(userId, role, title, message, type, deliveryId, "DELIVERY");
+    }
+
+    /**
+     * Get notifications for user
+     */
+    public List<Notification> getNotificationsByUserId(String userId) {
+        if (notificationRepository == null) return List.of();
+        return notificationRepository.findByUserIdOrderByCreatedAtDesc(userId);
+    }
+
+    /**
+     * Get unread count
+     */
+    public long getUnreadCount(String userId) {
+        if (notificationRepository == null) return 0;
+        return notificationRepository.countByUserIdAndIsReadFalse(userId);
+    }
+
+    /**
+     * Mark notification as read
+     */
+    public Notification markAsRead(String notificationId) {
+        if (notificationRepository == null) return null;
+        Notification notification = notificationRepository.findById(notificationId)
+            .orElseThrow(() -> new RuntimeException("Notification not found"));
+        notification.setRead(true);
+        return notificationRepository.save(notification);
+    }
+
+    /**
+     * Mark all notifications as read
+     */
+    public void markAllAsRead(String userId) {
+        if (notificationRepository != null) {
+            notificationRepository.markAllAsRead(userId, LocalDateTime.now());
+        }
     }
 }
