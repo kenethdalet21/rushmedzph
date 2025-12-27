@@ -108,6 +108,84 @@ export interface AppointmentCompletedPayload {
   summary?: string;
 }
 
+// Consultation events
+export interface ConsultationRequestedPayload {
+  consultationId: string;
+  userId: string;
+  userName?: string;
+  userAge?: number;
+  userGender?: string;
+  doctorId: string;
+  concern: string;
+  description?: string;
+}
+export interface ConsultationAcceptedPayload {
+  consultationId: string;
+  userId: string;
+  doctorId: string;
+  doctorName?: string;
+}
+export interface ConsultationMessagePayload {
+  consultationId: string;
+  userId: string;
+  doctorId: string;
+  sender: 'patient' | 'doctor';
+  message: string;
+}
+export interface ConsultationPrescriptionPayload {
+  consultationId: string;
+  userId: string;
+  doctorId: string;
+  prescription: string;
+}
+export interface ConsultationCompletedPayload {
+  consultationId: string;
+  userId: string;
+  doctorId: string;
+  doctorName?: string;
+}
+export interface ConsultationCancelledPayload {
+  consultationId: string;
+  userId: string;
+  doctorId: string;
+}
+
+// Video call events
+export interface ConsultationVideoCallPayload {
+  consultationId: string;
+  callId: string;
+  type: 'initiate' | 'ring' | 'accept' | 'reject' | 'end' | 'ice_candidate' | 'sdp_offer' | 'sdp_answer';
+  initiatorId: string;
+  initiatorType: 'patient' | 'doctor';
+  recipientId: string;
+  recipientType: 'patient' | 'doctor';
+  timestamp: string;
+  data?: {
+    roomCode?: string;
+    sdp?: string;
+    candidate?: any;
+    reason?: string;
+  };
+}
+
+// Typing indicator event
+export interface ConsultationTypingPayload {
+  consultationId: string;
+  userId: string;
+  userType: 'patient' | 'doctor';
+  isTyping: boolean;
+  timestamp: string;
+}
+
+// Messages read event
+export interface ConsultationMessagesReadPayload {
+  consultationId: string;
+  readerId: string;
+  readerType: 'patient' | 'doctor';
+  messageIds: string[];
+  timestamp: string;
+}
+
 export type EventMap = {
   orderAccepted: OrderAcceptedPayload;
   orderStatusChanged: OrderStatusChangedPayload;
@@ -132,13 +210,24 @@ export type EventMap = {
   appointmentRequested: AppointmentRequestedPayload;
   appointmentStatusChanged: AppointmentStatusChangedPayload;
   appointmentCompleted: AppointmentCompletedPayload;
+  consultationRequested: ConsultationRequestedPayload;
+  consultationAccepted: ConsultationAcceptedPayload;
+  consultationMessage: ConsultationMessagePayload;
+  consultationPrescription: ConsultationPrescriptionPayload;
+  consultationCompleted: ConsultationCompletedPayload;
+  consultationCancelled: ConsultationCancelledPayload;
+  consultationVideoCall: ConsultationVideoCallPayload;
+  consultationTyping: ConsultationTypingPayload;
+  consultationMessagesRead: ConsultationMessagesReadPayload;
 };
 
 class EventBus {
   private listeners: { [K in keyof EventMap]?: Set<EventHandler<EventMap[K]>> } = {};
 
   subscribe<K extends keyof EventMap>(event: K, handler: EventHandler<EventMap[K]>): () => void {
-    if (!this.listeners[event]) this.listeners[event] = new Set();
+    if (!this.listeners[event]) {
+      (this.listeners[event] as any) = new Set<EventHandler<EventMap[K]>>();
+    }
     this.listeners[event]!.add(handler);
     return () => { this.listeners[event]!.delete(handler); };
   }
@@ -149,6 +238,10 @@ class EventBus {
     handlers.forEach(h => {
       try { h(payload); } catch (e) { console.error(`EventBus handler error for ${String(event)}`, e); }
     });
+  }
+
+  emit<K extends keyof EventMap>(event: K, payload: EventMap[K]): void {
+    this.publish(event, payload);
   }
 }
 
