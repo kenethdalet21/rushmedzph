@@ -49,10 +49,10 @@ function Build-App {
     param(
         [string]$AppType,
         [string]$AppPath,
-        [string]$Profile
+        [string]$BuildProfile
     )
     
-    Write-Log "🔨 Building $AppType App (Profile: $Profile)..." "Info"
+    Write-Log "🔨 Building $AppType App (Profile: $BuildProfile)..." "Info"
     
     Push-Location $AppPath
     
@@ -83,11 +83,11 @@ function Build-App {
         
         # Run the build command using EAS directly
         Write-Log "📲 Submitting to EAS cloud service..." "Info"
-        Write-Log "   Command: eas build --platform android --profile ${AppType}-${Profile}" "Info"
+        Write-Log "   Command: eas build --platform android --profile ${AppType}-${BuildProfile}" "Info"
         Write-Log "   Estimated wait: 5-10 minutes per app" "Warning"
         Write-Log "" "Info"
         
-        & eas build --platform android --profile "${AppType}-${Profile}"
+        & eas build --platform android --profile "${AppType}-${BuildProfile}"
         
         if ($LASTEXITCODE -eq 0) {
             Write-Log "" "Info"
@@ -118,7 +118,7 @@ Write-Log "" "Info"
 
 # Check if user is logged in before starting
 Write-Log "Verifying EAS login..." "Warning"
-$loginCheck = & eas whoami 2>&1
+& eas whoami 2>&1 | Out-Null
 if ($LASTEXITCODE -ne 0) {
     Write-Log "ERROR: Not logged into EAS" "Error"
     Write-Log "Please login first with: eas login" "Error"
