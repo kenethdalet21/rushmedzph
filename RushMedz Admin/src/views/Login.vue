@@ -54,16 +54,15 @@ const handleLogin = async () => {
   errorMessage.value = '';
   
   try {
-    const response = await login(username.value, password.value);
-    if (response && response.token) {
-      localStorage.setItem('adminToken', response.token);
-      localStorage.setItem('adminUser', JSON.stringify(response.user));
+    const authResult = await login(username.value, password.value);
+    if (authResult?.token) {
       router.push('/dashboard');
-    } else {
-      throw new Error('Invalid response from server');
+      return;
     }
+    throw new Error('Login failed. Please try again.');
   } catch (error: any) {
-    errorMessage.value = error.response?.data?.message || error.message || 'Login failed. Please check your credentials.';
+    const apiMessage = error.response?.data?.error || error.response?.data?.message;
+    errorMessage.value = apiMessage || error.message || 'Login failed. Please check your credentials.';
   } finally {
     loading.value = false;
   }

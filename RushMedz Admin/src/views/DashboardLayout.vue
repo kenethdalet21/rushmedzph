@@ -52,7 +52,7 @@
       </nav>
       <div class="sidebar-footer">
         <button @click="showLogoutConfirmation" class="logout-btn">
-          <span class="icon">🚪</span>
+          <span class="icon">⛔</span>
           <span>Logout</span>
         </button>
       </div>
@@ -73,7 +73,7 @@
     <!-- Logout Confirmation Modal -->
     <div v-if="isLogoutModalVisible" class="modal-overlay" @click="cancelLogout">
       <div class="modal-content" @click.stop>
-        <div class="modal-icon">🚪</div>
+        <div class="modal-icon">⛔</div>
         <h3>Confirm Logout</h3>
         <p>Are you sure you want to log out?</p>
         <div class="modal-buttons">

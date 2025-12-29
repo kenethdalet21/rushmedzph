@@ -62,7 +62,7 @@ import { useRouter } from 'vue-router';
 import { useAuth } from '../composables/useApi';
 
 const router = useRouter();
-const { register } = useAuth();
+const { register, login } = useAuth();
 
 const formData = ref({
   username: '',
@@ -83,14 +83,22 @@ const handleSignup = async () => {
   try {
     await register({
       ...formData.value,
-      role: 'ADMIN',
+      role: 'admin',
     });
-    successMessage.value = 'Account created successfully! Redirecting to login...';
-    setTimeout(() => {
-      router.push('/login');
-    }, 2000);
+
+    // Auto-login after successful registration so the new admin can start immediately.
+    const authResult = await login(formData.value.username, formData.value.password);
+    if (authResult?.token) {
+      successMessage.value = 'Account created successfully! Redirecting...';
+      router.push('/dashboard');
+      return;
+    }
+
+    successMessage.value = 'Account created. Please log in.';
+    setTimeout(() => router.push('/login'), 1500);
   } catch (error: any) {
-    errorMessage.value = error.response?.data?.message || 'Signup failed. Please try again.';
+    const apiMessage = error.response?.data?.error || error.response?.data?.message;
+    errorMessage.value = apiMessage || 'Signup failed. Please try again.';
   } finally {
     loading.value = false;
   }
