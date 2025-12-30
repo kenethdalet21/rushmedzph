@@ -1,0 +1,9 @@
+2025-12-01T14:20:01.541Z [INFO] [Task.commitChanges](7.2): Committing changes for d:/Epharmacy Application/Epharma_Ecosystem/backend with message: Pin spring-web to 6.2.8 to fix CVE
+2025-12-01T14:20:01.873Z [INFO] [appmod/java-upgrade-20251201141257 33de0ab] Pin spring-web to 6.2.8 to fix CVE
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+2025-12-01T14:20:01.966Z [INFO] 33de0ab879547a1ee92202c9ec7e7605120b8c45
+
+2025-12-01T14:20:02.072Z [INFO] 1	1	backend/pom.xml
+
+2025-12-01T14:20:02.091Z [INFO] [Task.commitChanges](7.2): Committed changes for d:/Epharmacy Application/Epharma_Ecosystem/backend with message: Pin spring-web to 6.2.8 to fix CVE

@@ -1,0 +1,7 @@
+2025-12-12T06:49:29.075Z [INFO] [MavenBuildTool] Getting build errors of d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-12T06:49:29.076Z [INFO] [Environment] Running command (Java 17): mvn clean test-compile -q -B -fn
+2025-12-12T06:49:41.505Z [INFO] [MavenBuildTool] parsing compilation errors.
+2025-12-12T06:49:41.506Z [INFO] [BaseBuildTool] Found 1 modules: .
+2025-12-12T06:49:41.520Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2025-12-12T06:49:41.520Z [INFO] [MavenBuildTool] Cleaning d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-12T06:49:41.521Z [INFO] [Environment] Running command (Java 17): mvn clean -q -B -fn

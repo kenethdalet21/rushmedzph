@@ -1,0 +1,265 @@
+2025-11-30T02:13:56.481Z [INFO] ----------------------invoke run_tests_for_java----------------------
+2025-11-30T02:13:56.481Z [INFO] [Tool.invoke]({name: run_tests_for_java, input: {
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend"
+}}).
+2025-11-30T02:13:56.481Z [INFO] [Task.start](): Starting task toolCall
+2025-11-30T02:13:56.482Z [INFO] [Task.start](): Started task toolCall
+2025-11-30T02:13:56.482Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-11-30T02:13:56.483Z [INFO] [Tool.invoke] do pre-invoke.
+2025-11-30T02:13:56.483Z [INFO] Project d:/Epharmacy Application/Epharma_Ecosystem/backend is a maven project, try to get java version from pom.xml
+2025-11-30T02:13:56.485Z [INFO] Project java version: 21
+2025-11-30T02:13:56.485Z [INFO] Maven project detected.
+2025-11-30T02:13:56.486Z [INFO] Build tool type: mvn
+2025-11-30T02:13:56.871Z [INFO] [Environment] Running command (Java 21): java -version
+openjdk version "21.0.8" 2025-07-15 LTS
+OpenJDK Runtime Environment Microsoft-11933218 (build 21.0.8+9-LTS)
+OpenJDK 64-Bit Server VM Microsoft-11933218 (build 21.0.8+9-LTS, mixed mode, sharing)
+2025-11-30T02:13:57.065Z [INFO] [JdkEnvironment] Got real Java version: 21.0.8
+2025-11-30T02:13:57.065Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Users\\Keneth Dale Tuazon\\.jdk\\jdk-21.0.8\\bin",
+  "version": "21"
+}
+2025-11-30T02:13:57.080Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 21.0.8, vendor: Microsoft, runtime: C:\Users\Keneth Dale Tuazon\.jdk\jdk-21.0.8
+Default locale: en_PH, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-11-30T02:13:57.825Z [INFO] Real build tool version: 3.9.11
+2025-11-30T02:13:57.826Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+  "version": "3.9.11"
+}
+2025-11-30T02:13:57.826Z [INFO] Project config: {
+  "buildTool": {
+    "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+    "name": "mvn",
+    "version": "3.9.11"
+  },
+  "jdk": {
+    "path": "C:\\Users\\Keneth Dale Tuazon\\.jdk\\jdk-21.0.8\\bin",
+    "name": "java",
+    "version": "21"
+  },
+  "name": "backend",
+  "dir": "d:/Epharmacy Application/Epharma_Ecosystem/backend"
+}
+2025-11-30T02:13:57.835Z [INFO] [Tool.invoke] do invoke.
+2025-11-30T02:13:57.836Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2025-11-30T02:13:57.837Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 21.0.8, vendor: Microsoft, runtime: C:\Users\Keneth Dale Tuazon\.jdk\jdk-21.0.8
+Default locale: en_PH, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-11-30T02:13:58.621Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2025-11-30T02:13:58.621Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-11-30T02:13:58.622Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-11-30T02:13:58.623Z [INFO] [MavenBuildTool] Getting all module coordinates of d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-11-30T02:13:58.623Z [INFO] [MavenBuildTool] Getting effective POMs of d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-11-30T02:13:58.624Z [INFO] [Environment] Running command (Java 21): mvn help:effective-pom -Doutput=effective-pom-5d3ecef2-7df1-4803-91af-135c57167b88.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.epharma.ecosystem:backend >--------------------
+[INFO] Building Epharma Ecosystem Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.4.1:effective-pom (default-cli) @ backend ---
+[INFO] Effective-POM written to: d:\Epharmacy Application\Epharma_Ecosystem\backend\effective-pom-5d3ecef2-7df1-4803-91af-135c57167b88.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.222 s
+[INFO] Finished at: 2025-11-30T10:14:07+08:00
+[INFO] ------------------------------------------------------------------------
+2025-11-30T02:14:08.104Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-11-30T02:14:08.108Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-11-30T02:14:08.109Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2025-11-30T02:14:08.109Z [INFO] [Project backend]: Java version of project backend is changed.
+2025-11-30T02:14:08.110Z [INFO] [Project backend]: Java version of project backend is changed to '21' || '21'
+2025-11-30T02:14:08.110Z [INFO] [Project backend]: build tool config of project backend is modified.
+2025-11-30T02:14:08.110Z [INFO] [Project backend]: dependencies of project backend may be changed, resetting promise.
+2025-11-30T02:14:08.111Z [INFO] Building project before running tests...
+2025-11-30T02:14:08.111Z [INFO] [MavenBuildTool] Getting build errors of d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-11-30T02:14:08.112Z [INFO] [Environment] Running command (Java 21): mvn clean test-compile -q -B -fn
+2025-11-30T02:14:19.797Z [INFO] [MavenBuildTool] parsing compilation errors.
+2025-11-30T02:14:19.798Z [INFO] [BaseBuildTool] Found 1 modules: .
+2025-11-30T02:14:19.820Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2025-11-30T02:14:19.820Z [INFO] [MavenBuildTool] Cleaning d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-11-30T02:14:19.820Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2025-11-30T02:14:23.964Z [INFO] [Project backend]: Compilation errors of project backend is updated: 0 -> 0
+2025-11-30T02:14:23.964Z [INFO] Running tests...
+2025-11-30T02:14:23.964Z [INFO] [MavenBuildTool] Running test cases of d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-11-30T02:14:23.964Z [INFO] [Environment] Running command (Java 21): mvn clean test -q -B -fn
+10:14:37.316 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.epharma.ecosystem.controller.PaymentControllerTest]: PaymentControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:14:37.633 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.epharma.ecosystem.EpharmaApplication for test class com.epharma.ecosystem.controller.PaymentControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2025-11-30T10:14:38.727+08:00  INFO 18812 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : Starting PaymentControllerTest using Java 21.0.8 with PID 18812 (started by Keneth Dale Tuazon in d:\Epharmacy Application\Epharma_Ecosystem\backend)
+2025-11-30T10:14:38.731+08:00  INFO 18812 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2025-11-30T10:14:41.292+08:00  INFO 18812 --- [epharma-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-30T10:14:41.797+08:00  INFO 18812 --- [epharma-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 480 ms. Found 2 JPA repository interfaces.
+2025-11-30T10:14:45.215+08:00  INFO 18812 --- [epharma-backend] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-30T10:14:45.441+08:00  INFO 18812 --- [epharma-backend] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-30T10:14:45.552+08:00  INFO 18812 --- [epharma-backend] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-30T10:14:46.613+08:00  INFO 18812 --- [epharma-backend] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-30T10:14:46.710+08:00  INFO 18812 --- [epharma-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-30T10:14:47.898+08:00  INFO 18812 --- [epharma-backend] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./data/epharma user=SA
+2025-11-30T10:14:47.935+08:00  INFO 18812 --- [epharma-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-30T10:14:50.591+08:00  INFO 18812 --- [epharma-backend] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-30T10:14:50.709+08:00  INFO 18812 --- [epharma-backend] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-30T10:14:52.599+08:00  WARN 18812 --- [epharma-backend] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-30T10:14:52.898+08:00  WARN 18812 --- [epharma-backend] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8d27b2e8-0d0b-4384-b80e-557a2597c423
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-30T10:14:52.986+08:00  INFO 18812 --- [epharma-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-30T10:14:54.886+08:00  INFO 18812 --- [epharma-backend] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-11-30T10:14:56.290+08:00  INFO 18812 --- [epharma-backend] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/epharma'
+2025-11-30T10:14:56.541+08:00  INFO 18812 --- [epharma-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-11-30T10:14:56.541+08:00  INFO 18812 --- [epharma-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-11-30T10:14:56.546+08:00  INFO 18812 --- [epharma-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-11-30T10:14:56.749+08:00  INFO 18812 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : Started PaymentControllerTest in 18.735 seconds (process running for 21.047)
+WARNING: A Java agent has been loaded dynamically (C:\Users\Keneth Dale Tuazon\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2025-11-30T02:14:59.452Z [INFO] [MavenBuildTool] loading surefire reports.
+2025-11-30T02:14:59.499Z [INFO] [MavenBuildTool] summarizing surefire reports.
+2025-11-30T02:14:59.500Z [INFO] [MavenBuildTool] Cleaning d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-11-30T02:14:59.501Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2025-11-30T02:15:05.374Z [INFO] [Project backend]: Test result of project backend is updated: 0 -> 0
+2025-11-30T02:15:05.376Z [INFO] [Tool.invoke]({result: {
+  "message": "All tests passed! There are no test errors/failures in the project.",
+  "result": {
+    "errors": [],
+    "failures": [],
+    "summary": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reports": [
+      {
+        "name": "com.epharma.ecosystem.controller.PaymentControllerTest",
+        "time": 22.18,
+        "tests": 8,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "paypalWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 1.702,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "gcashWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.023,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "paymayaWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.022,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "paymayaWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.036,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "paypalWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.027,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "razorpayWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.02,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "razorpayWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.02,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "gcashWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.022,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      }
+    ]
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+}}).
+2025-11-30T02:15:05.378Z [INFO] [Task.complete](): Completing task toolCall
+2025-11-30T02:15:05.386Z [INFO] [Task.complete](): Completed task toolCall
+2025-11-30T02:15:05.386Z [INFO] [Tool.invoke]({message: All tests passed! There are no test errors/failures in the project.}).
+2025-11-30T02:15:05.387Z [INFO] ----------------------invoked run_tests_for_java----------------------

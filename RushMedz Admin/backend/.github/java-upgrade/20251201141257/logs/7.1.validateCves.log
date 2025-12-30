@@ -1,0 +1,52 @@
+2025-12-01T14:19:40.315Z [INFO] Some dependencies have been modified or added during the upgrade. start validating CVEs.
+2025-12-01T14:19:40.319Z [INFO] Getting CVEs for dependencies: org.springframework.boot:spring-boot-starter-web:3.5.0:jar,org.springframework.boot:spring-boot-starter-data-jpa:3.5.0:jar,com.h2database:h2:2.3.232:jar,org.springframework.boot:spring-boot-starter-validation:3.5.0:jar,org.springframework.boot:spring-boot-starter-actuator:3.5.0:jar,org.springframework.boot:spring-boot-starter-test:3.5.0:jar,org.springframework:spring-web:6.2.7:jar,org.springframework.boot:spring-boot-starter-security:3.5.0:jar
+2025-12-01T14:19:40.319Z [INFO] getting CVEs for dependencies:
+ - org.springframework.boot:spring-boot-starter-web:3.5.0:jar
+  - org.springframework.boot:spring-boot-starter-data-jpa:3.5.0:jar
+  - com.h2database:h2:2.3.232:jar
+  - org.springframework.boot:spring-boot-starter-validation:3.5.0:jar
+  - org.springframework.boot:spring-boot-starter-actuator:3.5.0:jar
+  - org.springframework.boot:spring-boot-starter-test:3.5.0:jar
+  - org.springframework:spring-web:6.2.7:jar
+  - org.springframework.boot:spring-boot-starter-security:3.5.0:jar...
+2025-12-01T14:19:40.320Z [INFO] getting gitHub access token...
+2025-12-01T14:19:40.324Z [INFO] Processing batch 1/1, size: 8
+2025-12-01T14:19:40.326Z [INFO] listing CVEs from GithHub for dependencies [
+  {
+    "name": "org.springframework.boot:spring-boot-starter-web",
+    "version": "3.5.0"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-data-jpa",
+    "version": "3.5.0"
+  },
+  {
+    "name": "com.h2database:h2",
+    "version": "2.3.232"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-validation",
+    "version": "3.5.0"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-actuator",
+    "version": "3.5.0"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-test",
+    "version": "3.5.0"
+  },
+  {
+    "name": "org.springframework:spring-web",
+    "version": "6.2.7"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-security",
+    "version": "3.5.0"
+  }
+]
+2025-12-01T14:19:40.947Z [INFO] found 1 CVEs for dependencies
+2025-12-01T14:19:40.947Z [INFO] grouping CVEs and finding min patched version by dep...
+2025-12-01T14:19:40.948Z [INFO] new patchedVersion 6.2.8, maxPatchedVersion undefined.
+2025-12-01T14:19:40.948Z [INFO] done getting 1 CVEs for 8 dependencies
+2025-12-01T14:19:40.948Z [INFO] Found 1 dependencies with known CVEs

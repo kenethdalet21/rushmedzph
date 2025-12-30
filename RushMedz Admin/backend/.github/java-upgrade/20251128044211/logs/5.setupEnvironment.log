@@ -1,0 +1,237 @@
+2025-11-28T04:48:04.943Z [INFO] validate plan and setup env from plan.md file...
+2025-11-28T04:48:04.945Z [INFO] parsing plan.md...
+2025-11-28T04:48:07.128Z [INFO] Successfully parsed plan.md to JSON:
+2025-11-28T04:48:07.129Z [INFO] {
+  "projectConfig": {
+    "name": "",
+    "dir": "d:\\Epharmacy Application\\Epharma_Ecosystem\\backend",
+    "jdk": {
+      "name": "java",
+      "path": "C:\\Java\\jdk-17.0.11+9\\bin",
+      "version": "17"
+    },
+    "buildTool": {
+      "name": "mvn",
+      "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+      "version": "",
+      "defaultOptions": ""
+    }
+  },
+  "upgradeOptions": {
+    "target": {
+      "javaVersion": "21",
+      "dependencies": [],
+      "jdk": {
+        "name": "java",
+        "path": "",
+        "version": "21"
+      }
+    },
+    "guidelines": "",
+    "workingBranch": "appmod/java-upgrade-20251128044211",
+    "runTests": true
+  }
+}
+2025-11-28T04:48:07.129Z [INFO] Project d:\Epharmacy Application\Epharma_Ecosystem\backend is not a maven project, try to get java version from gradle
+2025-11-28T04:48:07.145Z [INFO] Try to get java version from gradle config files: 
+2025-11-28T04:48:07.146Z [INFO] Try to get java version from gradle properties: undefined
+2025-11-28T04:48:07.147Z [INFO] Project java version: 8
+2025-11-28T04:48:07.148Z [INFO] Build tool type: mvn
+2025-11-28T04:48:07.149Z [INFO] [Environment] Running command (Java 8): java -version
+openjdk version "17.0.11" 2024-04-16 LTS
+OpenJDK Runtime Environment Microsoft-9388408 (build 17.0.11+9-LTS)
+OpenJDK 64-Bit Server VM Microsoft-9388408 (build 17.0.11+9-LTS, mixed mode, sharing)
+2025-11-28T04:48:07.377Z [INFO] [JdkEnvironment] Got real Java version: 17.0.11
+2025-11-28T04:48:07.377Z [ERROR] The version(17) of provided JDK C:\Java\jdk-17.0.11+9\bin doesn't match the required Java version 8.
+2025-11-28T04:48:09.829Z [INFO] [Environment] Running command (Java 1.8.0_472): java -version
+openjdk version "1.8.0_472"
+OpenJDK Runtime Environment (Temurin)(build 1.8.0_472-b08)
+OpenJDK 64-Bit Server VM (Temurin)(build 25.472-b08, mixed mode)
+2025-11-28T04:48:10.058Z [INFO] [JdkEnvironment] Got real Java version: 1.8.0_472
+2025-11-28T04:48:10.059Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Users\\Keneth Dale Tuazon\\.jdk\\jdk-8\\bin",
+  "version": "8",
+  "source": "install"
+}
+2025-11-28T04:48:10.072Z [INFO] [Environment] Running command (Java 8): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 1.8.0_472, vendor: Temurin, runtime: C:\Users\Keneth Dale Tuazon\.jdk\jdk-8\jre
+Default locale: en_PH, platform encoding: Cp1252
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-11-28T04:48:10.762Z [INFO] Real build tool version: 3.9.11
+2025-11-28T04:48:10.763Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+  "version": "3.9.11"
+}
+2025-11-28T04:48:10.763Z [INFO] Project config: {
+  "name": "backend",
+  "dir": "d:\\Epharmacy Application\\Epharma_Ecosystem\\backend",
+  "jdk": {
+    "name": "java",
+    "path": "C:\\Users\\Keneth Dale Tuazon\\.jdk\\jdk-8\\bin",
+    "version": "8",
+    "source": "install"
+  },
+  "buildTool": {
+    "name": "mvn",
+    "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+    "version": "3.9.11",
+    "defaultOptions": ""
+  }
+}
+2025-11-28T04:48:10.764Z [INFO] [Project backend]: getting Java version.
+2025-11-28T04:48:10.764Z [INFO] [Project backend]: reset Java version promise.
+2025-11-28T04:48:10.764Z [INFO] [MavenBuildTool] Getting Java version of d:\Epharmacy Application\Epharma_Ecosystem\backend from pom.xml
+2025-11-28T04:48:10.765Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:48:10.765Z [INFO] [MavenBuildTool] Getting all module coordinates of d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:48:10.766Z [INFO] [MavenBuildTool] Getting effective POMs of d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:48:10.777Z [INFO] [Environment] Running command (Java 8): mvn help:effective-pom -Doutput=effective-pom-7f324614-d5c2-48a9-89e6-cc13ce175c56.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.526 s
+[INFO] Finished at: 2025-11-28T12:48:17+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-help-plugin:3.5.1:effective-pom (default-cli): Goal requires a project to execute but there is no POM in this directory (d:\Epharmacy Application\Epharma_Ecosystem\backend). Please verify you invoked Maven from the correct directory. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
+2025-11-28T04:48:17.557Z [INFO] [MavenBuildTool] Failed to get effective POMs: Error: ENOENT: no such file or directory, open 'd:\Epharmacy Application\Epharma_Ecosystem\backend\effective-pom-7f324614-d5c2-48a9-89e6-cc13ce175c56.log'
+2025-11-28T04:48:17.559Z [INFO] [MavenBuildTool] Found pom.xml files: 
+2025-11-28T04:48:17.559Z [INFO] [Environment] Running command (Java 8): mvn help:evaluate -Dexpression=project.properties -q -DforceStdout
+<properties/>2025-11-28T04:48:24.178Z [INFO] [Environment] Running command (Java 8): mvn help:effective-pom -DforceStdout
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.716 s
+[INFO] Finished at: 2025-11-28T12:48:31+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-help-plugin:3.5.1:effective-pom (default-cli): Goal requires a project to execute but there is no POM in this directory (d:\Epharmacy Application\Epharma_Ecosystem\backend). Please verify you invoked Maven from the correct directory. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
+2025-11-28T04:48:31.759Z [ERROR] [MavenBuildTool] Failed to get Java version of d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:48:31.760Z [ERROR] failed to load Java Version, returning default version 21
+2025-11-28T04:48:31.765Z [INFO] Source Java version: 21
+2025-11-28T04:48:31.766Z [INFO] [Project backend]: getting dependencies promise.
+2025-11-28T04:48:31.766Z [INFO] [Project backend]: reset dependencies promise.
+2025-11-28T04:48:31.773Z [INFO] [Environment] Running command (Java 8): mvn dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.823 s
+[INFO] Finished at: 2025-11-28T12:48:36+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.7.0:tree (default-cli): Goal requires a project to execute but there is no POM in this directory (d:\Epharmacy Application\Epharma_Ecosystem\backend). Please verify you invoked Maven from the correct directory. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
+2025-11-28T04:48:37.126Z [ERROR] [MavenBuildTool] Failed to get dependencies from dependency tree: Error: Failed to run command: "mvn dependency:tree -B" with error code 1
+
+2025-11-28T04:48:37.127Z [INFO] [Environment] Running command (Java 8): mvn help:effective-pom -B
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.301 s
+[INFO] Finished at: 2025-11-28T12:48:42+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-help-plugin:3.5.1:effective-pom (default-cli): Goal requires a project to execute but there is no POM in this directory (d:\Epharmacy Application\Epharma_Ecosystem\backend). Please verify you invoked Maven from the correct directory. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
+2025-11-28T04:48:42.326Z [ERROR] [MavenBuildTool] Failed to get dependencies from effective pom: Error: Failed to run command: "mvn help:effective-pom -B" with error code 1
+
+2025-11-28T04:48:42.509Z [INFO] [MavenBuildTool] Getting Java version of d:\Epharmacy Application\Epharma_Ecosystem\backend from pom.xml
+2025-11-28T04:48:42.510Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:48:42.511Z [INFO] [MavenBuildTool] Getting all module coordinates of d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:48:42.512Z [INFO] [MavenBuildTool] Getting effective POMs of d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:48:42.515Z [INFO] [Environment] Running command (Java 8): mvn help:effective-pom -Doutput=effective-pom-ae172925-092e-4992-ab48-7f2aa9ba1f4a.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.004 s
+[INFO] Finished at: 2025-11-28T12:48:48+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-help-plugin:3.5.1:effective-pom (default-cli): Goal requires a project to execute but there is no POM in this directory (d:\Epharmacy Application\Epharma_Ecosystem\backend). Please verify you invoked Maven from the correct directory. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
+2025-11-28T04:48:48.289Z [INFO] [MavenBuildTool] Failed to get effective POMs: Error: ENOENT: no such file or directory, open 'd:\Epharmacy Application\Epharma_Ecosystem\backend\effective-pom-ae172925-092e-4992-ab48-7f2aa9ba1f4a.log'
+2025-11-28T04:48:48.290Z [INFO] [MavenBuildTool] Found pom.xml files: 
+2025-11-28T04:48:48.292Z [INFO] [Environment] Running command (Java 8): mvn help:evaluate -Dexpression=project.properties -q -DforceStdout
+<properties/>2025-11-28T04:48:54.970Z [INFO] [Environment] Running command (Java 8): mvn help:effective-pom -DforceStdout
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.953 s
+[INFO] Finished at: 2025-11-28T12:48:59+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-help-plugin:3.5.1:effective-pom (default-cli): Goal requires a project to execute but there is no POM in this directory (d:\Epharmacy Application\Epharma_Ecosystem\backend). Please verify you invoked Maven from the correct directory. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
+2025-11-28T04:48:59.551Z [ERROR] [MavenBuildTool] Failed to get Java version of d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:48:59.577Z [INFO] validateAndUpdateTargets, targets: [object Object]
+2025-11-28T04:48:59.579Z [WARN] No source dependencies found for Spring Boot. Skipping target dependency validation
+2025-11-28T04:48:59.580Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Boot
+2025-11-28T04:48:59.580Z [WARN] No source dependencies found for Spring Framework. Skipping target dependency validation
+2025-11-28T04:48:59.581Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Framework
+2025-11-28T04:48:59.582Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2025-11-28T04:48:59.582Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Security
+2025-11-28T04:48:59.583Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2025-11-28T04:48:59.583Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Jakarta EE
+2025-11-28T04:48:59.584Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2025-11-28T04:48:59.584Z [INFO] validateAndUpdateTargets, targets: [object Object], group:JUnit
+2025-11-28T04:48:59.595Z [ERROR] We are not able to upgrade Java from undefined to 21 directly.
+2025-11-28T04:48:59.597Z [ERROR] Failed to validate plan and setup env from plan.md: UserError: We are not able to upgrade Java from undefined to 21 directly. Please set another compatible target versions. We only support upgrading to 21 directly from >=8 <21, 11, 17, please upgrade to one of these versions first.

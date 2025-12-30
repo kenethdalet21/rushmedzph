@@ -1,0 +1,9 @@
+2025-12-01T14:17:43.761Z [INFO] [Task.commitChanges](5.3): Committing changes for d:/Epharmacy Application/Epharma_Ecosystem/backend with message: Reschedule spring-boot-maven-plugin build-info to package phase
+2025-12-01T14:17:44.043Z [INFO] [appmod/java-upgrade-20251201141257 c2c6953] Reschedule spring-boot-maven-plugin build-info to package phase
+ 1 file changed, 1 insertion(+)
+
+2025-12-01T14:17:44.133Z [INFO] c2c6953e985944997d8bf409ec0ead1d0a23f035
+
+2025-12-01T14:17:44.239Z [INFO] 1	0	backend/pom.xml
+
+2025-12-01T14:17:44.256Z [INFO] [Task.commitChanges](5.3): Committed changes for d:/Epharmacy Application/Epharma_Ecosystem/backend with message: Reschedule spring-boot-maven-plugin build-info to package phase

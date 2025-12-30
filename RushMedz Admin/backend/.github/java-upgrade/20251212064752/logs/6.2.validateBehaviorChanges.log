@@ -1,0 +1,218 @@
+2025-12-12T06:52:47.965Z [INFO] Getting code changes using `git diff`...
+2025-12-12T06:52:48.095Z [INFO] diff --git a/backend/data/epharma.lock.db b/backend/data/epharma.lock.db
+deleted file mode 100644
+index a06450f..0000000
+--- a/backend/data/epharma.lock.db
++++ /dev/null
+@@ -1,6 +0,0 @@
+-#FileLock
+-#Fri Dec 12 14:24:12 PST 2025
+-server=192.168.1.63\:57534
+-hostName=host.docker.internal
+-method=file
+-id=19b113b30d08fc62765f7d6e67b08cbdb2435a5e398
+diff --git a/backend/pom.xml b/backend/pom.xml
+index 8e4d158..d3cb7fd 100644
+--- a/backend/pom.xml
++++ b/backend/pom.xml
+@@ -16,8 +16,8 @@
+     <description>Backend service for Epharma Ecosystem</description>
+ 
+     <properties>
+-        <java.version>17</java.version>
+-        <maven.compiler.release>17</maven.compiler.release>
++        <java.version>21</java.version>
++        <maven.compiler.release>21</maven.compiler.release>
+     </properties>
+ 
+     <dependencies>
+diff --git a/backend/src/main/java/com/epharma/ecosystem/service/OTPService.java b/backend/src/main/java/com/epharma/ecosystem/service/OTPService.java
+index 03a7cea..4e08a6b 100644
+--- a/backend/src/main/java/com/epharma/ecosystem/service/OTPService.java
++++ b/backend/src/main/java/com/epharma/ecosystem/service/OTPService.java
+@@ -3,6 +3,7 @@ package com.epharma.ecosystem.service;
+ import com.epharma.ecosystem.model.OTPRecord;
+ import org.springframework.stereotype.Service;
+ import java.util.concurrent.ConcurrentHashMap;
++import java.util.concurrent.ThreadLocalRandom;
+ 
+ /**
+  * OTPService handles OTP generation, storage, and validation
+@@ -139,7 +140,7 @@ public class OTPService {
+     }
+ 
+     private String generateRandomOTP() {
+-        int otp = 100000 + (int) (Math.random() * 900000);
++        int otp = 100000 + (int) (ThreadLocalRandom.current().nextDouble() * 900000);
+         return String.valueOf(otp);
+     }
+ 
+diff --git a/backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java b/backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java
+index fa3484e..1e785b9 100644
+--- a/backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java
++++ b/backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java
+@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
+ import org.springframework.stereotype.Service;
+ import java.io.OutputStream;
+ import java.net.HttpURLConnection;
++import java.net.URI;
+ import java.net.URL;
+ import java.net.URLEncoder;
+ import java.nio.charset.StandardCharsets;
+@@ -93,7 +94,7 @@ public class SMSGatewayService {
+                 + "\"text\":\"" + escapeJSON(message) + "\""
+                 + "}";
+ 
+-        URL url = new URL(apiUrl);
++        URL url = URI.create(apiUrl).toURL();
+         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+         conn.setRequestMethod("POST");
+         conn.setRequestProperty("Content-Type", "application/json");
+@@ -143,7 +144,7 @@ public class SMSGatewayService {
+      * Send generic HTTP request
+      */
+     private boolean sendHTTPRequest(String apiUrl, String payload, String method) throws Exception {
+-        URL url = new URL(apiUrl);
++        URL url = URI.create(apiUrl).toURL();
+         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+         conn.setRequestMethod(method);
+         conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+
+2025-12-12T06:52:48.107Z [INFO] diff content: 
+ diff --git a/backend/data/epharma.lock.db b/backend/data/epharma.lock.db
+deleted file mode 100644
+index a06450f..0000000
+--- a/backend/data/epharma.lock.db
++++ /dev/null
+@@ -1,6 +0,0 @@
+-#FileLock
+-#Fri Dec 12 14:24:12 PST 2025
+-server=192.168.1.63\:57534
+-hostName=host.docker.internal
+-method=file
+-id=19b113b30d08fc62765f7d6e67b08cbdb2435a5e398
+diff --git a/backend/pom.xml b/backend/pom.xml
+index 8e4d158..d3cb7fd 100644
+--- a/backend/pom.xml
++++ b/backend/pom.xml
+@@ -16,8 +16,8 @@
+     <description>Backend service for Epharma Ecosystem</description>
+ 
+     <properties>
+-        <java.version>17</java.version>
+-        <maven.compiler.release>17</maven.compiler.release>
++        <java.version>21</java.version>
++        <maven.compiler.release>21</maven.compiler.release>
+     </properties>
+ 
+     <dependencies>
+diff --git a/backend/src/main/java/com/epharma/ecosystem/service/OTPService.java b/backend/src/main/java/com/epharma/ecosystem/service/OTPService.java
+index 03a7cea..4e08a6b 100644
+--- a/backend/src/main/java/com/epharma/ecosystem/service/OTPService.java
++++ b/backend/src/main/java/com/epharma/ecosystem/service/OTPService.java
+@@ -3,6 +3,7 @@ package com.epharma.ecosystem.service;
+ import com.epharma.ecosystem.model.OTPRecord;
+ import org.springframework.stereotype.Service;
+ import java.util.concurrent.ConcurrentHashMap;
++import java.util.concurrent.ThreadLocalRandom;
+ 
+ /**
+  * OTPService handles OTP generation, storage, and validation
+@@ -139,7 +140,7 @@ public class OTPService {
+     }
+ 
+     private String generateRandomOTP() {
+-        int otp = 100000 + (int) (Math.random() * 900000);
++        int otp = 100000 + (int) (ThreadLocalRandom.current().nextDouble() * 900000);
+         return String.valueOf(otp);
+     }
+ 
+diff --git a/backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java b/backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java
+index fa3484e..1e785b9 100644
+--- a/backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java
++++ b/backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java
+@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
+ import org.springframework.stereotype.Service;
+ import java.io.OutputStream;
+ import java.net.HttpURLConnection;
++import java.net.URI;
+ import java.net.URL;
+ import java.net.URLEncoder;
+ import java.nio.charset.StandardCharsets;
+@@ -93,7 +94,7 @@ public class SMSGatewayService {
+                 + "\"text\":\"" + escapeJSON(message) + "\""
+                 + "}";
+ 
+-        URL url = new URL(apiUrl);
++        URL url = URI.create(apiUrl).toURL();
+         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+         conn.setRequestMethod("POST");
+         conn.setRequestProperty("Content-Type", "application/json");
+@@ -143,7 +144,7 @@ public class SMSGatewayService {
+      * Send generic HTTP request
+      */
+     private boolean sendHTTPRequest(String apiUrl, String payload, String method) throws Exception {
+-        URL url = new URL(apiUrl);
++        URL url = URI.create(apiUrl).toURL();
+         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+         conn.setRequestMethod(method);
+         conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+2025-12-12T06:52:48.111Z [INFO] Validating code behavior changes...
+2025-12-12T06:52:48.113Z [INFO] [unknown]: there are 78 lines.
+2025-12-12T06:52:50.357Z [INFO] [unknown]: there are 871 tokens.
+2025-12-12T06:52:50.357Z [INFO] [unknown]: no need to split the diff file.
+2025-12-12T06:52:50.358Z [INFO] summarizing behavior changes...
+2025-12-12T06:52:50.359Z [INFO] summarizing behavior changes of part 1...
+2025-12-12T06:53:00.976Z [INFO] summarized behavior changes of part 1.
+2025-12-12T06:53:00.977Z [INFO] summarized behavior changes of all parts.
+2025-12-12T06:53:00.977Z [INFO] summarizing behavior changes...
+2025-12-12T06:53:00.978Z [INFO] summarizing behavior changes of part 1...
+2025-12-12T06:53:09.509Z [INFO] summarized behavior changes of part 1.
+2025-12-12T06:53:09.510Z [INFO] summarized behavior changes of all parts.
+2025-12-12T06:53:09.510Z [INFO] summarizing behavior changes...
+2025-12-12T06:53:09.510Z [INFO] summarizing behavior changes of part 1...
+2025-12-12T06:53:28.281Z [INFO] summarized behavior changes of part 1.
+2025-12-12T06:53:28.281Z [INFO] summarized behavior changes of all parts.
+2025-12-12T06:53:28.282Z [INFO] {
+  "backend/src/main/java/com/epharma/ecosystem/service/OTPService.java": [
+    {
+      "hunkHeader": "@@ -139,7 +140,7 @@",
+      "before": "The OTP is generated using `(int) (Math.random() * 900000)`, which produces a pseudo-random double between 0.0 and 1.0, multiplies it by 900000, and adds 100000 to get a 6-digit number.",
+      "after": "The OTP is generated using `(int) (ThreadLocalRandom.current().nextDouble() * 900000)`, which also produces a pseudo-random double between 0.0 and 1.0, multiplies it by 900000, and adds 100000 to get a 6-digit number.",
+      "change": "The random number generation source has changed from `Math.random()` (which uses a global Random instance) to `ThreadLocalRandom.current().nextDouble()` (which uses a thread-local random generator). Both approaches generate a 6-digit OTP in the same numeric range. The change may affect the distribution of generated OTPs in multi-threaded environments, but the functional behavior (generating a 6-digit random OTP) remains equivalent for typical use cases.",
+      "severity": [
+        "minor",
+        "minor",
+        "minor"
+      ],
+      "validationTimes": 3
+    }
+  ],
+  "backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java": [
+    {
+      "hunkHeader": "@@ -93,7 +94,7 @@",
+      "before": "A `URL` object is created directly from the `apiUrl` string using `new URL(apiUrl)`, which parses the string and throws a `MalformedURLException` if the URL is invalid.",
+      "after": "A `URI` object is created from the `apiUrl` string using `URI.create(apiUrl)`, and then converted to a `URL` object using `.toURL()`. This also throws an exception if the URL is invalid.",
+      "change": "The method of constructing the `URL` object has changed from direct instantiation to first creating a `URI` and then converting it to a `URL`. For valid URLs, the behavior is functionally equivalent. However, if the `apiUrl` contains characters that are valid in a URL but not in a URI, this could cause a `URISyntaxException` or other issues. The likelihood of such a difference is low for typical API URLs, but there is a minor risk of runtime differences if malformed URLs are provided.",
+      "severity": [
+        "minor",
+        "minor",
+        "minor"
+      ],
+      "validationTimes": 3
+    },
+    {
+      "hunkHeader": "@@ -143,7 +144,7 @@",
+      "before": "A `URL` object is created directly from the `apiUrl` string using `new URL(apiUrl)`.",
+      "after": "A `URI` object is created from the `apiUrl` string using `URI.create(apiUrl)`, and then converted to a `URL` object using `.toURL()`.",
+      "change": "Same as above: The change in URL construction could result in different exceptions or behavior if the `apiUrl` string is not a valid URI, but for typical valid URLs, the functional behavior remains the same.",
+      "severity": [
+        "minor",
+        "minor",
+        "minor"
+      ],
+      "validationTimes": 3
+    }
+  ]
+}
+2025-12-12T06:53:28.282Z [INFO] Done validating code behavior changes...

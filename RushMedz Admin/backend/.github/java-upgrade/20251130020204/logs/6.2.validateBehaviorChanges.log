@@ -1,0 +1,176 @@
+2025-11-30T02:16:06.575Z [INFO] Getting code changes using `git diff`...
+2025-11-30T02:16:06.704Z [INFO] diff --git a/backend/data/epharma.lock.db b/backend/data/epharma.lock.db
+deleted file mode 100644
+index 21eec29..0000000
+--- a/backend/data/epharma.lock.db
++++ /dev/null
+@@ -1,6 +0,0 @@
+-#FileLock
+-#Sat Nov 29 20:43:43 PST 2025
+-server=192.168.1.63\:55551
+-hostName=host.docker.internal
+-method=file
+-id=19acfa3fea12129212c45524419bbb98404c89dda8d
+diff --git a/backend/pom.xml b/backend/pom.xml
+index 816f7da..e2da6c2 100644
+--- a/backend/pom.xml
++++ b/backend/pom.xml
+@@ -16,8 +16,8 @@
+     <description>Backend service for Epharma Ecosystem</description>
+ 
+     <properties>
+-        <java.version>17</java.version>
+-        <maven.compiler.release>17</maven.compiler.release>
++        <java.version>21</java.version>
++        <maven.compiler.release>21</maven.compiler.release>
+     </properties>
+ 
+     <dependencies>
+@@ -91,9 +91,9 @@
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-compiler-plugin</artifactId>
+-                <version>3.11.0</version>
++                <version>3.14.1</version>
+                 <configuration>
+-                    <release>${maven.compiler.release}</release>
++                    <release>${java.version}</release>
+                 </configuration>
+             </plugin>
+         </plugins>
+diff --git a/backend/src/main/java/com/epharma/ecosystem/controller/PaymentController.java b/backend/src/main/java/com/epharma/ecosystem/controller/PaymentController.java
+index c417c72..bd1fda5 100644
+--- a/backend/src/main/java/com/epharma/ecosystem/controller/PaymentController.java
++++ b/backend/src/main/java/com/epharma/ecosystem/controller/PaymentController.java
+@@ -311,7 +311,7 @@ public class PaymentController {
+             byte[] hmac = mac.doFinal(payload.getBytes(StandardCharsets.UTF_8));
+             StringBuilder sb = new StringBuilder();
+             for (byte b : hmac) {
+-                sb.append(String.format("%02x", b));
++                sb.append("%02x".formatted(b));
+             }
+             String computed = sb.toString();
+             return computed.equalsIgnoreCase(signatureHex);
+diff --git a/backend/src/main/java/com/epharma/ecosystem/service/PaymentService.java b/backend/src/main/java/com/epharma/ecosystem/service/PaymentService.java
+index adca1cc..1934543 100644
+--- a/backend/src/main/java/com/epharma/ecosystem/service/PaymentService.java
++++ b/backend/src/main/java/com/epharma/ecosystem/service/PaymentService.java
+@@ -215,7 +215,7 @@ public class PaymentService {
+     }
+ 
+     private String generatePaymentUrl(String method, String transactionId, Double amount) {
+-        return String.format("https://payment-gateway.epharma.com/%s/checkout?tx=%s&amount=%.2f",
++        return "https://payment-gateway.epharma.com/%s/checkout?tx=%s&amount=%.2f".formatted(
+             method.toLowerCase(), transactionId, amount);
+     }
+ 
+diff --git a/backend/src/test/java/com/epharma/ecosystem/controller/PaymentControllerTest.java b/backend/src/test/java/com/epharma/ecosystem/controller/PaymentControllerTest.java
+index 7d2be5e..47cad9f 100644
+--- a/backend/src/test/java/com/epharma/ecosystem/controller/PaymentControllerTest.java
++++ b/backend/src/test/java/com/epharma/ecosystem/controller/PaymentControllerTest.java
+@@ -32,7 +32,7 @@ public class PaymentControllerTest {
+         mac.init(new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), "HmacSHA256"));
+         byte[] hmac = mac.doFinal(payload.getBytes(StandardCharsets.UTF_8));
+         StringBuilder sb = new StringBuilder();
+-        for (byte b : hmac) { sb.append(String.format("%02x", b)); }
++        for (byte b : hmac) { sb.append("%02x".formatted(b)); }
+         return sb.toString();
+     }
+ 
+
+2025-11-30T02:16:06.715Z [INFO] diff content: 
+ diff --git a/backend/data/epharma.lock.db b/backend/data/epharma.lock.db
+deleted file mode 100644
+index 21eec29..0000000
+--- a/backend/data/epharma.lock.db
++++ /dev/null
+@@ -1,6 +0,0 @@
+-#FileLock
+-#Sat Nov 29 20:43:43 PST 2025
+-server=192.168.1.63\:55551
+-hostName=host.docker.internal
+-method=file
+-id=19acfa3fea12129212c45524419bbb98404c89dda8d
+diff --git a/backend/pom.xml b/backend/pom.xml
+index 816f7da..e2da6c2 100644
+--- a/backend/pom.xml
++++ b/backend/pom.xml
+@@ -16,8 +16,8 @@
+     <description>Backend service for Epharma Ecosystem</description>
+ 
+     <properties>
+-        <java.version>17</java.version>
+-        <maven.compiler.release>17</maven.compiler.release>
++        <java.version>21</java.version>
++        <maven.compiler.release>21</maven.compiler.release>
+     </properties>
+ 
+     <dependencies>
+@@ -91,9 +91,9 @@
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-compiler-plugin</artifactId>
+-                <version>3.11.0</version>
++                <version>3.14.1</version>
+                 <configuration>
+-                    <release>${maven.compiler.release}</release>
++                    <release>${java.version}</release>
+                 </configuration>
+             </plugin>
+         </plugins>
+diff --git a/backend/src/main/java/com/epharma/ecosystem/controller/PaymentController.java b/backend/src/main/java/com/epharma/ecosystem/controller/PaymentController.java
+index c417c72..bd1fda5 100644
+--- a/backend/src/main/java/com/epharma/ecosystem/controller/PaymentController.java
++++ b/backend/src/main/java/com/epharma/ecosystem/controller/PaymentController.java
+@@ -311,7 +311,7 @@ public class PaymentController {
+             byte[] hmac = mac.doFinal(payload.getBytes(StandardCharsets.UTF_8));
+             StringBuilder sb = new StringBuilder();
+             for (byte b : hmac) {
+-                sb.append(String.format("%02x", b));
++                sb.append("%02x".formatted(b));
+             }
+             String computed = sb.toString();
+             return computed.equalsIgnoreCase(signatureHex);
+diff --git a/backend/src/main/java/com/epharma/ecosystem/service/PaymentService.java b/backend/src/main/java/com/epharma/ecosystem/service/PaymentService.java
+index adca1cc..1934543 100644
+--- a/backend/src/main/java/com/epharma/ecosystem/service/PaymentService.java
++++ b/backend/src/main/java/com/epharma/ecosystem/service/PaymentService.java
+@@ -215,7 +215,7 @@ public class PaymentService {
+     }
+ 
+     private String generatePaymentUrl(String method, String transactionId, Double amount) {
+-        return String.format("https://payment-gateway.epharma.com/%s/checkout?tx=%s&amount=%.2f",
++        return "https://payment-gateway.epharma.com/%s/checkout?tx=%s&amount=%.2f".formatted(
+             method.toLowerCase(), transactionId, amount);
+     }
+ 
+diff --git a/backend/src/test/java/com/epharma/ecosystem/controller/PaymentControllerTest.java b/backend/src/test/java/com/epharma/ecosystem/controller/PaymentControllerTest.java
+index 7d2be5e..47cad9f 100644
+--- a/backend/src/test/java/com/epharma/ecosystem/controller/PaymentControllerTest.java
++++ b/backend/src/test/java/com/epharma/ecosystem/controller/PaymentControllerTest.java
+@@ -32,7 +32,7 @@ public class PaymentControllerTest {
+         mac.init(new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), "HmacSHA256"));
+         byte[] hmac = mac.doFinal(payload.getBytes(StandardCharsets.UTF_8));
+         StringBuilder sb = new StringBuilder();
+-        for (byte b : hmac) { sb.append(String.format("%02x", b)); }
++        for (byte b : hmac) { sb.append("%02x".formatted(b)); }
+         return sb.toString();
+     }
+2025-11-30T02:16:06.718Z [INFO] Validating code behavior changes...
+2025-11-30T02:16:06.721Z [INFO] [unknown]: there are 77 lines.
+2025-11-30T02:16:07.566Z [INFO] [unknown]: there are 971 tokens.
+2025-11-30T02:16:07.567Z [INFO] [unknown]: no need to split the diff file.
+2025-11-30T02:16:07.567Z [INFO] summarizing behavior changes...
+2025-11-30T02:16:07.568Z [INFO] summarizing behavior changes of part 1...
+2025-11-30T02:16:08.224Z [INFO] summarized behavior changes of part 1.
+2025-11-30T02:16:08.224Z [INFO] summarized behavior changes of all parts.
+2025-11-30T02:16:08.225Z [INFO] summarizing behavior changes...
+2025-11-30T02:16:08.225Z [INFO] summarizing behavior changes of part 1...
+2025-11-30T02:16:08.810Z [INFO] summarized behavior changes of part 1.
+2025-11-30T02:16:08.810Z [INFO] summarized behavior changes of all parts.
+2025-11-30T02:16:08.810Z [INFO] summarizing behavior changes...
+2025-11-30T02:16:08.810Z [INFO] summarizing behavior changes of part 1...
+2025-11-30T02:16:09.342Z [INFO] summarized behavior changes of part 1.
+2025-11-30T02:16:09.343Z [INFO] summarized behavior changes of all parts.
+2025-11-30T02:16:09.343Z [INFO] {}
+2025-11-30T02:16:09.343Z [INFO] Done validating code behavior changes...

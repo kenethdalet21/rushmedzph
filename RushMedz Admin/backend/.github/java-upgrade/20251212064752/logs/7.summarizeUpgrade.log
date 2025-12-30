@@ -1,0 +1,420 @@
+2025-12-12T06:54:50.044Z [INFO] [Project backend]: getting Java version.
+2025-12-12T06:54:50.045Z [INFO] [Project backend]: got Java version: 21
+2025-12-12T06:54:50.046Z [INFO] [Project backend]: getting project state.
+2025-12-12T06:54:50.046Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2025-12-12T06:54:50.047Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 21.0.8, vendor: Microsoft, runtime: C:\Users\Keneth Dale Tuazon\.jdk\jdk-21.0.8
+Default locale: en_PH, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-12-12T06:54:50.563Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2025-12-12T06:54:50.563Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-12-12T06:54:50.563Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-12T06:54:50.563Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-12-12T06:54:50.565Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-12-12T06:54:50.565Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2025-12-12T06:54:50.566Z [INFO] [Project backend]: getting Java version.
+2025-12-12T06:54:50.566Z [INFO] [Project backend]: got Java version: 21
+2025-12-12T06:54:50.566Z [INFO] [Project backend]: getting dependencies promise.
+2025-12-12T06:54:50.566Z [INFO] [Project backend]: reset dependencies promise.
+2025-12-12T06:54:50.567Z [INFO] [Environment] Running command (Java 21): mvn dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.epharma.ecosystem:backend >--------------------
+[INFO] Building Epharma Ecosystem Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.1:tree (default-cli) @ backend ---
+[INFO] com.epharma.ecosystem:backend:jar:0.0.1-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:3.3.10:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:3.3.10:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:3.3.10:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.3.10:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.3.10:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.5.18:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.5.18:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.23.1:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.23.1:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:2.0.17:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:2.2:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:3.3.10:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.17.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.17.3:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.17.3:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:3.3.10:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.39:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.39:compile
+[INFO] |  +- org.springframework:spring-web:jar:6.1.18:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:6.1.18:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:6.1.18:compile
+[INFO] |     +- org.springframework:spring-context:jar:6.1.18:compile
+[INFO] |     \- org.springframework:spring-expression:jar:6.1.18:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:3.3.10:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-aop:jar:3.3.10:compile
+[INFO] |  |  \- org.aspectj:aspectjweaver:jar:1.9.23:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:3.3.10:compile
+[INFO] |  |  +- com.zaxxer:HikariCP:jar:5.1.0:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:6.1.18:compile
+[INFO] |  +- org.hibernate.orm:hibernate-core:jar:6.5.3.Final:compile
+[INFO] |  |  +- jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile
+[INFO] |  |  +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.5.3.Final:compile
+[INFO] |  |  +- org.hibernate.common:hibernate-commons-annotations:jar:6.0.6.Final:runtime
+[INFO] |  |  +- io.smallrye:jandex:jar:3.1.2:runtime
+[INFO] |  |  +- com.fasterxml:classmate:jar:1.7.0:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.14.19:runtime
+[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:4.0.5:runtime
+[INFO] |  |  |  \- org.glassfish.jaxb:jaxb-core:jar:4.0.5:runtime
+[INFO] |  |  |     +- org.glassfish.jaxb:txw2:jar:4.0.5:runtime
+[INFO] |  |  |     \- com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime
+[INFO] |  |  +- jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime
+[INFO] |  |  \- org.antlr:antlr4-runtime:jar:4.13.0:compile
+[INFO] |  +- org.springframework.data:spring-data-jpa:jar:3.3.10:compile
+[INFO] |  |  +- org.springframework.data:spring-data-commons:jar:3.3.10:compile
+[INFO] |  |  +- org.springframework:spring-orm:jar:6.1.18:compile
+[INFO] |  |  +- org.springframework:spring-tx:jar:6.1.18:compile
+[INFO] |  |  \- org.slf4j:slf4j-api:jar:2.0.17:compile
+[INFO] |  \- org.springframework:spring-aspects:jar:6.1.18:compile
+[INFO] +- com.h2database:h2:jar:2.2.224:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-validation:jar:3.3.10:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.39:compile
+[INFO] |  \- org.hibernate.validator:hibernate-validator:jar:8.0.2.Final:compile
+[INFO] |     \- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:3.3.10:compile
+[INFO] |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:3.3.10:compile
+[INFO] |  |  \- org.springframework.boot:spring-boot-actuator:jar:3.3.10:compile
+[INFO] |  +- io.micrometer:micrometer-observation:jar:1.13.12:compile
+[INFO] |  |  \- io.micrometer:micrometer-commons:jar:1.13.12:compile
+[INFO] |  \- io.micrometer:micrometer-jakarta9:jar:1.13.12:compile
+[INFO] |     \- io.micrometer:micrometer-core:jar:1.13.12:compile
+[INFO] |        +- org.hdrhistogram:HdrHistogram:jar:2.2.2:runtime
+[INFO] |        \- org.latencyutils:LatencyUtils:jar:2.0.3:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:3.3.10:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:3.3.10:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:3.3.10:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.9.0:test
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.2:runtime
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:2.1.3:compile
+[INFO] |  +- net.minidev:json-smart:jar:2.5.2:test
+[INFO] |  |  \- net.minidev:accessors-smart:jar:2.5.2:test
+[INFO] |  |     \- org.ow2.asm:asm:jar:9.7.1:test
+[INFO] |  +- org.assertj:assertj-core:jar:3.25.3:test
+[INFO] |  +- org.awaitility:awaitility:jar:4.2.2:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:2.2:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.10.5:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.10.5:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO] |  |  |  +- org.junit.platform:junit-platform-commons:jar:1.10.5:test
+[INFO] |  |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.10.5:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.10.5:test
+[INFO] |  |     \- org.junit.platform:junit-platform-engine:jar:1.10.5:test
+[INFO] |  +- org.mockito:mockito-core:jar:5.11.0:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.14.19:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:3.3:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:5.11.0:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.3:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:6.1.18:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:6.1.18:compile
+[INFO] |  +- org.springframework:spring-test:jar:6.1.18:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.9.1:test
+[INFO] +- org.springframework.boot:spring-boot-starter-security:jar:3.3.10:compile
+[INFO] |  +- org.springframework:spring-aop:jar:6.1.18:compile
+[INFO] |  +- org.springframework.security:spring-security-config:jar:6.3.8:compile
+[INFO] |  |  \- org.springframework.security:spring-security-core:jar:6.3.8:compile
+[INFO] |  |     \- org.springframework.security:spring-security-crypto:jar:6.3.8:compile
+[INFO] |  \- org.springframework.security:spring-security-web:jar:6.3.8:compile
+[INFO] +- io.jsonwebtoken:jjwt-api:jar:0.11.5:compile
+[INFO] +- io.jsonwebtoken:jjwt-impl:jar:0.11.5:runtime
+[INFO] +- io.jsonwebtoken:jjwt-jackson:jar:0.11.5:runtime
+[INFO] |  \- com.fasterxml.jackson.core:jackson-databind:jar:2.17.3:compile
+[INFO] |     +- com.fasterxml.jackson.core:jackson-annotations:jar:2.17.3:compile
+[INFO] |     \- com.fasterxml.jackson.core:jackson-core:jar:2.17.3:compile
+[INFO] \- org.springframework.boot:spring-boot-starter-mail:jar:3.3.10:compile
+[INFO]    +- org.springframework:spring-context-support:jar:6.1.18:compile
+[INFO]    \- org.eclipse.angus:jakarta.mail:jar:2.0.3:compile
+[INFO]       \- org.eclipse.angus:angus-activation:jar:2.0.2:runtime
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.164 s
+[INFO] Finished at: 2025-12-12T14:55:12+08:00
+[INFO] ------------------------------------------------------------------------
+2025-12-12T06:55:12.435Z [INFO] [MavenBuildTool] Successfully got dependency tree of d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-12T06:55:12.436Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-12-12T06:55:12.436Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-12T06:55:12.437Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-12-12T06:55:12.438Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-12-12T06:55:12.438Z [INFO] [MavenBuildTool] Getting build errors of d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-12T06:55:12.438Z [INFO] [Environment] Running command (Java 21): mvn clean test-compile -q -B -fn
+2025-12-12T06:55:22.002Z [INFO] [MavenBuildTool] parsing compilation errors.
+2025-12-12T06:55:22.002Z [INFO] [BaseBuildTool] Found 1 modules: .
+2025-12-12T06:55:22.018Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2025-12-12T06:55:22.018Z [INFO] [MavenBuildTool] Cleaning d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-12T06:55:22.019Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2025-12-12T06:55:25.557Z [INFO] [MavenBuildTool] Running test cases of d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-12T06:55:25.558Z [INFO] [Environment] Running command (Java 21): mvn clean test -q -B -fn
+14:55:37.194 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.epharma.ecosystem.controller.PaymentControllerTest]: PaymentControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:55:37.469 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.epharma.ecosystem.EpharmaApplication for test class com.epharma.ecosystem.controller.PaymentControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.3.10)
+
+2025-12-12T14:55:38.340+08:00  INFO 4108 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : Starting PaymentControllerTest using Java 21.0.8 with PID 4108 (started by Keneth Dale Tuazon in d:\Epharmacy Application\Epharma_Ecosystem\backend)
+2025-12-12T14:55:38.342+08:00 DEBUG 4108 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : Running with Spring Boot v3.3.10, Spring v6.1.18
+2025-12-12T14:55:38.343+08:00  INFO 4108 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2025-12-12T14:55:38.369+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@669d2b1b
+2025-12-12T14:55:40.320+08:00  INFO 4108 --- [epharma-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-12T14:55:40.426+08:00  INFO 4108 --- [epharma-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 3 JPA repository interfaces.
+2025-12-12T14:55:41.947+08:00  INFO 4108 --- [epharma-backend] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-12T14:55:42.070+08:00  INFO 4108 --- [epharma-backend] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-12-12T14:55:42.140+08:00  INFO 4108 --- [epharma-backend] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-12T14:55:42.945+08:00  INFO 4108 --- [epharma-backend] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-12T14:55:43.009+08:00  INFO 4108 --- [epharma-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-12T14:55:43.525+08:00  INFO 4108 --- [epharma-backend] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./data/epharma user=SA
+2025-12-12T14:55:43.527+08:00  INFO 4108 --- [epharma-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-12T14:55:45.001+08:00  INFO 4108 --- [epharma-backend] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: alter table if exists products alter column description set data type TEXT
+2025-12-12T14:55:45.071+08:00  INFO 4108 --- [epharma-backend] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-12T14:55:46.530+08:00  WARN 4108 --- [epharma-backend] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-12T14:55:46.646+08:00  WARN 4108 --- [epharma-backend] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e0fcaaee-2a6c-4454-9194-3ac25e3798b4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-12T14:55:46.700+08:00  INFO 4108 --- [epharma-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-12T14:55:47.117+08:00 DEBUG 4108 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2025-12-12T14:55:47.447+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-12-12T14:55:47.946+08:00  INFO 4108 --- [epharma-backend] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-12-12T14:55:48.478+08:00 DEBUG 4108 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-12T14:55:48.551+08:00 DEBUG 4108 --- [epharma-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-12T14:55:48.943+08:00  INFO 4108 --- [epharma-backend] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/epharma'
+2025-12-12T14:55:49.173+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-12-12T14:55:49.173+08:00 DEBUG 4108 --- [epharma-backend] [           main] c.e.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-12-12T14:55:49.175+08:00  INFO 4108 --- [epharma-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-12-12T14:55:49.175+08:00  INFO 4108 --- [epharma-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-12-12T14:55:49.178+08:00  INFO 4108 --- [epharma-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-12-12T14:55:49.316+08:00  INFO 4108 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : Started PaymentControllerTest in 11.496 seconds (process running for 13.414)
+WARNING: A Java agent has been loaded dynamically (C:\Users\Keneth Dale Tuazon\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2025-12-12T14:55:50.359+08:00 DEBUG 4108 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handlePayPalWebhook(HttpServletRequest, String)
+2025-12-12T14:55:50.395+08:00 DEBUG 4108 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:55:50.442+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:55:50.444+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Invalid signature}]
+2025-12-12T14:55:50.547+08:00 DEBUG 4108 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handleGCashWebhook(HttpServletRequest, String)
+2025-12-12T14:55:50.549+08:00 DEBUG 4108 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:55:50.551+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:55:50.552+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Invalid signature}]
+2025-12-12T14:55:50.583+08:00 DEBUG 4108 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handlePayMayaWebhook(HttpServletRequest, String)
+2025-12-12T14:55:50.584+08:00 DEBUG 4108 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:55:50.586+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:55:50.587+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Invalid signature}]
+2025-12-12T14:55:50.617+08:00 DEBUG 4108 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handlePayMayaWebhook(HttpServletRequest, String)
+2025-12-12T14:55:50.619+08:00 DEBUG 4108 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:55:50.634+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:55:50.635+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=ok}]
+2025-12-12T14:55:50.652+08:00 DEBUG 4108 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handlePayPalWebhook(HttpServletRequest, String)
+2025-12-12T14:55:50.653+08:00 DEBUG 4108 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:55:50.655+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:55:50.656+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=ok}]
+2025-12-12T14:55:50.672+08:00 DEBUG 4108 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handleRazorpayWebhook(HttpServletRequest, String)
+2025-12-12T14:55:50.674+08:00 DEBUG 4108 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:55:50.676+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:55:50.676+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Invalid signature}]
+2025-12-12T14:55:50.696+08:00 DEBUG 4108 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handleRazorpayWebhook(HttpServletRequest, String)
+2025-12-12T14:55:50.698+08:00 DEBUG 4108 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:55:50.699+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:55:50.700+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=ok}]
+2025-12-12T14:55:50.720+08:00 DEBUG 4108 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handleGCashWebhook(HttpServletRequest, String)
+2025-12-12T14:55:50.721+08:00 DEBUG 4108 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:55:50.724+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:55:50.725+08:00 DEBUG 4108 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=ok}]
+2025-12-12T06:55:51.359Z [INFO] [MavenBuildTool] loading surefire reports.
+2025-12-12T06:55:51.368Z [INFO] [MavenBuildTool] summarizing surefire reports.
+2025-12-12T06:55:51.368Z [INFO] [MavenBuildTool] Cleaning d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-12T06:55:51.369Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2025-12-12T06:55:54.784Z [INFO] Add test changes to summary...
+2025-12-12T06:55:54.902Z [INFO] 0	6	backend/data/epharma.lock.db
+2	2	backend/pom.xml
+2	1	backend/src/main/java/com/epharma/ecosystem/service/OTPService.java
+3	2	backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java
+
+2025-12-12T06:55:54.912Z [INFO] Add test errors to summary...
+2025-12-12T06:55:54.913Z [INFO] getting CVEs for dependencies:
+ - org.springframework.boot:spring-boot-starter-web:3.3.10
+  - org.springframework.boot:spring-boot-starter-data-jpa:3.3.10
+  - com.h2database:h2:2.2.224
+  - org.springframework.boot:spring-boot-starter-validation:3.3.10
+  - org.springframework.boot:spring-boot-starter-actuator:3.3.10
+  - org.springframework.boot:spring-boot-starter-test:3.3.10
+  - org.springframework.boot:spring-boot-starter-security:3.3.10
+  - io.jsonwebtoken:jjwt-api:0.11.5
+  - io.jsonwebtoken:jjwt-impl:0.11.5
+  - io.jsonwebtoken:jjwt-jackson:0.11.5
+  - org.springframework.boot:spring-boot-starter-mail:3.3.10
+  - java:*:21...
+2025-12-12T06:55:54.914Z [INFO] getting gitHub access token...
+2025-12-12T06:55:54.922Z [INFO] Processing batch 1/1, size: 12
+2025-12-12T06:55:54.923Z [INFO] listing CVEs from GithHub for dependencies [
+  {
+    "name": "org.springframework.boot:spring-boot-starter-web",
+    "version": "3.3.10"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-data-jpa",
+    "version": "3.3.10"
+  },
+  {
+    "name": "com.h2database:h2",
+    "version": "2.2.224"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-validation",
+    "version": "3.3.10"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-actuator",
+    "version": "3.3.10"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-test",
+    "version": "3.3.10"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-security",
+    "version": "3.3.10"
+  },
+  {
+    "name": "io.jsonwebtoken:jjwt-api",
+    "version": "0.11.5"
+  },
+  {
+    "name": "io.jsonwebtoken:jjwt-impl",
+    "version": "0.11.5"
+  },
+  {
+    "name": "io.jsonwebtoken:jjwt-jackson",
+    "version": "0.11.5"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-mail",
+    "version": "3.3.10"
+  },
+  {
+    "name": "java:*",
+    "version": "21"
+  }
+]
+2025-12-12T06:55:55.909Z [INFO] found 0 CVEs for dependencies
+2025-12-12T06:55:55.909Z [INFO] grouping CVEs and finding min patched version by dep...
+2025-12-12T06:55:55.909Z [INFO] done getting 0 CVEs for 12 dependencies
+2025-12-12T06:55:56.007Z [INFO] diff --git a/backend/data/epharma.lock.db b/backend/data/epharma.lock.db
+deleted file mode 100644
+index a06450f..0000000
+--- a/backend/data/epharma.lock.db
++++ /dev/null
+@@ -1,6 +0,0 @@
+-#FileLock
+-#Fri Dec 12 14:24:12 PST 2025
+-server=192.168.1.63\:57534
+-hostName=host.docker.internal
+-method=file
+-id=19b113b30d08fc62765f7d6e67b08cbdb2435a5e398
+diff --git a/backend/pom.xml b/backend/pom.xml
+index 8e4d158..d3cb7fd 100644
+--- a/backend/pom.xml
++++ b/backend/pom.xml
+@@ -16,8 +16,8 @@
+     <description>Backend service for Epharma Ecosystem</description>
+ 
+     <properties>
+-        <java.version>17</java.version>
+-        <maven.compiler.release>17</maven.compiler.release>
++        <java.version>21</java.version>
++        <maven.compiler.release>21</maven.compiler.release>
+     </properties>
+ 
+     <dependencies>
+diff --git a/backend/src/main/java/com/epharma/ecosystem/service/OTPService.java b/backend/src/main/java/com/epharma/ecosystem/service/OTPService.java
+index 03a7cea..4e08a6b 100644
+--- a/backend/src/main/java/com/epharma/ecosystem/service/OTPService.java
++++ b/backend/src/main/java/com/epharma/ecosystem/service/OTPService.java
+@@ -3,6 +3,7 @@ package com.epharma.ecosystem.service;
+ import com.epharma.ecosystem.model.OTPRecord;
+ import org.springframework.stereotype.Service;
+ import java.util.concurrent.ConcurrentHashMap;
++import java.util.concurrent.ThreadLocalRandom;
+ 
+ /**
+  * OTPService handles OTP generation, storage, and validation
+@@ -139,7 +140,7 @@ public class OTPService {
+     }
+ 
+     private String generateRandomOTP() {
+-        int otp = 100000 + (int) (Math.random() * 900000);
++        int otp = 100000 + (int) (ThreadLocalRandom.current().nextDouble() * 900000);
+         return String.valueOf(otp);
+     }
+ 
+diff --git a/backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java b/backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java
+index fa3484e..1e785b9 100644
+--- a/backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java
++++ b/backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java
+@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
+ import org.springframework.stereotype.Service;
+ import java.io.OutputStream;
+ import java.net.HttpURLConnection;
++import java.net.URI;
+ import java.net.URL;
+ import java.net.URLEncoder;
+ import java.nio.charset.StandardCharsets;
+@@ -93,7 +94,7 @@ public class SMSGatewayService {
+                 + "\"text\":\"" + escapeJSON(message) + "\""
+                 + "}";
+ 
+-        URL url = new URL(apiUrl);
++        URL url = URI.create(apiUrl).toURL();
+         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+         conn.setRequestMethod("POST");
+         conn.setRequestProperty("Content-Type", "application/json");
+@@ -143,7 +144,7 @@ public class SMSGatewayService {
+      * Send generic HTTP request
+      */
+     private boolean sendHTTPRequest(String apiUrl, String payload, String method) throws Exception {
+-        URL url = new URL(apiUrl);
++        URL url = URI.create(apiUrl).toURL();
+         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+         conn.setRequestMethod(method);
+         conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+
+2025-12-12T06:55:56.019Z [INFO] [unknown]: getting broken files...
+2025-12-12T06:55:56.019Z [INFO] [unknown]: found 0 broken files.
+2025-12-12T06:55:56.020Z [INFO] [unknown]: there are 78 lines.
+2025-12-12T06:55:56.793Z [INFO] [unknown]: there are 871 tokens.
+2025-12-12T06:55:56.793Z [INFO] [unknown]: no need to split the diff file.
+2025-12-12T06:55:56.793Z [INFO] summarizing behavior changes...
+2025-12-12T06:55:56.794Z [INFO] summarizing behavior changes of part 1...
+2025-12-12T06:56:00.653Z [INFO] summarized behavior changes of part 1.
+2025-12-12T06:56:00.654Z [INFO] summarized behavior changes of all parts.
+2025-12-12T06:56:00.654Z [INFO] summarizing behavior changes...
+2025-12-12T06:56:00.654Z [INFO] summarizing behavior changes of part 1...
+2025-12-12T06:56:08.112Z [INFO] summarized behavior changes of part 1.
+2025-12-12T06:56:08.113Z [INFO] summarized behavior changes of all parts.
+2025-12-12T06:56:08.113Z [INFO] summarizing behavior changes...
+2025-12-12T06:56:08.113Z [INFO] summarizing behavior changes of part 1...
+2025-12-12T06:56:11.745Z [INFO] summarized behavior changes of part 1.
+2025-12-12T06:56:11.745Z [INFO] summarized behavior changes of all parts.

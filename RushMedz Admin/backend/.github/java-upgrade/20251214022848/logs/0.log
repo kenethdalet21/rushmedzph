@@ -1,0 +1,43 @@
+2025-12-14T02:28:48.826Z [INFO] ----------------------invoke generate_upgrade_plan----------------------
+2025-12-14T02:28:48.827Z [INFO] [Tool.invoke]({name: generate_upgrade_plan, input: {
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend",
+  "targetDependencies": [
+    "org.springframework.boot:*:3.5.x"
+  ]
+}}).
+2025-12-14T02:28:48.828Z [INFO] [Plan.tryStartTask]({tool:generate_upgrade_plan, nextTask:{type:undefined, tool:undefined}}
+2025-12-14T02:28:48.828Z [INFO] [Plan.tryStartTask]: no next task, create new one.
+2025-12-14T02:28:48.829Z [INFO] [Plan.createTaskAtStart]({tool: generate_upgrade_plan, input: {
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend",
+  "targetDependencies": [
+    "org.springframework.boot:*:3.5.x"
+  ],
+  "sessionId": "20251214022848"
+}}).
+2025-12-14T02:28:48.830Z [INFO] [Plan.tryStartTask]: starting task generatePlan
+2025-12-14T02:28:48.831Z [INFO] [Task.start](): Starting task generatePlan
+2025-12-14T02:28:48.832Z [INFO] [Task.start](1): Started task generatePlan
+2025-12-14T02:28:48.834Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-14T02:28:48.835Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-14T02:28:48.835Z [INFO] [Tool.invoke] do invoke.
+2025-12-14T02:29:05.362Z [INFO] Project dependencies loaded: [
+  "org.springframework.boot:spring-boot-starter-web:3.3.10:jar",
+  "org.springframework.boot:spring-boot-starter-data-jpa:3.3.10:jar",
+  "com.h2database:h2:2.2.224:jar",
+  "org.springframework.boot:spring-boot-starter-validation:3.3.10:jar",
+  "org.springframework.boot:spring-boot-starter-actuator:3.3.10:jar",
+  "org.springframework.boot:spring-boot-starter-test:3.3.10:jar",
+  "org.springframework.boot:spring-boot-starter-security:3.3.10:jar",
+  "io.jsonwebtoken:jjwt-api:0.11.5:jar",
+  "io.jsonwebtoken:jjwt-impl:0.11.5:jar",
+  "io.jsonwebtoken:jjwt-jackson:0.11.5:jar",
+  "org.springframework.boot:spring-boot-starter-mail:3.3.10:jar"
+]
+2025-12-14T02:29:05.363Z [INFO] Project modules loaded: [
+  "com.epharma.ecosystem:backend:0.0.1-SNAPSHOT"
+]
+2025-12-14T02:29:05.412Z [ERROR] [Tool.invoke] error occurs when invoking tool generate_upgrade_plan: Error: Failed to get git status for d:/Epharmacy Application/Epharma_Ecosystem/backend: 'git' is not recognized as an internal or external command,
+operable program or batch file..
+2025-12-14T02:29:05.413Z [INFO] [Task.complete](1): Completing task generatePlan
+2025-12-14T02:29:05.414Z [INFO] ----------------------invoked generate_upgrade_plan----------------------
+2025-12-14T02:29:05.418Z [INFO] [Task.complete](1): Completed task generatePlan

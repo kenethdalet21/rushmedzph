@@ -1,0 +1,786 @@
+2025-11-30T02:02:05.415Z [INFO] Initializing project configuration...
+2025-11-30T02:02:05.417Z [INFO] Project d:/Epharmacy Application/Epharma_Ecosystem/backend is a maven project, try to get java version from pom.xml
+2025-11-30T02:02:05.426Z [INFO] Project java version: 17
+2025-11-30T02:02:05.427Z [INFO] Maven project detected.
+2025-11-30T02:02:05.428Z [INFO] Build tool type: mvn
+2025-11-30T02:02:07.559Z [INFO] [Environment] Running command (Java 17): java -version
+openjdk version "17.0.11" 2024-04-16 LTS
+OpenJDK Runtime Environment Microsoft-9388408 (build 17.0.11+9-LTS)
+OpenJDK 64-Bit Server VM Microsoft-9388408 (build 17.0.11+9-LTS, mixed mode, sharing)
+2025-11-30T02:02:07.850Z [INFO] [JdkEnvironment] Got real Java version: 17.0.11
+2025-11-30T02:02:07.851Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Java\\jdk-17.0.11+9\\bin",
+  "version": "17"
+}
+2025-11-30T02:02:07.896Z [INFO] [Environment] Running command (Java 17): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 17.0.11, vendor: Microsoft, runtime: C:\Java\jdk-17.0.11+9
+Default locale: en_PH, platform encoding: Cp1252
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-11-30T02:02:17.684Z [INFO] Real build tool version: 3.9.11
+2025-11-30T02:02:17.685Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+  "version": "3.9.11"
+}
+2025-11-30T02:02:17.686Z [INFO] Project config: {
+  "buildTool": {
+    "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+    "name": "mvn",
+    "version": "3.9.11"
+  },
+  "jdk": {
+    "path": "C:\\Java\\jdk-17.0.11+9\\bin",
+    "name": "java",
+    "version": "17"
+  },
+  "name": "backend",
+  "dir": "d:/Epharmacy Application/Epharma_Ecosystem/backend"
+}
+2025-11-30T02:02:17.689Z [INFO] Project configuration initialized: {
+  "buildTool": {
+    "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+    "name": "mvn",
+    "version": "3.9.11"
+  },
+  "jdk": {
+    "path": "C:\\Java\\jdk-17.0.11+9\\bin",
+    "name": "java",
+    "version": "17"
+  },
+  "name": "backend",
+  "dir": "d:/Epharmacy Application/Epharma_Ecosystem/backend"
+}
+2025-11-30T02:02:17.690Z [INFO] Initializing upgrade goals...
+2025-11-30T02:02:17.702Z [INFO] [Environment] Running command (Java 17): mvn dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.epharma.ecosystem:backend >--------------------
+[INFO] Building Epharma Ecosystem Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.1:tree (default-cli) @ backend ---
+[INFO] com.epharma.ecosystem:backend:jar:0.0.1-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:3.3.5:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:3.3.5:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:3.3.5:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.3.5:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.3.5:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.5.11:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.5.11:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.23.1:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.23.1:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:2.0.16:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:2.2:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:3.3.5:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.17.2:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.17.2:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.17.2:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:3.3.5:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.31:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.31:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:6.1.14:compile
+[INFO] |     +- org.springframework:spring-context:jar:6.1.14:compile
+[INFO] |     \- org.springframework:spring-expression:jar:6.1.14:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:3.3.5:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-aop:jar:3.3.5:compile
+[INFO] |  |  \- org.aspectj:aspectjweaver:jar:1.9.22.1:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:3.3.5:compile
+[INFO] |  |  +- com.zaxxer:HikariCP:jar:5.1.0:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:6.1.14:compile
+[INFO] |  +- org.hibernate.orm:hibernate-core:jar:6.5.3.Final:compile
+[INFO] |  |  +- jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile
+[INFO] |  |  +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.5.3.Final:compile
+[INFO] |  |  +- org.hibernate.common:hibernate-commons-annotations:jar:6.0.6.Final:runtime
+[INFO] |  |  +- io.smallrye:jandex:jar:3.1.2:runtime
+[INFO] |  |  +- com.fasterxml:classmate:jar:1.7.0:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.14.19:runtime
+[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:4.0.5:runtime
+[INFO] |  |  |  \- org.glassfish.jaxb:jaxb-core:jar:4.0.5:runtime
+[INFO] |  |  |     +- org.eclipse.angus:angus-activation:jar:2.0.2:runtime
+[INFO] |  |  |     +- org.glassfish.jaxb:txw2:jar:4.0.5:runtime
+[INFO] |  |  |     \- com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime
+[INFO] |  |  +- jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime
+[INFO] |  |  \- org.antlr:antlr4-runtime:jar:4.13.0:compile
+[INFO] |  +- org.springframework.data:spring-data-jpa:jar:3.3.5:compile
+[INFO] |  |  +- org.springframework.data:spring-data-commons:jar:3.3.5:compile
+[INFO] |  |  +- org.springframework:spring-orm:jar:6.1.14:compile
+[INFO] |  |  +- org.springframework:spring-tx:jar:6.1.14:compile
+[INFO] |  |  \- org.slf4j:slf4j-api:jar:2.0.16:compile
+[INFO] |  \- org.springframework:spring-aspects:jar:6.1.14:compile
+[INFO] +- com.h2database:h2:jar:2.2.224:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-validation:jar:3.3.5:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.31:compile
+[INFO] |  \- org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:compile
+[INFO] |     \- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:3.3.5:compile
+[INFO] |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:3.3.5:compile
+[INFO] |  |  \- org.springframework.boot:spring-boot-actuator:jar:3.3.5:compile
+[INFO] |  +- io.micrometer:micrometer-observation:jar:1.13.6:compile
+[INFO] |  |  \- io.micrometer:micrometer-commons:jar:1.13.6:compile
+[INFO] |  \- io.micrometer:micrometer-jakarta9:jar:1.13.6:compile
+[INFO] |     \- io.micrometer:micrometer-core:jar:1.13.6:compile
+[INFO] |        +- org.hdrhistogram:HdrHistogram:jar:2.2.2:runtime
+[INFO] |        \- org.latencyutils:LatencyUtils:jar:2.0.3:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:3.3.5:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:3.3.5:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:3.3.5:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.9.0:test
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.2:runtime
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:2.1.3:runtime
+[INFO] |  +- net.minidev:json-smart:jar:2.5.1:test
+[INFO] |  |  \- net.minidev:accessors-smart:jar:2.5.1:test
+[INFO] |  |     \- org.ow2.asm:asm:jar:9.6:test
+[INFO] |  +- org.assertj:assertj-core:jar:3.25.3:test
+[INFO] |  +- org.awaitility:awaitility:jar:4.2.2:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:2.2:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.10.5:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.10.5:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO] |  |  |  +- org.junit.platform:junit-platform-commons:jar:1.10.5:test
+[INFO] |  |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.10.5:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.10.5:test
+[INFO] |  |     \- org.junit.platform:junit-platform-engine:jar:1.10.5:test
+[INFO] |  +- org.mockito:mockito-core:jar:5.11.0:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.14.19:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:3.3:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:5.11.0:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.3:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:6.1.14:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:6.1.14:compile
+[INFO] |  +- org.springframework:spring-test:jar:6.1.14:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.9.1:test
+[INFO] +- org.springframework:spring-web:jar:6.1.14:compile
+[INFO] |  \- org.springframework:spring-beans:jar:6.1.14:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-security:jar:3.3.5:compile
+[INFO] |  +- org.springframework:spring-aop:jar:6.1.14:compile
+[INFO] |  +- org.springframework.security:spring-security-config:jar:6.3.4:compile
+[INFO] |  |  \- org.springframework.security:spring-security-core:jar:6.3.4:compile
+[INFO] |  |     \- org.springframework.security:spring-security-crypto:jar:6.3.4:compile
+[INFO] |  \- org.springframework.security:spring-security-web:jar:6.3.4:compile
+[INFO] +- io.jsonwebtoken:jjwt-api:jar:0.11.5:compile
+[INFO] +- io.jsonwebtoken:jjwt-impl:jar:0.11.5:runtime
+[INFO] \- io.jsonwebtoken:jjwt-jackson:jar:0.11.5:runtime
+[INFO]    \- com.fasterxml.jackson.core:jackson-databind:jar:2.17.2:compile
+[INFO]       +- com.fasterxml.jackson.core:jackson-annotations:jar:2.17.2:compile
+[INFO]       \- com.fasterxml.jackson.core:jackson-core:jar:2.17.2:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  31.258 s
+[INFO] Finished at: 2025-11-30T10:02:56+08:00
+[INFO] ------------------------------------------------------------------------
+2025-11-30T02:02:56.926Z [INFO] [MavenBuildTool] Successfully got dependency tree of d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-11-30T02:02:56.929Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-11-30T02:02:56.930Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-11-30T02:02:56.931Z [INFO] [MavenBuildTool] Getting all module coordinates of d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-11-30T02:02:56.932Z [INFO] [MavenBuildTool] Getting effective POMs of d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-11-30T02:02:56.933Z [INFO] [Environment] Running command (Java 17): mvn help:effective-pom -Doutput=effective-pom-8fdb462d-1a61-4c49-8f2b-fea0bec018d5.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.epharma.ecosystem:backend >--------------------
+[INFO] Building Epharma Ecosystem Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.4.1:effective-pom (default-cli) @ backend ---
+[INFO] Effective-POM written to: d:\Epharmacy Application\Epharma_Ecosystem\backend\effective-pom-8fdb462d-1a61-4c49-8f2b-fea0bec018d5.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.665 s
+[INFO] Finished at: 2025-11-30T10:03:04+08:00
+[INFO] ------------------------------------------------------------------------
+2025-11-30T02:03:04.658Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-11-30T02:03:04.667Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 17
+2025-11-30T02:03:04.669Z [INFO] Source Java version: 17
+2025-11-30T02:03:04.671Z [INFO] validateAndUpdateTargets, targets: [object Object]
+2025-11-30T02:03:04.677Z [INFO] No target dependencies found for Spring Boot. Skipping target dependency validation
+2025-11-30T02:03:04.677Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Boot
+2025-11-30T02:03:04.678Z [INFO] No target dependencies found for Spring Framework. Skipping target dependency validation
+2025-11-30T02:03:04.678Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Framework
+2025-11-30T02:03:04.679Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2025-11-30T02:03:04.680Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Security
+2025-11-30T02:03:04.681Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2025-11-30T02:03:04.682Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Jakarta EE
+2025-11-30T02:03:04.684Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2025-11-30T02:03:04.684Z [INFO] validateAndUpdateTargets, targets: [object Object], group:JUnit
+2025-11-30T02:03:04.686Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Java
+2025-11-30T02:03:04.686Z [INFO] validateAndUpdateTargets, userTargets: [object Object]
+2025-11-30T02:03:04.690Z [INFO] initUpgradeGoal, targetDeps: [object Object]
+2025-11-30T02:03:04.691Z [INFO] Upgrade goal initialized: [
+  {
+    "name": "Java",
+    "groupId": "java",
+    "artifactId": "*",
+    "version": "21",
+    "recipes": [
+      {
+        "id": "org.openrewrite.java.migrate.UpgradeToJava21",
+        "name": "Upgrade to Java 21",
+        "description": "Migrate Java 8 to Java 21.",
+        "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava21",
+        "recipeLib": {
+          "groupId": "org.openrewrite.recipe",
+          "artifactId": "rewrite-migrate-java",
+          "version": "2.31.1",
+          "versionForGradle": "2.31.1"
+        }
+      }
+    ],
+    "supportedSources": [
+      {
+        "groupId": "java",
+        "artifactId": "*",
+        "version": ">=8 <21"
+      },
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "11",
+        "recipes": [
+          {
+            "id": "org.openrewrite.java.migrate.Java8toJava11",
+            "name": "Upgrade to Java 11",
+            "description": "Migrate Java 8 to Java 11.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava11",
+            "recipeLib": {
+              "groupId": "org.openrewrite.recipe",
+              "artifactId": "rewrite-migrate-java",
+              "version": "2.31.1",
+              "versionForGradle": "2.31.1"
+            }
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <11"
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11"
+          }
+        ]
+      },
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "17",
+        "recipes": [
+          {
+            "id": "org.openrewrite.java.migrate.UpgradeToJava17",
+            "name": "Upgrade to Java 17",
+            "description": "Migrate Java 8 to Java 17.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+            "recipeLib": {
+              "groupId": "org.openrewrite.recipe",
+              "artifactId": "rewrite-migrate-java",
+              "version": "2.31.1",
+              "versionForGradle": "2.31.1"
+            }
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <17"
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11",
+            "recipes": [
+              {
+                "id": "org.openrewrite.java.migrate.Java8toJava11",
+                "name": "Upgrade to Java 11",
+                "description": "Migrate Java 8 to Java 11.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava11",
+                "recipeLib": {
+                  "groupId": "org.openrewrite.recipe",
+                  "artifactId": "rewrite-migrate-java",
+                  "version": "2.31.1",
+                  "versionForGradle": "2.31.1"
+                }
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <11"
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11"
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "17"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "21"
+      }
+    ]
+  }
+]
+2025-11-30T02:03:04.691Z [INFO] Initializing upgrade options...
+2025-11-30T02:03:04.692Z [INFO] Source Java version: 17
+2025-11-30T02:03:04.693Z [INFO] Source JDK: {"name":"java","path":"C:\\Java\\jdk-17.0.11+9\\bin","version":"17"}
+2025-11-30T02:03:04.693Z [INFO] Target Java version: 21
+2025-11-30T02:03:05.104Z [INFO] Target JDK: {"name":"java","path":"C:\\Users\\Keneth Dale Tuazon\\.jdk\\jdk-21.0.8\\bin","version":"21.0.8","source":"install"}
+2025-11-30T02:03:05.105Z [INFO] Maven project detected.
+2025-11-30T02:03:05.105Z [INFO] Build tool type: mvn
+2025-11-30T02:03:05.106Z [INFO] Build tool: {"name":"mvn","path":"C:\\Maven\\apache-maven-3.9.11\\bin","version":""}
+2025-11-30T02:03:05.106Z [INFO] Working branch: appmod/java-upgrade-20251130020204
+2025-11-30T02:03:05.107Z [INFO] Upgrade options initialized: {
+  "target": {
+    "jdk": {
+      "name": "java",
+      "path": "C:\\Users\\Keneth Dale Tuazon\\.jdk\\jdk-21.0.8\\bin",
+      "version": "21.0.8",
+      "source": "install"
+    },
+    "dependencies": [
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "21",
+        "recipes": [
+          {
+            "id": "org.openrewrite.java.migrate.UpgradeToJava21",
+            "name": "Upgrade to Java 21",
+            "description": "Migrate Java 8 to Java 21.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava21",
+            "recipeLib": {
+              "groupId": "org.openrewrite.recipe",
+              "artifactId": "rewrite-migrate-java",
+              "version": "2.31.1",
+              "versionForGradle": "2.31.1"
+            }
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <21"
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11",
+            "recipes": [
+              {
+                "id": "org.openrewrite.java.migrate.Java8toJava11",
+                "name": "Upgrade to Java 11",
+                "description": "Migrate Java 8 to Java 11.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava11",
+                "recipeLib": {
+                  "groupId": "org.openrewrite.recipe",
+                  "artifactId": "rewrite-migrate-java",
+                  "version": "2.31.1",
+                  "versionForGradle": "2.31.1"
+                }
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <11"
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11"
+              }
+            ]
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "17",
+            "recipes": [
+              {
+                "id": "org.openrewrite.java.migrate.UpgradeToJava17",
+                "name": "Upgrade to Java 17",
+                "description": "Migrate Java 8 to Java 17.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+                "recipeLib": {
+                  "groupId": "org.openrewrite.recipe",
+                  "artifactId": "rewrite-migrate-java",
+                  "version": "2.31.1",
+                  "versionForGradle": "2.31.1"
+                }
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <17"
+              },
+              {
+                "name": "Java",
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11",
+                "recipes": [
+                  {
+                    "id": "org.openrewrite.java.migrate.Java8toJava11",
+                    "name": "Upgrade to Java 11",
+                    "description": "Migrate Java 8 to Java 11.",
+                    "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava11",
+                    "recipeLib": {
+                      "groupId": "org.openrewrite.recipe",
+                      "artifactId": "rewrite-migrate-java",
+                      "version": "2.31.1",
+                      "versionForGradle": "2.31.1"
+                    }
+                  }
+                ],
+                "supportedSources": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": ">=8 <11"
+                  }
+                ],
+                "effects": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": "11"
+                  }
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "17"
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "21"
+          }
+        ]
+      }
+    ],
+    "buildTool": {
+      "name": "mvn",
+      "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+      "version": ""
+    }
+  },
+  "workingBranch": "appmod/java-upgrade-20251130020204",
+  "runTests": true
+}
+2025-11-30T02:03:05.108Z [INFO] Project dependencies loaded: [
+  "org.springframework.boot:spring-boot-starter-web:3.3.5:jar",
+  "org.springframework.boot:spring-boot-starter-data-jpa:3.3.5:jar",
+  "com.h2database:h2:2.2.224:jar",
+  "org.springframework.boot:spring-boot-starter-validation:3.3.5:jar",
+  "org.springframework.boot:spring-boot-starter-actuator:3.3.5:jar",
+  "org.springframework.boot:spring-boot-starter-test:3.3.5:jar",
+  "org.springframework:spring-web:6.1.14:jar",
+  "org.springframework.boot:spring-boot-starter-security:3.3.5:jar",
+  "io.jsonwebtoken:jjwt-api:0.11.5:jar",
+  "io.jsonwebtoken:jjwt-impl:0.11.5:jar",
+  "io.jsonwebtoken:jjwt-jackson:0.11.5:jar"
+]
+2025-11-30T02:03:05.109Z [INFO] Project modules loaded: [
+  "com.epharma.ecosystem:backend:0.0.1-SNAPSHOT"
+]
+2025-11-30T02:03:05.109Z [INFO] done initializing context.
+2025-11-30T02:03:05.110Z [INFO] Source dependencies: [
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-web",
+    "type": "jar",
+    "version": "3.3.5",
+    "scope": "compile",
+    "module": "backend"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-data-jpa",
+    "type": "jar",
+    "version": "3.3.5",
+    "scope": "compile",
+    "module": "backend"
+  },
+  {
+    "groupId": "com.h2database",
+    "artifactId": "h2",
+    "type": "jar",
+    "version": "2.2.224",
+    "scope": "runtime",
+    "module": "backend"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-validation",
+    "type": "jar",
+    "version": "3.3.5",
+    "scope": "compile",
+    "module": "backend"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-actuator",
+    "type": "jar",
+    "version": "3.3.5",
+    "scope": "compile",
+    "module": "backend"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-test",
+    "type": "jar",
+    "version": "3.3.5",
+    "scope": "test",
+    "module": "backend"
+  },
+  {
+    "groupId": "org.springframework",
+    "artifactId": "spring-web",
+    "type": "jar",
+    "version": "6.1.14",
+    "scope": "compile",
+    "module": "backend"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-security",
+    "type": "jar",
+    "version": "3.3.5",
+    "scope": "compile",
+    "module": "backend"
+  },
+  {
+    "groupId": "io.jsonwebtoken",
+    "artifactId": "jjwt-api",
+    "type": "jar",
+    "version": "0.11.5",
+    "scope": "compile",
+    "module": "backend"
+  },
+  {
+    "groupId": "io.jsonwebtoken",
+    "artifactId": "jjwt-impl",
+    "type": "jar",
+    "version": "0.11.5",
+    "scope": "runtime",
+    "module": "backend"
+  },
+  {
+    "groupId": "io.jsonwebtoken",
+    "artifactId": "jjwt-jackson",
+    "type": "jar",
+    "version": "0.11.5",
+    "scope": "runtime",
+    "module": "backend"
+  },
+  {
+    "groupId": "java",
+    "artifactId": "*",
+    "version": "17"
+  }
+]
+2025-11-30T02:03:05.111Z [INFO] validateAndUpdateTargets, targets: [object Object]
+2025-11-30T02:03:05.112Z [INFO] No target dependencies found for Spring Boot. Skipping target dependency validation
+2025-11-30T02:03:05.113Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Boot
+2025-11-30T02:03:05.114Z [INFO] No target dependencies found for Spring Framework. Skipping target dependency validation
+2025-11-30T02:03:05.114Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Framework
+2025-11-30T02:03:05.114Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2025-11-30T02:03:05.115Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Security
+2025-11-30T02:03:05.115Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2025-11-30T02:03:05.116Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Jakarta EE
+2025-11-30T02:03:05.116Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2025-11-30T02:03:05.117Z [INFO] validateAndUpdateTargets, targets: [object Object], group:JUnit
+2025-11-30T02:03:05.117Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Java
+2025-11-30T02:03:05.118Z [INFO] validateAndUpdateTargets, userTargets: [object Object]
+2025-11-30T02:03:05.119Z [INFO] Upgrade route: upgrade `Java` to *21* with oneStepOneFramework=false
+2025-11-30T02:03:05.120Z [INFO] Upgrade route planned: [
+  [
+    {
+      "name": "Java",
+      "groupId": "java",
+      "artifactId": "*",
+      "version": "21",
+      "recipes": [
+        {
+          "id": "org.openrewrite.java.migrate.UpgradeToJava21",
+          "name": "Upgrade to Java 21",
+          "description": "Migrate Java 8 to Java 21.",
+          "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava21",
+          "recipeLib": {
+            "groupId": "org.openrewrite.recipe",
+            "artifactId": "rewrite-migrate-java",
+            "version": "2.31.1",
+            "versionForGradle": "2.31.1"
+          }
+        }
+      ],
+      "supportedSources": [
+        {
+          "groupId": "java",
+          "artifactId": "*",
+          "version": ">=8 <21"
+        },
+        {
+          "name": "Java",
+          "groupId": "java",
+          "artifactId": "*",
+          "version": "11",
+          "recipes": [
+            {
+              "id": "org.openrewrite.java.migrate.Java8toJava11",
+              "name": "Upgrade to Java 11",
+              "description": "Migrate Java 8 to Java 11.",
+              "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava11",
+              "recipeLib": {
+                "groupId": "org.openrewrite.recipe",
+                "artifactId": "rewrite-migrate-java",
+                "version": "2.31.1",
+                "versionForGradle": "2.31.1"
+              }
+            }
+          ],
+          "supportedSources": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": ">=8 <11"
+            }
+          ],
+          "effects": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "11"
+            }
+          ]
+        },
+        {
+          "name": "Java",
+          "groupId": "java",
+          "artifactId": "*",
+          "version": "17",
+          "recipes": [
+            {
+              "id": "org.openrewrite.java.migrate.UpgradeToJava17",
+              "name": "Upgrade to Java 17",
+              "description": "Migrate Java 8 to Java 17.",
+              "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+              "recipeLib": {
+                "groupId": "org.openrewrite.recipe",
+                "artifactId": "rewrite-migrate-java",
+                "version": "2.31.1",
+                "versionForGradle": "2.31.1"
+              }
+            }
+          ],
+          "supportedSources": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": ">=8 <17"
+            },
+            {
+              "name": "Java",
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "11",
+              "recipes": [
+                {
+                  "id": "org.openrewrite.java.migrate.Java8toJava11",
+                  "name": "Upgrade to Java 11",
+                  "description": "Migrate Java 8 to Java 11.",
+                  "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava11",
+                  "recipeLib": {
+                    "groupId": "org.openrewrite.recipe",
+                    "artifactId": "rewrite-migrate-java",
+                    "version": "2.31.1",
+                    "versionForGradle": "2.31.1"
+                  }
+                }
+              ],
+              "supportedSources": [
+                {
+                  "groupId": "java",
+                  "artifactId": "*",
+                  "version": ">=8 <11"
+                }
+              ],
+              "effects": [
+                {
+                  "groupId": "java",
+                  "artifactId": "*",
+                  "version": "11"
+                }
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "17"
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "groupId": "java",
+          "artifactId": "*",
+          "version": "21"
+        }
+      ]
+    }
+  ]
+]
+2025-11-30T02:03:05.347Z [INFO] Upgrade plan written to d:\Epharmacy Application\Epharma_Ecosystem\backend\.github\java-upgrade\20251130020204\plan.md

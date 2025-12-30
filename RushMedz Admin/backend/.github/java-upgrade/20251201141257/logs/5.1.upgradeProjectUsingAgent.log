@@ -1,0 +1,9 @@
+2025-12-01T14:16:33.600Z [INFO] [Task.commitChanges](5.1): Committing changes for d:/Epharmacy Application/Epharma_Ecosystem/backend with message: Upgrade Spring Boot parent to 3.4.0
+2025-12-01T14:16:33.857Z [INFO] [appmod/java-upgrade-20251201141257 75662ea] Upgrade Spring Boot parent to 3.4.0
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+2025-12-01T14:16:33.949Z [INFO] 75662ea235b6ce14d688ee6ac6e5672d6debdb09
+
+2025-12-01T14:16:34.067Z [INFO] 1	1	backend/pom.xml
+
+2025-12-01T14:16:34.099Z [INFO] [Task.commitChanges](5.1): Committed changes for d:/Epharmacy Application/Epharma_Ecosystem/backend with message: Upgrade Spring Boot parent to 3.4.0

@@ -1,0 +1,117 @@
+2025-12-09T21:28:07.042Z [INFO] ----------------------invoke build_java_project----------------------
+2025-12-09T21:28:07.045Z [INFO] [Tool.invoke]({name: build_java_project, input: {
+  "codeChangesDetails": "- Remove unused import java.util.random.RandomGenerator from OTPService\n  - Remove unused constants OTP_LENGTH and OTP_PATTERN from OTPService",
+  "codeChangesMessage": "Clean up unused imports and constants in OTPService",
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend"
+}}).
+2025-12-09T21:28:07.058Z [INFO] [Task.start](): Starting task toolCall
+2025-12-09T21:28:07.064Z [INFO] [Task.start](): Started task toolCall
+2025-12-09T21:28:07.065Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-09T21:28:07.069Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-09T21:28:07.072Z [INFO] Project d:/Epharmacy Application/Epharma_Ecosystem/backend is a maven project, try to get java version from pom.xml
+2025-12-09T21:28:07.107Z [INFO] Project java version: 21
+2025-12-09T21:28:07.109Z [INFO] Maven project detected.
+2025-12-09T21:28:07.110Z [INFO] Build tool type: mvn
+2025-12-09T21:28:08.505Z [INFO] [Environment] Running command (Java 21): java -version
+openjdk version "21.0.8" 2025-07-15 LTS
+OpenJDK Runtime Environment Microsoft-11933218 (build 21.0.8+9-LTS)
+OpenJDK 64-Bit Server VM Microsoft-11933218 (build 21.0.8+9-LTS, mixed mode, sharing)
+2025-12-09T21:28:08.953Z [INFO] [JdkEnvironment] Got real Java version: 21.0.8
+2025-12-09T21:28:08.954Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Users\\Keneth Dale Tuazon\\.jdk\\jdk-21.0.8\\bin",
+  "version": "21"
+}
+2025-12-09T21:28:09.001Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 21.0.8, vendor: Microsoft, runtime: C:\Users\Keneth Dale Tuazon\.jdk\jdk-21.0.8
+Default locale: en_PH, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-12-09T21:28:12.584Z [INFO] Real build tool version: 3.9.11
+2025-12-09T21:28:12.585Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+  "version": "3.9.11"
+}
+2025-12-09T21:28:12.585Z [INFO] Project config: {
+  "buildTool": {
+    "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+    "name": "mvn",
+    "version": "3.9.11"
+  },
+  "jdk": {
+    "path": "C:\\Users\\Keneth Dale Tuazon\\.jdk\\jdk-21.0.8\\bin",
+    "name": "java",
+    "version": "21"
+  },
+  "name": "backend",
+  "dir": "d:/Epharmacy Application/Epharma_Ecosystem/backend"
+}
+2025-12-09T21:28:12.601Z [INFO] [Tool.invoke] do invoke.
+2025-12-09T21:28:12.609Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2025-12-09T21:28:12.611Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 21.0.8, vendor: Microsoft, runtime: C:\Users\Keneth Dale Tuazon\.jdk\jdk-21.0.8
+Default locale: en_PH, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-12-09T21:28:15.335Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2025-12-09T21:28:15.336Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-12-09T21:28:15.337Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-09T21:28:15.338Z [INFO] [MavenBuildTool] Getting all module coordinates of d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-09T21:28:15.338Z [INFO] [MavenBuildTool] Getting effective POMs of d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-09T21:28:15.341Z [INFO] [Environment] Running command (Java 21): mvn help:effective-pom -Doutput=effective-pom-b68ed51d-958b-41a7-a3af-3bfe40486d2c.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.epharma.ecosystem:backend >--------------------
+[INFO] Building Epharma Ecosystem Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.1:effective-pom (default-cli) @ backend ---
+[INFO] Effective-POM written to: d:\Epharmacy Application\Epharma_Ecosystem\backend\effective-pom-b68ed51d-958b-41a7-a3af-3bfe40486d2c.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.907 s
+[INFO] Finished at: 2025-12-10T05:28:27+08:00
+[INFO] ------------------------------------------------------------------------
+2025-12-09T21:28:28.242Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-12-09T21:28:28.256Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-12-09T21:28:28.257Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2025-12-09T21:28:28.259Z [INFO] [Project backend]: Java version of project backend is changed.
+2025-12-09T21:28:28.260Z [INFO] [Project backend]: Java version of project backend is changed to '21' || '21'
+2025-12-09T21:28:28.261Z [INFO] [Project backend]: build tool config of project backend is modified.
+2025-12-09T21:28:28.261Z [INFO] [Project backend]: dependencies of project backend may be changed, resetting promise.
+2025-12-09T21:28:28.262Z [INFO] [MavenBuildTool] Getting build errors of d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-09T21:28:28.264Z [INFO] [Environment] Running command (Java 21): mvn clean test-compile -q -B -fn
+2025-12-09T21:28:50.787Z [INFO] [MavenBuildTool] parsing compilation errors.
+2025-12-09T21:28:50.792Z [INFO] [BaseBuildTool] Found 1 modules: .
+2025-12-09T21:28:50.843Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2025-12-09T21:28:50.844Z [INFO] [MavenBuildTool] Cleaning d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-09T21:28:50.846Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2025-12-09T21:28:58.994Z [INFO] [Project backend]: Compilation errors of project backend is updated: 0 -> 0
+2025-12-09T21:28:59.000Z [INFO] Build succeeded! There are no build errors in the project.
+2025-12-09T21:28:59.038Z [INFO] [Tool.invoke]({result: {
+  "message": "Build succeeded! There are no build errors in the project.",
+  "result": {
+    "numOfJavaFiles": 32,
+    "numOfClassFiles": 32,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 32,
+        "numOfClassFiles": 32
+      }
+    },
+    "errors": [],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+}}).
+2025-12-09T21:28:59.041Z [INFO] [Task.complete](): Completing task toolCall
+2025-12-09T21:28:59.046Z [INFO] [Task.complete](): Completed task toolCall
+2025-12-09T21:28:59.046Z [INFO] [Tool.invoke]({message: Build succeeded! There are no build errors in the project.}).
+2025-12-09T21:28:59.046Z [INFO] ----------------------invoked build_java_project----------------------

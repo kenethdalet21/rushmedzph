@@ -1,0 +1,46 @@
+2025-12-27T10:14:44.709Z [INFO] ----------------------invoke list_jdks----------------------
+2025-12-27T10:14:44.734Z [INFO] [Tool.invoke]({name: list_jdks, input: {
+  "projectPath": "d:\\RushMedz App_Final"
+}}).
+2025-12-27T10:14:44.750Z [INFO] [Task.start](): Starting task toolCall
+2025-12-27T10:14:44.757Z [INFO] [Task.start](): Started task toolCall
+2025-12-27T10:14:44.764Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-27T10:14:44.772Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-27T10:14:44.779Z [INFO] [Tool.invoke] do invoke.
+2025-12-27T10:14:54.603Z [INFO] [Tool.invoke]({result: {
+  "message": "We found following jdks in your system:\n\n1. Java 1.8.0_472\n   📁 Path: C:\\Users\\Keneth Dale Tuazon\\.jdk\\jdk-8\\bin\n   🏷️ Source: install\n\n2. Java 17.0.11\n   📁 Path: C:\\Java\\jdk-17.0.11+9\\bin\n   🏷️ Source: JAVA_HOME\n\n3. Java 21.0.8\n   📁 Path: C:\\Users\\Keneth Dale Tuazon\\.jdk\\jdk-21.0.8\\bin\n   🏷️ Source: install\n\n4. Java 21.0.8\n   📁 Path: C:\\Java\\jdk-21.0.8\\bin\n   🏷️ Source: others\n\nTotal: 4 JDK installation(s) found"
+}}).
+2025-12-27T10:14:54.616Z [INFO] [Task.complete](): Completing task toolCall
+2025-12-27T10:14:54.630Z [INFO] [Task.complete](): Completed task toolCall
+2025-12-27T10:14:54.641Z [INFO] [Tool.invoke]({message: We found following jdks in your system:
+
+1. Java 1.8.0_472
+   📁 Path: C:\Users\Keneth Dale Tuazon\.jdk\jdk-8\bin
+   🏷️ Source: install
+
+2. Java 17.0.11
+   📁 Path: C:\Java\jdk-17.0.11+9\bin
+   🏷️ Source: JAVA_HOME
+
+3. Java 21.0.8
+   📁 Path: C:\Users\Keneth Dale Tuazon\.jdk\jdk-21.0.8\bin
+   🏷️ Source: install
+
+4. Java 21.0.8
+   📁 Path: C:\Java\jdk-21.0.8\bin
+   🏷️ Source: others
+
+Total: 4 JDK installation(s) found}).
+2025-12-27T10:14:54.652Z [INFO] ----------------------invoked list_jdks----------------------
+2025-12-27T10:15:00.100Z [INFO] ---------------------prepare build_java_project----------------------
+2025-12-27T10:15:00.110Z [INFO] [Tool.prepareInvocation]({name: build_java_project, input: {
+  "projectPath": "d:\\RushMedz App_Final\\RushMedz Admin\\backend",
+  "jdkPath": "C:\\Java\\jdk-21.0.8",
+  "codeChangesMessage": "",
+  "codeChangesDetails": ""
+}}).
+2025-12-27T10:15:00.120Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-27T10:15:00.123Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Build project"
+}}).
+2025-12-27T10:15:00.127Z [INFO] ----------------------prepared build_java_project----------------------

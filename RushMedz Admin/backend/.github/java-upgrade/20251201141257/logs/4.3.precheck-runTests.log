@@ -1,0 +1,50 @@
+2025-12-01T14:15:36.938Z [INFO] [MavenBuildTool] Running test cases of d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-01T14:15:36.939Z [INFO] [Environment] Running command (Java 21): mvn clean test -q -B -fn
+22:15:52.041 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.epharma.ecosystem.controller.PaymentControllerTest]: PaymentControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:15:52.317 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.epharma.ecosystem.EpharmaApplication for test class com.epharma.ecosystem.controller.PaymentControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2025-12-01T22:15:53.311+08:00  INFO 22020 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : Starting PaymentControllerTest using Java 21.0.8 with PID 22020 (started by Keneth Dale Tuazon in d:\Epharmacy Application\Epharma_Ecosystem\backend)
+2025-12-01T22:15:53.312+08:00  INFO 22020 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2025-12-01T22:15:55.495+08:00  INFO 22020 --- [epharma-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-01T22:15:55.600+08:00  INFO 22020 --- [epharma-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 2 JPA repository interfaces.
+2025-12-01T22:15:57.300+08:00  INFO 22020 --- [epharma-backend] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-01T22:15:57.469+08:00  INFO 22020 --- [epharma-backend] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-12-01T22:15:57.559+08:00  INFO 22020 --- [epharma-backend] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-01T22:15:58.327+08:00  INFO 22020 --- [epharma-backend] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-01T22:15:58.398+08:00  INFO 22020 --- [epharma-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-01T22:15:59.056+08:00  INFO 22020 --- [epharma-backend] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./data/epharma user=SA
+2025-12-01T22:15:59.060+08:00  INFO 22020 --- [epharma-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-01T22:16:00.760+08:00  INFO 22020 --- [epharma-backend] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-01T22:16:00.836+08:00  INFO 22020 --- [epharma-backend] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-01T22:16:01.972+08:00  WARN 22020 --- [epharma-backend] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-01T22:16:02.090+08:00  WARN 22020 --- [epharma-backend] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: fd91a635-dbc0-47e5-8484-44c82872ead7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-01T22:16:02.151+08:00  INFO 22020 --- [epharma-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-01T22:16:03.412+08:00  INFO 22020 --- [epharma-backend] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-12-01T22:16:04.542+08:00  INFO 22020 --- [epharma-backend] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/epharma'
+2025-12-01T22:16:04.759+08:00  INFO 22020 --- [epharma-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-12-01T22:16:04.760+08:00  INFO 22020 --- [epharma-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-12-01T22:16:04.764+08:00  INFO 22020 --- [epharma-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-12-01T22:16:04.911+08:00  INFO 22020 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : Started PaymentControllerTest in 12.156 seconds (process running for 14.868)
+WARNING: A Java agent has been loaded dynamically (C:\Users\Keneth Dale Tuazon\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2025-12-01T14:16:07.022Z [INFO] [MavenBuildTool] loading surefire reports.
+2025-12-01T14:16:07.087Z [INFO] [MavenBuildTool] summarizing surefire reports.
+2025-12-01T14:16:07.088Z [INFO] [MavenBuildTool] Cleaning d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-01T14:16:07.089Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn

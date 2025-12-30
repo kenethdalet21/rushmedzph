@@ -1,0 +1,2201 @@
+2025-12-01T14:12:57.997Z [INFO] ----------------------invoke generate_upgrade_plan----------------------
+2025-12-01T14:12:57.998Z [INFO] [Tool.invoke]({name: generate_upgrade_plan, input: {
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend",
+  "targetDependencies": [
+    "org.springframework.boot:*:3.5.x"
+  ]
+}}).
+2025-12-01T14:12:57.999Z [INFO] [Plan.tryStartTask]({tool:generate_upgrade_plan, nextTask:{type:undefined, tool:undefined}}
+2025-12-01T14:12:57.999Z [INFO] [Plan.tryStartTask]: no next task, create new one.
+2025-12-01T14:12:57.999Z [INFO] [Plan.createTaskAtStart]({tool: generate_upgrade_plan, input: {
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend",
+  "targetDependencies": [
+    "org.springframework.boot:*:3.5.x"
+  ],
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:12:58.000Z [INFO] [Plan.tryStartTask]: starting task generatePlan
+2025-12-01T14:12:58.001Z [INFO] [Task.start](): Starting task generatePlan
+2025-12-01T14:12:58.002Z [INFO] [Task.start](1): Started task generatePlan
+2025-12-01T14:12:58.005Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:12:58.521Z [INFO] Copilot user info:{
+  "access_type_sku": "trial_30_monthly_subscriber_quota",
+  "analytics_tracking_id": "779b6a179d26e0e8e9d379c7b89c2308",
+  "assigned_date": null,
+  "can_signup_for_limited": false,
+  "chat_enabled": true,
+  "copilot_plan": "individual",
+  "organization_login_list": [],
+  "organization_list": [],
+  "quota_reset_date": "2026-01-01",
+  "quota_snapshots": {
+    "chat": {
+      "entitlement": 0,
+      "overage_count": 0,
+      "overage_permitted": false,
+      "percent_remaining": 100,
+      "quota_id": "chat",
+      "quota_remaining": 0,
+      "remaining": 0,
+      "unlimited": true,
+      "timestamp_utc": "2025-12-01T14:15:31.346Z"
+    },
+    "completions": {
+      "entitlement": 0,
+      "overage_count": 0,
+      "overage_permitted": false,
+      "percent_remaining": 100,
+      "quota_id": "completions",
+      "quota_remaining": 0,
+      "remaining": 0,
+      "unlimited": true,
+      "timestamp_utc": "2025-12-01T14:15:31.346Z"
+    },
+    "premium_interactions": {
+      "entitlement": 300,
+      "overage_count": 0,
+      "overage_permitted": false,
+      "percent_remaining": 99.70000000000002,
+      "quota_id": "premium_interactions",
+      "quota_remaining": 299.1,
+      "remaining": 299,
+      "unlimited": false,
+      "timestamp_utc": "2025-12-01T14:15:31.346Z"
+    }
+  },
+  "quota_reset_date_utc": "2026-01-01T00:00:00.000Z"
+}
+2025-12-01T14:12:58.523Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:12:58.523Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:13:43.759Z [INFO] Project dependencies loaded: [
+  "org.springframework.boot:spring-boot-starter-web:3.3.5:jar",
+  "org.springframework.boot:spring-boot-starter-data-jpa:3.3.5:jar",
+  "com.h2database:h2:2.2.224:jar",
+  "org.springframework.boot:spring-boot-starter-validation:3.3.5:jar",
+  "org.springframework.boot:spring-boot-starter-actuator:3.3.5:jar",
+  "org.springframework.boot:spring-boot-starter-test:3.3.5:jar",
+  "org.springframework:spring-web:6.1.14:jar",
+  "org.springframework.boot:spring-boot-starter-security:3.3.5:jar",
+  "io.jsonwebtoken:jjwt-api:0.11.5:jar",
+  "io.jsonwebtoken:jjwt-impl:0.11.5:jar",
+  "io.jsonwebtoken:jjwt-jackson:0.11.5:jar"
+]
+2025-12-01T14:13:43.759Z [INFO] Project modules loaded: [
+  "com.epharma.ecosystem:backend:0.0.1-SNAPSHOT"
+]
+2025-12-01T14:13:43.892Z [INFO] [Tool.invoke]({result: {
+  "message": "\nA new upgrade session has been created with ID: **20251201141257** (You must remember this session ID to use it invoke other tools in followup steps).\nUpgrade plan is generated successfully and saved at \"d:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\.github\\java-upgrade\\20251201141257\\plan.md\"\n\n# IMPORTANT NOTE: Milestone-based Upgrade\n\nGiven that this upgrade will span multiple version updates and the process is relatively complex, we believe that a milestone-based approach will make it easier to achieve the final goal. Therefore, we have divided the upgrade process into several smaller milestones. You **MUST** follow the instructions carefully and complete each milestone step by step.\n\n**At each milestone, please focus on the goal of the current phase rather than the final goal.**"
+}}).
+2025-12-01T14:13:43.892Z [INFO] [Plan.completeTask](task:{id:1, type:generatePlan}, result:{
+  "message": "\nA new upgrade session has been created with ID: **20251201141257** (You must remember this session ID to use it invoke other tools in followup steps).\nUpgrade plan is generated successfully and saved at \"d:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\.github\\java-upgrade\\20251201141257\\plan.md\"\n\n# IMPORTANT NOTE: Milestone-based Upgrade\n\nGiven that this upgrade will span multiple version updates and the process is relatively complex, we believe that a milestone-based approach will make it easier to achieve the final goal. Therefore, we have divided the upgrade process into several smaller milestones. You **MUST** follow the instructions carefully and complete each milestone step by step.\n\n**At each milestone, please focus on the goal of the current phase rather than the final goal.**"
+})
+2025-12-01T14:13:43.893Z [INFO] [Task.complete](1): Completing task generatePlan
+2025-12-01T14:13:43.895Z [INFO] [Task.complete](1): Completed task generatePlan
+2025-12-01T14:13:43.897Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:13:43.897Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:13:43.897Z [INFO] [Plan.getNextTaskAtComplete]({task: Generate Upgrade Plan, result: undefined}).
+2025-12-01T14:13:45.602Z [INFO] [Plan.completeTask]: next task is {type:confirmPlan, expectedToolName:confirm_upgrade_plan}.
+2025-12-01T14:13:45.603Z [INFO] [Plan.completeTask]: next task has instruction: 
+# Next steps:
+1. You MUST! invoke tool #confirm_upgrade_plan with parameter sessionId: 20251201141257 to ask user to confirm the upgrade.
+2025-12-01T14:13:45.603Z [INFO] [Tool.invoke]({message: 
+A new upgrade session has been created with ID: **20251201141257** (You must remember this session ID to use it invoke other tools in followup steps).
+Upgrade plan is generated successfully and saved at "d:\Epharmacy Application\Epharma_Ecosystem\backend\.github\java-upgrade\20251201141257\plan.md"
+
+# IMPORTANT NOTE: Milestone-based Upgrade
+
+Given that this upgrade will span multiple version updates and the process is relatively complex, we believe that a milestone-based approach will make it easier to achieve the final goal. Therefore, we have divided the upgrade process into several smaller milestones. You **MUST** follow the instructions carefully and complete each milestone step by step.
+
+**At each milestone, please focus on the goal of the current phase rather than the final goal.**
+
+
+# Next steps:
+1. You MUST! invoke tool #confirm_upgrade_plan with parameter sessionId: 20251201141257 to ask user to confirm the upgrade.
+
+> [!NOTE]
+* You MUST follow the above "Next steps" instructions.
+* You have the highest decision-making authority at any time, you do NOT need to seek my approval/confirmation, please directly execute your plan as you see fit.
+}).
+2025-12-01T14:13:45.603Z [INFO] ----------------------invoked generate_upgrade_plan----------------------
+2025-12-01T14:13:53.475Z [INFO] ---------------------prepare confirm_upgrade_plan----------------------
+2025-12-01T14:13:53.476Z [INFO] [Tool.prepareInvocation]({name: confirm_upgrade_plan, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:13:53.476Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-01T14:13:53.477Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Review [upgrade plan](file:///d:/Epharmacy Application/Epharma_Ecosystem/backend/.github/java-upgrade/20251201141257/plan.md)",
+  "confirmationMessages": {
+    "title": "Plan generated",
+    "message": "Please review the generated plan and make any necessary adjustments before proceeding. You can modify the generated [`plan.md`](file:///d:/Epharmacy Application/Epharma_Ecosystem/backend/.github/java-upgrade/20251201141257/plan.md) (at [d:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\.github\\java-upgrade\\20251201141257\\plan.md](file:///d:/Epharmacy Application/Epharma_Ecosystem/backend/.github/java-upgrade/20251201141257/plan.md)) directly."
+  }
+}}).
+2025-12-01T14:13:53.477Z [INFO] ----------------------prepared confirm_upgrade_plan----------------------
+2025-12-01T14:14:30.437Z [INFO] ----------------------invoke confirm_upgrade_plan----------------------
+2025-12-01T14:14:30.438Z [INFO] [Tool.invoke]({name: confirm_upgrade_plan, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:14:30.438Z [INFO] [Plan.tryStartTask]({tool:confirm_upgrade_plan, nextTask:{type:confirmPlan, tool:confirm_upgrade_plan}}
+2025-12-01T14:14:30.439Z [INFO] [Plan.tryStartTask]: tool.type is exactly the same as nextTask.expectedToolName
+2025-12-01T14:14:30.439Z [INFO] [Plan.tryStartTask]: starting task confirmPlan
+2025-12-01T14:14:30.439Z [INFO] [Task.start](): Starting task confirmPlan
+2025-12-01T14:14:30.440Z [INFO] [Task.start](2): Started task confirmPlan
+2025-12-01T14:14:30.440Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:14:30.440Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:14:30.440Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:14:30.441Z [INFO] [Tool.invoke]({result: {
+  "message": "Generated plan is reviewed and confirmed by the user! the upgrade process will start now and be tracked in markdown file: d:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\.github\\java-upgrade\\20251201141257\\progress.md."
+}}).
+2025-12-01T14:14:30.441Z [INFO] [Plan.completeTask](task:{id:2, type:confirmPlan}, result:{
+  "message": "Generated plan is reviewed and confirmed by the user! the upgrade process will start now and be tracked in markdown file: d:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\.github\\java-upgrade\\20251201141257\\progress.md."
+})
+2025-12-01T14:14:30.441Z [INFO] [Task.complete](2): Completing task confirmPlan
+2025-12-01T14:14:30.442Z [INFO] [Task.complete](2): Completed task confirmPlan
+2025-12-01T14:14:30.442Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:14:30.442Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:14:30.442Z [INFO] [Plan.getNextTaskAtComplete]({task: Confirm Upgrade Plan, result: undefined}).
+2025-12-01T14:14:30.810Z [INFO] [Plan.completeTask]: next task is {type:setupEnvironment, expectedToolName:setup_upgrade_environment}.
+2025-12-01T14:14:30.811Z [INFO] [Plan.completeTask]: next task has instruction: 
+# Next steps:
+1. You MUST! invoke tool #setup_upgrade_environment with parameter sessionId: 20251201141257 to setup the development environment for upgrading this Java project.
+2025-12-01T14:14:30.811Z [INFO] [Tool.invoke]({message: Generated plan is reviewed and confirmed by the user! the upgrade process will start now and be tracked in markdown file: d:\Epharmacy Application\Epharma_Ecosystem\backend\.github\java-upgrade\20251201141257\progress.md.
+
+
+# Next steps:
+1. You MUST! invoke tool #setup_upgrade_environment with parameter sessionId: 20251201141257 to setup the development environment for upgrading this Java project.
+
+> [!NOTE]
+* You MUST follow the above "Next steps" instructions.
+* You have the highest decision-making authority at any time, you do NOT need to seek my approval/confirmation, please directly execute your plan as you see fit.
+}).
+2025-12-01T14:14:30.811Z [INFO] ----------------------invoked confirm_upgrade_plan----------------------
+2025-12-01T14:14:38.262Z [INFO] ---------------------prepare setup_upgrade_environment----------------------
+2025-12-01T14:14:38.262Z [INFO] [Tool.prepareInvocation]({name: setup_upgrade_environment, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:14:38.262Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-01T14:14:38.264Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Setup Development Environment"
+}}).
+2025-12-01T14:14:38.264Z [INFO] ----------------------prepared setup_upgrade_environment----------------------
+2025-12-01T14:14:38.313Z [INFO] ----------------------invoke setup_upgrade_environment----------------------
+2025-12-01T14:14:38.314Z [INFO] [Tool.invoke]({name: setup_upgrade_environment, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:14:38.314Z [INFO] [Plan.tryStartTask]({tool:setup_upgrade_environment, nextTask:{type:setupEnvironment, tool:setup_upgrade_environment}}
+2025-12-01T14:14:38.314Z [INFO] [Plan.tryStartTask]: tool.type is exactly the same as nextTask.expectedToolName
+2025-12-01T14:14:38.314Z [INFO] [Plan.tryStartTask]: starting task setupEnvironment
+2025-12-01T14:14:38.315Z [INFO] [Task.start](): Starting task setupEnvironment
+2025-12-01T14:14:38.316Z [INFO] [Task.start](3): Started task setupEnvironment
+2025-12-01T14:14:38.316Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:14:38.317Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:14:38.317Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:15:05.314Z [INFO] ---------------------prepare precheck_for_upgrade----------------------
+2025-12-01T14:15:05.315Z [INFO] [Tool.prepareInvocation]({name: precheck_for_upgrade, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:15:05.316Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-01T14:15:05.316Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Precheck"
+}}).
+2025-12-01T14:15:05.317Z [INFO] ----------------------prepared precheck_for_upgrade----------------------
+2025-12-01T14:15:05.404Z [INFO] ----------------------invoke precheck_for_upgrade----------------------
+2025-12-01T14:15:05.404Z [INFO] [Tool.invoke]({name: precheck_for_upgrade, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:15:05.405Z [INFO] [Plan.tryStartTask]({tool:precheck_for_upgrade, nextTask:{type:undefined, tool:undefined}}
+2025-12-01T14:15:05.405Z [INFO] [Plan.tryStartTask]: no next task, create new one.
+2025-12-01T14:15:05.405Z [INFO] [Plan.createTaskAtStart]({tool: precheck_for_upgrade, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:15:05.405Z [INFO] [Plan.tryStartTask]: starting task detached
+2025-12-01T14:15:05.405Z [INFO] [Task.start](): Starting task detached
+2025-12-01T14:15:05.406Z [INFO] [Task.start](): Started task detached
+2025-12-01T14:15:05.406Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:15:05.406Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:15:05.406Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:15:05.407Z [INFO] [Task.start](): Starting task precheck
+2025-12-01T14:15:05.408Z [INFO] [Project backend]: getting dependencies promise.
+2025-12-01T14:15:05.408Z [INFO] [Task.start](): Starting task precheck-buildProject
+2025-12-01T14:15:05.424Z [INFO] [Task.start](4): Started task precheck
+2025-12-01T14:15:05.424Z [INFO] [Task.start](4.1): Started task precheck-buildProject
+2025-12-01T14:15:36.241Z [INFO] [Project backend]: Compilation errors of project backend is updated: 0 -> 0
+2025-12-01T14:15:36.243Z [INFO] [Task.complete](4.1): Completing task precheck-buildProject
+2025-12-01T14:15:36.247Z [INFO] [Task.start](): Starting task precheck-validateCves
+2025-12-01T14:15:36.251Z [INFO] [Task.complete](4.1): Completed task precheck-buildProject
+2025-12-01T14:15:36.252Z [INFO] [Task.start](4.2): Started task precheck-validateCves
+2025-12-01T14:15:36.935Z [INFO] [Task.complete](4.2): Completing task precheck-validateCves
+2025-12-01T14:15:36.937Z [INFO] [Task.start](): Starting task precheck-runTests
+2025-12-01T14:15:36.954Z [INFO] [Task.complete](4.2): Completed task precheck-validateCves
+2025-12-01T14:15:36.954Z [INFO] [Task.start](4.3): Started task precheck-runTests
+2025-12-01T14:16:10.552Z [INFO] [Project backend]: Test result of project backend is updated: 0 -> 0
+2025-12-01T14:16:10.556Z [INFO] [Task.complete](4.3): Completing task precheck-runTests
+2025-12-01T14:16:10.559Z [INFO] [Task.complete](4.3): Completed task precheck-runTests
+2025-12-01T14:16:10.562Z [INFO] [Task.complete](4): Completing task precheck
+2025-12-01T14:16:10.563Z [INFO] [Tool.invoke]({result: {
+  "message": "Done prechecking"
+}}).
+2025-12-01T14:16:10.563Z [INFO] [Plan.completeTask](task:{id:<unknown>, type:detached}, result:{
+  "message": "Done prechecking"
+})
+2025-12-01T14:16:10.564Z [INFO] [Task.complete](): Completing task detached
+2025-12-01T14:16:10.565Z [INFO] [Task.complete](4): Completed task precheck
+2025-12-01T14:16:10.565Z [INFO] [Task.complete](): Completed task detached
+2025-12-01T14:16:10.566Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:16:10.566Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:16:10.566Z [INFO] [Plan.getNextTaskAtComplete]({task: [Detached] precheck_for_upgrade, result: undefined}).
+2025-12-01T14:16:10.566Z [INFO] [Plan.completeTask]: next task is {type:undefined, expectedToolName:undefined}.
+2025-12-01T14:16:10.566Z [INFO] [Plan.completeTask]: next task has no instruction. Just return Done prechecking
+2025-12-01T14:16:10.566Z [INFO] [Tool.invoke]({message: Done prechecking
+}).
+2025-12-01T14:16:10.566Z [INFO] ----------------------invoked precheck_for_upgrade----------------------
+2025-12-01T14:16:11.194Z [INFO] [Tool.invoke]({result: {
+  "message": "\nThe upgrade plan at d:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\.github\\java-upgrade\\20251201141257\\plan.md has been updated and confirmed.\n\n# Confirmed final upgrade goal:\n- upgrade `Spring Boot` to *3.5.x*\n\n## IMPORTANT NOTE: Milestone-based Upgrade\n\nGiven that this upgrade will span multiple version updates and the process is relatively complex, we believe that a milestone-based approach will make it easier to achieve the final goal. Therefore, we have divided the upgrade process into several smaller milestones and each milestone has its own smaller goal:\n- Milestone 1: Upgrade project to use `Spring Boot 3.4.x`\n- Milestone 2: Upgrade project to use `Spring Boot 3.5.x`\n\nYou **MUST** follow the instructions carefully and complete each milestone step by step.\n\n- You MUST focus on the goal of the current milestone rather than the final goal for each milestone.\n- All changes you make MUST be solely aimed at achieving the current milestone's goals, with no deviation whatsoever.\n- You should NEVER make any modifications that are inconsistent with these goals.\n"
+}}).
+2025-12-01T14:16:11.194Z [INFO] [Plan.completeTask](task:{id:3, type:setupEnvironment}, result:{
+  "message": "\nThe upgrade plan at d:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\.github\\java-upgrade\\20251201141257\\plan.md has been updated and confirmed.\n\n# Confirmed final upgrade goal:\n- upgrade `Spring Boot` to *3.5.x*\n\n## IMPORTANT NOTE: Milestone-based Upgrade\n\nGiven that this upgrade will span multiple version updates and the process is relatively complex, we believe that a milestone-based approach will make it easier to achieve the final goal. Therefore, we have divided the upgrade process into several smaller milestones and each milestone has its own smaller goal:\n- Milestone 1: Upgrade project to use `Spring Boot 3.4.x`\n- Milestone 2: Upgrade project to use `Spring Boot 3.5.x`\n\nYou **MUST** follow the instructions carefully and complete each milestone step by step.\n\n- You MUST focus on the goal of the current milestone rather than the final goal for each milestone.\n- All changes you make MUST be solely aimed at achieving the current milestone's goals, with no deviation whatsoever.\n- You should NEVER make any modifications that are inconsistent with these goals.\n"
+})
+2025-12-01T14:16:11.194Z [INFO] [Task.complete](3): Completing task setupEnvironment
+2025-12-01T14:16:11.196Z [INFO] [Task.complete](3): Completed task setupEnvironment
+2025-12-01T14:16:11.196Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:16:11.197Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:16:11.197Z [INFO] [Plan.getNextTaskAtComplete]({task: Setup Development Environment, result: undefined}).
+2025-12-01T14:16:11.201Z [INFO] [Task.start](): Starting task milestone
+2025-12-01T14:16:11.203Z [INFO] [Task.start](5): Started task milestone
+2025-12-01T14:16:11.203Z [INFO] [Plan.startCurrentMilestone]({milestoneTask:{id: 5, title: Upgrade project to use `Spring Boot 3.4.x`}})
+2025-12-01T14:16:11.206Z [INFO] [Plan.startCurrentMilestone]: this is the first milestone, no previous milestone.
+2025-12-01T14:16:11.208Z [INFO] [Plan.startCurrentMilestone]: current milestone has no OpenRewrite recipes, creating AI task.
+2025-12-01T14:16:11.209Z [INFO] [Plan.completeTask]: next task is {type:upgradeProjectUsingAgent, expectedToolName:build_java_project}.
+2025-12-01T14:16:11.209Z [INFO] [Plan.completeTask]: next task is an AgentTask, starting it.
+2025-12-01T14:16:11.210Z [INFO] [Task.start](): Starting task upgradeProjectUsingAgent
+2025-12-01T14:16:11.212Z [INFO] [Task.start](5.1): Started task upgradeProjectUsingAgent
+2025-12-01T14:16:11.212Z [INFO] [Plan.completeTask]: next task has instruction: 
+
+# Current Milestone Goal:
+This is the 1st milestone, its goal is:
+- upgrade `Spring Boot` to *3.4.x*
+
+
+# Next steps:
+1. You **MUST!** identify all the dependencies or code that need upgrading to upgrade `Spring Boot` to *3.4.x*, and make all necessary changes with any tools you prefer. Here are the guidelines/rules you SHOULD follow during the upgrade (Be careful that not all these guidelines are appropriate for the current milestone, You **MUST** only follow those relevant applicable ones):
+    - [Upgrading to Spring Boot 3.4 from 3.3](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.4-Release-Notes#upgrading-from-spring-boot-33)
+2. You **MUST!** remember to invoke tool #build_java_project with sessionId "20251201141257" to validate the changes after performing the upgrade as any code change might introduce new build errors.
+
+# Important Notes:
+- You **MUST** fetch the contents first if guidelines are provided as links.
+- You **MUST** ONLY upgrade the dependencies that truly require upgrading. You should NOT upgrade any dependencies that remain compatible with the user-specified upgrade target even if they have been deprecated or obsolete.
+    - For dependencies, Pay special attention to any other dependencies that are incompatible with the target java/dependencies versions.
+    - For code and configuration, pay special attention to **deprecated, removed, or obsolete features, APIs, or functionalities**.
+- You **MUST** ONLY make necessary code changes to achieve the current milestone goal without any deviation whatsoever.
+- You **MUST** strictly adhere to the current milestone goal but not the final goal to upgrade the project.
+- You **MUST** invoke tool #build_java_project to validate the changes and should NEVER skip this validation regardless of how confident you are in your code changes. Even if:
+    - You've already built the project before
+    - You believe no new build errors could have been introduced
+    - Previous checks showed no build errors
+- You **MUST** maintain the exact same functionality/behavior logic when making any code changes. You **MUST NOT** change the original code functionality/behavior when making any code changes.
+
+2025-12-01T14:16:11.213Z [INFO] [Tool.invoke]({message: 
+The upgrade plan at d:\Epharmacy Application\Epharma_Ecosystem\backend\.github\java-upgrade\20251201141257\plan.md has been updated and confirmed.
+
+# Confirmed final upgrade goal:
+- upgrade `Spring Boot` to *3.5.x*
+
+## IMPORTANT NOTE: Milestone-based Upgrade
+
+Given that this upgrade will span multiple version updates and the process is relatively complex, we believe that a milestone-based approach will make it easier to achieve the final goal. Therefore, we have divided the upgrade process into several smaller milestones and each milestone has its own smaller goal:
+- Milestone 1: Upgrade project to use `Spring Boot 3.4.x`
+- Milestone 2: Upgrade project to use `Spring Boot 3.5.x`
+
+You **MUST** follow the instructions carefully and complete each milestone step by step.
+
+- You MUST focus on the goal of the current milestone rather than the final goal for each milestone.
+- All changes you make MUST be solely aimed at achieving the current milestone's goals, with no deviation whatsoever.
+- You should NEVER make any modifications that are inconsistent with these goals.
+
+Now, let's start with the first milestone goal of upgrading the project.
+
+
+# Current Milestone Goal:
+This is the 1st milestone, its goal is:
+- upgrade `Spring Boot` to *3.4.x*
+
+
+# Next steps:
+1. You **MUST!** identify all the dependencies or code that need upgrading to upgrade `Spring Boot` to *3.4.x*, and make all necessary changes with any tools you prefer. Here are the guidelines/rules you SHOULD follow during the upgrade (Be careful that not all these guidelines are appropriate for the current milestone, You **MUST** only follow those relevant applicable ones):
+    - [Upgrading to Spring Boot 3.4 from 3.3](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.4-Release-Notes#upgrading-from-spring-boot-33)
+2. You **MUST!** remember to invoke tool #build_java_project with sessionId "20251201141257" to validate the changes after performing the upgrade as any code change might introduce new build errors.
+
+# Important Notes:
+- You **MUST** fetch the contents first if guidelines are provided as links.
+- You **MUST** ONLY upgrade the dependencies that truly require upgrading. You should NOT upgrade any dependencies that remain compatible with the user-specified upgrade target even if they have been deprecated or obsolete.
+    - For dependencies, Pay special attention to any other dependencies that are incompatible with the target java/dependencies versions.
+    - For code and configuration, pay special attention to **deprecated, removed, or obsolete features, APIs, or functionalities**.
+- You **MUST** ONLY make necessary code changes to achieve the current milestone goal without any deviation whatsoever.
+- You **MUST** strictly adhere to the current milestone goal but not the final goal to upgrade the project.
+- You **MUST** invoke tool #build_java_project to validate the changes and should NEVER skip this validation regardless of how confident you are in your code changes. Even if:
+    - You've already built the project before
+    - You believe no new build errors could have been introduced
+    - Previous checks showed no build errors
+- You **MUST** maintain the exact same functionality/behavior logic when making any code changes. You **MUST NOT** change the original code functionality/behavior when making any code changes.
+
+
+> [!NOTE]
+* You MUST follow the above "Next steps" instructions.
+* You have the highest decision-making authority at any time, you do NOT need to seek my approval/confirmation, please directly execute your plan as you see fit.
+}).
+2025-12-01T14:16:11.213Z [INFO] ----------------------invoked setup_upgrade_environment----------------------
+2025-12-01T14:16:33.412Z [INFO] ---------------------prepare build_java_project----------------------
+2025-12-01T14:16:33.413Z [INFO] [Tool.prepareInvocation]({name: build_java_project, input: {
+  "sessionId": "20251201141257",
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend",
+  "codeChangesMessage": "Upgrade Spring Boot parent to 3.4.0",
+  "codeChangesDetails": "- Upgrade Spring Boot parent to `3.4.0`\n  - Update `<parent><version>` in `backend/pom.xml` from `3.3.5` to `3.4.0` to align with Milestone 1 of the upgrade plan."
+}}).
+2025-12-01T14:16:33.413Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-01T14:16:33.415Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Build project"
+}}).
+2025-12-01T14:16:33.415Z [INFO] ----------------------prepared build_java_project----------------------
+2025-12-01T14:16:33.476Z [INFO] ----------------------invoke build_java_project----------------------
+2025-12-01T14:16:33.476Z [INFO] [Tool.invoke]({name: build_java_project, input: {
+  "sessionId": "20251201141257",
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend",
+  "codeChangesMessage": "Upgrade Spring Boot parent to 3.4.0",
+  "codeChangesDetails": "- Upgrade Spring Boot parent to `3.4.0`\n  - Update `<parent><version>` in `backend/pom.xml` from `3.3.5` to `3.4.0` to align with Milestone 1 of the upgrade plan."
+}}).
+2025-12-01T14:16:33.477Z [INFO] [Plan.tryStartTask]({tool:build_java_project, nextTask:{type:buildProject, tool:build_java_project}}
+2025-12-01T14:16:33.477Z [INFO] [Plan.tryStartTask]: tool.type is exactly the same as nextTask.expectedToolName
+2025-12-01T14:16:33.477Z [INFO] [Plan.tryStartTask]: currentTask is an AgentTask, complete it first.
+2025-12-01T14:16:33.478Z [INFO] [Task.complete](5.1): Completing task upgradeProjectUsingAgent
+2025-12-01T14:16:33.479Z [INFO] [Task.complete](5.1): Completed task upgradeProjectUsingAgent
+2025-12-01T14:16:34.099Z [INFO] [Task.commitChanges](5.1): Committed changes for d:/Epharmacy Application/Epharma_Ecosystem/backend with message: Upgrade Spring Boot parent to 3.4.0
+2025-12-01T14:16:34.099Z [INFO] [Plan.tryStartTask]: starting task buildProject
+2025-12-01T14:16:34.100Z [INFO] [Task.start](): Starting task buildProject
+2025-12-01T14:16:34.101Z [INFO] [Task.start](5.2): Started task buildProject
+2025-12-01T14:16:34.101Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:16:34.101Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:16:34.102Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:16:34.694Z [INFO] [Project backend]: Java version of project backend is changed.
+2025-12-01T14:16:34.695Z [INFO] [Project backend]: Java version of project backend is changed to '21' || '21'
+2025-12-01T14:16:34.695Z [INFO] [Project backend]: updating project backend's build tool jdk accordingly to '21'
+2025-12-01T14:16:34.696Z [INFO] [Project backend]: build tool config of project backend is modified.
+2025-12-01T14:16:34.697Z [INFO] [Project backend]: dependencies of project backend may be changed, resetting promise.
+2025-12-01T14:17:03.293Z [INFO] [Project backend]: Compilation errors of project backend is updated: 0 -> 1
+2025-12-01T14:17:03.302Z [INFO] [Tool.invoke]({result: {
+  "message": "Build failed with 1 errors using command: `mvn clean test-compile -q -B -fn`.\n- === Config File error     The below errors can be due to missing dependencies. You may have to refer     to the config files provided earlier to solve it.     'errorMessage': Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.0:build-info (default) on project backend: Cannot create parent directory for 'd:\\Epharmacy Application\\Epharma\\_Ecosystem\\backend\\target\\classes\\META-INF\\build-info.properties' \n  ```\n  Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.0:build-info (default) on project backend: Cannot create parent directory for 'd:\\Epharmacy Application\\Epharma\\_Ecosystem\\backend\\target\\classes\\META-INF\\build-info.properties'\n  ```",
+  "result": {
+    "numOfJavaFiles": 26,
+    "numOfClassFiles": 0,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 26,
+        "numOfClassFiles": 0
+      }
+    },
+    "errors": [
+      {
+        "errorMessage": "\n    === Config File error\n    The below errors can be due to missing dependencies. You may have to refer\n    to the config files provided earlier to solve it.\n    'errorMessage': Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.0:build-info (default) on project backend: Cannot create parent directory for 'd:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\target\\classes\\META-INF\\build-info.properties'\n",
+        "raw": "Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.0:build-info (default) on project backend: Cannot create parent directory for 'd:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\target\\classes\\META-INF\\build-info.properties'"
+      }
+    ],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "telemetry": {
+    "result": "failed"
+  }
+}}).
+2025-12-01T14:17:03.302Z [INFO] [Plan.completeTask](task:{id:5.2, type:buildProject}, result:{
+  "message": "Build failed with 1 errors using command: `mvn clean test-compile -q -B -fn`.\n- === Config File error     The below errors can be due to missing dependencies. You may have to refer     to the config files provided earlier to solve it.     'errorMessage': Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.0:build-info (default) on project backend: Cannot create parent directory for 'd:\\Epharmacy Application\\Epharma\\_Ecosystem\\backend\\target\\classes\\META-INF\\build-info.properties' \n  ```\n  Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.0:build-info (default) on project backend: Cannot create parent directory for 'd:\\Epharmacy Application\\Epharma\\_Ecosystem\\backend\\target\\classes\\META-INF\\build-info.properties'\n  ```",
+  "result": {
+    "numOfJavaFiles": 26,
+    "numOfClassFiles": 0,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 26,
+        "numOfClassFiles": 0
+      }
+    },
+    "errors": [
+      {
+        "errorMessage": "\n    === Config File error\n    The below errors can be due to missing dependencies. You may have to refer\n    to the config files provided earlier to solve it.\n    'errorMessage': Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.0:build-info (default) on project backend: Cannot create parent directory for 'd:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\target\\classes\\META-INF\\build-info.properties'\n",
+        "raw": "Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.0:build-info (default) on project backend: Cannot create parent directory for 'd:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\target\\classes\\META-INF\\build-info.properties'"
+      }
+    ],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "telemetry": {
+    "result": "failed"
+  }
+})
+2025-12-01T14:17:03.303Z [INFO] [Task.complete](5.2): Completing task buildProject
+2025-12-01T14:17:03.306Z [INFO] [Task.complete](5.2): Completed task buildProject
+2025-12-01T14:17:03.307Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:17:03.307Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:17:03.307Z [INFO] [Plan.getNextTaskAtComplete]({task: Build Project, result: {
+  "numOfJavaFiles": 26,
+  "numOfClassFiles": 0,
+  "modulesBuildResult": {
+    ".": {
+      "numOfJavaFiles": 26,
+      "numOfClassFiles": 0
+    }
+  },
+  "errors": [
+    {
+      "errorMessage": "\n    === Config File error\n    The below errors can be due to missing dependencies. You may have to refer\n    to the config files provided earlier to solve it.\n    'errorMessage': Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.0:build-info (default) on project backend: Cannot create parent directory for 'd:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\target\\classes\\META-INF\\build-info.properties'\n",
+      "raw": "Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.0:build-info (default) on project backend: Cannot create parent directory for 'd:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\target\\classes\\META-INF\\build-info.properties'"
+    }
+  ],
+  "command": "mvn clean test-compile -q -B -fn"
+}}).
+2025-12-01T14:17:03.310Z [INFO] [Plan.completeTask]: next task is {type:fixBuildErrors, expectedToolName:build_java_project}.
+2025-12-01T14:17:03.310Z [INFO] [Plan.completeTask]: next task is an AgentTask, starting it.
+2025-12-01T14:17:03.311Z [INFO] [Task.start](): Starting task fixBuildErrors
+2025-12-01T14:17:03.311Z [INFO] [Task.start](5.3): Started task fixBuildErrors
+2025-12-01T14:17:03.312Z [INFO] [Plan.completeTask]: next task has instruction: 
+
+# Current Milestone Goal:
+This is the 1st milestone, its goal is:
+- upgrade `Spring Boot` to *3.4.x*
+
+
+# Next steps:
+1. First, You **MUST!** fix the above building errors to make project buildable with any tools you see fit. 
+2. And then, You **MUST!** remember to invoke tool #build_java_project with sessionId "20251201141257" to validate the changes after fixing build errors as any code changes may introduce new build errors.
+
+# Important Notes:
+- You **MUST** focus exclusively on *fixing the build errors to make the project buildable.*
+- You **MUST** upgrade any dependencies that are incompatible with the milestone goal dependencies — these incompatibilities only become apparent after the target dependencies have been upgraded.
+- You **MUST NOT** downgrade any of the milestone goal dependencies whenever fixing any issues.
+- You **MUST** make as many necessary code changes as possible to fix the build errors before invoking tool #build_java_project to validate the changes again.
+- You **MUST** focus on the current milestone goal 'upgrade `Spring Boot` to *3.4.x*' but not the final goal.
+- All the code changes you make MUST strictly adhere to/serve the current milestone goal, without any deviation whatsoever.
+- All the code changes you make MUST be compatible with the current milestone goal.
+- All the code changes you make MUST maintain the exact same functionality and behavior as the original code. Any deviation from the original logic will be considered incorrect, even if you believe the original logic contains errors.
+- You **MUST NOT** import any new CVE vulnerable dependencies when making any code changes.
+- You **MUST NOT** break any existing test cases when making any code changes.
+
+2025-12-01T14:17:03.312Z [INFO] [Tool.invoke]({message: Build failed with 1 errors using command: `mvn clean test-compile -q -B -fn`.
+- === Config File error     The below errors can be due to missing dependencies. You may have to refer     to the config files provided earlier to solve it.     'errorMessage': Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.0:build-info (default) on project backend: Cannot create parent directory for 'd:\Epharmacy Application\Epharma\_Ecosystem\backend\target\classes\META-INF\build-info.properties' 
+  ```
+  Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.0:build-info (default) on project backend: Cannot create parent directory for 'd:\Epharmacy Application\Epharma\_Ecosystem\backend\target\classes\META-INF\build-info.properties'
+  ```
+
+
+
+# Current Milestone Goal:
+This is the 1st milestone, its goal is:
+- upgrade `Spring Boot` to *3.4.x*
+
+
+# Next steps:
+1. First, You **MUST!** fix the above building errors to make project buildable with any tools you see fit. 
+2. And then, You **MUST!** remember to invoke tool #build_java_project with sessionId "20251201141257" to validate the changes after fixing build errors as any code changes may introduce new build errors.
+
+# Important Notes:
+- You **MUST** focus exclusively on *fixing the build errors to make the project buildable.*
+- You **MUST** upgrade any dependencies that are incompatible with the milestone goal dependencies — these incompatibilities only become apparent after the target dependencies have been upgraded.
+- You **MUST NOT** downgrade any of the milestone goal dependencies whenever fixing any issues.
+- You **MUST** make as many necessary code changes as possible to fix the build errors before invoking tool #build_java_project to validate the changes again.
+- You **MUST** focus on the current milestone goal 'upgrade `Spring Boot` to *3.4.x*' but not the final goal.
+- All the code changes you make MUST strictly adhere to/serve the current milestone goal, without any deviation whatsoever.
+- All the code changes you make MUST be compatible with the current milestone goal.
+- All the code changes you make MUST maintain the exact same functionality and behavior as the original code. Any deviation from the original logic will be considered incorrect, even if you believe the original logic contains errors.
+- You **MUST NOT** import any new CVE vulnerable dependencies when making any code changes.
+- You **MUST NOT** break any existing test cases when making any code changes.
+
+
+> [!NOTE]
+* You MUST follow the above "Next steps" instructions.
+* You have the highest decision-making authority at any time, you do NOT need to seek my approval/confirmation, please directly execute your plan as you see fit.
+}).
+2025-12-01T14:17:03.312Z [INFO] ----------------------invoked build_java_project----------------------
+2025-12-01T14:17:43.547Z [INFO] ---------------------prepare build_java_project----------------------
+2025-12-01T14:17:43.549Z [INFO] [Tool.prepareInvocation]({name: build_java_project, input: {
+  "sessionId": "20251201141257",
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend",
+  "codeChangesMessage": "Reschedule spring-boot-maven-plugin build-info to package phase",
+  "codeChangesDetails": "- Adjust plugin execution phase\n  - Set `spring-boot-maven-plugin` build-info execution to run in `package` phase to avoid directory creation error during `test-compile`.\n- Rationale\n  - Prevents Windows path parent directory creation error while preserving build-info generation at packaging."
+}}).
+2025-12-01T14:17:43.549Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-01T14:17:43.550Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Build project"
+}}).
+2025-12-01T14:17:43.550Z [INFO] ----------------------prepared build_java_project----------------------
+2025-12-01T14:17:43.638Z [INFO] ----------------------invoke build_java_project----------------------
+2025-12-01T14:17:43.639Z [INFO] [Tool.invoke]({name: build_java_project, input: {
+  "sessionId": "20251201141257",
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend",
+  "codeChangesMessage": "Reschedule spring-boot-maven-plugin build-info to package phase",
+  "codeChangesDetails": "- Adjust plugin execution phase\n  - Set `spring-boot-maven-plugin` build-info execution to run in `package` phase to avoid directory creation error during `test-compile`.\n- Rationale\n  - Prevents Windows path parent directory creation error while preserving build-info generation at packaging."
+}}).
+2025-12-01T14:17:43.639Z [INFO] [Plan.tryStartTask]({tool:build_java_project, nextTask:{type:buildProject, tool:build_java_project}}
+2025-12-01T14:17:43.640Z [INFO] [Plan.tryStartTask]: tool.type is exactly the same as nextTask.expectedToolName
+2025-12-01T14:17:43.640Z [INFO] [Plan.tryStartTask]: currentTask is an AgentTask, complete it first.
+2025-12-01T14:17:43.640Z [INFO] [Task.complete](5.3): Completing task fixBuildErrors
+2025-12-01T14:17:43.642Z [INFO] [Task.complete](5.3): Completed task fixBuildErrors
+2025-12-01T14:17:44.256Z [INFO] [Task.commitChanges](5.3): Committed changes for d:/Epharmacy Application/Epharma_Ecosystem/backend with message: Reschedule spring-boot-maven-plugin build-info to package phase
+2025-12-01T14:17:44.257Z [INFO] [Plan.tryStartTask]: starting task buildProject
+2025-12-01T14:17:44.257Z [INFO] [Task.start](): Starting task buildProject
+2025-12-01T14:17:44.258Z [INFO] [Task.start](5.4): Started task buildProject
+2025-12-01T14:17:44.258Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:17:44.259Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:17:44.259Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:17:44.906Z [INFO] [Project backend]: Java version of project backend is changed.
+2025-12-01T14:17:44.906Z [INFO] [Project backend]: Java version of project backend is changed to '21' || '21'
+2025-12-01T14:17:44.906Z [INFO] [Project backend]: updating project backend's build tool jdk accordingly to '21'
+2025-12-01T14:17:44.906Z [INFO] [Project backend]: build tool config of project backend is modified.
+2025-12-01T14:17:44.907Z [INFO] [Project backend]: dependencies of project backend may be changed, resetting promise.
+2025-12-01T14:18:04.014Z [INFO] [Project backend]: Compilation errors of project backend is updated: 1 -> 0
+2025-12-01T14:18:04.018Z [INFO] [Tool.invoke]({result: {
+  "message": "Build succeeded! There are no build errors in the project.",
+  "result": {
+    "numOfJavaFiles": 26,
+    "numOfClassFiles": 10,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 26,
+        "numOfClassFiles": 10
+      }
+    },
+    "errors": [],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+}}).
+2025-12-01T14:18:04.018Z [INFO] [Plan.completeTask](task:{id:5.4, type:buildProject}, result:{
+  "message": "Build succeeded! There are no build errors in the project.",
+  "result": {
+    "numOfJavaFiles": 26,
+    "numOfClassFiles": 10,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 26,
+        "numOfClassFiles": 10
+      }
+    },
+    "errors": [],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+})
+2025-12-01T14:18:04.019Z [INFO] [Task.complete](5.4): Completing task buildProject
+2025-12-01T14:18:04.020Z [INFO] [Task.complete](5.4): Completed task buildProject
+2025-12-01T14:18:04.020Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:18:04.020Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:18:04.021Z [INFO] [Plan.getNextTaskAtComplete]({task: Build Project, result: {
+  "numOfJavaFiles": 26,
+  "numOfClassFiles": 10,
+  "modulesBuildResult": {
+    ".": {
+      "numOfJavaFiles": 26,
+      "numOfClassFiles": 10
+    }
+  },
+  "errors": [],
+  "command": "mvn clean test-compile -q -B -fn"
+}}).
+2025-12-01T14:18:04.021Z [INFO] [Task.complete](5): Completing task milestone
+2025-12-01T14:18:04.024Z [INFO] [Task.complete](5): Completed task milestone
+2025-12-01T14:18:04.024Z [INFO] [Task.start](): Starting task milestone
+2025-12-01T14:18:04.031Z [INFO] [Task.start](6): Started task milestone
+2025-12-01T14:18:04.031Z [INFO] [Plan.startCurrentMilestone]({milestoneTask:{id: 6, title: Upgrade project to use `Spring Boot 3.5.x`}})
+2025-12-01T14:18:04.034Z [INFO] [Plan.startCurrentMilestone]: current milestone has no OpenRewrite recipes, creating AI task.
+2025-12-01T14:18:04.035Z [INFO] [Plan.completeTask]: next task is {type:upgradeProjectUsingAgent, expectedToolName:build_java_project}.
+2025-12-01T14:18:04.036Z [INFO] [Plan.completeTask]: next task is an AgentTask, starting it.
+2025-12-01T14:18:04.036Z [INFO] [Task.start](): Starting task upgradeProjectUsingAgent
+2025-12-01T14:18:04.037Z [INFO] [Task.start](6.1): Started task upgradeProjectUsingAgent
+2025-12-01T14:18:04.037Z [INFO] [Plan.completeTask]: next task has instruction: 
+
+# Current Milestone Goal:
+This is the 2nd milestone, its goal is:
+- upgrade `Spring Boot` to *3.5.x*
+
+
+# Next steps:
+1. You **MUST!** identify all the dependencies or code that need upgrading to upgrade `Spring Boot` to *3.5.x*, and make all necessary changes with any tools you prefer. Here are the guidelines/rules you SHOULD follow during the upgrade (Be careful that not all these guidelines are appropriate for the current milestone, You **MUST** only follow those relevant applicable ones):
+    - [Upgrading to Spring Boot 3.5 from 3.4](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.5-Release-Notes#upgrading-from-spring-boot-34)
+2. You **MUST!** remember to invoke tool #build_java_project with sessionId "20251201141257" to validate the changes after performing the upgrade as any code change might introduce new build errors.
+
+# Important Notes:
+- You **MUST** fetch the contents first if guidelines are provided as links.
+- You **MUST** ONLY upgrade the dependencies that truly require upgrading. You should NOT upgrade any dependencies that remain compatible with the user-specified upgrade target even if they have been deprecated or obsolete.
+    - For dependencies, Pay special attention to any other dependencies that are incompatible with the target java/dependencies versions.
+    - For code and configuration, pay special attention to **deprecated, removed, or obsolete features, APIs, or functionalities**.
+- You **MUST** ONLY make necessary code changes to achieve the current milestone goal without any deviation whatsoever.
+- You **MUST** strictly adhere to the current milestone goal but not the final goal to upgrade the project.
+- You **MUST** invoke tool #build_java_project to validate the changes and should NEVER skip this validation regardless of how confident you are in your code changes. Even if:
+    - You've already built the project before
+    - You believe no new build errors could have been introduced
+    - Previous checks showed no build errors
+- You **MUST** maintain the exact same functionality/behavior logic when making any code changes. You **MUST NOT** change the original code functionality/behavior when making any code changes.
+
+2025-12-01T14:18:04.038Z [INFO] [Tool.invoke]({message: Build succeeded! There are no build errors in the project.
+Congratulations! The 1st milestone goal has been achieved successfully. Now, let's proceed to the next milestone goal.
+
+
+# Current Milestone Goal:
+This is the 2nd milestone, its goal is:
+- upgrade `Spring Boot` to *3.5.x*
+
+
+# Next steps:
+1. You **MUST!** identify all the dependencies or code that need upgrading to upgrade `Spring Boot` to *3.5.x*, and make all necessary changes with any tools you prefer. Here are the guidelines/rules you SHOULD follow during the upgrade (Be careful that not all these guidelines are appropriate for the current milestone, You **MUST** only follow those relevant applicable ones):
+    - [Upgrading to Spring Boot 3.5 from 3.4](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.5-Release-Notes#upgrading-from-spring-boot-34)
+2. You **MUST!** remember to invoke tool #build_java_project with sessionId "20251201141257" to validate the changes after performing the upgrade as any code change might introduce new build errors.
+
+# Important Notes:
+- You **MUST** fetch the contents first if guidelines are provided as links.
+- You **MUST** ONLY upgrade the dependencies that truly require upgrading. You should NOT upgrade any dependencies that remain compatible with the user-specified upgrade target even if they have been deprecated or obsolete.
+    - For dependencies, Pay special attention to any other dependencies that are incompatible with the target java/dependencies versions.
+    - For code and configuration, pay special attention to **deprecated, removed, or obsolete features, APIs, or functionalities**.
+- You **MUST** ONLY make necessary code changes to achieve the current milestone goal without any deviation whatsoever.
+- You **MUST** strictly adhere to the current milestone goal but not the final goal to upgrade the project.
+- You **MUST** invoke tool #build_java_project to validate the changes and should NEVER skip this validation regardless of how confident you are in your code changes. Even if:
+    - You've already built the project before
+    - You believe no new build errors could have been introduced
+    - Previous checks showed no build errors
+- You **MUST** maintain the exact same functionality/behavior logic when making any code changes. You **MUST NOT** change the original code functionality/behavior when making any code changes.
+
+
+> [!NOTE]
+* You MUST follow the above "Next steps" instructions.
+* You have the highest decision-making authority at any time, you do NOT need to seek my approval/confirmation, please directly execute your plan as you see fit.
+}).
+2025-12-01T14:18:04.038Z [INFO] ----------------------invoked build_java_project----------------------
+2025-12-01T14:18:19.848Z [INFO] ---------------------prepare build_java_project----------------------
+2025-12-01T14:18:19.849Z [INFO] [Tool.prepareInvocation]({name: build_java_project, input: {
+  "sessionId": "20251201141257",
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend",
+  "codeChangesMessage": "Upgrade Spring Boot parent to 3.5.0",
+  "codeChangesDetails": "- Upgrade Spring Boot parent to `3.5.0`\n  - Update `<parent><version>` in `backend/pom.xml` from `3.4.0` to `3.5.0` as per Milestone 2.\n- Prior change retained\n  - Keep `spring-boot-maven-plugin` build-info execution bound to `package` phase."
+}}).
+2025-12-01T14:18:19.849Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-01T14:18:19.849Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Build project"
+}}).
+2025-12-01T14:18:19.850Z [INFO] ----------------------prepared build_java_project----------------------
+2025-12-01T14:18:19.913Z [INFO] ----------------------invoke build_java_project----------------------
+2025-12-01T14:18:19.913Z [INFO] [Tool.invoke]({name: build_java_project, input: {
+  "sessionId": "20251201141257",
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend",
+  "codeChangesMessage": "Upgrade Spring Boot parent to 3.5.0",
+  "codeChangesDetails": "- Upgrade Spring Boot parent to `3.5.0`\n  - Update `<parent><version>` in `backend/pom.xml` from `3.4.0` to `3.5.0` as per Milestone 2.\n- Prior change retained\n  - Keep `spring-boot-maven-plugin` build-info execution bound to `package` phase."
+}}).
+2025-12-01T14:18:19.914Z [INFO] [Plan.tryStartTask]({tool:build_java_project, nextTask:{type:buildProject, tool:build_java_project}}
+2025-12-01T14:18:19.914Z [INFO] [Plan.tryStartTask]: tool.type is exactly the same as nextTask.expectedToolName
+2025-12-01T14:18:19.914Z [INFO] [Plan.tryStartTask]: currentTask is an AgentTask, complete it first.
+2025-12-01T14:18:19.914Z [INFO] [Task.complete](6.1): Completing task upgradeProjectUsingAgent
+2025-12-01T14:18:19.915Z [INFO] [Task.complete](6.1): Completed task upgradeProjectUsingAgent
+2025-12-01T14:18:20.902Z [INFO] [Task.commitChanges](6.1): Committed changes for d:/Epharmacy Application/Epharma_Ecosystem/backend with message: Upgrade Spring Boot parent to 3.5.0
+2025-12-01T14:18:20.902Z [INFO] [Plan.tryStartTask]: starting task buildProject
+2025-12-01T14:18:20.902Z [INFO] [Task.start](): Starting task buildProject
+2025-12-01T14:18:20.904Z [INFO] [Task.start](6.2): Started task buildProject
+2025-12-01T14:18:20.904Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:18:20.904Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:18:20.905Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:18:21.704Z [INFO] [Project backend]: Java version of project backend is changed.
+2025-12-01T14:18:21.704Z [INFO] [Project backend]: Java version of project backend is changed to '21' || '21'
+2025-12-01T14:18:21.704Z [INFO] [Project backend]: updating project backend's build tool jdk accordingly to '21'
+2025-12-01T14:18:21.704Z [INFO] [Project backend]: build tool config of project backend is modified.
+2025-12-01T14:18:21.705Z [INFO] [Project backend]: dependencies of project backend may be changed, resetting promise.
+2025-12-01T14:18:57.162Z [INFO] [Project backend]: Compilation errors of project backend is updated: 0 -> 0
+2025-12-01T14:18:57.168Z [INFO] [Tool.invoke]({result: {
+  "message": "Build succeeded! There are no build errors in the project.",
+  "result": {
+    "numOfJavaFiles": 26,
+    "numOfClassFiles": 26,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 26,
+        "numOfClassFiles": 26
+      }
+    },
+    "errors": [],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+}}).
+2025-12-01T14:18:57.168Z [INFO] [Plan.completeTask](task:{id:6.2, type:buildProject}, result:{
+  "message": "Build succeeded! There are no build errors in the project.",
+  "result": {
+    "numOfJavaFiles": 26,
+    "numOfClassFiles": 26,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 26,
+        "numOfClassFiles": 26
+      }
+    },
+    "errors": [],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+})
+2025-12-01T14:18:57.169Z [INFO] [Task.complete](6.2): Completing task buildProject
+2025-12-01T14:18:57.170Z [INFO] [Task.complete](6.2): Completed task buildProject
+2025-12-01T14:18:57.170Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:18:57.170Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:18:57.170Z [INFO] [Plan.getNextTaskAtComplete]({task: Build Project, result: {
+  "numOfJavaFiles": 26,
+  "numOfClassFiles": 26,
+  "modulesBuildResult": {
+    ".": {
+      "numOfJavaFiles": 26,
+      "numOfClassFiles": 26
+    }
+  },
+  "errors": [],
+  "command": "mvn clean test-compile -q -B -fn"
+}}).
+2025-12-01T14:18:57.171Z [INFO] [Task.complete](6): Completing task milestone
+2025-12-01T14:18:57.172Z [INFO] [Task.complete](6): Completed task milestone
+2025-12-01T14:18:57.174Z [INFO] [Task.start](): Starting task validation
+2025-12-01T14:18:57.180Z [INFO] [Task.start](7): Started task validation
+2025-12-01T14:18:57.180Z [INFO] [Plan.completeTask]: next task is {type:validateCves, expectedToolName:validate_cves_for_java}.
+2025-12-01T14:18:57.181Z [INFO] [Plan.completeTask]: next task has instruction: 
+There maybe some dependencies modified or added which may introduce new CVE issues since last check, we need to validate and then fix them again.
+
+# Next steps:
+1. You MUST! invoke tool #validate_cves_for_java with parameter sessionId: 20251201141257 again to check for any CVE issues for the updated/added dependencies since last CVE validation.
+
+# Important Notes:
+- You MUST run this CVEs validation EVERY time you modifying any dependencies directly or indirectly to ensure no new CVE issues are introduced,
+- You SHOULD NEVER skip CVE validation regardless of how confident you are in your code changes. Even if:
+    - You've already checked these dependencies before
+    - You believe no new vulnerabilities could have been introduced
+    - No dependencies were explicitly changed in your recent modifications
+    - Previous checks showed no CVE issues
+
+2025-12-01T14:18:57.181Z [INFO] [Tool.invoke]({message: Build succeeded! There are no build errors in the project.
+Congratulations! All upgrade milestones have been achieved successfully, but there are still some validation tasks to complete. Now, let's proceed to the next step of validating and fixing **CVE issues**, **code behavior changes** and **test errors/failures**.
+
+There maybe some dependencies modified or added which may introduce new CVE issues since last check, we need to validate and then fix them again.
+
+# Next steps:
+1. You MUST! invoke tool #validate_cves_for_java with parameter sessionId: 20251201141257 again to check for any CVE issues for the updated/added dependencies since last CVE validation.
+
+# Important Notes:
+- You MUST run this CVEs validation EVERY time you modifying any dependencies directly or indirectly to ensure no new CVE issues are introduced,
+- You SHOULD NEVER skip CVE validation regardless of how confident you are in your code changes. Even if:
+    - You've already checked these dependencies before
+    - You believe no new vulnerabilities could have been introduced
+    - No dependencies were explicitly changed in your recent modifications
+    - Previous checks showed no CVE issues
+
+
+> [!NOTE]
+* You MUST follow the above "Next steps" instructions.
+* You have the highest decision-making authority at any time, you do NOT need to seek my approval/confirmation, please directly execute your plan as you see fit.
+}).
+2025-12-01T14:18:57.181Z [INFO] ----------------------invoked build_java_project----------------------
+2025-12-01T14:19:09.059Z [INFO] ---------------------prepare validate_cves_for_java----------------------
+2025-12-01T14:19:09.060Z [INFO] [Tool.prepareInvocation]({name: validate_cves_for_java, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:19:09.060Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-01T14:19:09.062Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Validate CVEs"
+}}).
+2025-12-01T14:19:09.063Z [INFO] ----------------------prepared validate_cves_for_java----------------------
+2025-12-01T14:19:09.117Z [INFO] ----------------------invoke validate_cves_for_java----------------------
+2025-12-01T14:19:09.117Z [INFO] [Tool.invoke]({name: validate_cves_for_java, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:19:09.118Z [INFO] [Plan.tryStartTask]({tool:validate_cves_for_java, nextTask:{type:validateCves, tool:validate_cves_for_java}}
+2025-12-01T14:19:09.118Z [INFO] [Plan.tryStartTask]: tool.type is exactly the same as nextTask.expectedToolName
+2025-12-01T14:19:09.118Z [INFO] [Plan.tryStartTask]: starting task validateCves
+2025-12-01T14:19:09.118Z [INFO] [Task.start](): Starting task validateCves
+2025-12-01T14:19:09.119Z [INFO] [Task.start](7.1): Started task validateCves
+2025-12-01T14:19:09.119Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:19:09.120Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:19:09.120Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:19:09.123Z [INFO] [Project backend]: getting dependencies promise.
+2025-12-01T14:19:09.124Z [INFO] [Project backend]: reset dependencies promise.
+2025-12-01T14:19:09.125Z [INFO] [Environment] Running command (Java 21): mvn dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.5.3/maven-surefire-plugin-3.5.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.5.3/maven-surefire-plugin-3.5.3.pom (5.5 kB at 6.4 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.5.3/surefire-3.5.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.5.3/surefire-3.5.3.pom (20 kB at 122 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/44/maven-parent-44.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/44/maven-parent-44.pom (52 kB at 230 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/34/apache-34.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/34/apache-34.pom (24 kB at 141 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.12.1/junit-bom-5.12.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.12.1/junit-bom-5.12.1.pom (5.6 kB at 37 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.4/maven-install-plugin-3.1.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.4/maven-install-plugin-3.1.4.pom (8.1 kB at 49 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/3.1.4/maven-deploy-plugin-3.1.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/3.1.4/maven-deploy-plugin-3.1.4.pom (9.2 kB at 39 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/build-helper-maven-plugin/3.6.0/build-helper-maven-plugin-3.6.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/build-helper-maven-plugin/3.6.0/build-helper-maven-plugin-3.6.0.pom (8.1 kB at 46 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/82/mojo-parent-82.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/82/mojo-parent-82.pom (36 kB at 202 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/build-helper-maven-plugin/3.6.0/build-helper-maven-plugin-3.6.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/build-helper-maven-plugin/3.6.0/build-helper-maven-plugin-3.6.0.jar (72 kB at 321 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/cyclonedx/cyclonedx-maven-plugin/2.9.1/cyclonedx-maven-plugin-2.9.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/cyclonedx/cyclonedx-maven-plugin/2.9.1/cyclonedx-maven-plugin-2.9.1.pom (19 kB at 119 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/cyclonedx/cyclonedx-maven-plugin/2.9.1/cyclonedx-maven-plugin-2.9.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/cyclonedx/cyclonedx-maven-plugin/2.9.1/cyclonedx-maven-plugin-2.9.1.jar (52 kB at 295 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/flywaydb/flyway-maven-plugin/11.7.2/flyway-maven-plugin-11.7.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/flywaydb/flyway-maven-plugin/11.7.2/flyway-maven-plugin-11.7.2.pom (3.8 kB at 30 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/flywaydb/flyway-parent/11.7.2/flyway-parent-11.7.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/flywaydb/flyway-parent/11.7.2/flyway-parent-11.7.2.pom (36 kB at 246 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/flywaydb/flyway-maven-plugin/11.7.2/flyway-maven-plugin-11.7.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/flywaydb/flyway-maven-plugin/11.7.2/flyway-maven-plugin-11.7.2.jar (110 kB at 593 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/git-commit-id/git-commit-id-maven-plugin/9.0.1/git-commit-id-maven-plugin-9.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/git-commit-id/git-commit-id-maven-plugin/9.0.1/git-commit-id-maven-plugin-9.0.1.pom (28 kB at 164 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/git-commit-id/git-commit-id-maven-plugin/9.0.1/git-commit-id-maven-plugin-9.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/git-commit-id/git-commit-id-maven-plugin/9.0.1/git-commit-id-maven-plugin-9.0.1.jar (55 kB at 292 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jooq/jooq-codegen-maven/3.19.23/jooq-codegen-maven-3.19.23.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jooq/jooq-codegen-maven/3.19.23/jooq-codegen-maven-3.19.23.pom (3.8 kB at 23 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jooq/jooq-parent/3.19.23/jooq-parent-3.19.23.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jooq/jooq-parent/3.19.23/jooq-parent-3.19.23.pom (40 kB at 250 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jooq/jooq-codegen-maven/3.19.23/jooq-codegen-maven-3.19.23.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jooq/jooq-codegen-maven/3.19.23/jooq-codegen-maven-3.19.23.jar (18 kB at 47 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/liquibase/liquibase-maven-plugin/4.31.1/liquibase-maven-plugin-4.31.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/liquibase/liquibase-maven-plugin/4.31.1/liquibase-maven-plugin-4.31.1.pom (2.0 kB at 16 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/liquibase/liquibase-maven-plugin/4.31.1/liquibase-maven-plugin-4.31.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/liquibase/liquibase-maven-plugin/4.31.1/liquibase-maven-plugin-4.31.1.jar (352 kB at 1.7 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.14.0/maven-compiler-plugin-3.14.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.14.0/maven-compiler-plugin-3.14.0.pom (9.5 kB at 60 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.14.0/maven-compiler-plugin-3.14.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.14.0/maven-compiler-plugin-3.14.0.jar (83 kB at 522 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-dependency-plugin/3.8.1/maven-dependency-plugin-3.8.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-dependency-plugin/3.8.1/maven-dependency-plugin-3.8.1.pom (18 kB at 122 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-dependency-plugin/3.8.1/maven-dependency-plugin-3.8.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-dependency-plugin/3.8.1/maven-dependency-plugin-3.8.1.jar (208 kB at 1.1 MB/s)
+[INFO] 
+[INFO] -------------------< com.epharma.ecosystem:backend >--------------------
+[INFO] Building Epharma Ecosystem Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.8.1:tree (default-cli) @ backend ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.0.0/doxia-sink-api-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.0.0/doxia-sink-api-2.0.0.pom (1.4 kB at 11 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia/2.0.0/doxia-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia/2.0.0/doxia-2.0.0.pom (17 kB at 124 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.11.1/junit-bom-5.11.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.11.1/junit-bom-5.11.1.pom (5.6 kB at 47 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/4.0.0/maven-reporting-impl-4.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/4.0.0/maven-reporting-impl-4.0.0.pom (8.8 kB at 55 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-model/2.0.0/doxia-site-model-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-model/2.0.0/doxia-site-model-2.0.0.pom (5.8 kB at 44 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sitetools/2.0.0/doxia-sitetools-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sitetools/2.0.0/doxia-sitetools-2.0.0.pom (12 kB at 76 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/2.0.0/doxia-core-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/2.0.0/doxia-core-2.0.0.pom (3.9 kB at 26 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.17.0/commons-io-2.17.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.17.0/commons-io-2.17.0.pom (20 kB at 124 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/74/commons-parent-74.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/74/commons-parent-74.pom (78 kB at 537 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-integration-tools/2.0.0/doxia-integration-tools-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-integration-tools/2.0.0/doxia-integration-tools-2.0.0.pom (7.8 kB at 58 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/2.0.0/doxia-site-renderer-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/2.0.0/doxia-site-renderer-2.0.0.pom (7.4 kB at 66 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-skin-model/2.0.0/doxia-skin-model-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-skin-model/2.0.0/doxia-skin-model-2.0.0.pom (3.0 kB at 26 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml5/2.0.0/doxia-module-xhtml5-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml5/2.0.0/doxia-module-xhtml5-2.0.0.pom (2.9 kB at 24 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-modules/2.0.0/doxia-modules-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-modules/2.0.0/doxia-modules-2.0.0.pom (2.5 kB at 20 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/2.2.0/plexus-velocity-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/2.2.0/plexus-velocity-2.2.0.pom (4.1 kB at 23 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/19/plexus-19.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/19/plexus-19.pom (25 kB at 156 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.4/velocity-engine-core-2.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.4/velocity-engine-core-2.4.pom (12 kB at 83 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-parent/2.4/velocity-engine-parent-2.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-parent/2.4/velocity-engine-parent-2.4.pom (9.5 kB at 65 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-master/7/velocity-master-7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-master/7/velocity-master-7.pom (7.9 kB at 58 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-generic/3.1/velocity-tools-generic-3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-generic/3.1/velocity-tools-generic-3.1.pom (2.6 kB at 19 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-parent/3.1/velocity-tools-parent-3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-parent/3.1/velocity-tools-parent-3.1.pom (8.0 kB at 62 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-master/4/velocity-master-4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-master/4/velocity-master-4.pom (7.8 kB at 58 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.pom (10 kB at 65 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-parent/2.3/velocity-engine-parent-2.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-parent/2.3/velocity-engine-parent-2.3.pom (14 kB at 74 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.pom (30 kB at 162 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/51/commons-parent-51.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/51/commons-parent-51.pom (78 kB at 534 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.pom (3.8 kB at 33 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.30/slf4j-parent-1.7.30.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.30/slf4j-parent-1.7.30.pom (14 kB at 97 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.pom (18 kB at 113 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-digester3/3.2/commons-digester3-3.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-digester3/3.2/commons-digester3-3.2.pom (18 kB at 112 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/22/commons-parent-22.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/22/commons-parent-22.pom (42 kB at 247 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.pom (11 kB at 75 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/14/commons-parent-14.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/14/commons-parent-14.pom (31 kB at 185 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.pom (18 kB at 98 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/5/commons-parent-5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/5/commons-parent-5.pom (16 kB at 76 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.pom (31 kB at 169 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/50/commons-parent-50.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/50/commons-parent-50.pom (76 kB at 467 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/cliftonlabs/json-simple/3.0.2/json-simple-3.0.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/cliftonlabs/json-simple/3.0.2/json-simple-3.0.2.pom (7.5 kB at 49 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/2.0.0/doxia-module-apt-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/2.0.0/doxia-module-apt-2.0.0.pom (2.9 kB at 19 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/2.0.0/doxia-module-xdoc-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/2.0.0/doxia-module-xdoc-2.0.0.pom (5.4 kB at 42 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.10.0/plexus-archiver-4.10.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.10.0/plexus-archiver-4.10.0.pom (5.8 kB at 40 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.5.0/plexus-io-3.5.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.5.0/plexus-io-3.5.0.pom (4.3 kB at 31 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.26.2/commons-compress-1.26.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.26.2/commons-compress-1.26.2.pom (23 kB at 165 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.17.0/commons-codec-1.17.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.17.0/commons-codec-1.17.0.pom (18 kB at 112 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/airlift/aircompressor/0.27/aircompressor-0.27.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/airlift/aircompressor/0.27/aircompressor-0.27.pom (5.8 kB at 44 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/airlift/airbase/112/airbase-112.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/airlift/airbase/112/airbase-112.pom (69 kB at 450 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0-M1/junit-bom-5.8.0-M1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0-M1/junit-bom-5.8.0-M1.pom (5.7 kB at 43 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.6-3/zstd-jni-1.5.6-3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.6-3/zstd-jni-1.5.6-3.pom (2.0 kB at 15 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.5.1/plexus-io-3.5.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.5.1/plexus-io-3.5.1.pom (4.3 kB at 27 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.15.0/maven-dependency-analyzer-1.15.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.15.0/maven-dependency-analyzer-1.15.0.pom (32 kB at 221 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.4.0/maven-common-artifact-filters-3.4.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.4.0/maven-common-artifact-filters-3.4.0.pom (5.4 kB at 22 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.0.0/doxia-sink-api-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.0.0/doxia-sink-api-2.0.0.jar (11 kB at 28 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/4.0.0/maven-reporting-impl-4.0.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-model/2.0.0/doxia-site-model-2.0.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/2.0.0/doxia-core-2.0.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-integration-tools/2.0.0/doxia-integration-tools-2.0.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/2.0.0/doxia-site-renderer-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-model/2.0.0/doxia-site-model-2.0.0.jar (86 kB at 491 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-skin-model/2.0.0/doxia-skin-model-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-integration-tools/2.0.0/doxia-integration-tools-2.0.0.jar (50 kB at 169 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml5/2.0.0/doxia-module-xhtml5-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/2.0.0/doxia-core-2.0.0.jar (168 kB at 354 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/2.2.0/plexus-velocity-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-skin-model/2.0.0/doxia-skin-model-2.0.0.jar (16 kB at 26 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.4/velocity-engine-core-2.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/4.0.0/maven-reporting-impl-4.0.0.jar (21 kB at 32 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-generic/3.1/velocity-tools-generic-3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/2.2.0/plexus-velocity-2.2.0.jar (5.7 kB at 8.0 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml5/2.0.0/doxia-module-xhtml5-2.0.0.jar (17 kB at 19 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-digester3/3.2/commons-digester3-3.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-generic/3.1/velocity-tools-generic-3.1.jar (217 kB at 222 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/cliftonlabs/json-simple/3.0.2/json-simple-3.0.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-digester3/3.2/commons-digester3-3.2.jar (242 kB at 232 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/2.0.0/doxia-module-apt-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar (247 kB at 216 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/2.0.0/doxia-module-xdoc-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/2.0.0/doxia-site-renderer-2.0.0.jar (44 kB at 36 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.10.0/plexus-archiver-4.10.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/2.0.0/doxia-module-apt-2.0.0.jar (54 kB at 44 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.26.2/commons-compress-1.26.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.26.2/commons-compress-1.26.2.jar (1.1 MB at 738 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.17.0/commons-codec-1.17.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.10.0/plexus-archiver-4.10.0.jar (225 kB at 150 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/airlift/aircompressor/0.27/aircompressor-0.27.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/airlift/aircompressor/0.27/aircompressor-0.27.jar (255 kB at 150 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.6-3/zstd-jni-1.5.6-3.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/cliftonlabs/json-simple/3.0.2/json-simple-3.0.2.jar (35 kB at 21 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.5.1/plexus-io-3.5.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.17.0/commons-codec-1.17.0.jar (373 kB at 211 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.15.0/maven-dependency-analyzer-1.15.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.5.1/plexus-io-3.5.1.jar (80 kB at 43 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.4.0/maven-common-artifact-filters-3.4.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/2.0.0/doxia-module-xdoc-2.0.0.jar (35 kB at 18 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.4/velocity-engine-core-2.4.jar (510 kB at 255 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.4.0/maven-common-artifact-filters-3.4.0.jar (58 kB at 29 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.15.0/maven-dependency-analyzer-1.15.0.jar (45 kB at 16 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.6-3/zstd-jni-1.5.6-3.jar (6.7 MB at 1.9 MB/s)
+[INFO] com.epharma.ecosystem:backend:jar:0.0.1-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:3.5.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.5.0:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.5.18:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.5.18:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.24.3:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:2.0.17:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:2.4:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:3.5.0:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.0:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.0:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.0:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.41:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.41:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:6.2.7:compile
+[INFO] |     +- org.springframework:spring-context:jar:6.2.7:compile
+[INFO] |     \- org.springframework:spring-expression:jar:6.2.7:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.0:compile
+[INFO] |  |  +- com.zaxxer:HikariCP:jar:6.3.0:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:6.2.7:compile
+[INFO] |  +- org.hibernate.orm:hibernate-core:jar:6.6.15.Final:compile
+[INFO] |  |  +- jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile
+[INFO] |  |  +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.6.1.Final:compile
+[INFO] |  |  +- org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime
+[INFO] |  |  +- io.smallrye:jandex:jar:3.2.0:runtime
+[INFO] |  |  +- com.fasterxml:classmate:jar:1.7.0:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.17.5:runtime
+[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:4.0.5:runtime
+[INFO] |  |  |  \- org.glassfish.jaxb:jaxb-core:jar:4.0.5:runtime
+[INFO] |  |  |     +- org.eclipse.angus:angus-activation:jar:2.0.2:runtime
+[INFO] |  |  |     +- org.glassfish.jaxb:txw2:jar:4.0.5:runtime
+[INFO] |  |  |     \- com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime
+[INFO] |  |  +- jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime
+[INFO] |  |  \- org.antlr:antlr4-runtime:jar:4.13.0:compile
+[INFO] |  +- org.springframework.data:spring-data-jpa:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework.data:spring-data-commons:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework:spring-orm:jar:6.2.7:compile
+[INFO] |  |  +- org.springframework:spring-tx:jar:6.2.7:compile
+[INFO] |  |  \- org.slf4j:slf4j-api:jar:2.0.17:compile
+[INFO] |  \- org.springframework:spring-aspects:jar:6.2.7:compile
+[INFO] |     \- org.aspectj:aspectjweaver:jar:1.9.24:compile
+[INFO] +- com.h2database:h2:jar:2.3.232:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-validation:jar:3.5.0:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.41:compile
+[INFO] |  \- org.hibernate.validator:hibernate-validator:jar:8.0.2.Final:compile
+[INFO] |     \- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:3.5.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:3.5.0:compile
+[INFO] |  |  \- org.springframework.boot:spring-boot-actuator:jar:3.5.0:compile
+[INFO] |  +- io.micrometer:micrometer-observation:jar:1.15.0:compile
+[INFO] |  |  \- io.micrometer:micrometer-commons:jar:1.15.0:compile
+[INFO] |  \- io.micrometer:micrometer-jakarta9:jar:1.15.0:compile
+[INFO] |     \- io.micrometer:micrometer-core:jar:1.15.0:compile
+[INFO] |        +- org.hdrhistogram:HdrHistogram:jar:2.2.2:runtime
+[INFO] |        \- org.latencyutils:LatencyUtils:jar:2.0.3:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:3.5.0:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:3.5.0:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.0:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.9.0:test
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.2:runtime
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:2.1.3:runtime
+[INFO] |  +- net.minidev:json-smart:jar:2.5.2:test
+[INFO] |  |  \- net.minidev:accessors-smart:jar:2.5.2:test
+[INFO] |  |     \- org.ow2.asm:asm:jar:9.7.1:test
+[INFO] |  +- org.assertj:assertj-core:jar:3.27.3:test
+[INFO] |  +- org.awaitility:awaitility:jar:4.3.0:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:3.0:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.12.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO] |  |  |  +- org.junit.platform:junit-platform-commons:jar:1.12.2:test
+[INFO] |  |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test
+[INFO] |  |     \- org.junit.platform:junit-platform-engine:jar:1.12.2:test
+[INFO] |  +- org.mockito:mockito-core:jar:5.17.0:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.17.5:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:3.3:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:5.17.0:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.3:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:6.2.7:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:6.2.7:compile
+[INFO] |  +- org.springframework:spring-test:jar:6.2.7:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.10.1:test
+[INFO] +- org.springframework:spring-web:jar:6.2.7:compile
+[INFO] |  \- org.springframework:spring-beans:jar:6.2.7:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-security:jar:3.5.0:compile
+[INFO] |  +- org.springframework:spring-aop:jar:6.2.7:compile
+[INFO] |  +- org.springframework.security:spring-security-config:jar:6.5.0:compile
+[INFO] |  |  \- org.springframework.security:spring-security-core:jar:6.5.0:compile
+[INFO] |  |     \- org.springframework.security:spring-security-crypto:jar:6.5.0:compile
+[INFO] |  \- org.springframework.security:spring-security-web:jar:6.5.0:compile
+[INFO] +- io.jsonwebtoken:jjwt-api:jar:0.11.5:compile
+[INFO] +- io.jsonwebtoken:jjwt-impl:jar:0.11.5:runtime
+[INFO] \- io.jsonwebtoken:jjwt-jackson:jar:0.11.5:runtime
+[INFO]    \- com.fasterxml.jackson.core:jackson-databind:jar:2.19.0:compile
+[INFO]       +- com.fasterxml.jackson.core:jackson-annotations:jar:2.19.0:compile
+[INFO]       \- com.fasterxml.jackson.core:jackson-core:jar:2.19.0:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  28.166 s
+[INFO] Finished at: 2025-12-01T22:19:40+08:00
+[INFO] ------------------------------------------------------------------------
+2025-12-01T14:19:40.309Z [INFO] [MavenBuildTool] Successfully got dependency tree of d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-01T14:19:40.309Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-12-01T14:19:40.310Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-01T14:19:40.310Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-12-01T14:19:40.311Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-12-01T14:19:40.951Z [INFO] [Tool.invoke]({result: {
+  "message": "The following dependencies have known CVEs that need to be fixed:\n- Dependency `org.springframework:spring-web` has **1** known CVEs need to be fixed:\n  - [CVE-2025-41234](https://github.com/advisories/GHSA-6r3c-xf4w-jxjm): Spring Framework vulnerable to a reflected file download (RFD)\n    - **Severity**: **MEDIUM**\n    - **Details**: ### Description\n      \n      In Spring Framework, versions 6.0.x as of 6.0.5, versions 6.1.x and 6.2.x, an application is vulnerable to a reflected file download (RFD) attack when it sets a “Content-Disposition” header with a non-ASCII charset, where the filename attribute is derived from user-supplied input.\n      \n      Specifically, an application is vulnerable when all the following are true:\n      \n        -  The header is prepared with `org.springframework.http.ContentDisposition`.\n        -  The filename is set via `ContentDisposition.Builder#filename(String, Charset)`.\n        -  The value for the filename is derived from user-supplied input.\n        -  The application does not sanitize the user-supplied input.\n        -  The downloaded content of the response is injected with malicious commands by the attacker (see RFD paper reference for details).\n      \n      \n      An application is not vulnerable if any of the following is true:\n      \n        -  The application does not set a “Content-Disposition” response header.\n        -  The header is not prepared with `org.springframework.http.ContentDisposition`.\n        -  The filename is set via one of:  \n           - `ContentDisposition.Builder#filename(String)`, or\n           - `ContentDisposition.Builder#filename(String, ASCII)`\n        -  The filename is not derived from user-supplied input.\n        -  The filename is derived from user-supplied input but sanitized by the application.\n        -  The attacker cannot inject malicious content in the downloaded content of the response.\n      \n      \n      ### Affected Spring Products and VersionsSpring Framework\n      \n        -  6.2.0 - 6.2.7\n        -  6.1.0 - 6.1.20\n        -  6.0.5 - 6.0.28\n        -  Older, unsupported versions are not affected\n      \n      \n      ### Mitigation\n      \n      Users of affected versions should upgrade to the corresponding fixed version.\n      \n      | Affected version(s) | Fix version | Availability |\n      | - | - | - |\n      | 6.2.x | 6.2.8 | OSS |\n      | 6.1.x | 6.1.21 | OSS |\n      | 6.0.x | 6.0.29 | [Commercial](https://enterprise.spring.io/) |\n      \n      No further mitigation steps are necessary.",
+  "result": [
+    {
+      "dep": "org.springframework:spring-web",
+      "cves": [
+        {
+          "id": "CVE-2025-41234",
+          "ghsa_id": "GHSA-6r3c-xf4w-jxjm",
+          "severity": "medium",
+          "summary": "Spring Framework vulnerable to a reflected file download (RFD)",
+          "description": "### Description\n\nIn Spring Framework, versions 6.0.x as of 6.0.5, versions 6.1.x and 6.2.x, an application is vulnerable to a reflected file download (RFD) attack when it sets a “Content-Disposition” header with a non-ASCII charset, where the filename attribute is derived from user-supplied input.\n\nSpecifically, an application is vulnerable when all the following are true:\n\n  -  The header is prepared with `org.springframework.http.ContentDisposition`.\n  -  The filename is set via `ContentDisposition.Builder#filename(String, Charset)`.\n  -  The value for the filename is derived from user-supplied input.\n  -  The application does not sanitize the user-supplied input.\n  -  The downloaded content of the response is injected with malicious commands by the attacker (see RFD paper reference for details).\n\n\nAn application is not vulnerable if any of the following is true:\n\n  -  The application does not set a “Content-Disposition” response header.\n  -  The header is not prepared with `org.springframework.http.ContentDisposition`.\n  -  The filename is set via one of:  \n     - `ContentDisposition.Builder#filename(String)`, or\n     - `ContentDisposition.Builder#filename(String, ASCII)`\n  -  The filename is not derived from user-supplied input.\n  -  The filename is derived from user-supplied input but sanitized by the application.\n  -  The attacker cannot inject malicious content in the downloaded content of the response.\n\n\n### Affected Spring Products and VersionsSpring Framework\n\n  -  6.2.0 - 6.2.7\n  -  6.1.0 - 6.1.20\n  -  6.0.5 - 6.0.28\n  -  Older, unsupported versions are not affected\n\n\n### Mitigation\n\nUsers of affected versions should upgrade to the corresponding fixed version.\n\n| Affected version(s) | Fix version | Availability |\n| - | - | - |\n| 6.2.x | 6.2.8 | OSS |\n| 6.1.x | 6.1.21 | OSS |\n| 6.0.x | 6.0.29 | [Commercial](https://enterprise.spring.io/) |\n\nNo further mitigation steps are necessary.",
+          "html_url": "https://github.com/advisories/GHSA-6r3c-xf4w-jxjm",
+          "affectedDeps": [
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": ">= 6.2.0, < 6.2.8",
+              "patchedVersion": "6.2.8"
+            },
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": ">= 6.1.0, < 6.1.21",
+              "patchedVersion": "6.1.21"
+            },
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": ">= 6.0.5, <= 6.0.23",
+              "patchedVersion": null
+            }
+          ]
+        }
+      ],
+      "minVersion": "6.2.8"
+    }
+  ],
+  "telemetry": {
+    "cve.medium": 1,
+    "cves": "{\"CVE-2025-41234\":1}"
+  }
+}}).
+2025-12-01T14:19:40.951Z [INFO] [Plan.completeTask](task:{id:7.1, type:validateCves}, result:{
+  "message": "The following dependencies have known CVEs that need to be fixed:\n- Dependency `org.springframework:spring-web` has **1** known CVEs need to be fixed:\n  - [CVE-2025-41234](https://github.com/advisories/GHSA-6r3c-xf4w-jxjm): Spring Framework vulnerable to a reflected file download (RFD)\n    - **Severity**: **MEDIUM**\n    - **Details**: ### Description\n      \n      In Spring Framework, versions 6.0.x as of 6.0.5, versions 6.1.x and 6.2.x, an application is vulnerable to a reflected file download (RFD) attack when it sets a “Content-Disposition” header with a non-ASCII charset, where the filename attribute is derived from user-supplied input.\n      \n      Specifically, an application is vulnerable when all the following are true:\n      \n        -  The header is prepared with `org.springframework.http.ContentDisposition`.\n        -  The filename is set via `ContentDisposition.Builder#filename(String, Charset)`.\n        -  The value for the filename is derived from user-supplied input.\n        -  The application does not sanitize the user-supplied input.\n        -  The downloaded content of the response is injected with malicious commands by the attacker (see RFD paper reference for details).\n      \n      \n      An application is not vulnerable if any of the following is true:\n      \n        -  The application does not set a “Content-Disposition” response header.\n        -  The header is not prepared with `org.springframework.http.ContentDisposition`.\n        -  The filename is set via one of:  \n           - `ContentDisposition.Builder#filename(String)`, or\n           - `ContentDisposition.Builder#filename(String, ASCII)`\n        -  The filename is not derived from user-supplied input.\n        -  The filename is derived from user-supplied input but sanitized by the application.\n        -  The attacker cannot inject malicious content in the downloaded content of the response.\n      \n      \n      ### Affected Spring Products and VersionsSpring Framework\n      \n        -  6.2.0 - 6.2.7\n        -  6.1.0 - 6.1.20\n        -  6.0.5 - 6.0.28\n        -  Older, unsupported versions are not affected\n      \n      \n      ### Mitigation\n      \n      Users of affected versions should upgrade to the corresponding fixed version.\n      \n      | Affected version(s) | Fix version | Availability |\n      | - | - | - |\n      | 6.2.x | 6.2.8 | OSS |\n      | 6.1.x | 6.1.21 | OSS |\n      | 6.0.x | 6.0.29 | [Commercial](https://enterprise.spring.io/) |\n      \n      No further mitigation steps are necessary.",
+  "result": [
+    {
+      "dep": "org.springframework:spring-web",
+      "cves": [
+        {
+          "id": "CVE-2025-41234",
+          "ghsa_id": "GHSA-6r3c-xf4w-jxjm",
+          "severity": "medium",
+          "summary": "Spring Framework vulnerable to a reflected file download (RFD)",
+          "description": "### Description\n\nIn Spring Framework, versions 6.0.x as of 6.0.5, versions 6.1.x and 6.2.x, an application is vulnerable to a reflected file download (RFD) attack when it sets a “Content-Disposition” header with a non-ASCII charset, where the filename attribute is derived from user-supplied input.\n\nSpecifically, an application is vulnerable when all the following are true:\n\n  -  The header is prepared with `org.springframework.http.ContentDisposition`.\n  -  The filename is set via `ContentDisposition.Builder#filename(String, Charset)`.\n  -  The value for the filename is derived from user-supplied input.\n  -  The application does not sanitize the user-supplied input.\n  -  The downloaded content of the response is injected with malicious commands by the attacker (see RFD paper reference for details).\n\n\nAn application is not vulnerable if any of the following is true:\n\n  -  The application does not set a “Content-Disposition” response header.\n  -  The header is not prepared with `org.springframework.http.ContentDisposition`.\n  -  The filename is set via one of:  \n     - `ContentDisposition.Builder#filename(String)`, or\n     - `ContentDisposition.Builder#filename(String, ASCII)`\n  -  The filename is not derived from user-supplied input.\n  -  The filename is derived from user-supplied input but sanitized by the application.\n  -  The attacker cannot inject malicious content in the downloaded content of the response.\n\n\n### Affected Spring Products and VersionsSpring Framework\n\n  -  6.2.0 - 6.2.7\n  -  6.1.0 - 6.1.20\n  -  6.0.5 - 6.0.28\n  -  Older, unsupported versions are not affected\n\n\n### Mitigation\n\nUsers of affected versions should upgrade to the corresponding fixed version.\n\n| Affected version(s) | Fix version | Availability |\n| - | - | - |\n| 6.2.x | 6.2.8 | OSS |\n| 6.1.x | 6.1.21 | OSS |\n| 6.0.x | 6.0.29 | [Commercial](https://enterprise.spring.io/) |\n\nNo further mitigation steps are necessary.",
+          "html_url": "https://github.com/advisories/GHSA-6r3c-xf4w-jxjm",
+          "affectedDeps": [
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": ">= 6.2.0, < 6.2.8",
+              "patchedVersion": "6.2.8"
+            },
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": ">= 6.1.0, < 6.1.21",
+              "patchedVersion": "6.1.21"
+            },
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": ">= 6.0.5, <= 6.0.23",
+              "patchedVersion": null
+            }
+          ]
+        }
+      ],
+      "minVersion": "6.2.8"
+    }
+  ],
+  "telemetry": {
+    "cve.medium": 1,
+    "cves": "{\"CVE-2025-41234\":1}"
+  }
+})
+2025-12-01T14:19:40.951Z [INFO] [Task.complete](7.1): Completing task validateCves
+2025-12-01T14:19:40.953Z [INFO] [Task.complete](7.1): Completed task validateCves
+2025-12-01T14:19:40.954Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:19:40.954Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:19:40.954Z [INFO] [Plan.getNextTaskAtComplete]({task: Validate CVEs, result: [
+  {
+    "dep": "org.springframework:spring-web",
+    "cves": [
+      {
+        "id": "CVE-2025-41234",
+        "ghsa_id": "GHSA-6r3c-xf4w-jxjm",
+        "severity": "medium",
+        "summary": "Spring Framework vulnerable to a reflected file download (RFD)",
+        "description": "### Description\n\nIn Spring Framework, versions 6.0.x as of 6.0.5, versions 6.1.x and 6.2.x, an application is vulnerable to a reflected file download (RFD) attack when it sets a “Content-Disposition” header with a non-ASCII charset, where the filename attribute is derived from user-supplied input.\n\nSpecifically, an application is vulnerable when all the following are true:\n\n  -  The header is prepared with `org.springframework.http.ContentDisposition`.\n  -  The filename is set via `ContentDisposition.Builder#filename(String, Charset)`.\n  -  The value for the filename is derived from user-supplied input.\n  -  The application does not sanitize the user-supplied input.\n  -  The downloaded content of the response is injected with malicious commands by the attacker (see RFD paper reference for details).\n\n\nAn application is not vulnerable if any of the following is true:\n\n  -  The application does not set a “Content-Disposition” response header.\n  -  The header is not prepared with `org.springframework.http.ContentDisposition`.\n  -  The filename is set via one of:  \n     - `ContentDisposition.Builder#filename(String)`, or\n     - `ContentDisposition.Builder#filename(String, ASCII)`\n  -  The filename is not derived from user-supplied input.\n  -  The filename is derived from user-supplied input but sanitized by the application.\n  -  The attacker cannot inject malicious content in the downloaded content of the response.\n\n\n### Affected Spring Products and VersionsSpring Framework\n\n  -  6.2.0 - 6.2.7\n  -  6.1.0 - 6.1.20\n  -  6.0.5 - 6.0.28\n  -  Older, unsupported versions are not affected\n\n\n### Mitigation\n\nUsers of affected versions should upgrade to the corresponding fixed version.\n\n| Affected version(s) | Fix version | Availability |\n| - | - | - |\n| 6.2.x | 6.2.8 | OSS |\n| 6.1.x | 6.1.21 | OSS |\n| 6.0.x | 6.0.29 | [Commercial](https://enterprise.spring.io/) |\n\nNo further mitigation steps are necessary.",
+        "html_url": "https://github.com/advisories/GHSA-6r3c-xf4w-jxjm",
+        "affectedDeps": [
+          {
+            "name": "org.springframework:spring-web",
+            "vulVersions": ">= 6.2.0, < 6.2.8",
+            "patchedVersion": "6.2.8"
+          },
+          {
+            "name": "org.springframework:spring-web",
+            "vulVersions": ">= 6.1.0, < 6.1.21",
+            "patchedVersion": "6.1.21"
+          },
+          {
+            "name": "org.springframework:spring-web",
+            "vulVersions": ">= 6.0.5, <= 6.0.23",
+            "patchedVersion": null
+          }
+        ]
+      }
+    ],
+    "minVersion": "6.2.8"
+  }
+]}).
+2025-12-01T14:19:40.955Z [INFO] [Plan.completeTask]: next task is {type:fixCveIssues, expectedToolName:build_java_project}.
+2025-12-01T14:19:40.955Z [INFO] [Plan.completeTask]: next task is an AgentTask, starting it.
+2025-12-01T14:19:40.955Z [INFO] [Task.start](): Starting task fixCveIssues
+2025-12-01T14:19:40.956Z [INFO] [Task.start](7.2): Started task fixCveIssues
+2025-12-01T14:19:40.956Z [INFO] [Plan.completeTask]: next task has instruction: 
+Upgrading project should not introduce any new CVE issues, so you MUST fix the CVE issues to ensure the project is secure.
+
+# Next steps:
+1. First, You MUST! upgrade the below dependencies (having CVEs) to safe versions with any tools you see fit. (You can leave them as is if you can not find a safe version.)
+    - upgrade `org.springframework:spring-web` to `6.2.8` or a newer version
+2. And then, You MUST! remember to invoke tool #build_java_project with sessionId: 20251201141257 again after fixing the CVE issues as any code changes may introduce new build errors.
+
+# Important Notes:
+- You **MUST** focus exclusively on *fixing the CVE issues to make the project secure.*
+- You **MUST** upgrade any dependencies that are incompatible with the milestone goal dependencies.
+- You **MUST NOT** downgrade any of the milestone goal dependencies whenever fixing any issues.
+- You **MUST** make as many necessary code changes as possible to fix the CVE issues before invoking tool #build_java_project to validate the changes again.
+- All the code changes you make MUST maintain the exact same functionality and behavior as the original code. Any deviation from the original logic will be considered incorrect, even if you believe the original logic contains errors.
+- You MUST NOT import any new CVE vulnerable dependencies when making any code changes.
+- You MUST NOT break any existing test cases when making any code changes.
+
+2025-12-01T14:19:40.957Z [INFO] [Tool.invoke]({message: The following dependencies have known CVEs that need to be fixed:
+- Dependency `org.springframework:spring-web` has **1** known CVEs need to be fixed:
+  - [CVE-2025-41234](https://github.com/advisories/GHSA-6r3c-xf4w-jxjm): Spring Framework vulnerable to a reflected file download (RFD)
+    - **Severity**: **MEDIUM**
+    - **Details**: ### Description
+      
+      In Spring Framework, versions 6.0.x as of 6.0.5, versions 6.1.x and 6.2.x, an application is vulnerable to a reflected file download (RFD) attack when it sets a “Content-Disposition” header with a non-ASCII charset, where the filename attribute is derived from user-supplied input.
+      
+      Specifically, an application is vulnerable when all the following are true:
+      
+        -  The header is prepared with `org.springframework.http.ContentDisposition`.
+        -  The filename is set via `ContentDisposition.Builder#filename(String, Charset)`.
+        -  The value for the filename is derived from user-supplied input.
+        -  The application does not sanitize the user-supplied input.
+        -  The downloaded content of the response is injected with malicious commands by the attacker (see RFD paper reference for details).
+      
+      
+      An application is not vulnerable if any of the following is true:
+      
+        -  The application does not set a “Content-Disposition” response header.
+        -  The header is not prepared with `org.springframework.http.ContentDisposition`.
+        -  The filename is set via one of:  
+           - `ContentDisposition.Builder#filename(String)`, or
+           - `ContentDisposition.Builder#filename(String, ASCII)`
+        -  The filename is not derived from user-supplied input.
+        -  The filename is derived from user-supplied input but sanitized by the application.
+        -  The attacker cannot inject malicious content in the downloaded content of the response.
+      
+      
+      ### Affected Spring Products and VersionsSpring Framework
+      
+        -  6.2.0 - 6.2.7
+        -  6.1.0 - 6.1.20
+        -  6.0.5 - 6.0.28
+        -  Older, unsupported versions are not affected
+      
+      
+      ### Mitigation
+      
+      Users of affected versions should upgrade to the corresponding fixed version.
+      
+      | Affected version(s) | Fix version | Availability |
+      | - | - | - |
+      | 6.2.x | 6.2.8 | OSS |
+      | 6.1.x | 6.1.21 | OSS |
+      | 6.0.x | 6.0.29 | [Commercial](https://enterprise.spring.io/) |
+      
+      No further mitigation steps are necessary.
+
+
+Upgrading project should not introduce any new CVE issues, so you MUST fix the CVE issues to ensure the project is secure.
+
+# Next steps:
+1. First, You MUST! upgrade the below dependencies (having CVEs) to safe versions with any tools you see fit. (You can leave them as is if you can not find a safe version.)
+    - upgrade `org.springframework:spring-web` to `6.2.8` or a newer version
+2. And then, You MUST! remember to invoke tool #build_java_project with sessionId: 20251201141257 again after fixing the CVE issues as any code changes may introduce new build errors.
+
+# Important Notes:
+- You **MUST** focus exclusively on *fixing the CVE issues to make the project secure.*
+- You **MUST** upgrade any dependencies that are incompatible with the milestone goal dependencies.
+- You **MUST NOT** downgrade any of the milestone goal dependencies whenever fixing any issues.
+- You **MUST** make as many necessary code changes as possible to fix the CVE issues before invoking tool #build_java_project to validate the changes again.
+- All the code changes you make MUST maintain the exact same functionality and behavior as the original code. Any deviation from the original logic will be considered incorrect, even if you believe the original logic contains errors.
+- You MUST NOT import any new CVE vulnerable dependencies when making any code changes.
+- You MUST NOT break any existing test cases when making any code changes.
+
+
+> [!NOTE]
+* You MUST follow the above "Next steps" instructions.
+* You have the highest decision-making authority at any time, you do NOT need to seek my approval/confirmation, please directly execute your plan as you see fit.
+}).
+2025-12-01T14:19:40.957Z [INFO] ----------------------invoked validate_cves_for_java----------------------
+2025-12-01T14:20:01.322Z [INFO] ---------------------prepare build_java_project----------------------
+2025-12-01T14:20:01.323Z [INFO] [Tool.prepareInvocation]({name: build_java_project, input: {
+  "sessionId": "20251201141257",
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend",
+  "codeChangesMessage": "Pin spring-web to 6.2.8 to fix CVE",
+  "codeChangesDetails": "- Security: Address CVE-2025-41234\n  - Set `org.springframework:spring-web` version to `6.2.8` explicitly in `backend/pom.xml` while staying on Spring Boot 3.5.0.\n- Validation\n  - Build to ensure compatibility with the managed Spring Boot BOM."
+}}).
+2025-12-01T14:20:01.323Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-01T14:20:01.324Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Build project"
+}}).
+2025-12-01T14:20:01.324Z [INFO] ----------------------prepared build_java_project----------------------
+2025-12-01T14:20:01.393Z [INFO] ----------------------invoke build_java_project----------------------
+2025-12-01T14:20:01.394Z [INFO] [Tool.invoke]({name: build_java_project, input: {
+  "sessionId": "20251201141257",
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend",
+  "codeChangesMessage": "Pin spring-web to 6.2.8 to fix CVE",
+  "codeChangesDetails": "- Security: Address CVE-2025-41234\n  - Set `org.springframework:spring-web` version to `6.2.8` explicitly in `backend/pom.xml` while staying on Spring Boot 3.5.0.\n- Validation\n  - Build to ensure compatibility with the managed Spring Boot BOM."
+}}).
+2025-12-01T14:20:01.395Z [INFO] [Plan.tryStartTask]({tool:build_java_project, nextTask:{type:buildProject, tool:build_java_project}}
+2025-12-01T14:20:01.395Z [INFO] [Plan.tryStartTask]: tool.type is exactly the same as nextTask.expectedToolName
+2025-12-01T14:20:01.395Z [INFO] [Plan.tryStartTask]: currentTask is an AgentTask, complete it first.
+2025-12-01T14:20:01.395Z [INFO] [Task.complete](7.2): Completing task fixCveIssues
+2025-12-01T14:20:01.398Z [INFO] [Task.complete](7.2): Completed task fixCveIssues
+2025-12-01T14:20:02.092Z [INFO] [Task.commitChanges](7.2): Committed changes for d:/Epharmacy Application/Epharma_Ecosystem/backend with message: Pin spring-web to 6.2.8 to fix CVE
+2025-12-01T14:20:02.092Z [INFO] [Plan.tryStartTask]: starting task buildProject
+2025-12-01T14:20:02.092Z [INFO] [Task.start](): Starting task buildProject
+2025-12-01T14:20:02.093Z [INFO] [Task.start](7.3): Started task buildProject
+2025-12-01T14:20:02.094Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:20:02.094Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:20:02.095Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:20:02.696Z [INFO] [Project backend]: Java version of project backend is changed.
+2025-12-01T14:20:02.696Z [INFO] [Project backend]: Java version of project backend is changed to '21' || '21'
+2025-12-01T14:20:02.696Z [INFO] [Project backend]: updating project backend's build tool jdk accordingly to '21'
+2025-12-01T14:20:02.697Z [INFO] [Project backend]: build tool config of project backend is modified.
+2025-12-01T14:20:02.697Z [INFO] [Project backend]: dependencies of project backend may be changed, resetting promise.
+2025-12-01T14:20:17.207Z [INFO] [Project backend]: Compilation errors of project backend is updated: 0 -> 0
+2025-12-01T14:20:17.220Z [INFO] [Tool.invoke]({result: {
+  "message": "Build succeeded! There are no build errors in the project.",
+  "result": {
+    "numOfJavaFiles": 26,
+    "numOfClassFiles": 26,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 26,
+        "numOfClassFiles": 26
+      }
+    },
+    "errors": [],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+}}).
+2025-12-01T14:20:17.220Z [INFO] [Plan.completeTask](task:{id:7.3, type:buildProject}, result:{
+  "message": "Build succeeded! There are no build errors in the project.",
+  "result": {
+    "numOfJavaFiles": 26,
+    "numOfClassFiles": 26,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 26,
+        "numOfClassFiles": 26
+      }
+    },
+    "errors": [],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+})
+2025-12-01T14:20:17.221Z [INFO] [Task.complete](7.3): Completing task buildProject
+2025-12-01T14:20:17.225Z [INFO] [Task.complete](7.3): Completed task buildProject
+2025-12-01T14:20:17.225Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:20:17.226Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:20:17.226Z [INFO] [Plan.getNextTaskAtComplete]({task: Build Project, result: {
+  "numOfJavaFiles": 26,
+  "numOfClassFiles": 26,
+  "modulesBuildResult": {
+    ".": {
+      "numOfJavaFiles": 26,
+      "numOfClassFiles": 26
+    }
+  },
+  "errors": [],
+  "command": "mvn clean test-compile -q -B -fn"
+}}).
+2025-12-01T14:20:17.229Z [INFO] [Plan.completeTask]: next task is {type:validateCves, expectedToolName:validate_cves_for_java}.
+2025-12-01T14:20:17.230Z [INFO] [Plan.completeTask]: next task has instruction: 
+There maybe some dependencies modified or added which may introduce new CVE issues since last check, we need to validate and then fix them again.
+
+# Next steps:
+1. You MUST! invoke tool #validate_cves_for_java with parameter sessionId: 20251201141257 again to check for any CVE issues for the updated/added dependencies since last CVE validation.
+
+# Important Notes:
+- You MUST run this CVEs validation EVERY time you modifying any dependencies directly or indirectly to ensure no new CVE issues are introduced,
+- You SHOULD NEVER skip CVE validation regardless of how confident you are in your code changes. Even if:
+    - You've already checked these dependencies before
+    - You believe no new vulnerabilities could have been introduced
+    - No dependencies were explicitly changed in your recent modifications
+    - Previous checks showed no CVE issues
+
+2025-12-01T14:20:17.230Z [INFO] [Tool.invoke]({message: Build succeeded! There are no build errors in the project.
+
+
+There maybe some dependencies modified or added which may introduce new CVE issues since last check, we need to validate and then fix them again.
+
+# Next steps:
+1. You MUST! invoke tool #validate_cves_for_java with parameter sessionId: 20251201141257 again to check for any CVE issues for the updated/added dependencies since last CVE validation.
+
+# Important Notes:
+- You MUST run this CVEs validation EVERY time you modifying any dependencies directly or indirectly to ensure no new CVE issues are introduced,
+- You SHOULD NEVER skip CVE validation regardless of how confident you are in your code changes. Even if:
+    - You've already checked these dependencies before
+    - You believe no new vulnerabilities could have been introduced
+    - No dependencies were explicitly changed in your recent modifications
+    - Previous checks showed no CVE issues
+
+
+> [!NOTE]
+* You MUST follow the above "Next steps" instructions.
+* You have the highest decision-making authority at any time, you do NOT need to seek my approval/confirmation, please directly execute your plan as you see fit.
+}).
+2025-12-01T14:20:17.231Z [INFO] ----------------------invoked build_java_project----------------------
+2025-12-01T14:20:28.060Z [INFO] ---------------------prepare validate_cves_for_java----------------------
+2025-12-01T14:20:28.060Z [INFO] [Tool.prepareInvocation]({name: validate_cves_for_java, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:20:28.061Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-01T14:20:28.061Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Validate CVEs"
+}}).
+2025-12-01T14:20:28.062Z [INFO] ----------------------prepared validate_cves_for_java----------------------
+2025-12-01T14:20:28.125Z [INFO] ----------------------invoke validate_cves_for_java----------------------
+2025-12-01T14:20:28.125Z [INFO] [Tool.invoke]({name: validate_cves_for_java, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:20:28.125Z [INFO] [Plan.tryStartTask]({tool:validate_cves_for_java, nextTask:{type:validateCves, tool:validate_cves_for_java}}
+2025-12-01T14:20:28.126Z [INFO] [Plan.tryStartTask]: tool.type is exactly the same as nextTask.expectedToolName
+2025-12-01T14:20:28.126Z [INFO] [Plan.tryStartTask]: starting task validateCves
+2025-12-01T14:20:28.126Z [INFO] [Task.start](): Starting task validateCves
+2025-12-01T14:20:28.128Z [INFO] [Task.start](7.4): Started task validateCves
+2025-12-01T14:20:28.128Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:20:28.128Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:20:28.128Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:20:28.128Z [INFO] [Project backend]: getting dependencies promise.
+2025-12-01T14:20:28.129Z [INFO] [Project backend]: reset dependencies promise.
+2025-12-01T14:20:28.129Z [INFO] [Environment] Running command (Java 21): mvn dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.epharma.ecosystem:backend >--------------------
+[INFO] Building Epharma Ecosystem Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.8.1:tree (default-cli) @ backend ---
+[INFO] com.epharma.ecosystem:backend:jar:0.0.1-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:3.5.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.5.0:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.5.18:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.5.18:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.24.3:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:2.0.17:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:2.4:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:3.5.0:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.0:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.0:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.0:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.41:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.41:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:6.2.7:compile
+[INFO] |     +- org.springframework:spring-context:jar:6.2.7:compile
+[INFO] |     \- org.springframework:spring-expression:jar:6.2.7:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.0:compile
+[INFO] |  |  +- com.zaxxer:HikariCP:jar:6.3.0:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:6.2.7:compile
+[INFO] |  +- org.hibernate.orm:hibernate-core:jar:6.6.15.Final:compile
+[INFO] |  |  +- jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile
+[INFO] |  |  +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.6.1.Final:compile
+[INFO] |  |  +- org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime
+[INFO] |  |  +- io.smallrye:jandex:jar:3.2.0:runtime
+[INFO] |  |  +- com.fasterxml:classmate:jar:1.7.0:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.17.5:runtime
+[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:4.0.5:runtime
+[INFO] |  |  |  \- org.glassfish.jaxb:jaxb-core:jar:4.0.5:runtime
+[INFO] |  |  |     +- org.eclipse.angus:angus-activation:jar:2.0.2:runtime
+[INFO] |  |  |     +- org.glassfish.jaxb:txw2:jar:4.0.5:runtime
+[INFO] |  |  |     \- com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime
+[INFO] |  |  +- jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime
+[INFO] |  |  \- org.antlr:antlr4-runtime:jar:4.13.0:compile
+[INFO] |  +- org.springframework.data:spring-data-jpa:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework.data:spring-data-commons:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework:spring-orm:jar:6.2.7:compile
+[INFO] |  |  +- org.springframework:spring-tx:jar:6.2.7:compile
+[INFO] |  |  \- org.slf4j:slf4j-api:jar:2.0.17:compile
+[INFO] |  \- org.springframework:spring-aspects:jar:6.2.7:compile
+[INFO] |     \- org.aspectj:aspectjweaver:jar:1.9.24:compile
+[INFO] +- com.h2database:h2:jar:2.3.232:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-validation:jar:3.5.0:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.41:compile
+[INFO] |  \- org.hibernate.validator:hibernate-validator:jar:8.0.2.Final:compile
+[INFO] |     \- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:3.5.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:3.5.0:compile
+[INFO] |  |  \- org.springframework.boot:spring-boot-actuator:jar:3.5.0:compile
+[INFO] |  +- io.micrometer:micrometer-observation:jar:1.15.0:compile
+[INFO] |  |  \- io.micrometer:micrometer-commons:jar:1.15.0:compile
+[INFO] |  \- io.micrometer:micrometer-jakarta9:jar:1.15.0:compile
+[INFO] |     \- io.micrometer:micrometer-core:jar:1.15.0:compile
+[INFO] |        +- org.hdrhistogram:HdrHistogram:jar:2.2.2:runtime
+[INFO] |        \- org.latencyutils:LatencyUtils:jar:2.0.3:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:3.5.0:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:3.5.0:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.0:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.9.0:test
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.2:runtime
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:2.1.3:runtime
+[INFO] |  +- net.minidev:json-smart:jar:2.5.2:test
+[INFO] |  |  \- net.minidev:accessors-smart:jar:2.5.2:test
+[INFO] |  |     \- org.ow2.asm:asm:jar:9.7.1:test
+[INFO] |  +- org.assertj:assertj-core:jar:3.27.3:test
+[INFO] |  +- org.awaitility:awaitility:jar:4.3.0:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:3.0:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.12.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO] |  |  |  +- org.junit.platform:junit-platform-commons:jar:1.12.2:test
+[INFO] |  |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test
+[INFO] |  |     \- org.junit.platform:junit-platform-engine:jar:1.12.2:test
+[INFO] |  +- org.mockito:mockito-core:jar:5.17.0:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.17.5:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:3.3:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:5.17.0:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.3:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:6.2.7:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:6.2.7:compile
+[INFO] |  +- org.springframework:spring-test:jar:6.2.7:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.10.1:test
+[INFO] +- org.springframework:spring-web:jar:6.2.8:compile
+[INFO] |  \- org.springframework:spring-beans:jar:6.2.7:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-security:jar:3.5.0:compile
+[INFO] |  +- org.springframework:spring-aop:jar:6.2.7:compile
+[INFO] |  +- org.springframework.security:spring-security-config:jar:6.5.0:compile
+[INFO] |  |  \- org.springframework.security:spring-security-core:jar:6.5.0:compile
+[INFO] |  |     \- org.springframework.security:spring-security-crypto:jar:6.5.0:compile
+[INFO] |  \- org.springframework.security:spring-security-web:jar:6.5.0:compile
+[INFO] +- io.jsonwebtoken:jjwt-api:jar:0.11.5:compile
+[INFO] +- io.jsonwebtoken:jjwt-impl:jar:0.11.5:runtime
+[INFO] \- io.jsonwebtoken:jjwt-jackson:jar:0.11.5:runtime
+[INFO]    \- com.fasterxml.jackson.core:jackson-databind:jar:2.19.0:compile
+[INFO]       +- com.fasterxml.jackson.core:jackson-annotations:jar:2.19.0:compile
+[INFO]       \- com.fasterxml.jackson.core:jackson-core:jar:2.19.0:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.034 s
+[INFO] Finished at: 2025-12-01T22:20:36+08:00
+[INFO] ------------------------------------------------------------------------
+2025-12-01T14:20:36.112Z [INFO] [MavenBuildTool] Successfully got dependency tree of d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-01T14:20:36.113Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-12-01T14:20:36.114Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-01T14:20:36.114Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-12-01T14:20:36.118Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-12-01T14:20:36.826Z [INFO] [Tool.invoke]({result: {
+  "message": "No known CVEs that need to be fixed are found for the given dependencies."
+}}).
+2025-12-01T14:20:36.826Z [INFO] [Plan.completeTask](task:{id:7.4, type:validateCves}, result:{
+  "message": "No known CVEs that need to be fixed are found for the given dependencies."
+})
+2025-12-01T14:20:36.827Z [INFO] [Task.complete](7.4): Completing task validateCves
+2025-12-01T14:20:36.829Z [INFO] [Task.complete](7.4): Completed task validateCves
+2025-12-01T14:20:36.830Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:20:36.830Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:20:36.830Z [INFO] [Plan.getNextTaskAtComplete]({task: Validate CVEs, result: undefined}).
+2025-12-01T14:20:36.833Z [INFO] [Plan.completeTask]: next task is {type:validateBehaviorChanges, expectedToolName:validate_behavior_changes}.
+2025-12-01T14:20:36.834Z [INFO] [Plan.completeTask]: next task has instruction: 
+Code changes have been made, which may introduce new code behavior changes since last check, we need to validate and then fix them again.
+
+# Next steps:
+1. You MUST! invoke tool #validate_behavior_changes with sessionId "20251201141257" again to check if any new code behavior changes have been introduced since last behavior changes validation as any code changes may introduce new behavior changes.
+
+# Important Notes:
+- You MUST run behavior change validation EVERY time you modifying any code to ensure consistent functionality.
+- You SHOULD NEVER skip behavior change validation regardless of how confident you are in your code changes. Even if:
+    - You've already validated these code sections before
+    - You believe your changes couldn't affect behavior
+    - Only minor code modifications were made since last check
+    - Previous validations showed no behavior changes
+
+2025-12-01T14:20:36.834Z [INFO] [Tool.invoke]({message: No known CVEs that need to be fixed are found for the given dependencies.
+None or only low severity CVEs, which don't need to be fixed, are found in the project. Please continue to validate code behavior changes.
+
+Code changes have been made, which may introduce new code behavior changes since last check, we need to validate and then fix them again.
+
+# Next steps:
+1. You MUST! invoke tool #validate_behavior_changes with sessionId "20251201141257" again to check if any new code behavior changes have been introduced since last behavior changes validation as any code changes may introduce new behavior changes.
+
+# Important Notes:
+- You MUST run behavior change validation EVERY time you modifying any code to ensure consistent functionality.
+- You SHOULD NEVER skip behavior change validation regardless of how confident you are in your code changes. Even if:
+    - You've already validated these code sections before
+    - You believe your changes couldn't affect behavior
+    - Only minor code modifications were made since last check
+    - Previous validations showed no behavior changes
+
+
+> [!NOTE]
+* You MUST follow the above "Next steps" instructions.
+* You have the highest decision-making authority at any time, you do NOT need to seek my approval/confirmation, please directly execute your plan as you see fit.
+}).
+2025-12-01T14:20:36.834Z [INFO] ----------------------invoked validate_cves_for_java----------------------
+2025-12-01T14:20:43.240Z [INFO] ---------------------prepare validate_behavior_changes----------------------
+2025-12-01T14:20:43.240Z [INFO] [Tool.prepareInvocation]({name: validate_behavior_changes, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:20:43.241Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-01T14:20:43.241Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Validate behavior changes"
+}}).
+2025-12-01T14:20:43.241Z [INFO] ----------------------prepared validate_behavior_changes----------------------
+2025-12-01T14:20:43.293Z [INFO] ----------------------invoke validate_behavior_changes----------------------
+2025-12-01T14:20:43.293Z [INFO] [Tool.invoke]({name: validate_behavior_changes, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:20:43.294Z [INFO] [Plan.tryStartTask]({tool:validate_behavior_changes, nextTask:{type:validateBehaviorChanges, tool:validate_behavior_changes}}
+2025-12-01T14:20:43.294Z [INFO] [Plan.tryStartTask]: tool.type is exactly the same as nextTask.expectedToolName
+2025-12-01T14:20:43.294Z [INFO] [Plan.tryStartTask]: starting task validateBehaviorChanges
+2025-12-01T14:20:43.294Z [INFO] [Task.start](): Starting task validateBehaviorChanges
+2025-12-01T14:20:43.296Z [INFO] [Task.start](7.5): Started task validateBehaviorChanges
+2025-12-01T14:20:43.296Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:20:43.296Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:20:43.296Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:20:46.335Z [INFO] [Tool.invoke]({result: {
+  "message": "Validation completed! NO code behavior changes detected.",
+  "result": {},
+  "telemetry": {
+    "behaviorChangesCount": 0
+  }
+}}).
+2025-12-01T14:20:46.335Z [INFO] [Plan.completeTask](task:{id:7.5, type:validateBehaviorChanges}, result:{
+  "message": "Validation completed! NO code behavior changes detected.",
+  "result": {},
+  "telemetry": {
+    "behaviorChangesCount": 0
+  }
+})
+2025-12-01T14:20:46.335Z [INFO] [Task.complete](7.5): Completing task validateBehaviorChanges
+2025-12-01T14:20:46.337Z [INFO] [Task.complete](7.5): Completed task validateBehaviorChanges
+2025-12-01T14:20:46.337Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:20:46.337Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:20:46.337Z [INFO] [Plan.getNextTaskAtComplete]({task: Validate Code Behavior Changes, result: {}}).
+2025-12-01T14:20:46.341Z [INFO] [Plan.completeTask]: next task is {type:runTests, expectedToolName:run_tests_for_java}.
+2025-12-01T14:20:46.341Z [INFO] [Plan.completeTask]: next task has instruction: 
+All behavior changes of critical/high severity have been fixed. You can now proceed to validate the tests to ensure the project is still working as expected.
+
+# Next steps:
+1. You MUST! invoke tool #run_tests_for_java with parameter sessionId: 20251201141257 again to check if any new test errors/failures have been introduced since last check. (Any code changes may introduce new test failures/errors.)
+
+# Important Notes:
+- You MUST run all tests EVERY time to ensure all functionality remains intact.
+- You SHOULD NEVER skip tests validation regardless of how minor or isolated your changes appear to be. Even if:
+    - You've already run these tests before
+    - Tests passed in previous runs
+    - You've only made minor or seemingly unrelated changes
+    - You believe your changes couldn't affect existing functionality
+
+2025-12-01T14:20:46.341Z [INFO] [Tool.invoke]({message: Validation completed! NO code behavior changes detected.
+None or only minor severity code behavior changes are detected, which are not needed to be fixed. Please continue to validate test errors/failures.
+
+All behavior changes of critical/high severity have been fixed. You can now proceed to validate the tests to ensure the project is still working as expected.
+
+# Next steps:
+1. You MUST! invoke tool #run_tests_for_java with parameter sessionId: 20251201141257 again to check if any new test errors/failures have been introduced since last check. (Any code changes may introduce new test failures/errors.)
+
+# Important Notes:
+- You MUST run all tests EVERY time to ensure all functionality remains intact.
+- You SHOULD NEVER skip tests validation regardless of how minor or isolated your changes appear to be. Even if:
+    - You've already run these tests before
+    - Tests passed in previous runs
+    - You've only made minor or seemingly unrelated changes
+    - You believe your changes couldn't affect existing functionality
+
+
+> [!NOTE]
+* You MUST follow the above "Next steps" instructions.
+* You have the highest decision-making authority at any time, you do NOT need to seek my approval/confirmation, please directly execute your plan as you see fit.
+}).
+2025-12-01T14:20:46.342Z [INFO] ----------------------invoked validate_behavior_changes----------------------
+2025-12-01T14:20:50.136Z [INFO] ---------------------prepare run_tests_for_java----------------------
+2025-12-01T14:20:50.136Z [INFO] [Tool.prepareInvocation]({name: run_tests_for_java, input: {
+  "sessionId": "20251201141257",
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend"
+}}).
+2025-12-01T14:20:50.137Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-01T14:20:50.138Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Run tests"
+}}).
+2025-12-01T14:20:50.138Z [INFO] ----------------------prepared run_tests_for_java----------------------
+2025-12-01T14:20:50.192Z [INFO] ----------------------invoke run_tests_for_java----------------------
+2025-12-01T14:20:50.192Z [INFO] [Tool.invoke]({name: run_tests_for_java, input: {
+  "sessionId": "20251201141257",
+  "projectPath": "d:/Epharmacy Application/Epharma_Ecosystem/backend"
+}}).
+2025-12-01T14:20:50.193Z [INFO] [Plan.tryStartTask]({tool:run_tests_for_java, nextTask:{type:runTests, tool:run_tests_for_java}}
+2025-12-01T14:20:50.193Z [INFO] [Plan.tryStartTask]: tool.type is exactly the same as nextTask.expectedToolName
+2025-12-01T14:20:50.193Z [INFO] [Plan.tryStartTask]: starting task runTests
+2025-12-01T14:20:50.194Z [INFO] [Task.start](): Starting task runTests
+2025-12-01T14:20:50.195Z [INFO] [Task.start](7.6): Started task runTests
+2025-12-01T14:20:50.195Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:20:50.195Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:20:50.196Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:20:50.862Z [INFO] [Project backend]: Java version of project backend is changed.
+2025-12-01T14:20:50.863Z [INFO] [Project backend]: Java version of project backend is changed to '21' || '21'
+2025-12-01T14:20:50.863Z [INFO] [Project backend]: updating project backend's build tool jdk accordingly to '21'
+2025-12-01T14:20:50.863Z [INFO] [Project backend]: build tool config of project backend is modified.
+2025-12-01T14:20:50.863Z [INFO] [Project backend]: dependencies of project backend may be changed, resetting promise.
+2025-12-01T14:21:28.691Z [INFO] [Project backend]: Test result of project backend is updated: 0 -> 0
+2025-12-01T14:21:28.696Z [INFO] [Tool.invoke]({result: {
+  "message": "All tests passed! There are no test errors/failures in the project.",
+  "result": {
+    "errors": [],
+    "failures": [],
+    "summary": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reports": [
+      {
+        "name": "com.epharma.ecosystem.controller.PaymentControllerTest",
+        "time": 13.552,
+        "tests": 8,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "paypalWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.905,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "gcashWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.017,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "paymayaWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.016,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "paymayaWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.023,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "paypalWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.017,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "razorpayWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.016,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "razorpayWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.018,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "gcashWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.015,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      }
+    ]
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+}}).
+2025-12-01T14:21:28.696Z [INFO] [Plan.completeTask](task:{id:7.6, type:runTests}, result:{
+  "message": "All tests passed! There are no test errors/failures in the project.",
+  "result": {
+    "errors": [],
+    "failures": [],
+    "summary": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reports": [
+      {
+        "name": "com.epharma.ecosystem.controller.PaymentControllerTest",
+        "time": 13.552,
+        "tests": 8,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "paypalWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.905,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "gcashWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.017,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "paymayaWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.016,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "paymayaWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.023,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "paypalWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.017,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "razorpayWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.016,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "razorpayWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.018,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "gcashWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.015,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      }
+    ]
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+})
+2025-12-01T14:21:28.697Z [INFO] [Task.complete](7.6): Completing task runTests
+2025-12-01T14:21:28.700Z [INFO] [Task.complete](7.6): Completed task runTests
+2025-12-01T14:21:28.701Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:21:28.701Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:21:28.701Z [INFO] [Plan.getNextTaskAtComplete]({task: Run Tests, result: {
+  "errors": [],
+  "failures": [],
+  "summary": {
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "reports": [
+    {
+      "name": "com.epharma.ecosystem.controller.PaymentControllerTest",
+      "time": 13.552,
+      "tests": 8,
+      "errors": 0,
+      "skipped": 0,
+      "failures": 0,
+      "testcases": [
+        {
+          "name": "paypalWebhook_invalidSignature_returnsUnauthorized",
+          "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+          "time": 0.905,
+          "failures": [],
+          "rerunFailures": [],
+          "flakyFailures": [],
+          "errors": [],
+          "rerunErrors": [],
+          "flakyErrors": []
+        },
+        {
+          "name": "gcashWebhook_invalidSignature_returnsUnauthorized",
+          "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+          "time": 0.017,
+          "failures": [],
+          "rerunFailures": [],
+          "flakyFailures": [],
+          "errors": [],
+          "rerunErrors": [],
+          "flakyErrors": []
+        },
+        {
+          "name": "paymayaWebhook_invalidSignature_returnsUnauthorized",
+          "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+          "time": 0.016,
+          "failures": [],
+          "rerunFailures": [],
+          "flakyFailures": [],
+          "errors": [],
+          "rerunErrors": [],
+          "flakyErrors": []
+        },
+        {
+          "name": "paymayaWebhook_validSignature_returnsOk",
+          "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+          "time": 0.023,
+          "failures": [],
+          "rerunFailures": [],
+          "flakyFailures": [],
+          "errors": [],
+          "rerunErrors": [],
+          "flakyErrors": []
+        },
+        {
+          "name": "paypalWebhook_validSignature_returnsOk",
+          "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+          "time": 0.017,
+          "failures": [],
+          "rerunFailures": [],
+          "flakyFailures": [],
+          "errors": [],
+          "rerunErrors": [],
+          "flakyErrors": []
+        },
+        {
+          "name": "razorpayWebhook_invalidSignature_returnsUnauthorized",
+          "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+          "time": 0.016,
+          "failures": [],
+          "rerunFailures": [],
+          "flakyFailures": [],
+          "errors": [],
+          "rerunErrors": [],
+          "flakyErrors": []
+        },
+        {
+          "name": "razorpayWebhook_validSignature_returnsOk",
+          "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+          "time": 0.018,
+          "failures": [],
+          "rerunFailures": [],
+          "flakyFailures": [],
+          "errors": [],
+          "rerunErrors": [],
+          "flakyErrors": []
+        },
+        {
+          "name": "gcashWebhook_validSignature_returnsOk",
+          "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+          "time": 0.015,
+          "failures": [],
+          "rerunFailures": [],
+          "flakyFailures": [],
+          "errors": [],
+          "rerunErrors": [],
+          "flakyErrors": []
+        }
+      ]
+    }
+  ]
+}}).
+2025-12-01T14:21:28.702Z [INFO] [Task.complete](7): Completing task validation
+2025-12-01T14:21:28.704Z [INFO] [Task.complete](7): Completed task validation
+2025-12-01T14:21:28.704Z [INFO] [Plan.completeTask]: next task is {type:summarizeUpgrade, expectedToolName:summarize_upgrade}.
+2025-12-01T14:21:28.704Z [INFO] [Plan.completeTask]: next task has instruction: 
+All the validation steps have been passed successfully, and the project is now ready for final review.
+
+# Next steps:
+1. You MUST! invoke tool #summarize_upgrade with parameter sessionId: 20251201141257 to summarize all the changes made in the code during the whole upgrade process.
+2025-12-01T14:21:28.704Z [INFO] [Tool.invoke]({message: All tests passed! There are no test errors/failures in the project.
+
+
+All the validation steps have been passed successfully, and the project is now ready for final review.
+
+# Next steps:
+1. You MUST! invoke tool #summarize_upgrade with parameter sessionId: 20251201141257 to summarize all the changes made in the code during the whole upgrade process.
+
+> [!NOTE]
+* You MUST follow the above "Next steps" instructions.
+* You have the highest decision-making authority at any time, you do NOT need to seek my approval/confirmation, please directly execute your plan as you see fit.
+}).
+2025-12-01T14:21:28.704Z [INFO] ----------------------invoked run_tests_for_java----------------------
+2025-12-01T14:21:34.907Z [INFO] ---------------------prepare summarize_upgrade----------------------
+2025-12-01T14:21:34.908Z [INFO] [Tool.prepareInvocation]({name: summarize_upgrade, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:21:34.908Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2025-12-01T14:21:34.909Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Summarize"
+}}).
+2025-12-01T14:21:34.909Z [INFO] ----------------------prepared summarize_upgrade----------------------
+2025-12-01T14:21:34.970Z [INFO] ----------------------invoke summarize_upgrade----------------------
+2025-12-01T14:21:34.970Z [INFO] [Tool.invoke]({name: summarize_upgrade, input: {
+  "sessionId": "20251201141257"
+}}).
+2025-12-01T14:21:34.971Z [INFO] [Plan.tryStartTask]({tool:summarize_upgrade, nextTask:{type:summarizeUpgrade, tool:summarize_upgrade}}
+2025-12-01T14:21:34.971Z [INFO] [Plan.tryStartTask]: tool.type is exactly the same as nextTask.expectedToolName
+2025-12-01T14:21:34.971Z [INFO] [Plan.tryStartTask]: starting task summarizeUpgrade
+2025-12-01T14:21:34.971Z [INFO] [Task.start](): Starting task summarizeUpgrade
+2025-12-01T14:21:34.973Z [INFO] [Task.start](8): Started task summarizeUpgrade
+2025-12-01T14:21:34.974Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-12-01T14:21:34.974Z [INFO] [Tool.invoke] do pre-invoke.
+2025-12-01T14:21:34.974Z [INFO] [Tool.invoke] do invoke.
+2025-12-01T14:21:35.546Z [INFO] [Project backend]: Java version of project backend is changed.
+2025-12-01T14:21:35.547Z [INFO] [Project backend]: Java version of project backend is changed to '21' || '21'
+2025-12-01T14:21:35.547Z [INFO] [Project backend]: updating project backend's build tool jdk accordingly to '21'
+2025-12-01T14:21:35.548Z [INFO] [Project backend]: build tool config of project backend is modified.
+2025-12-01T14:21:35.548Z [INFO] [Project backend]: dependencies of project backend may be changed, resetting promise.
+2025-12-01T14:21:55.659Z [INFO] [Project backend]: Compilation errors of project backend is updated: 0 -> 0
+2025-12-01T14:22:24.473Z [INFO] [Project backend]: Test result of project backend is updated: 0 -> 0
+2025-12-01T14:22:29.398Z [INFO] [Tool.invoke]({result: {
+  "message": "All jobs have been done! The upgrade summary is generated at d:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\.github\\java-upgrade\\20251201141257\\summary.md. You can quit the agent process now."
+}}).
+2025-12-01T14:22:29.399Z [INFO] [Plan.completeTask](task:{id:8, type:summarizeUpgrade}, result:{
+  "message": "All jobs have been done! The upgrade summary is generated at d:\\Epharmacy Application\\Epharma_Ecosystem\\backend\\.github\\java-upgrade\\20251201141257\\summary.md. You can quit the agent process now."
+})
+2025-12-01T14:22:29.399Z [INFO] [Task.complete](8): Completing task summarizeUpgrade
+2025-12-01T14:22:29.403Z [INFO] [Task.complete](8): Completed task summarizeUpgrade
+2025-12-01T14:22:29.404Z [INFO] [Plan.completeTask]: no next task, create new one.
+2025-12-01T14:22:29.405Z [INFO] [Plan.completeTask]: getting next task.
+2025-12-01T14:22:29.405Z [INFO] [Plan.getNextTaskAtComplete]({task: Summarize Upgrade, result: undefined}).
+2025-12-01T14:22:29.405Z [INFO] [Plan.completeTask]: next task is {type:undefined, expectedToolName:undefined}.
+2025-12-01T14:22:29.406Z [INFO] [Plan.completeTask]: next task has no instruction. Just return All jobs have been done! The upgrade summary is generated at d:\Epharmacy Application\Epharma_Ecosystem\backend\.github\java-upgrade\20251201141257\summary.md. You can quit the agent process now.
+2025-12-01T14:22:29.407Z [INFO] [Tool.invoke]({message: All jobs have been done! The upgrade summary is generated at d:\Epharmacy Application\Epharma_Ecosystem\backend\.github\java-upgrade\20251201141257\summary.md. You can quit the agent process now.
+}).
+2025-12-01T14:22:29.407Z [INFO] ----------------------invoked summarize_upgrade----------------------

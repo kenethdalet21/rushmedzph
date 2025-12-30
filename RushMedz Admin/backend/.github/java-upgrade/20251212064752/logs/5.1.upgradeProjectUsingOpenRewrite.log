@@ -1,0 +1,268 @@
+2025-12-12T06:50:31.263Z [INFO] Upgrading to: 
+- java:*:21
+2025-12-12T06:50:31.264Z [INFO] Collecting recipes.
+2025-12-12T06:50:31.266Z [INFO] Collected OpenRewrite recipes:
+org.openrewrite.java.migrate.UpgradeToJava21
+2025-12-12T06:50:31.266Z [INFO] Recipes collected:
+org.openrewrite.java.migrate.UpgradeToJava21
+2025-12-12T06:50:31.267Z [INFO] Applying recipes:
+org.openrewrite.java.migrate.UpgradeToJava21
+2025-12-12T06:50:31.267Z [INFO] [MavenBuildTool] Running OpenRewrite recipes in d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-12T06:50:31.268Z [INFO] [MavenBuildTool] Running OpenRewrite recipes: org.openrewrite.java.migrate.UpgradeToJava21
+2025-12-12T06:50:31.268Z [INFO] [Environment] Running command (Java 17): mvn -B org.openrewrite.maven:rewrite-maven-plugin:5.47.3:run -Drewrite.activeRecipes=org.openrewrite.java.migrate.UpgradeToJava21 -Drewrite.recipeArtifactCoordinates=org.openrewrite.recipe:rewrite-migrate-java:2.31.1
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.epharma.ecosystem:backend >--------------------
+[INFO] Building Epharma Ecosystem Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> rewrite:5.47.3:run (default-cli) > process-test-classes @ backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ backend ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ backend ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 34 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ backend ---
+[INFO] skip non existing resourceDirectory d:\Epharmacy Application\Epharma_Ecosystem\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ backend ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] <<< rewrite:5.47.3:run (default-cli) < process-test-classes @ backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- rewrite:5.47.3:run (default-cli) @ backend ---
+[INFO] Using active recipe(s) [org.openrewrite.java.migrate.UpgradeToJava21]
+[INFO] Using active styles(s) []
+[INFO] Validating active recipes...
+[WARNING] This Gauge has been already registered (MeterId{name='cache.size', tags=[tag(cache=Maven POMs - default)]}), the Gauge registration will be ignored. Note that subsequent logs will be logged at debug level.
+[INFO] Project [Epharma Ecosystem Backend] Resolving Poms...
+[INFO] Project [Epharma Ecosystem Backend] Parsing source files
+[INFO] Running recipe(s)...
+[WARNING] Changes have been made to backend\pom.xml by:
+[WARNING]     org.openrewrite.java.migrate.UpgradeBuildToJava21
+[WARNING]         org.openrewrite.java.migrate.UpgradeJavaVersion: {version=21}
+[WARNING]             org.openrewrite.java.migrate.maven.UpdateMavenProjectPropertyJavaVersion: {version=21}
+[WARNING] Changes have been made to backend\src\main\java\com\epharma\ecosystem\service\OTPService.java by:
+[WARNING]     org.openrewrite.java.migrate.UpgradeToJava17
+[WARNING]         org.openrewrite.java.migrate.Java8toJava11
+[WARNING]             org.openrewrite.java.migrate.UpgradeToJava8
+[WARNING]                 org.openrewrite.java.migrate.UpgradeToJava7
+[WARNING]                     org.openrewrite.java.migrate.util.ReplaceMathRandomWithThreadLocalRandomRecipe
+[WARNING]         org.openrewrite.java.migrate.UpgradeBuildToJava21
+[WARNING]             org.openrewrite.java.migrate.UpgradeJavaVersion: {version=21}
+[WARNING] Changes have been made to backend\src\main\java\com\epharma\ecosystem\service\SMSGatewayService.java by:
+[WARNING]     org.openrewrite.java.migrate.UpgradeBuildToJava21
+[WARNING]         org.openrewrite.java.migrate.UpgradeJavaVersion: {version=21}
+[WARNING]         org.openrewrite.java.migrate.net.URLConstructorsToURIRecipes
+[WARNING]             org.openrewrite.java.migrate.net.URLConstructorsToURIRecipes$URLSingleArgumentConstructorRecipe
+[WARNING] Please review and commit the results.
+[WARNING] Estimate time saved: 10m
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:04 min
+[INFO] Finished at: 2025-12-12T14:51:38+08:00
+[INFO] ------------------------------------------------------------------------
+2025-12-12T06:51:38.289Z [INFO] [MavenBuildTool] Cleaning up/Notifying after OpenRewrite success.
+2025-12-12T06:51:38.290Z [INFO] [MavenBuildTool] Notifying Maven config changed.
+2025-12-12T06:51:38.296Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2025-12-12T06:51:38.299Z [INFO] [Environment] Running command (Java 17): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 17.0.11, vendor: Microsoft, runtime: C:\Java\jdk-17.0.11+9
+Default locale: en_PH, platform encoding: Cp1252
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-12-12T06:51:38.919Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2025-12-12T06:51:38.920Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-12-12T06:51:38.921Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-12T06:51:38.921Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-12-12T06:51:38.927Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-12-12T06:51:38.927Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2025-12-12T06:51:38.936Z [INFO] Recipes applied successfully.
+2025-12-12T06:51:38.936Z [INFO] [MavenBuildTool] Cleaning d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-12T06:51:38.938Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2025-12-12T06:51:45.053Z [INFO] [Task.commitChanges](5.1): Committing changes for d:/Epharmacy Application/Epharma_Ecosystem/backend with message: Upgrade project to use `Java 21` using openrewrite.
+2025-12-12T06:51:45.397Z [INFO] [appmod/java-upgrade-20251212064752 f9779f5] Upgrade project to use `Java 21` using openrewrite.
+ 4 files changed, 7 insertions(+), 11 deletions(-)
+ delete mode 100644 backend/data/epharma.lock.db
+
+2025-12-12T06:51:45.500Z [INFO] f9779f5954e3a893903f3d792a793e086795ae79
+
+2025-12-12T06:51:45.625Z [INFO] 0	6	backend/data/epharma.lock.db
+2	2	backend/pom.xml
+2	1	backend/src/main/java/com/epharma/ecosystem/service/OTPService.java
+3	2	backend/src/main/java/com/epharma/ecosystem/service/SMSGatewayService.java
+
+2025-12-12T06:51:45.661Z [INFO] [Task.commitChanges](5.1): Committed changes for d:/Epharmacy Application/Epharma_Ecosystem/backend with message: Upgrade project to use `Java 21` using openrewrite.
+2025-12-12T06:51:45.662Z [INFO] Validating dependencies...
+2025-12-12T06:51:45.663Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2025-12-12T06:51:45.663Z [INFO] [Project backend]: getting dependencies promise.
+2025-12-12T06:51:45.663Z [INFO] [Project backend]: reset dependencies promise.
+2025-12-12T06:51:45.664Z [INFO] [Environment] Running command (Java 21): mvn --version
+2025-12-12T06:51:45.671Z [INFO] [Environment] Running command (Java 21): mvn dependency:tree -B
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 21.0.8, vendor: Microsoft, runtime: C:\Users\Keneth Dale Tuazon\.jdk\jdk-21.0.8
+Default locale: en_PH, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-12-12T06:51:46.440Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2025-12-12T06:51:46.440Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-12-12T06:51:46.440Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-12T06:51:46.441Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-12-12T06:51:46.442Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-12-12T06:51:46.443Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.epharma.ecosystem:backend >--------------------
+[INFO] Building Epharma Ecosystem Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.1:tree (default-cli) @ backend ---
+[INFO] com.epharma.ecosystem:backend:jar:0.0.1-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:3.3.10:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:3.3.10:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:3.3.10:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.3.10:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.3.10:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.5.18:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.5.18:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.23.1:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.23.1:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:2.0.17:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:2.2:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:3.3.10:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.17.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.17.3:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.17.3:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:3.3.10:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.39:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.39:compile
+[INFO] |  +- org.springframework:spring-web:jar:6.1.18:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:6.1.18:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:6.1.18:compile
+[INFO] |     +- org.springframework:spring-context:jar:6.1.18:compile
+[INFO] |     \- org.springframework:spring-expression:jar:6.1.18:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:3.3.10:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-aop:jar:3.3.10:compile
+[INFO] |  |  \- org.aspectj:aspectjweaver:jar:1.9.23:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:3.3.10:compile
+[INFO] |  |  +- com.zaxxer:HikariCP:jar:5.1.0:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:6.1.18:compile
+[INFO] |  +- org.hibernate.orm:hibernate-core:jar:6.5.3.Final:compile
+[INFO] |  |  +- jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile
+[INFO] |  |  +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.5.3.Final:compile
+[INFO] |  |  +- org.hibernate.common:hibernate-commons-annotations:jar:6.0.6.Final:runtime
+[INFO] |  |  +- io.smallrye:jandex:jar:3.1.2:runtime
+[INFO] |  |  +- com.fasterxml:classmate:jar:1.7.0:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.14.19:runtime
+[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:4.0.5:runtime
+[INFO] |  |  |  \- org.glassfish.jaxb:jaxb-core:jar:4.0.5:runtime
+[INFO] |  |  |     +- org.glassfish.jaxb:txw2:jar:4.0.5:runtime
+[INFO] |  |  |     \- com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime
+[INFO] |  |  +- jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime
+[INFO] |  |  \- org.antlr:antlr4-runtime:jar:4.13.0:compile
+[INFO] |  +- org.springframework.data:spring-data-jpa:jar:3.3.10:compile
+[INFO] |  |  +- org.springframework.data:spring-data-commons:jar:3.3.10:compile
+[INFO] |  |  +- org.springframework:spring-orm:jar:6.1.18:compile
+[INFO] |  |  +- org.springframework:spring-tx:jar:6.1.18:compile
+[INFO] |  |  \- org.slf4j:slf4j-api:jar:2.0.17:compile
+[INFO] |  \- org.springframework:spring-aspects:jar:6.1.18:compile
+[INFO] +- com.h2database:h2:jar:2.2.224:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-validation:jar:3.3.10:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.39:compile
+[INFO] |  \- org.hibernate.validator:hibernate-validator:jar:8.0.2.Final:compile
+[INFO] |     \- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:3.3.10:compile
+[INFO] |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:3.3.10:compile
+[INFO] |  |  \- org.springframework.boot:spring-boot-actuator:jar:3.3.10:compile
+[INFO] |  +- io.micrometer:micrometer-observation:jar:1.13.12:compile
+[INFO] |  |  \- io.micrometer:micrometer-commons:jar:1.13.12:compile
+[INFO] |  \- io.micrometer:micrometer-jakarta9:jar:1.13.12:compile
+[INFO] |     \- io.micrometer:micrometer-core:jar:1.13.12:compile
+[INFO] |        +- org.hdrhistogram:HdrHistogram:jar:2.2.2:runtime
+[INFO] |        \- org.latencyutils:LatencyUtils:jar:2.0.3:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:3.3.10:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:3.3.10:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:3.3.10:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.9.0:test
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.2:runtime
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:2.1.3:compile
+[INFO] |  +- net.minidev:json-smart:jar:2.5.2:test
+[INFO] |  |  \- net.minidev:accessors-smart:jar:2.5.2:test
+[INFO] |  |     \- org.ow2.asm:asm:jar:9.7.1:test
+[INFO] |  +- org.assertj:assertj-core:jar:3.25.3:test
+[INFO] |  +- org.awaitility:awaitility:jar:4.2.2:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:2.2:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.10.5:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.10.5:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO] |  |  |  +- org.junit.platform:junit-platform-commons:jar:1.10.5:test
+[INFO] |  |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.10.5:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.10.5:test
+[INFO] |  |     \- org.junit.platform:junit-platform-engine:jar:1.10.5:test
+[INFO] |  +- org.mockito:mockito-core:jar:5.11.0:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.14.19:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:3.3:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:5.11.0:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.3:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:6.1.18:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:6.1.18:compile
+[INFO] |  +- org.springframework:spring-test:jar:6.1.18:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.9.1:test
+[INFO] +- org.springframework.boot:spring-boot-starter-security:jar:3.3.10:compile
+[INFO] |  +- org.springframework:spring-aop:jar:6.1.18:compile
+[INFO] |  +- org.springframework.security:spring-security-config:jar:6.3.8:compile
+[INFO] |  |  \- org.springframework.security:spring-security-core:jar:6.3.8:compile
+[INFO] |  |     \- org.springframework.security:spring-security-crypto:jar:6.3.8:compile
+[INFO] |  \- org.springframework.security:spring-security-web:jar:6.3.8:compile
+[INFO] +- io.jsonwebtoken:jjwt-api:jar:0.11.5:compile
+[INFO] +- io.jsonwebtoken:jjwt-impl:jar:0.11.5:runtime
+[INFO] +- io.jsonwebtoken:jjwt-jackson:jar:0.11.5:runtime
+[INFO] |  \- com.fasterxml.jackson.core:jackson-databind:jar:2.17.3:compile
+[INFO] |     +- com.fasterxml.jackson.core:jackson-annotations:jar:2.17.3:compile
+[INFO] |     \- com.fasterxml.jackson.core:jackson-core:jar:2.17.3:compile
+[INFO] \- org.springframework.boot:spring-boot-starter-mail:jar:3.3.10:compile
+[INFO]    +- org.springframework:spring-context-support:jar:6.1.18:compile
+[INFO]    \- org.eclipse.angus:jakarta.mail:jar:2.0.3:compile
+[INFO]       \- org.eclipse.angus:angus-activation:jar:2.0.2:runtime
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.050 s
+[INFO] Finished at: 2025-12-12T14:51:56+08:00
+[INFO] ------------------------------------------------------------------------
+2025-12-12T06:51:56.888Z [INFO] [MavenBuildTool] Successfully got dependency tree of d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-12T06:51:56.891Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-12-12T06:51:56.892Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-12T06:51:56.892Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-12-12T06:51:56.902Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-12-12T06:51:56.904Z [INFO] After upgrading: 
+- org.springframework.boot:spring-boot-starter-web:3.3.10
+- org.springframework.boot:spring-boot-starter-data-jpa:3.3.10
+- com.h2database:h2:2.2.224
+- org.springframework.boot:spring-boot-starter-validation:3.3.10
+- org.springframework.boot:spring-boot-starter-actuator:3.3.10
+- org.springframework.boot:spring-boot-starter-test:3.3.10
+- org.springframework.boot:spring-boot-starter-security:3.3.10
+- io.jsonwebtoken:jjwt-api:0.11.5
+- io.jsonwebtoken:jjwt-impl:0.11.5
+- io.jsonwebtoken:jjwt-jackson:0.11.5
+- org.springframework.boot:spring-boot-starter-mail:3.3.10
+- java:*:21
+2025-12-12T06:51:56.915Z [INFO] Failed upgrading: 
+
+2025-12-12T06:51:56.915Z [INFO] OpenRewrite upgrade Java version successfully.
+2025-12-12T06:51:56.916Z [INFO] OpenRewrite recipes are applied successfully. The following recipes are applied:
+- org.openrewrite.java.migrate.UpgradeToJava21

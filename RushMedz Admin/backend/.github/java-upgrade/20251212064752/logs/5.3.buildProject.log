@@ -1,0 +1,22 @@
+2025-12-12T06:52:09.525Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2025-12-12T06:52:09.526Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 21.0.8, vendor: Microsoft, runtime: C:\Users\Keneth Dale Tuazon\.jdk\jdk-21.0.8
+Default locale: en_PH, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-12-12T06:52:10.104Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2025-12-12T06:52:10.104Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-12-12T06:52:10.104Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-12T06:52:10.104Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-12-12T06:52:10.105Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-12-12T06:52:10.105Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2025-12-12T06:52:10.106Z [INFO] [MavenBuildTool] Getting build errors of d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-12T06:52:10.107Z [INFO] [Environment] Running command (Java 21): mvn clean test-compile -q -B -fn
+2025-12-12T06:52:20.568Z [INFO] [MavenBuildTool] parsing compilation errors.
+2025-12-12T06:52:20.570Z [INFO] [BaseBuildTool] Found 1 modules: .
+2025-12-12T06:52:20.588Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2025-12-12T06:52:20.588Z [INFO] [MavenBuildTool] Cleaning d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-12T06:52:20.589Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2025-12-12T06:52:24.270Z [INFO] Build succeeded! There are no build errors in the project.
+2025-12-12T06:52:24.273Z [INFO] Build project completed. Looking for next task...

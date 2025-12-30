@@ -1,0 +1,333 @@
+2025-12-01T14:21:34.975Z [INFO] [Project backend]: getting Java version.
+2025-12-01T14:21:34.976Z [INFO] [Project backend]: got Java version: 21
+2025-12-01T14:21:34.977Z [INFO] [Project backend]: getting project state.
+2025-12-01T14:21:34.977Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2025-12-01T14:21:34.978Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 21.0.8, vendor: Microsoft, runtime: C:\Users\Keneth Dale Tuazon\.jdk\jdk-21.0.8
+Default locale: en_PH, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-12-01T14:21:35.543Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2025-12-01T14:21:35.543Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-12-01T14:21:35.544Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-01T14:21:35.544Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-12-01T14:21:35.545Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-12-01T14:21:35.546Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2025-12-01T14:21:35.549Z [INFO] [Project backend]: getting Java version.
+2025-12-01T14:21:35.549Z [INFO] [Project backend]: got Java version: 21
+2025-12-01T14:21:35.550Z [INFO] [Project backend]: getting dependencies promise.
+2025-12-01T14:21:35.550Z [INFO] [Project backend]: reset dependencies promise.
+2025-12-01T14:21:35.551Z [INFO] [Environment] Running command (Java 21): mvn dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.epharma.ecosystem:backend >--------------------
+[INFO] Building Epharma Ecosystem Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.8.1:tree (default-cli) @ backend ---
+[INFO] com.epharma.ecosystem:backend:jar:0.0.1-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:3.5.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.5.0:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.5.18:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.5.18:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.24.3:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:2.0.17:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:2.4:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:3.5.0:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.0:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.0:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.0:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.41:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.41:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:6.2.7:compile
+[INFO] |     +- org.springframework:spring-context:jar:6.2.7:compile
+[INFO] |     \- org.springframework:spring-expression:jar:6.2.7:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.0:compile
+[INFO] |  |  +- com.zaxxer:HikariCP:jar:6.3.0:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:6.2.7:compile
+[INFO] |  +- org.hibernate.orm:hibernate-core:jar:6.6.15.Final:compile
+[INFO] |  |  +- jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile
+[INFO] |  |  +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.6.1.Final:compile
+[INFO] |  |  +- org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime
+[INFO] |  |  +- io.smallrye:jandex:jar:3.2.0:runtime
+[INFO] |  |  +- com.fasterxml:classmate:jar:1.7.0:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.17.5:runtime
+[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:4.0.5:runtime
+[INFO] |  |  |  \- org.glassfish.jaxb:jaxb-core:jar:4.0.5:runtime
+[INFO] |  |  |     +- org.eclipse.angus:angus-activation:jar:2.0.2:runtime
+[INFO] |  |  |     +- org.glassfish.jaxb:txw2:jar:4.0.5:runtime
+[INFO] |  |  |     \- com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime
+[INFO] |  |  +- jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime
+[INFO] |  |  \- org.antlr:antlr4-runtime:jar:4.13.0:compile
+[INFO] |  +- org.springframework.data:spring-data-jpa:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework.data:spring-data-commons:jar:3.5.0:compile
+[INFO] |  |  +- org.springframework:spring-orm:jar:6.2.7:compile
+[INFO] |  |  +- org.springframework:spring-tx:jar:6.2.7:compile
+[INFO] |  |  \- org.slf4j:slf4j-api:jar:2.0.17:compile
+[INFO] |  \- org.springframework:spring-aspects:jar:6.2.7:compile
+[INFO] |     \- org.aspectj:aspectjweaver:jar:1.9.24:compile
+[INFO] +- com.h2database:h2:jar:2.3.232:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-validation:jar:3.5.0:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.41:compile
+[INFO] |  \- org.hibernate.validator:hibernate-validator:jar:8.0.2.Final:compile
+[INFO] |     \- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:3.5.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:3.5.0:compile
+[INFO] |  |  \- org.springframework.boot:spring-boot-actuator:jar:3.5.0:compile
+[INFO] |  +- io.micrometer:micrometer-observation:jar:1.15.0:compile
+[INFO] |  |  \- io.micrometer:micrometer-commons:jar:1.15.0:compile
+[INFO] |  \- io.micrometer:micrometer-jakarta9:jar:1.15.0:compile
+[INFO] |     \- io.micrometer:micrometer-core:jar:1.15.0:compile
+[INFO] |        +- org.hdrhistogram:HdrHistogram:jar:2.2.2:runtime
+[INFO] |        \- org.latencyutils:LatencyUtils:jar:2.0.3:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:3.5.0:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:3.5.0:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.0:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.9.0:test
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.2:runtime
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:2.1.3:runtime
+[INFO] |  +- net.minidev:json-smart:jar:2.5.2:test
+[INFO] |  |  \- net.minidev:accessors-smart:jar:2.5.2:test
+[INFO] |  |     \- org.ow2.asm:asm:jar:9.7.1:test
+[INFO] |  +- org.assertj:assertj-core:jar:3.27.3:test
+[INFO] |  +- org.awaitility:awaitility:jar:4.3.0:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:3.0:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.12.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO] |  |  |  +- org.junit.platform:junit-platform-commons:jar:1.12.2:test
+[INFO] |  |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test
+[INFO] |  |     \- org.junit.platform:junit-platform-engine:jar:1.12.2:test
+[INFO] |  +- org.mockito:mockito-core:jar:5.17.0:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.17.5:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:3.3:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:5.17.0:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.3:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:6.2.7:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:6.2.7:compile
+[INFO] |  +- org.springframework:spring-test:jar:6.2.7:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.10.1:test
+[INFO] +- org.springframework:spring-web:jar:6.2.8:compile
+[INFO] |  \- org.springframework:spring-beans:jar:6.2.7:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-security:jar:3.5.0:compile
+[INFO] |  +- org.springframework:spring-aop:jar:6.2.7:compile
+[INFO] |  +- org.springframework.security:spring-security-config:jar:6.5.0:compile
+[INFO] |  |  \- org.springframework.security:spring-security-core:jar:6.5.0:compile
+[INFO] |  |     \- org.springframework.security:spring-security-crypto:jar:6.5.0:compile
+[INFO] |  \- org.springframework.security:spring-security-web:jar:6.5.0:compile
+[INFO] +- io.jsonwebtoken:jjwt-api:jar:0.11.5:compile
+[INFO] +- io.jsonwebtoken:jjwt-impl:jar:0.11.5:runtime
+[INFO] \- io.jsonwebtoken:jjwt-jackson:jar:0.11.5:runtime
+[INFO]    \- com.fasterxml.jackson.core:jackson-databind:jar:2.19.0:compile
+[INFO]       +- com.fasterxml.jackson.core:jackson-annotations:jar:2.19.0:compile
+[INFO]       \- com.fasterxml.jackson.core:jackson-core:jar:2.19.0:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.076 s
+[INFO] Finished at: 2025-12-01T22:21:42+08:00
+[INFO] ------------------------------------------------------------------------
+2025-12-01T14:21:42.287Z [INFO] [MavenBuildTool] Successfully got dependency tree of d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-01T14:21:42.288Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-12-01T14:21:42.288Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-01T14:21:42.288Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-12-01T14:21:42.289Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-12-01T14:21:42.289Z [INFO] [MavenBuildTool] Getting build errors of d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-01T14:21:42.290Z [INFO] [Environment] Running command (Java 21): mvn clean test-compile -q -B -fn
+2025-12-01T14:21:52.004Z [INFO] [MavenBuildTool] parsing compilation errors.
+2025-12-01T14:21:52.004Z [INFO] [BaseBuildTool] Found 1 modules: .
+2025-12-01T14:21:52.016Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2025-12-01T14:21:52.016Z [INFO] [MavenBuildTool] Cleaning d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-01T14:21:52.016Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2025-12-01T14:21:55.659Z [INFO] [MavenBuildTool] Running test cases of d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-01T14:21:55.660Z [INFO] [Environment] Running command (Java 21): mvn clean test -q -B -fn
+22:22:07.287 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.epharma.ecosystem.controller.PaymentControllerTest]: PaymentControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:22:07.540 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.epharma.ecosystem.EpharmaApplication for test class com.epharma.ecosystem.controller.PaymentControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-12-01T22:22:08.555+08:00  INFO 19136 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : Starting PaymentControllerTest using Java 21.0.8 with PID 19136 (started by Keneth Dale Tuazon in d:\Epharmacy Application\Epharma_Ecosystem\backend)
+2025-12-01T22:22:08.557+08:00  INFO 19136 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2025-12-01T22:22:11.033+08:00  INFO 19136 --- [epharma-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-01T22:22:11.178+08:00  INFO 19136 --- [epharma-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
+2025-12-01T22:22:12.612+08:00  INFO 19136 --- [epharma-backend] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-01T22:22:12.769+08:00  INFO 19136 --- [epharma-backend] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-12-01T22:22:12.858+08:00  INFO 19136 --- [epharma-backend] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-01T22:22:13.619+08:00  INFO 19136 --- [epharma-backend] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-01T22:22:13.684+08:00  INFO 19136 --- [epharma-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-01T22:22:14.284+08:00  INFO 19136 --- [epharma-backend] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./data/epharma user=SA
+2025-12-01T22:22:14.287+08:00  INFO 19136 --- [epharma-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-01T22:22:14.405+08:00  INFO 19136 --- [epharma-backend] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-01T22:22:15.820+08:00  INFO 19136 --- [epharma-backend] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-01T22:22:15.893+08:00  INFO 19136 --- [epharma-backend] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-01T22:22:16.990+08:00  WARN 19136 --- [epharma-backend] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-01T22:22:17.092+08:00  WARN 19136 --- [epharma-backend] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: dc1e0b30-9292-4c5b-8445-3a89d8590a50
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-01T22:22:17.107+08:00  INFO 19136 --- [epharma-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-01T22:22:18.201+08:00  INFO 19136 --- [epharma-backend] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-12-01T22:22:18.969+08:00  INFO 19136 --- [epharma-backend] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/epharma'
+2025-12-01T22:22:19.125+08:00  INFO 19136 --- [epharma-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-12-01T22:22:19.125+08:00  INFO 19136 --- [epharma-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-12-01T22:22:19.130+08:00  INFO 19136 --- [epharma-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+2025-12-01T22:22:19.280+08:00  INFO 19136 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : Started PaymentControllerTest in 11.327 seconds (process running for 13.308)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\Keneth Dale Tuazon\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.5\byte-buddy-agent-1.17.5.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2025-12-01T14:22:20.907Z [INFO] [MavenBuildTool] loading surefire reports.
+2025-12-01T14:22:20.933Z [INFO] [MavenBuildTool] summarizing surefire reports.
+2025-12-01T14:22:20.935Z [INFO] [MavenBuildTool] Cleaning d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-01T14:22:20.936Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2025-12-01T14:22:24.474Z [INFO] Add test changes to summary...
+2025-12-01T14:22:24.578Z [INFO] 3	2	backend/pom.xml
+
+2025-12-01T14:22:24.589Z [INFO] Add test errors to summary...
+2025-12-01T14:22:24.591Z [INFO] getting CVEs for dependencies:
+ - org.springframework.boot:spring-boot-starter-web:3.5.0
+  - org.springframework.boot:spring-boot-starter-data-jpa:3.5.0
+  - com.h2database:h2:2.3.232
+  - org.springframework.boot:spring-boot-starter-validation:3.5.0
+  - org.springframework.boot:spring-boot-starter-actuator:3.5.0
+  - org.springframework.boot:spring-boot-starter-test:3.5.0
+  - org.springframework:spring-web:6.2.8
+  - org.springframework.boot:spring-boot-starter-security:3.5.0
+  - io.jsonwebtoken:jjwt-api:0.11.5
+  - io.jsonwebtoken:jjwt-impl:0.11.5
+  - io.jsonwebtoken:jjwt-jackson:0.11.5
+  - java:*:21...
+2025-12-01T14:22:24.591Z [INFO] getting gitHub access token...
+2025-12-01T14:22:24.596Z [INFO] Processing batch 1/1, size: 12
+2025-12-01T14:22:24.598Z [INFO] listing CVEs from GithHub for dependencies [
+  {
+    "name": "org.springframework.boot:spring-boot-starter-web",
+    "version": "3.5.0"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-data-jpa",
+    "version": "3.5.0"
+  },
+  {
+    "name": "com.h2database:h2",
+    "version": "2.3.232"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-validation",
+    "version": "3.5.0"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-actuator",
+    "version": "3.5.0"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-test",
+    "version": "3.5.0"
+  },
+  {
+    "name": "org.springframework:spring-web",
+    "version": "6.2.8"
+  },
+  {
+    "name": "org.springframework.boot:spring-boot-starter-security",
+    "version": "3.5.0"
+  },
+  {
+    "name": "io.jsonwebtoken:jjwt-api",
+    "version": "0.11.5"
+  },
+  {
+    "name": "io.jsonwebtoken:jjwt-impl",
+    "version": "0.11.5"
+  },
+  {
+    "name": "io.jsonwebtoken:jjwt-jackson",
+    "version": "0.11.5"
+  },
+  {
+    "name": "java:*",
+    "version": "21"
+  }
+]
+2025-12-01T14:22:25.260Z [INFO] found 0 CVEs for dependencies
+2025-12-01T14:22:25.260Z [INFO] grouping CVEs and finding min patched version by dep...
+2025-12-01T14:22:25.260Z [INFO] done getting 0 CVEs for 12 dependencies
+2025-12-01T14:22:25.345Z [INFO] diff --git a/backend/pom.xml b/backend/pom.xml
+index e2da6c2..c0898a6 100644
+--- a/backend/pom.xml
++++ b/backend/pom.xml
+@@ -5,7 +5,7 @@
+     <parent>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-parent</artifactId>
+-        <version>3.3.5</version>
++        <version>3.5.0</version>
+         <relativePath/> <!-- lookup parent from repository -->
+     </parent>
+ 
+@@ -50,7 +50,7 @@
+         <dependency>
+             <groupId>org.springframework</groupId>
+             <artifactId>spring-web</artifactId>
+-            <!-- Removed explicit version to align with Spring Boot parent -->
++            <version>6.2.8</version>
+         </dependency>
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+@@ -82,6 +82,7 @@
+                 <artifactId>spring-boot-maven-plugin</artifactId>
+                 <executions>
+                     <execution>
++                        <phase>package</phase>
+                         <goals>
+                             <goal>build-info</goal>
+                         </goals>
+
+2025-12-01T14:22:25.358Z [INFO] [unknown]: getting broken files...
+2025-12-01T14:22:25.360Z [INFO] [unknown]: found 0 broken files.
+2025-12-01T14:22:25.360Z [INFO] [unknown]: there are 30 lines.
+2025-12-01T14:22:26.296Z [INFO] [unknown]: there are 275 tokens.
+2025-12-01T14:22:26.296Z [INFO] [unknown]: no need to split the diff file.
+2025-12-01T14:22:26.297Z [INFO] summarizing behavior changes...
+2025-12-01T14:22:26.297Z [INFO] summarizing behavior changes of part 1...
+2025-12-01T14:22:27.539Z [INFO] summarized behavior changes of part 1.
+2025-12-01T14:22:27.539Z [INFO] summarized behavior changes of all parts.
+2025-12-01T14:22:27.539Z [INFO] summarizing behavior changes...
+2025-12-01T14:22:27.539Z [INFO] summarizing behavior changes of part 1...
+2025-12-01T14:22:28.136Z [INFO] summarized behavior changes of part 1.
+2025-12-01T14:22:28.136Z [INFO] summarized behavior changes of all parts.
+2025-12-01T14:22:28.136Z [INFO] summarizing behavior changes...
+2025-12-01T14:22:28.136Z [INFO] summarizing behavior changes of part 1...
+2025-12-01T14:22:28.780Z [INFO] summarized behavior changes of part 1.
+2025-12-01T14:22:28.780Z [INFO] summarized behavior changes of all parts.

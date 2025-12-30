@@ -1,0 +1,69 @@
+2025-11-28T04:41:32.376Z [INFO] ----------------------invoke generate_upgrade_plan----------------------
+2025-11-28T04:41:32.380Z [INFO] [Tool.invoke]({name: generate_upgrade_plan, input: {
+  "projectPath": "d:\\Epharmacy Application\\Epharma_Ecosystem\\backend",
+  "targetJavaVersion": "21"
+}}).
+2025-11-28T04:41:32.382Z [INFO] [Plan.tryStartTask]({tool:generate_upgrade_plan, nextTask:{type:undefined, tool:undefined}}
+2025-11-28T04:41:32.383Z [INFO] [Plan.tryStartTask]: no next task, create new one.
+2025-11-28T04:41:32.384Z [INFO] [Plan.createTaskAtStart]({tool: generate_upgrade_plan, input: {
+  "projectPath": "d:\\Epharmacy Application\\Epharma_Ecosystem\\backend",
+  "targetJavaVersion": "21",
+  "sessionId": "20251128044132"
+}}).
+2025-11-28T04:41:32.384Z [INFO] [Plan.tryStartTask]: starting task generatePlan
+2025-11-28T04:41:32.385Z [INFO] [Task.start](): Starting task generatePlan
+2025-11-28T04:41:32.387Z [INFO] [Task.start](1): Started task generatePlan
+2025-11-28T04:41:32.390Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2025-11-28T04:41:37.280Z [INFO] Copilot user info:{
+  "access_type_sku": "trial_30_monthly_subscriber_quota",
+  "analytics_tracking_id": "779b6a179d26e0e8e9d379c7b89c2308",
+  "assigned_date": null,
+  "can_signup_for_limited": false,
+  "chat_enabled": true,
+  "copilot_plan": "individual",
+  "organization_login_list": [],
+  "organization_list": [],
+  "quota_reset_date": "2025-12-01",
+  "quota_snapshots": {
+    "chat": {
+      "entitlement": 0,
+      "overage_count": 0,
+      "overage_permitted": false,
+      "percent_remaining": 100,
+      "quota_id": "chat",
+      "quota_remaining": 0,
+      "remaining": 0,
+      "unlimited": true,
+      "timestamp_utc": "2025-11-28T04:44:06.105Z"
+    },
+    "completions": {
+      "entitlement": 0,
+      "overage_count": 0,
+      "overage_permitted": false,
+      "percent_remaining": 100,
+      "quota_id": "completions",
+      "quota_remaining": 0,
+      "remaining": 0,
+      "unlimited": true,
+      "timestamp_utc": "2025-11-28T04:44:06.105Z"
+    },
+    "premium_interactions": {
+      "entitlement": 300,
+      "overage_count": 0,
+      "overage_permitted": false,
+      "percent_remaining": 91.96666666666667,
+      "quota_id": "premium_interactions",
+      "quota_remaining": 275.90000000000003,
+      "remaining": 275,
+      "unlimited": false,
+      "timestamp_utc": "2025-11-28T04:44:06.105Z"
+    }
+  },
+  "quota_reset_date_utc": "2025-12-01T00:00:00.000Z"
+}
+2025-11-28T04:41:37.284Z [INFO] [Tool.invoke] do pre-invoke.
+2025-11-28T04:41:37.285Z [INFO] [Tool.invoke] do invoke.
+2025-11-28T04:42:06.571Z [ERROR] [Tool.invoke] error occurs when invoking tool generate_upgrade_plan: UserError: Failed to prepare project configuration or init upgrade options: We are not able to upgrade Java from undefined to 21 directly. Please set another compatible target versions. We only support upgrading to 21 directly from >=8 <21, 11, 17, please upgrade to one of these versions first.. Please check the project configuration and try again..
+2025-11-28T04:42:06.577Z [INFO] [Task.complete](1): Completing task generatePlan
+2025-11-28T04:42:06.581Z [INFO] ----------------------invoked generate_upgrade_plan----------------------
+2025-11-28T04:42:06.582Z [INFO] [Task.complete](1): Completed task generatePlan

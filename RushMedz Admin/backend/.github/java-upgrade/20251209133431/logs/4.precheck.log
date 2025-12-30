@@ -1,0 +1,230 @@
+2025-12-09T13:37:06.674Z [INFO] Prechecking project backend...
+2025-12-09T13:37:06.674Z [INFO] Prechecking build status...
+2025-12-09T13:37:45.720Z [INFO] Prechecking CVEs...
+2025-12-09T13:37:47.249Z [INFO] Prechecking tests...
+2025-12-09T13:37:47.253Z [INFO] Run tests before upgrading...
+2025-12-09T13:38:47.871Z [INFO] Prepare initial state...
+2025-12-09T13:38:47.873Z [INFO] [Project backend]: getting project state.
+2025-12-09T13:38:47.874Z [INFO] [Project backend]: getting Java version.
+2025-12-09T13:38:47.874Z [INFO] [Project backend]: got Java version: 17
+2025-12-09T13:38:47.876Z [INFO] [Project backend]: getting dependencies promise.
+2025-12-09T13:38:47.879Z [INFO] Project initial state: {
+  "javaVersion": "17",
+  "dependencies": [
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-web",
+      "type": "jar",
+      "version": "3.5.0",
+      "scope": "compile",
+      "module": "backend"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-data-jpa",
+      "type": "jar",
+      "version": "3.5.0",
+      "scope": "compile",
+      "module": "backend"
+    },
+    {
+      "groupId": "com.h2database",
+      "artifactId": "h2",
+      "type": "jar",
+      "version": "2.3.232",
+      "scope": "runtime",
+      "module": "backend"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-validation",
+      "type": "jar",
+      "version": "3.5.0",
+      "scope": "compile",
+      "module": "backend"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-actuator",
+      "type": "jar",
+      "version": "3.5.0",
+      "scope": "compile",
+      "module": "backend"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-test",
+      "type": "jar",
+      "version": "3.5.0",
+      "scope": "test",
+      "module": "backend"
+    },
+    {
+      "groupId": "org.springframework",
+      "artifactId": "spring-web",
+      "type": "jar",
+      "version": "6.2.8",
+      "scope": "compile",
+      "module": "backend"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-security",
+      "type": "jar",
+      "version": "3.5.0",
+      "scope": "compile",
+      "module": "backend"
+    },
+    {
+      "groupId": "io.jsonwebtoken",
+      "artifactId": "jjwt-api",
+      "type": "jar",
+      "version": "0.11.5",
+      "scope": "compile",
+      "module": "backend"
+    },
+    {
+      "groupId": "io.jsonwebtoken",
+      "artifactId": "jjwt-impl",
+      "type": "jar",
+      "version": "0.11.5",
+      "scope": "runtime",
+      "module": "backend"
+    },
+    {
+      "groupId": "io.jsonwebtoken",
+      "artifactId": "jjwt-jackson",
+      "type": "jar",
+      "version": "0.11.5",
+      "scope": "runtime",
+      "module": "backend"
+    },
+    {
+      "groupId": "java",
+      "artifactId": "*",
+      "version": "17"
+    }
+  ],
+  "buildResult": {
+    "numOfJavaFiles": 29,
+    "numOfClassFiles": 29,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 29,
+        "numOfClassFiles": 29
+      }
+    },
+    "errors": [],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "testResult": {
+    "errors": [],
+    "failures": [],
+    "summary": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reports": [
+      {
+        "name": "com.epharma.ecosystem.controller.PaymentControllerTest",
+        "time": 26.022,
+        "tests": 8,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "paypalWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 1.947,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "gcashWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.027,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "paymayaWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.025,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "paymayaWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.043,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "paypalWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.028,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "razorpayWebhook_invalidSignature_returnsUnauthorized",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.028,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "razorpayWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.023,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "gcashWebhook_validSignature_returnsOk",
+            "classname": "com.epharma.ecosystem.controller.PaymentControllerTest",
+            "time": 0.025,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      }
+    ]
+  }
+}

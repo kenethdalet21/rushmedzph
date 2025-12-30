@@ -1,0 +1,205 @@
+2025-11-28T04:57:07.754Z [INFO] validate plan and setup env from plan.md file...
+2025-11-28T04:57:07.757Z [INFO] parsing plan.md...
+2025-11-28T04:57:09.714Z [INFO] Successfully parsed plan.md to JSON:
+2025-11-28T04:57:09.715Z [INFO] {
+  "projectConfig": {
+    "name": "",
+    "dir": "d:\\Epharmacy Application\\Epharma_Ecosystem\\backend",
+    "jdk": {
+      "name": "java",
+      "path": "",
+      "version": "21"
+    },
+    "buildTool": {
+      "name": "",
+      "path": "",
+      "version": "",
+      "defaultOptions": ""
+    }
+  },
+  "upgradeOptions": {
+    "target": {
+      "javaVersion": "21",
+      "dependencies": [],
+      "jdk": {
+        "name": "java",
+        "path": "C:\\Java\\jdk-21.0.8\\bin",
+        "version": "21"
+      }
+    },
+    "guidelines": "",
+    "workingBranch": "appmod/java-upgrade-20251128044211",
+    "runTests": true
+  }
+}
+2025-11-28T04:57:09.715Z [INFO] Project d:\Epharmacy Application\Epharma_Ecosystem\backend is a maven project, try to get java version from pom.xml
+2025-11-28T04:57:09.716Z [INFO] Project java version: 21
+2025-11-28T04:57:09.717Z [INFO] Maven project detected.
+2025-11-28T04:57:09.717Z [INFO] Build tool type: mvn
+2025-11-28T04:57:10.153Z [INFO] [Environment] Running command (Java 21): java -version
+openjdk version "21.0.8" 2025-07-15 LTS
+OpenJDK Runtime Environment Microsoft-11933218 (build 21.0.8+9-LTS)
+OpenJDK 64-Bit Server VM Microsoft-11933218 (build 21.0.8+9-LTS, mixed mode, sharing)
+2025-11-28T04:57:10.351Z [INFO] [JdkEnvironment] Got real Java version: 21.0.8
+2025-11-28T04:57:10.351Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Users\\Keneth Dale Tuazon\\.jdk\\jdk-21.0.8\\bin",
+  "version": "21"
+}
+2025-11-28T04:57:10.372Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 21.0.8, vendor: Microsoft, runtime: C:\Users\Keneth Dale Tuazon\.jdk\jdk-21.0.8
+Default locale: en_PH, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-11-28T04:57:11.033Z [INFO] Real build tool version: 3.9.11
+2025-11-28T04:57:11.033Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+  "version": "3.9.11"
+}
+2025-11-28T04:57:11.034Z [INFO] Project config: {
+  "name": "backend",
+  "dir": "d:\\Epharmacy Application\\Epharma_Ecosystem\\backend",
+  "jdk": {
+    "name": "java",
+    "path": "C:\\Users\\Keneth Dale Tuazon\\.jdk\\jdk-21.0.8\\bin",
+    "version": "21"
+  },
+  "buildTool": {
+    "name": "mvn",
+    "path": "C:\\Maven\\apache-maven-3.9.11\\bin",
+    "version": "3.9.11",
+    "defaultOptions": ""
+  }
+}
+2025-11-28T04:57:11.034Z [INFO] [Project backend]: getting Java version.
+2025-11-28T04:57:11.035Z [INFO] [Project backend]: reset Java version promise.
+2025-11-28T04:57:11.035Z [INFO] [MavenBuildTool] Getting Java version of d:\Epharmacy Application\Epharma_Ecosystem\backend from pom.xml
+2025-11-28T04:57:11.036Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:57:11.036Z [INFO] [MavenBuildTool] Getting all module coordinates of d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:57:11.037Z [INFO] [MavenBuildTool] Getting effective POMs of d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:57:11.046Z [INFO] [Environment] Running command (Java 21): mvn help:effective-pom -Doutput=effective-pom-5b8ee103-e7d0-4842-aaca-c51e40c6f7ba.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.epharma.ecosystem:backend >--------------------
+[INFO] Building Epharma Ecosystem Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.4.1:effective-pom (default-cli) @ backend ---
+[INFO] Effective-POM written to: d:\Epharmacy Application\Epharma_Ecosystem\backend\effective-pom-5b8ee103-e7d0-4842-aaca-c51e40c6f7ba.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.965 s
+[INFO] Finished at: 2025-11-28T12:57:19+08:00
+[INFO] ------------------------------------------------------------------------
+2025-11-28T04:57:20.092Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-11-28T04:57:20.106Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-11-28T04:57:20.107Z [INFO] [Project backend]: got Java version: 21
+2025-11-28T04:57:20.107Z [INFO] Source Java version: 21
+2025-11-28T04:57:20.107Z [INFO] [Project backend]: getting dependencies promise.
+2025-11-28T04:57:20.108Z [INFO] [Project backend]: reset dependencies promise.
+2025-11-28T04:57:20.109Z [INFO] [Environment] Running command (Java 21): mvn dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.epharma.ecosystem:backend >--------------------
+[INFO] Building Epharma Ecosystem Backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.1:tree (default-cli) @ backend ---
+[INFO] com.epharma.ecosystem:backend:jar:0.0.1-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:3.3.5:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:3.3.5:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:3.3.5:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.3.5:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.3.5:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.5.11:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.5.11:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.23.1:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.23.1:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:2.0.16:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:2.2:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:3.3.5:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.17.2:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.17.2:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.17.2:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.17.2:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.17.2:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.17.2:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:3.3.5:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.31:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.31:compile
+[INFO] |  +- org.springframework:spring-web:jar:6.1.14:compile
+[INFO] |  |  +- org.springframework:spring-beans:jar:6.1.14:compile
+[INFO] |  |  \- io.micrometer:micrometer-observation:jar:1.13.6:compile
+[INFO] |  |     \- io.micrometer:micrometer-commons:jar:1.13.6:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:6.1.14:compile
+[INFO] |     +- org.springframework:spring-aop:jar:6.1.14:compile
+[INFO] |     +- org.springframework:spring-context:jar:6.1.14:compile
+[INFO] |     \- org.springframework:spring-expression:jar:6.1.14:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-validation:jar:3.3.5:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.31:compile
+[INFO] |  \- org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:compile
+[INFO] |     +- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
+[INFO] |     +- org.jboss.logging:jboss-logging:jar:3.5.3.Final:compile
+[INFO] |     \- com.fasterxml:classmate:jar:1.7.0:compile
+[INFO] \- org.springframework.boot:spring-boot-starter-test:jar:3.3.5:test
+[INFO]    +- org.springframework.boot:spring-boot-test:jar:3.3.5:test
+[INFO]    +- org.springframework.boot:spring-boot-test-autoconfigure:jar:3.3.5:test
+[INFO]    +- com.jayway.jsonpath:json-path:jar:2.9.0:test
+[INFO]    |  \- org.slf4j:slf4j-api:jar:2.0.16:compile
+[INFO]    +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.2:test
+[INFO]    |  \- jakarta.activation:jakarta.activation-api:jar:2.1.3:test
+[INFO]    +- net.minidev:json-smart:jar:2.5.1:test
+[INFO]    |  \- net.minidev:accessors-smart:jar:2.5.1:test
+[INFO]    |     \- org.ow2.asm:asm:jar:9.6:test
+[INFO]    +- org.assertj:assertj-core:jar:3.25.3:test
+[INFO]    |  \- net.bytebuddy:byte-buddy:jar:1.14.19:test
+[INFO]    +- org.awaitility:awaitility:jar:4.2.2:test
+[INFO]    +- org.hamcrest:hamcrest:jar:2.2:test
+[INFO]    +- org.junit.jupiter:junit-jupiter:jar:5.10.5:test
+[INFO]    |  +- org.junit.jupiter:junit-jupiter-api:jar:5.10.5:test
+[INFO]    |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO]    |  |  +- org.junit.platform:junit-platform-commons:jar:1.10.5:test
+[INFO]    |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO]    |  +- org.junit.jupiter:junit-jupiter-params:jar:5.10.5:test
+[INFO]    |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.10.5:test
+[INFO]    |     \- org.junit.platform:junit-platform-engine:jar:1.10.5:test
+[INFO]    +- org.mockito:mockito-core:jar:5.11.0:test
+[INFO]    |  +- net.bytebuddy:byte-buddy-agent:jar:1.14.19:test
+[INFO]    |  \- org.objenesis:objenesis:jar:3.3:test
+[INFO]    +- org.mockito:mockito-junit-jupiter:jar:5.11.0:test
+[INFO]    +- org.skyscreamer:jsonassert:jar:1.5.3:test
+[INFO]    |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO]    +- org.springframework:spring-core:jar:6.1.14:compile
+[INFO]    |  \- org.springframework:spring-jcl:jar:6.1.14:compile
+[INFO]    +- org.springframework:spring-test:jar:6.1.14:test
+[INFO]    \- org.xmlunit:xmlunit-core:jar:2.9.1:test
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.172 s
+[INFO] Finished at: 2025-11-28T12:57:26+08:00
+[INFO] ------------------------------------------------------------------------
+2025-11-28T04:57:27.008Z [INFO] [MavenBuildTool] Successfully got dependency tree of d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:57:27.010Z [INFO] [MavenBuildTool] Getting Java version of d:\Epharmacy Application\Epharma_Ecosystem\backend from pom.xml
+2025-11-28T04:57:27.010Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:\Epharmacy Application\Epharma_Ecosystem\backend
+2025-11-28T04:57:27.011Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-11-28T04:57:27.013Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-11-28T04:57:27.015Z [INFO] validateAndUpdateTargets, targets: 
+2025-11-28T04:57:27.017Z [INFO] validateAndUpdateTargets, targets: , group:Spring Boot
+2025-11-28T04:57:27.017Z [WARN] No source dependencies found for Spring Framework. Skipping target dependency validation
+2025-11-28T04:57:27.017Z [INFO] validateAndUpdateTargets, targets: , group:Spring Framework
+2025-11-28T04:57:27.018Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2025-11-28T04:57:27.018Z [INFO] validateAndUpdateTargets, targets: , group:Spring Security
+2025-11-28T04:57:27.018Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2025-11-28T04:57:27.018Z [INFO] validateAndUpdateTargets, targets: , group:Jakarta EE
+2025-11-28T04:57:27.019Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2025-11-28T04:57:27.019Z [INFO] validateAndUpdateTargets, targets: , group:JUnit
+2025-11-28T04:57:27.020Z [INFO] validateAndUpdateTargets, targets: , group:Java
+2025-11-28T04:57:27.020Z [INFO] validateAndUpdateTargets, userTargets: 
+2025-11-28T04:57:27.021Z [ERROR] Failed to validate plan and setup env from plan.md: UserError: Your project is already at the upgrade target you set. Please confirm the upgrade goal first or set a new upgrade goal.

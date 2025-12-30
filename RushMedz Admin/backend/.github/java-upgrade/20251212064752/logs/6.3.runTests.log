@@ -1,0 +1,105 @@
+2025-12-12T06:53:35.423Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2025-12-12T06:53:35.423Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\Maven\apache-maven-3.9.11
+Java version: 21.0.8, vendor: Microsoft, runtime: C:\Users\Keneth Dale Tuazon\.jdk\jdk-21.0.8
+Default locale: en_PH, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-12-12T06:53:43.641Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2025-12-12T06:53:43.642Z [INFO] [MavenBuildTool] Getting Java version of d:/Epharmacy Application/Epharma_Ecosystem/backend from pom.xml
+2025-12-12T06:53:43.642Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:/Epharmacy Application/Epharma_Ecosystem/backend
+2025-12-12T06:53:43.642Z [INFO] [MavenBuildTool] Found pom.xml files: d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml
+2025-12-12T06:53:43.645Z [INFO] [MavenBuildTool] Java version found in d:\Epharmacy Application\Epharma_Ecosystem\backend\pom.xml: 21
+2025-12-12T06:53:43.645Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2025-12-12T06:53:43.647Z [INFO] Running tests...
+2025-12-12T06:53:43.647Z [INFO] [MavenBuildTool] Running test cases of d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-12T06:53:43.647Z [INFO] [Environment] Running command (Java 21): mvn clean test -q -B -fn
+14:54:23.586 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.epharma.ecosystem.controller.PaymentControllerTest]: PaymentControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:54:23.885 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.epharma.ecosystem.EpharmaApplication for test class com.epharma.ecosystem.controller.PaymentControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.3.10)
+
+2025-12-12T14:54:24.859+08:00  INFO 17080 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : Starting PaymentControllerTest using Java 21.0.8 with PID 17080 (started by Keneth Dale Tuazon in d:\Epharmacy Application\Epharma_Ecosystem\backend)
+2025-12-12T14:54:24.861+08:00 DEBUG 17080 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : Running with Spring Boot v3.3.10, Spring v6.1.18
+2025-12-12T14:54:24.862+08:00  INFO 17080 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2025-12-12T14:54:24.894+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@669d2b1b
+2025-12-12T14:54:26.898+08:00  INFO 17080 --- [epharma-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-12T14:54:27.011+08:00  INFO 17080 --- [epharma-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
+2025-12-12T14:54:28.805+08:00  INFO 17080 --- [epharma-backend] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-12T14:54:29.015+08:00  INFO 17080 --- [epharma-backend] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-12-12T14:54:29.107+08:00  INFO 17080 --- [epharma-backend] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-12T14:54:29.870+08:00  INFO 17080 --- [epharma-backend] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-12T14:54:29.932+08:00  INFO 17080 --- [epharma-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-12T14:54:30.503+08:00  INFO 17080 --- [epharma-backend] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./data/epharma user=SA
+2025-12-12T14:54:30.505+08:00  INFO 17080 --- [epharma-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-12T14:54:32.029+08:00  INFO 17080 --- [epharma-backend] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: alter table if exists products alter column description set data type TEXT
+2025-12-12T14:54:32.106+08:00  INFO 17080 --- [epharma-backend] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-12T14:54:33.555+08:00  WARN 17080 --- [epharma-backend] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-12T14:54:33.702+08:00  WARN 17080 --- [epharma-backend] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 74468896-5a38-4bcf-b1e6-0d70257e70ec
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-12T14:54:33.816+08:00  INFO 17080 --- [epharma-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-12T14:54:34.292+08:00 DEBUG 17080 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2025-12-12T14:54:34.660+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-12-12T14:54:35.086+08:00  INFO 17080 --- [epharma-backend] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-12-12T14:54:35.675+08:00 DEBUG 17080 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-12T14:54:35.765+08:00 DEBUG 17080 --- [epharma-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-12T14:54:36.164+08:00  INFO 17080 --- [epharma-backend] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/epharma'
+2025-12-12T14:54:36.370+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-12-12T14:54:36.371+08:00 DEBUG 17080 --- [epharma-backend] [           main] c.e.e.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-12-12T14:54:36.373+08:00  INFO 17080 --- [epharma-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-12-12T14:54:36.373+08:00  INFO 17080 --- [epharma-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-12-12T14:54:36.377+08:00  INFO 17080 --- [epharma-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-12-12T14:54:36.511+08:00  INFO 17080 --- [epharma-backend] [           main] c.e.e.controller.PaymentControllerTest   : Started PaymentControllerTest in 12.238 seconds (process running for 14.828)
+WARNING: A Java agent has been loaded dynamically (C:\Users\Keneth Dale Tuazon\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2025-12-12T14:54:37.804+08:00 DEBUG 17080 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handlePayPalWebhook(HttpServletRequest, String)
+2025-12-12T14:54:37.835+08:00 DEBUG 17080 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:54:37.863+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:54:37.865+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Invalid signature}]
+2025-12-12T14:54:37.933+08:00 DEBUG 17080 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handleGCashWebhook(HttpServletRequest, String)
+2025-12-12T14:54:37.934+08:00 DEBUG 17080 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:54:37.936+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:54:37.937+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Invalid signature}]
+2025-12-12T14:54:37.953+08:00 DEBUG 17080 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handlePayMayaWebhook(HttpServletRequest, String)
+2025-12-12T14:54:37.955+08:00 DEBUG 17080 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:54:37.958+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:54:37.958+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Invalid signature}]
+2025-12-12T14:54:37.973+08:00 DEBUG 17080 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handlePayMayaWebhook(HttpServletRequest, String)
+2025-12-12T14:54:37.975+08:00 DEBUG 17080 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:54:37.985+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:54:37.985+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=ok}]
+2025-12-12T14:54:37.999+08:00 DEBUG 17080 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handlePayPalWebhook(HttpServletRequest, String)
+2025-12-12T14:54:38.000+08:00 DEBUG 17080 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:54:38.001+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:54:38.002+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=ok}]
+2025-12-12T14:54:38.015+08:00 DEBUG 17080 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handleRazorpayWebhook(HttpServletRequest, String)
+2025-12-12T14:54:38.016+08:00 DEBUG 17080 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:54:38.018+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:54:38.018+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Invalid signature}]
+2025-12-12T14:54:38.035+08:00 DEBUG 17080 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handleRazorpayWebhook(HttpServletRequest, String)
+2025-12-12T14:54:38.036+08:00 DEBUG 17080 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:54:38.038+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:54:38.039+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=ok}]
+2025-12-12T14:54:38.055+08:00 DEBUG 17080 --- [epharma-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.epharma.ecosystem.controller.PaymentController#handleGCashWebhook(HttpServletRequest, String)
+2025-12-12T14:54:38.056+08:00 DEBUG 17080 --- [epharma-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to ["{"event":"payment.success"}"]
+2025-12-12T14:54:38.058+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-12T14:54:38.059+08:00 DEBUG 17080 --- [epharma-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=ok}]
+2025-12-12T06:54:38.678Z [INFO] [MavenBuildTool] loading surefire reports.
+2025-12-12T06:54:38.689Z [INFO] [MavenBuildTool] summarizing surefire reports.
+2025-12-12T06:54:38.689Z [INFO] [MavenBuildTool] Cleaning d:/Epharmacy Application/Epharma_Ecosystem/backend using Maven
+2025-12-12T06:54:38.689Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
