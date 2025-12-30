@@ -723,8 +723,8 @@ function DriverAppContent() {
           <Text style={styles.profileAvatarText}>{user.name?.substring(0, 2).toUpperCase() || 'DR'}</Text>
         </View>
         <Text style={styles.profileName}>{user.name || 'Driver'}</Text>
-        <Text style={styles.profileEmail}>{user.email || 'driver@example.com'}</Text>
-        <Text style={styles.profilePhone}>+63 912 345 6789</Text>
+        <Text style={styles.profilePhone}>{user.phone || ''}</Text>
+        <Text style={styles.profileEmail}>{user.email || ''}</Text>
         
         <View style={styles.profileRating}>
           <Text style={styles.profileRatingLabel}>Driver Rating</Text>

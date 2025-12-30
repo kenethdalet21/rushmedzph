@@ -67,8 +67,8 @@ export default function DoctorDashboard({ doctor, onNavigate }: DoctorDashboardP
     verificationStatus: 'verified',
     organization: "Epharma Medical Network",
     organizationAddress: 'Metro Manila, Philippines',
-    email: doctorUser?.email || 'doctor@epharma.com',
-    phone: doctorUser?.phone || '+63 912 345 6789',
+    email: doctorUser?.email || '',
+    phone: doctorUser?.phone || '',
   };
 
   // Subscribe to events for real-time updates

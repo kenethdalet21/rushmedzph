@@ -9,6 +9,7 @@ import {
   Switch,
 } from 'react-native';
 import TabBar from './TabBar';
+import { useUnifiedAuth } from '../contexts/UnifiedAuthContext';
 import { ordersAPI, driversAPI } from '../services/api';
 import type { Order } from '../types';
 
@@ -41,6 +42,7 @@ interface EarningsData {
 }
 
 export default function DriverAppEnhanced() {
+  const { user } = useUnifiedAuth();
   const [activeTab, setActiveTab] = useState('active');
   const [activeDeliveries, setActiveDeliveries] = useState<DeliveryWithDetails[]>([]);
   const [availableDeliveries, setAvailableDeliveries] = useState<DeliveryWithDetails[]>([]);
@@ -431,11 +433,11 @@ export default function DriverAppEnhanced() {
 
       <View style={styles.profileCard}>
         <View style={styles.profileAvatar}>
-          <Text style={styles.profileAvatarText}>JD</Text>
+          <Text style={styles.profileAvatarText}>{user?.name?.substring(0, 2).toUpperCase() || 'DR'}</Text>
         </View>
-        <Text style={styles.profileName}>John Driver</Text>
-        <Text style={styles.profileEmail}>john.driver@example.com</Text>
-        <Text style={styles.profilePhone}>+63 912 345 6789</Text>
+        <Text style={styles.profileName}>{user?.name || 'Driver'}</Text>
+        <Text style={styles.profilePhone}>{user?.phone || ''}</Text>
+        <Text style={styles.profileEmail}>{user?.email || ''}</Text>
       </View>
 
       <View style={styles.vehicleCard}>

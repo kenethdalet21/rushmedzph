@@ -11,6 +11,7 @@ import {
   Alert,
 } from 'react-native';
 import TabBar from './TabBar';
+import { useUnifiedAuth } from '../contexts/UnifiedAuthContext';
 import { productsAPI, ordersAPI } from '../services/api';
 import { eventBus } from '../services/eventBus';
 import type { Product, Order } from '../types';
@@ -36,6 +37,7 @@ interface CartItem {
 }
 
 export default function UserAppEnhanced() {
+  const { user } = useUnifiedAuth();
   const [activeTab, setActiveTab] = useState('browse');
   const [products, setProducts] = useState<Product[]>([]);
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -426,9 +428,9 @@ export default function UserAppEnhanced() {
           <View style={styles.content}>
             <Text style={styles.sectionTitle}>Profile</Text>
             <View style={styles.profileCard}>
-              <Text style={styles.profileName}>John Doe</Text>
-              <Text style={styles.profileEmail}>john.doe@example.com</Text>
-              <Text style={styles.profilePhone}>+63 912 345 6789</Text>
+              <Text style={styles.profileName}>{user?.name || 'User'}</Text>
+              <Text style={styles.profilePhone}>{user?.phone || ''}</Text>
+              <Text style={styles.profileEmail}>{user?.email || ''}</Text>
             </View>
           </View>
         );

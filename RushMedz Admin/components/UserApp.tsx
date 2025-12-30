@@ -1573,8 +1573,8 @@ function UserAppContent() {
       <Text style={styles.sectionTitle}>Profile</Text>
       <View style={styles.profileCard}>
         <Text style={styles.profileName}>{user.name}</Text>
-        <Text style={styles.profileEmail}>{user.email}</Text>
-        <Text style={styles.profilePhone}>+63 912 345 6789</Text>
+        <Text style={styles.profilePhone}>{user.phone || ''}</Text>
+        <Text style={styles.profileEmail}>{user.email || ''}</Text>
       </View>
     </View>
   );
