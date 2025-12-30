@@ -53,58 +53,62 @@
 
     <!-- Top-ups Table -->
     <div class="table-card">
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>User ID</th>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Payment Method</th>
-            <th>Status</th>
-            <th>Date</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="topup in filteredTopUps" :key="topup.id">
-            <td>#{{ topup.id }}</td>
-            <td>{{ topup.userId }}</td>
-            <td>
-              <span class="type-badge" :class="topup.type">
-                {{ topup.type.toUpperCase() }}
-              </span>
-            </td>
-            <td class="amount">{{ formatCurrency(topup.amount) }}</td>
-            <td>{{ topup.paymentMethod }}</td>
-            <td>
-              <span class="status" :class="topup.status">
-                {{ topup.status }}
-              </span>
-            </td>
-            <td>{{ formatDate(topup.createdAt) }}</td>
-            <td>
-              <button
-                v-if="topup.status === 'processing'"
-                @click="approveTopUp(topup.id)"
-                class="action-btn approve"
-              >
-                ✅ Approve
-              </button>
-              <button
-                v-if="topup.status === 'processing'"
-                @click="rejectTopUp(topup.id)"
-                class="action-btn reject"
-              >
-                ❌ Reject
-              </button>
-              <button @click="viewDetails(topup.id)" class="action-btn view">
-                👁️ View
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>User</th>
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Method</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="topup in filteredTopUps" :key="topup.id">
+              <td class="id-cell">#{{ topup.id }}</td>
+              <td class="user-cell">{{ topup.userId }}</td>
+              <td>
+                <span class="type-badge" :class="topup.type">
+                  {{ topup.type === 'topup' ? 'Top-up' : topup.type === 'payout' ? 'Payout' : 'Refund' }}
+                </span>
+              </td>
+              <td class="amount">{{ formatCurrency(topup.amount) }}</td>
+              <td class="method-cell">{{ topup.paymentMethod }}</td>
+              <td>
+                <span class="status" :class="topup.status">
+                  {{ topup.status }}
+                </span>
+              </td>
+              <td class="date-cell">{{ formatDate(topup.createdAt) }}</td>
+              <td class="actions-cell">
+                <button
+                  v-if="topup.status === 'processing'"
+                  @click="approveTopUp(topup.id)"
+                  class="action-btn approve"
+                  title="Approve"
+                >
+                  ✓
+                </button>
+                <button
+                  v-if="topup.status === 'processing'"
+                  @click="rejectTopUp(topup.id)"
+                  class="action-btn reject"
+                  title="Reject"
+                >
+                  ✕
+                </button>
+                <button @click="viewDetails(topup.id)" class="action-btn view" title="View Details">
+                  👁
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </template>
@@ -217,6 +221,9 @@ onMounted(async () => {
 
 <style scoped>
 .wallets-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   padding: 24px;
 }
 
@@ -286,7 +293,6 @@ onMounted(async () => {
 .filters {
   display: flex;
   gap: 12px;
-  margin-bottom: 20px;
 }
 
 .search-input {
@@ -322,8 +328,8 @@ onMounted(async () => {
 table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: auto;
-  min-width: 900px;
+  table-layout: fixed;
+  min-width: 800px;
 }
 
 thead {
@@ -331,41 +337,73 @@ thead {
 }
 
 th {
-  padding: 14px 16px;
+  padding: 12px 8px;
   text-align: center;
   font-weight: 700;
   color: #4a5568;
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   border-bottom: 2px solid #e2e8f0;
   white-space: nowrap;
 }
 
+th:nth-child(1) { width: 8%; }  /* ID */
+th:nth-child(2) { width: 12%; } /* User */
+th:nth-child(3) { width: 10%; } /* Type */
+th:nth-child(4) { width: 12%; } /* Amount */
+th:nth-child(5) { width: 14%; } /* Method */
+th:nth-child(6) { width: 12%; } /* Status */
+th:nth-child(7) { width: 16%; } /* Date */
+th:nth-child(8) { width: 16%; } /* Actions */
+
 td {
-  padding: 16px;
-  font-size: 14px;
+  padding: 12px 8px;
+  font-size: 13px;
   color: #2d3748;
   border-bottom: 1px solid #f7fafc;
   text-align: center;
+  vertical-align: middle;
+}
+
+.id-cell {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 12px;
+}
+
+.user-cell {
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.method-cell {
+  font-size: 12px;
+}
+
+.date-cell {
+  font-size: 11px;
+  color: #718096;
+}
+
+.actions-cell {
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .amount {
   font-weight: 600;
   color: #27ae60;
   white-space: nowrap;
+  font-size: 13px;
 }
 
 .type-badge {
-  padding: 5px 12px;
-  border-radius: 12px;
-  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
   display: inline-block;
   white-space: nowrap;
 }
@@ -386,14 +424,16 @@ td {
 }
 
 .status {
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
   font-weight: 600;
-  text-transform: capitalize;  letter-spacing: 0.3px;
+  text-transform: capitalize;
+  letter-spacing: 0.2px;
   display: inline-block;
   text-align: center;
-  white-space: nowrap;}
+  white-space: nowrap;
+}
 
 .status.completed {
   background: #d4edda;
@@ -416,15 +456,16 @@ td {
 }
 
 .action-btn {
-  padding: 6px 14px;
+  padding: 6px 10px;
   border: none;
   border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
-  margin-right: 6px;
+  margin: 0 2px;
   transition: all 0.2s;
   white-space: nowrap;
+  min-width: 32px;
+  text-align: center;
 }
 
 .action-btn.approve {
@@ -434,7 +475,7 @@ td {
 
 .action-btn.approve:hover {
   background: #229954;
-  transform: translateY(-1px);
+  transform: scale(1.05);
 }
 
 .action-btn.reject {
@@ -444,7 +485,7 @@ td {
 
 .action-btn.reject:hover {
   background: #c0392b;
-  transform: translateY(-1px);
+  transform: scale(1.05);
 }
 
 .action-btn.view {
@@ -454,6 +495,6 @@ td {
 
 .action-btn.view:hover {
   background: #2980b9;
-  transform: translateY(-1px);
+  transform: scale(1.05);
 }
 </style>
