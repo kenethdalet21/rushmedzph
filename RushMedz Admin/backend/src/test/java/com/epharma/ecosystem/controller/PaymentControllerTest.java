@@ -1,14 +1,20 @@
 package com.epharma.ecosystem.controller;
 
+import com.epharma.ecosystem.config.TestSecurityConfig;
+import com.epharma.ecosystem.security.JwtAuthFilter;
+import com.epharma.ecosystem.security.JwtAuthEntryPoint;
+import com.epharma.ecosystem.security.JwtUtil;
+import com.epharma.ecosystem.security.SecurityConfig;
+import com.epharma.ecosystem.service.PaymentService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.context.TestPropertySource;
-
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import com.epharma.ecosystem.service.PaymentService;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
+import org.springframework.context.annotation.Import;
+import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.web.servlet.MockMvc;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -17,8 +23,14 @@ import java.nio.charset.StandardCharsets;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@SpringBootTest
-@AutoConfigureMockMvc
+@WebMvcTest(
+    controllers = PaymentController.class,
+    excludeFilters = @ComponentScan.Filter(
+        type = FilterType.ASSIGNABLE_TYPE,
+        classes = {SecurityConfig.class, JwtAuthFilter.class, JwtAuthEntryPoint.class}
+    )
+)
+@Import(TestSecurityConfig.class)
 @TestPropertySource(properties = {
     "webhook.gcash.secret=test-gcash-secret",
     "webhook.paymaya.secret=test-paymaya-secret",
@@ -37,7 +49,7 @@ public class PaymentControllerTest {
     private PaymentService paymentService;
 
     @MockBean
-    private com.epharma.ecosystem.security.JwtUtil jwtUtil;
+    private JwtUtil jwtUtil;
 
     private String hmacSha256(String payload, String secret) throws Exception {
         Mac mac = Mac.getInstance("HmacSHA256");
