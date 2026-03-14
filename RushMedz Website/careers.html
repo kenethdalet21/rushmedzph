@@ -1,488 +1,505 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers - RushMedz</title>
+    <meta name="description" content="Join the RushMedz team - Explore career opportunities and help us transform healthcare in the Philippines.">
+    <title>Careers | RushMedz</title>
+    
     <link rel="icon" type="image/png" href="assets/logo.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .careers-hero {
-            padding: 160px 0 100px;
-            background: var(--primary-gradient);
-            color: white;
-            text-align: center;
-        }
-        
-        .careers-hero h1,
-        .careers-hero p {
-            color: white;
-        }
-        
-        .job-listings {
-            padding: 80px 0;
-        }
-        
-        .job-filters {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-            justify-content: center;
-        }
-        
-        .filter-btn {
-            padding: 12px 24px;
-            border: 2px solid var(--gray-200);
-            background: white;
-            border-radius: var(--radius-full);
-            cursor: pointer;
-            transition: var(--transition-normal);
-            font-weight: 500;
-        }
-        
-        .filter-btn:hover,
-        .filter-btn.active {
-            border-color: var(--primary-color);
-            background: var(--primary-color);
-            color: white;
-        }
-        
-        .job-card {
-            background: white;
-            padding: 32px;
-            border-radius: var(--radius-xl);
-            border: 1px solid var(--gray-100);
-            margin-bottom: 24px;
-            transition: var(--transition-normal);
-            cursor: pointer;
-        }
-        
-        .job-card:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-4px);
-        }
-        
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 16px;
-        }
-        
-        .job-title h3 {
-            margin-bottom: 8px;
-            font-size: 1.5rem;
-        }
-        
-        .job-meta {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        
-        .job-meta span {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .job-meta i {
-            color: var(--primary-color);
-        }
-        
-        .job-description {
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-            line-height: 1.6;
-        }
-        
-        .job-tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        
-        .job-tag {
-            padding: 6px 16px;
-            background: var(--gray-50);
-            border-radius: var(--radius-full);
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-        }
-        
-        .perks-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        
-        .perk-card {
-            background: white;
-            padding: 32px 24px;
-            border-radius: var(--radius-xl);
-            text-align: center;
-            border: 1px solid var(--gray-100);
-        }
-        
-        .perk-card i {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 16px;
-        }
-        
-        .perk-card h4 {
-            margin-bottom: 8px;
-        }
-        
-        .perk-card p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        
-        @media (max-width: 992px) {
-            .perks-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .job-header {
-                flex-direction: column;
-            }
-            
-            .perks-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="RushMedz Logo">
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/logo.png" alt="RushMedz" class="brand-logo">
                 <span>RushMedz</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="download.html" class="nav-link">Download Apps</a></li>
-                <li><a href="rushmedz-ads.html" class="nav-link">RushMedz Ads</a></li>
-                <li><a href="partners.html" class="nav-link">Partners</a></li>
-                <li><a href="careers.html" class="nav-link active">Careers</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <a href="download.html" class="btn btn-primary">Get the App</a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="about.html" class="navbar-link">About</a>
+                <a href="services.html" class="navbar-link">Services</a>
+                <a href="download.html" class="navbar-link">Download Apps</a>
+                <a href="rushmedz-ads.html" class="navbar-link">RushMedz Ads</a>
+                <a href="partners.html" class="navbar-link">Partners</a>
+                <a href="careers.html" class="navbar-link active">Careers</a>
+                <a href="contact.html" class="navbar-link">Contact</a>
+            </div>
+            
+            <div class="navbar-actions">
+                <a href="download.html" class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    Download App
+                </a>
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-header">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="RushMedz Logo">
-                <span>RushMedz</span>
-            </a>
-            <button class="close-menu-btn" id="closeMenuBtn">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="mobile-nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="download.html">Download Apps</a></li>
-            <li><a href="rushmedz-ads.html">RushMedz Ads</a></li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-
-    <!-- Careers Hero -->
-    <section class="careers-hero">
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <h1>Join Our <span class="highlight" style="color: white; text-decoration: underline;">Mission</span></h1>
-            <p style="max-width: 700px; margin: 0 auto;">Help us make healthcare accessible to everyone. Build your career with a company that's transforming the healthcare industry.</p>
+            <div class="page-header-content">
+                <h1>Join Our <span class="text-gradient">Growing Team</span></h1>
+                <p>Be part of a mission-driven company that's transforming healthcare delivery in the Philippines. We're always looking for passionate people to join us.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Why Work With Us -->
+    <!-- Why Work Here -->
     <section class="section">
         <div class="container">
-            <div class="text-center section-intro">
-                <h2>Why Work at <span class="highlight">RushMedz</span>?</h2>
-                <p>We offer more than just a job—we offer a career with purpose</p>
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-heart"></i>
+                    Why RushMedz
+                </span>
+                <h2 class="section-title">Why Work With Us?</h2>
+                <p class="section-description">We believe that happy employees create happy customers. Here's what makes RushMedz a great place to work.</p>
             </div>
-            <div class="perks-grid">
-                <div class="perk-card">
-                    <i class="fas fa-heartbeat"></i>
-                    <h4>Meaningful Work</h4>
-                    <p>Make a real difference in people's lives every day</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-briefcase-medical"></i>
+                    </div>
+                    <h4>Health Coverage</h4>
+                    <p>Comprehensive HMO coverage for you and your dependents from day one.</p>
                 </div>
-                <div class="perk-card">
-                    <i class="fas fa-rocket"></i>
-                    <h4>Fast Growth</h4>
-                    <p>Rapid career advancement in a fast-growing company</p>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                    <h4>Flexible Work</h4>
+                    <p>Hybrid work setup with flexible hours to maintain work-life balance.</p>
                 </div>
-                <div class="perk-card">
-                    <i class="fas fa-users"></i>
-                    <h4>Great Team</h4>
-                    <p>Work with passionate, talented people who care</p>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Learning & Growth</h4>
+                    <p>Training programs, conference budgets, and career development paths.</p>
                 </div>
-                <div class="perk-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h4>Learning Budget</h4>
-                    <p>₱20,000/year for courses, conferences, and books</p>
-                </div>
-                <div class="perk-card">
-                    <i class="fas fa-medkit"></i>
-                    <h4>Health Benefits</h4>
-                    <p>Comprehensive HMO coverage for you and dependents</p>
-                </div>
-                <div class="perk-card">
-                    <i class="fas fa-home"></i>
-                    <h4>Work-Life Balance</h4>
-                    <p>Flexible hours and hybrid work arrangements</p>
-                </div>
-                <div class="perk-card">
-                    <i class="fas fa-wallet"></i>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
                     <h4>Competitive Pay</h4>
-                    <p>Market-leading salaries and performance bonuses</p>
+                    <p>Above-market compensation with performance bonuses and equity options.</p>
                 </div>
-                <div class="perk-card">
-                    <i class="fas fa-umbrella-beach"></i>
-                    <h4>Time Off</h4>
-                    <p>20 days vacation leave plus 15 sick leave annually</p>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h4>Generous PTO</h4>
+                    <p>Paid vacation leaves, sick leaves, and mental health days.</p>
                 </div>
-                <div class="perk-card">
-                    <i class="fas fa-gift"></i>
-                    <h4>Perks & More</h4>
-                    <p>Free meals, gym membership, and team events</p>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Inclusive Culture</h4>
+                    <p>Diverse, welcoming environment where everyone's voice matters.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h4>Fun Events</h4>
+                    <p>Team outings, game nights, and company-wide celebrations.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4>Meaningful Work</h4>
+                    <p>Make a real impact on healthcare accessibility in the Philippines.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Job Openings -->
-    <section class="job-listings" style="background: var(--bg-secondary);">
+    <!-- Open Positions -->
+    <section class="section bg-light" id="openings">
         <div class="container">
-            <div class="text-center section-intro">
-                <h2>Open Positions</h2>
-                <p>Find your next opportunity at RushMedz</p>
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-briefcase"></i>
+                    Open Positions
+                </span>
+                <h2 class="section-title">Current Job Openings</h2>
+                <p class="section-description">Find the perfect role that matches your skills and passion.</p>
             </div>
             
-            <div class="job-filters">
-                <button class="filter-btn active" data-filter="all">All Roles</button>
+            <!-- Job Filters -->
+            <div class="jobs-filter">
+                <button class="filter-btn active" data-filter="all">All Departments</button>
                 <button class="filter-btn" data-filter="engineering">Engineering</button>
                 <button class="filter-btn" data-filter="product">Product</button>
                 <button class="filter-btn" data-filter="operations">Operations</button>
                 <button class="filter-btn" data-filter="marketing">Marketing</button>
-                <button class="filter-btn" data-filter="medical">Medical</button>
             </div>
             
-            <div class="job-card" data-category="engineering">
-                <div class="job-header">
-                    <div class="job-title">
-                        <h3>Senior Full Stack Engineer</h3>
-                        <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Metro Manila</span>
-                            <span><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-clock"></i> Posted 2 days ago</span>
+            <!-- Job Listings -->
+            <div class="jobs-list">
+                <div class="job-card" data-department="engineering">
+                    <div class="job-header">
+                        <div>
+                            <h3>Senior Full Stack Developer</h3>
+                            <div class="job-meta">
+                                <span><i class="fas fa-code"></i> Engineering</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Makati / Remote</span>
+                                <span><i class="fas fa-clock"></i> Full-time</span>
+                            </div>
                         </div>
+                        <a href="#apply" class="btn btn-primary">Apply Now</a>
                     </div>
-                    <a href="contact.html" class="btn btn-primary">Apply Now</a>
+                    <p>Build and scale our mobile and web applications using React Native, Node.js, and cloud technologies. 5+ years of experience required.</p>
+                    <div class="job-tags">
+                        <span>React Native</span>
+                        <span>Node.js</span>
+                        <span>AWS</span>
+                        <span>PostgreSQL</span>
+                    </div>
                 </div>
-                <p class="job-description">
-                    We're looking for an experienced Full Stack Engineer to help build and scale our healthcare platform. You'll work on both frontend (React Native, Vue.js) and backend (Spring Boot, Node.js) systems.
-                </p>
-                <div class="job-tags">
-                    <span class="job-tag">React Native</span>
-                    <span class="job-tag">Spring Boot</span>
-                    <span class="job-tag">PostgreSQL</span>
-                    <span class="job-tag">Microservices</span>
-                </div>
-            </div>
-            
-            <div class="job-card" data-category="product">
-                <div class="job-header">
-                    <div class="job-title">
-                        <h3>Product Manager - Healthcare</h3>
-                        <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Metro Manila (Hybrid)</span>
-                            <span><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-clock"></i> Posted 1 week ago</span>
+                
+                <div class="job-card" data-department="engineering">
+                    <div class="job-header">
+                        <div>
+                            <h3>Mobile App Developer (iOS/Android)</h3>
+                            <div class="job-meta">
+                                <span><i class="fas fa-code"></i> Engineering</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Makati / Remote</span>
+                                <span><i class="fas fa-clock"></i> Full-time</span>
+                            </div>
                         </div>
+                        <a href="#apply" class="btn btn-primary">Apply Now</a>
                     </div>
-                    <a href="contact.html" class="btn btn-primary">Apply Now</a>
+                    <p>Develop and maintain our suite of mobile applications for iOS and Android. 3+ years of native or cross-platform mobile development experience.</p>
+                    <div class="job-tags">
+                        <span>Swift</span>
+                        <span>Kotlin</span>
+                        <span>Flutter</span>
+                        <span>Firebase</span>
+                    </div>
                 </div>
-                <p class="job-description">
-                    Lead product strategy and execution for our telemedicine and pharmacy delivery features. Work closely with engineers, designers, and stakeholders to deliver exceptional user experiences.
-                </p>
-                <div class="job-tags">
-                    <span class="job-tag">Product Strategy</span>
-                    <span class="job-tag">Healthcare Tech</span>
-                    <span class="job-tag">Agile</span>
-                    <span class="job-tag">Analytics</span>
-                </div>
-            </div>
-            
-            <div class="job-card" data-category="operations">
-                <div class="job-header">
-                    <div class="job-title">
-                        <h3>Operations Manager - Logistics</h3>
-                        <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Multiple Locations</span>
-                            <span><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-clock"></i> Posted 3 days ago</span>
+                
+                <div class="job-card" data-department="engineering">
+                    <div class="job-header">
+                        <div>
+                            <h3>DevOps Engineer</h3>
+                            <div class="job-meta">
+                                <span><i class="fas fa-code"></i> Engineering</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Makati / Remote</span>
+                                <span><i class="fas fa-clock"></i> Full-time</span>
+                            </div>
                         </div>
+                        <a href="#apply" class="btn btn-primary">Apply Now</a>
                     </div>
-                    <a href="contact.html" class="btn btn-primary">Apply Now</a>
+                    <p>Build and manage our cloud infrastructure, CI/CD pipelines, and ensure system reliability at 99.9%+ uptime.</p>
+                    <div class="job-tags">
+                        <span>AWS</span>
+                        <span>Kubernetes</span>
+                        <span>Docker</span>
+                        <span>Terraform</span>
+                    </div>
                 </div>
-                <p class="job-description">
-                    Oversee delivery operations, manage driver fleet, and optimize logistics processes to ensure fast and reliable medicine delivery across the region.
-                </p>
-                <div class="job-tags">
-                    <span class="job-tag">Logistics</span>
-                    <span class="job-tag">Fleet Management</span>
-                    <span class="job-tag">Process Optimization</span>
-                    <span class="job-tag">Leadership</span>
-                </div>
-            </div>
-            
-            <div class="job-card" data-category="marketing">
-                <div class="job-header">
-                    <div class="job-title">
-                        <h3>Digital Marketing Specialist</h3>
-                        <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Metro Manila</span>
-                            <span><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-clock"></i> Posted 5 days ago</span>
+                
+                <div class="job-card" data-department="product">
+                    <div class="job-header">
+                        <div>
+                            <h3>Product Manager</h3>
+                            <div class="job-meta">
+                                <span><i class="fas fa-cubes"></i> Product</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Makati</span>
+                                <span><i class="fas fa-clock"></i> Full-time</span>
+                            </div>
                         </div>
+                        <a href="#apply" class="btn btn-primary">Apply Now</a>
                     </div>
-                    <a href="contact.html" class="btn btn-primary">Apply Now</a>
+                    <p>Define product vision, roadmap, and lead cross-functional teams to deliver features that delight our users.</p>
+                    <div class="job-tags">
+                        <span>Product Strategy</span>
+                        <span>Agile</span>
+                        <span>User Research</span>
+                        <span>Analytics</span>
+                    </div>
                 </div>
-                <p class="job-description">
-                    Drive user acquisition and engagement through digital channels. Plan and execute campaigns across social media, search, and display advertising.
-                </p>
-                <div class="job-tags">
-                    <span class="job-tag">Digital Marketing</span>
-                    <span class="job-tag">Social Media</span>
-                    <span class="job-tag">Google Ads</span>
-                    <span class="job-tag">Analytics</span>
-                </div>
-            </div>
-            
-            <div class="job-card" data-category="medical">
-                <div class="job-header">
-                    <div class="job-title">
-                        <h3>Clinical Quality Manager</h3>
-                        <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Metro Manila</span>
-                            <span><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-clock"></i> Posted 1 week ago</span>
+                
+                <div class="job-card" data-department="product">
+                    <div class="job-header">
+                        <div>
+                            <h3>UI/UX Designer</h3>
+                            <div class="job-meta">
+                                <span><i class="fas fa-cubes"></i> Product</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Makati / Remote</span>
+                                <span><i class="fas fa-clock"></i> Full-time</span>
+                            </div>
                         </div>
+                        <a href="#apply" class="btn btn-primary">Apply Now</a>
                     </div>
-                    <a href="contact.html" class="btn btn-primary">Apply Now</a>
+                    <p>Create intuitive, beautiful user experiences for healthcare applications. Strong portfolio required.</p>
+                    <div class="job-tags">
+                        <span>Figma</span>
+                        <span>User Research</span>
+                        <span>Design Systems</span>
+                        <span>Prototyping</span>
+                    </div>
                 </div>
-                <p class="job-description">
-                    Ensure clinical quality and compliance across telemedicine services. Develop protocols, train doctors, and maintain regulatory standards.
-                </p>
-                <div class="job-tags">
-                    <span class="job-tag">Healthcare Quality</span>
-                    <span class="job-tag">Compliance</span>
-                    <span class="job-tag">Telemedicine</span>
-                    <span class="job-tag">MD Preferred</span>
-                </div>
-            </div>
-            
-            <div class="job-card" data-category="engineering">
-                <div class="job-header">
-                    <div class="job-title">
-                        <h3>Mobile Engineer (React Native)</h3>
-                        <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Remote</span>
-                            <span><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-clock"></i> Posted 4 days ago</span>
+                
+                <div class="job-card" data-department="operations">
+                    <div class="job-header">
+                        <div>
+                            <h3>Operations Manager</h3>
+                            <div class="job-meta">
+                                <span><i class="fas fa-cogs"></i> Operations</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Makati</span>
+                                <span><i class="fas fa-clock"></i> Full-time</span>
+                            </div>
                         </div>
+                        <a href="#apply" class="btn btn-primary">Apply Now</a>
                     </div>
-                    <a href="contact.html" class="btn btn-primary">Apply Now</a>
+                    <p>Oversee daily operations, manage logistics, and optimize delivery efficiency across all service areas.</p>
+                    <div class="job-tags">
+                        <span>Logistics</span>
+                        <span>Team Management</span>
+                        <span>Process Optimization</span>
+                    </div>
                 </div>
-                <p class="job-description">
-                    Build and enhance our suite of mobile apps for users, drivers, merchants, and healthcare providers. Focus on performance, user experience, and offline capabilities.
-                </p>
-                <div class="job-tags">
-                    <span class="job-tag">React Native</span>
-                    <span class="job-tag">TypeScript</span>
-                    <span class="job-tag">Mobile UI/UX</span>
-                    <span class="job-tag">Offline-first</span>
+                
+                <div class="job-card" data-department="operations">
+                    <div class="job-header">
+                        <div>
+                            <h3>Customer Support Lead</h3>
+                            <div class="job-meta">
+                                <span><i class="fas fa-cogs"></i> Operations</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Makati</span>
+                                <span><i class="fas fa-clock"></i> Full-time</span>
+                            </div>
+                        </div>
+                        <a href="#apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                    <p>Lead our customer support team to deliver exceptional service and maintain high satisfaction scores.</p>
+                    <div class="job-tags">
+                        <span>Customer Service</span>
+                        <span>Team Leadership</span>
+                        <span>CRM</span>
+                        <span>Training</span>
+                    </div>
+                </div>
+                
+                <div class="job-card" data-department="marketing">
+                    <div class="job-header">
+                        <div>
+                            <h3>Digital Marketing Manager</h3>
+                            <div class="job-meta">
+                                <span><i class="fas fa-bullhorn"></i> Marketing</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Makati</span>
+                                <span><i class="fas fa-clock"></i> Full-time</span>
+                            </div>
+                        </div>
+                        <a href="#apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                    <p>Plan and execute digital marketing campaigns across social media, SEM, and content marketing channels.</p>
+                    <div class="job-tags">
+                        <span>Digital Marketing</span>
+                        <span>SEO/SEM</span>
+                        <span>Social Media</span>
+                        <span>Analytics</span>
+                    </div>
+                </div>
+                
+                <div class="job-card" data-department="marketing">
+                    <div class="job-header">
+                        <div>
+                            <h3>Content Writer</h3>
+                            <div class="job-meta">
+                                <span><i class="fas fa-bullhorn"></i> Marketing</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+                                <span><i class="fas fa-clock"></i> Full-time</span>
+                            </div>
+                        </div>
+                        <a href="#apply" class="btn btn-primary">Apply Now</a>
+                    </div>
+                    <p>Create compelling content for blogs, social media, and marketing campaigns. Healthcare experience is a plus.</p>
+                    <div class="job-tags">
+                        <span>Copywriting</span>
+                        <span>SEO</span>
+                        <span>Healthcare</span>
+                        <span>Social Media</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Application Process -->
+    <!-- Hiring Process -->
     <section class="section">
         <div class="container">
-            <div class="text-center section-intro">
-                <h2>Our Hiring Process</h2>
-                <p>What to expect when you apply</p>
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-route"></i>
+                    Hiring Process
+                </span>
+                <h2 class="section-title">Our Hiring Process</h2>
+                <p class="section-description">We've designed a transparent and efficient hiring experience.</p>
             </div>
-            <div class="grid-4">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-file-alt"></i>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <div class="process-content">
+                        <h4>Application Review</h4>
+                        <p>Submit your application and our team will review your resume within 3-5 business days.</p>
                     </div>
-                    <h3>1. Apply</h3>
-                    <p>Submit your application through our careers page</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-phone"></i>
+                
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <div class="process-content">
+                        <h4>Initial Screening</h4>
+                        <p>A 30-minute phone or video call to learn about your background and expectations.</p>
                     </div>
-                    <h3>2. Screen</h3>
-                    <p>Initial phone/video call with our HR team</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop-code"></i>
+                
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <div class="process-content">
+                        <h4>Technical Assessment</h4>
+                        <p>A take-home assignment or live coding session relevant to the role (for technical positions).</p>
                     </div>
-                    <h3>3. Interview</h3>
-                    <p>Technical/role-specific interviews with team</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-handshake"></i>
+                
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <div class="process-content">
+                        <h4>Team Interview</h4>
+                        <p>Meet with team members and leadership to discuss the role and culture fit.</p>
                     </div>
-                    <h3>4. Offer</h3>
-                    <p>Receive offer and join the team!</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">5</div>
+                    <div class="process-content">
+                        <h4>Offer & Onboarding</h4>
+                        <p>Receive your offer letter and begin your journey with RushMedz!</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
+    <!-- Application Form -->
+    <section class="section bg-light" id="apply">
         <div class="container">
-            <div class="cta-content">
-                <h2>Don't See Your Role?</h2>
-                <p>We're always looking for talented people. Send us your resume and let's talk!</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">Send Us Your Resume</a>
-                    <a href="about.html" class="btn btn-outline">Learn More About Us</a>
-                </div>
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-paper-plane"></i>
+                    Apply Now
+                </span>
+                <h2 class="section-title">Submit Your Application</h2>
+                <p class="section-description">Ready to join us? Fill out the form below and we'll get back to you soon.</p>
+            </div>
+            
+            <div class="form-container">
+                <form class="contact-form" id="applicationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Juan Dela Cruz" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="juan@email.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+63 9XX XXX XXXX" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="position">Position Applied For *</label>
+                            <select id="position" name="position" required>
+                                <option value="">Select a position</option>
+                                <option value="senior-fullstack">Senior Full Stack Developer</option>
+                                <option value="mobile-dev">Mobile App Developer</option>
+                                <option value="devops">DevOps Engineer</option>
+                                <option value="product-manager">Product Manager</option>
+                                <option value="ui-ux">UI/UX Designer</option>
+                                <option value="ops-manager">Operations Manager</option>
+                                <option value="support-lead">Customer Support Lead</option>
+                                <option value="marketing-manager">Digital Marketing Manager</option>
+                                <option value="content-writer">Content Writer</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="experience">Years of Experience *</label>
+                            <select id="experience" name="experience" required>
+                                <option value="">Select experience level</option>
+                                <option value="0-1">0-1 years</option>
+                                <option value="2-3">2-3 years</option>
+                                <option value="4-5">4-5 years</option>
+                                <option value="6+">6+ years</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="linkedin">LinkedIn Profile</label>
+                            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="portfolio">Portfolio / GitHub URL</label>
+                        <input type="url" id="portfolio" name="portfolio" placeholder="https://github.com/yourprofile">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resume">Resume / CV *</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                        <small>Accepted formats: PDF, DOC, DOCX (Max 5MB)</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="coverLetter">Cover Letter / Why do you want to join RushMedz?</label>
+                        <textarea id="coverLetter" name="coverLetter" rows="5" placeholder="Tell us about yourself and why you're interested in this position..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span>I agree to the <a href="privacy.html">Privacy Policy</a> and consent to the processing of my personal data</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large btn-full">
+                        <i class="fas fa-paper-plane"></i>
+                        Submit Application
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -492,62 +509,68 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <img src="assets/logo.png" alt="RushMedz Logo">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/logo.png" alt="RushMedz" class="brand-logo">
                         <span>RushMedz</span>
                     </a>
                     <p>Your trusted partner for medical delivery and healthcare services. Making healthcare accessible to everyone, everywhere.</p>
-                    <div class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <div class="footer-contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Pengue, Tuguegarao City, Cagayan 3500</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:09757477099">09757477099</a></p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="footer-links">
+                
+                <div class="footer-column">
                     <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="partners.html">Partners</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
                 </div>
-                <div class="footer-links">
+                
+                <div class="footer-column">
                     <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#medicine">Medicine Delivery</a></li>
-                        <li><a href="services.html#telemedicine">Telemedicine</a></li>
-                        <li><a href="services.html#clinic">Clinic Booking</a></li>
-                        <li><a href="services.html#lab">Lab Tests</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="services.html#medicine">Medicine Delivery</a>
+                        <a href="services.html#telemedicine">Telemedicine</a>
+                        <a href="services.html#clinic">Clinic Booking</a>
+                        <a href="services.html#lab">Lab Tests</a>
+                    </div>
                 </div>
-                <div class="footer-links">
+                
+                <div class="footer-column">
                     <h4>For Business</h4>
-                    <ul>
-                        <li><a href="partners.html#pharmacy">Register Pharmacy</a></li>
-                        <li><a href="partners.html#clinic">Register Clinic</a></li>
-                        <li><a href="partners.html#doctor">Join as Doctor</a></li>
-                        <li><a href="rushmedz-ads.html">RushMedz Ads</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="partners.html#pharmacy">Register Pharmacy</a>
+                        <a href="partners.html#clinic">Register Clinic</a>
+                        <a href="partners.html#doctor">Join as Doctor</a>
+                        <a href="rushmedz-ads.html">RushMedz Ads</a>
+                    </div>
                 </div>
-                <div class="footer-links">
+                
+                <div class="footer-column">
                     <h4>Download Apps</h4>
-                    <ul>
-                        <li><a href="download.html#user">RushMedz User</a></li>
-                        <li><a href="download.html#driver">RushMedz Driver</a></li>
-                        <li><a href="download.html#merchant">RushMedz Merchant</a></li>
-                        <li><a href="download.html#doctor">RushMedz Doctor</a></li>
-                        <li><a href="download.html#clinic">RushMedz Clinic</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="download.html#user">RushMedz User</a>
+                        <a href="download.html#driver">RushMedz Driver</a>
+                        <a href="download.html#merchant">RushMedz Merchant</a>
+                        <a href="download.html#doctor">RushMedz Doctor</a>
+                        <a href="download.html#clinic">RushMedz Clinic</a>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
+                <p>&copy; 2026 RushMedz. All rights reserved.</p>
                 <div class="footer-legal">
-                    <p>&copy; 2026 RushMedz. All rights reserved.</p>
-                </div>
-                <div class="footer-legal-links">
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
                     <a href="cookies.html">Cookie Policy</a>
@@ -556,6 +579,65 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const navbarToggle = document.getElementById('navbarToggle');
+        const navbarMenu = document.getElementById('navbarMenu');
+        
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+            const icon = navbarToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        document.querySelectorAll('.navbar-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarMenu.classList.remove('active');
+                const icon = navbarToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Job filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const jobCards = document.querySelectorAll('.job-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                jobCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.department === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Form submission
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your application! We will review it and get back to you within 3-5 business days.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>

@@ -1,299 +1,348 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - RushMedz</title>
+    <meta name="description" content="RushMedz Terms of Service - Read our terms and conditions for using our services.">
+    <title>Terms of Service | RushMedz</title>
+    
     <link rel="icon" type="image/png" href="assets/logo.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .legal-content { max-width: 900px; margin: 0 auto; padding: 80px 20px; }
-        .legal-content h1 { margin-bottom: 16px; }
-        .legal-content .last-updated { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 40px; }
-        .legal-content h2 { margin-top: 48px; margin-bottom: 16px; font-size: 1.75rem; }
-        .legal-content h3 { margin-top: 32px; margin-bottom: 12px; font-size: 1.25rem; }
-        .legal-content p { margin-bottom: 16px; line-height: 1.8; color: var(--text-secondary); }
-        .legal-content ul, .legal-content ol { margin-bottom: 16px; padding-left: 32px; }
-        .legal-content li { margin-bottom: 8px; line-height: 1.8; color: var(--text-secondary); }
-        .legal-content strong { color: var(--text-primary); font-weight: 600; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="RushMedz Logo">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/logo.png" alt="RushMedz" class="brand-logo">
                 <span>RushMedz</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="download.html" class="nav-link">Download Apps</a></li>
-                <li><a href="rushmedz-ads.html" class="nav-link">RushMedz Ads</a></li>
-                <li><a href="partners.html" class="nav-link">Partners</a></li>
-                <li><a href="careers.html" class="nav-link">Careers</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <a href="download.html" class="btn btn-primary">Get the App</a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="about.html" class="navbar-link">About</a>
+                <a href="services.html" class="navbar-link">Services</a>
+                <a href="download.html" class="navbar-link">Download Apps</a>
+                <a href="rushmedz-ads.html" class="navbar-link">RushMedz Ads</a>
+                <a href="partners.html" class="navbar-link">Partners</a>
+                <a href="careers.html" class="navbar-link">Careers</a>
+                <a href="contact.html" class="navbar-link">Contact</a>
+            </div>
+            
+            <div class="navbar-actions">
+                <a href="download.html" class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    Download App
+                </a>
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </nav>
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-header">
-            <a href="index.html" class="logo"><img src="assets/logo.png" alt="RushMedz Logo"><span>RushMedz</span></a>
-            <button class="close-menu-btn" id="closeMenuBtn"><i class="fas fa-times"></i></button>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Terms of <span class="text-gradient">Service</span></h1>
+                <p>Last updated: January 1, 2026</p>
+            </div>
         </div>
-        <ul class="mobile-nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="download.html">Download Apps</a></li>
-            <li><a href="rushmedz-ads.html">RushMedz Ads</a></li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-    <div class="legal-content">
-        <h1>Terms of Service</h1>
-        <p class="last-updated">Last Updated: January 2026</p>
-        
-        <p>Welcome to RushMedz. By accessing or using our mobile applications and services, you agree to be bound by these Terms of Service. Please read them carefully.</p>
-        
-        <h2>1. Acceptance of Terms</h2>
-        <p>By creating an account, downloading our apps, or using any RushMedz service, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree, please discontinue use immediately.</p>
-        
-        <h2>2. Eligibility</h2>
-        <ul>
-            <li>You must be at least 18 years old to use RushMedz services</li>
-            <li>You must provide accurate and complete registration information</li>
-            <li>You must be legally capable of entering into binding contracts</li>
-            <li>You must comply with all applicable laws and regulations</li>
-        </ul>
-        
-        <h2>3. Services Provided</h2>
-        <p>RushMedz operates as a platform connecting users with:</p>
-        <ul>
-            <li><strong>Partner Pharmacies:</strong> For medicine and medical supply delivery</li>
-            <li><strong>Healthcare Providers:</strong> For telemedicine consultations</li>
-            <li><strong>Clinics and Hospitals:</strong> For appointment booking</li>
-            <li><strong>Laboratory Partners:</strong> For diagnostic tests</li>
-            <li><strong>Delivery Partners:</strong> For logistics</li>
-        </ul>
-        <p><strong>Important:</strong> RushMedz is a technology platform. We do not practice medicine, dispense medications, or provide medical advice. All healthcare services are provided by licensed third-party professionals.</p>
-        
-        <h2>4. Account Registration</h2>
-        
-        <h3>4.1 User Accounts</h3>
-        <ul>
-            <li>You must create an account to use most features</li>
-            <li>You are responsible for maintaining account confidentiality</li>
-            <li>You must notify us immediately of unauthorized access</li>
-            <li>You are liable for all activities under your account</li>
-            <li>One person may not maintain multiple active accounts</li>
-        </ul>
-        
-        <h3>4.2 Account Suspension/Termination</h3>
-        <p>We reserve the right to suspend or terminate accounts that:</p>
-        <ul>
-            <li>Violate these Terms</li>
-            <li>Engage in fraudulent activity</li>
-            <li>Abuse the platform or other users</li>
-            <li>Provide false information</li>
-            <li>Remain inactive for extended periods</li>
-        </ul>
-        
-        <h2>5. Use of Services</h2>
-        
-        <h3>5.1 Medicine Orders</h3>
-        <ul>
-            <li>Prescription medicines require valid prescriptions from licensed doctors</li>
-            <li>Prescriptions will be verified by licensed pharmacists</li>
-            <li>We reserve the right to refuse orders that cannot be verified</li>
-            <li>Delivery times are estimates and may vary</li>
-            <li>Substitutions may occur based on availability (with your consent)</li>
-        </ul>
-        
-        <h3>5.2 Telemedicine</h3>
-        <ul>
-            <li>Consultations are provided by licensed, independent healthcare professionals</li>
-            <li>Telemedicine is not suitable for emergencies - call emergency services for urgent matters</li>
-            <li>Doctors may decline consultations based on professional judgment</li>
-            <li>You must provide accurate health information</li>
-            <li>Follow all medical advice and prescriptions as directed</li>
-        </ul>
-        
-        <h3>5.3 Clinic/Lab Bookings</h3>
-        <ul>
-            <li>Appointments are subject to availability</li>
-            <li>Cancellation policies vary by provider</li>
-            <li>You must arrive on time for appointments</li>
-            <li>Additional fees may apply for services rendered</li>
-        </ul>
-        
-        <h2>6. Pricing and Payments</h2>
-        
-        <h3>6.1 Product Prices</h3>
-        <ul>
-            <li>Prices are listed in Philippine Pesos (PHP)</li>
-            <li>Prices may vary between pharmacies</li>
-            <li>Prices are subject to change without notice</li>
-            <li>Delivery fees are calculated based on distance</li>
-            <li>Service fees may apply to certain transactions</li>
-        </ul>
-        
-        <h3>6.2 Payment Methods</h3>
-        <p>We accept: GCash, PayMaya, credit/debit cards, PayPal, and Cash on Delivery.</p>
-        <ul>
-            <li>Payment is due at time of order placement</li>
-            <li>COD payments must be exact amount or digital payment via driver</li>
-            <li>Failed payments may result in order cancellation</li>
-            <li>All payment processing is secure and encrypted</li>
-        </ul>
-        
-        <h3>6.3 Refunds</h3>
-        <ul>
-            <li>Refunds are processed according to our Refund Policy</li>
-            <li>Defective or incorrect items will be replaced or refunded</li>
-            <li>Prescription errors by partner pharmacies will be corrected at no cost</li>
-            <li>Processing time: 5-10 business days to original payment method</li>
-        </ul>
-        
-        <h2>7. Delivery Services</h2>
-        
-        <h3>7.1 Delivery Times</h3>
-        <ul>
-            <li>Standard delivery: 30-60 minutes in Metro Manila</li>
-            <li>Times may vary based on location, traffic, and weather</li>
-            <li>Scheduled deliveries available for future dates</li>
-            <li>We are not liable for delays beyond our control</li>
-        </ul>
-        
-        <h3>7.2 Delivery Requirements</h3>
-        <ul>
-            <li>Someone must be present to receive delivery</li>
-            <li>Valid ID required for prescription medicines</li>
-            <li>Delivery to accessible locations only</li>
-            <li>Drivers may refuse delivery to unsafe locations</li>
-        </ul>
-        
-        <h2>8. User Conduct</h2>
-        <p>You agree NOT to:</p>
-        <ul>
-            <li>Use the platform for any illegal purpose</li>
-            <li>Share prescription medicines with others</li>
-            <li>Upload false or fraudulent prescriptions</li>
-            <li>Harass or abuse drivers, pharmacists, or healthcare providers</li>
-            <li>Attempt to circumvent pricing or payment systems</li>
-            <li>Reverse engineer or tamper with our apps</li>
-            <li>Use automated tools to access the platform</li>
-            <li>Create fake accounts or impersonate others</li>
-            <li>Post inappropriate content or spam</li>
-            <li>Violate any applicable laws or regulations</li>
-        </ul>
-        
-        <h2>9. Intellectual Property</h2>
-        <p>All content, features, and functionality are owned by RushMedz and protected by copyright, trademark, and other intellectual property laws.</p>
-        <ul>
-            <li>You may not copy, modify, or distribute our content</li>
-            <li>"RushMedz" name and logo are registered trademarks</li>
-            <li>User-generated content (reviews, photos) grants us license to use</li>
-        </ul>
-        
-        <h2>10. Disclaimers</h2>
-        
-        <h3>10.1 Medical Advice</h3>
-        <p><strong>RushMedz does not provide medical advice.</strong> All medical advice comes from licensed, independent healthcare professionals. Always consult qualified healthcare providers for medical questions.</p>
-        
-        <h3>10.2 Service Availability</h3>
-        <p>Services are provided "as is" without warranties of any kind. We do not guarantee:</p>
-        <ul>
-            <li>Uninterrupted or error-free operation</li>
-            <li>Availability in all locations at all times</li>
-            <li>Accuracy of third-party information</li>
-            <li>Specific delivery times</li>
-        </ul>
-        
-        <h3>10.3 Third-Party Providers</h3>
-        <p>Partner pharmacies, doctors, clinics, and laboratories are independent contractors. We are not responsible for their actions, services, or products beyond our role as a platform.</p>
-        
-        <h2>11. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law:</p>
-        <ul>
-            <li>RushMedz shall not be liable for indirect, incidental, or consequential damages</li>
-            <li>Our total liability shall not exceed the amount paid for the specific transaction</li>
-            <li>We are not liable for acts of third-party providers</li>
-            <li>We are not liable for force majeure events (natural disasters, pandemics, etc.)</li>
-        </ul>
-        
-        <h2>12. Indemnification</h2>
-        <p>You agree to indemnify and hold harmless RushMedz, its officers, directors, employees, and partners from any claims, damages, or expenses arising from:</p>
-        <ul>
-            <li>Your use of the services</li>
-            <li>Your violation of these Terms</li>
-            <li>Your violation of any laws or third-party rights</li>
-        </ul>
-        
-        <h2>13. Privacy</h2>
-        <p>Your use of RushMedz is subject to our <a href="privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference. Please review it carefully.</p>
-        
-        <h2>14. Changes to Terms</h2>
-        <p>We may modify these Terms at any time. Changes will be effective upon posting with updated "Last Updated" date. Continued use after changes constitutes acceptance.</p>
-        
-        <h2>15. Governing Law and Dispute Resolution</h2>
-        
-        <h3>15.1 Governing Law</h3>
-        <p>These Terms are governed by the laws of the Republic of the Philippines.</p>
-        
-        <h3>15.2 Dispute Resolution</h3>
-        <p>Any disputes shall be resolved through:</p>
-        <ol>
-            <li>Good faith negotiation</li>
-            <li>Mediation (if negotiation fails)</li>
-            <li>Binding arbitration under Philippine Arbitration Law</li>
-            <li>Courts of Metro Manila (for matters not subject to arbitration)</li>
-        </ol>
-        
-        <h2>16. Severability</h2>
-        <p>If any provision is found unenforceable, the remaining provisions continue in full force.</p>
-        
-        <h2>17. Contact Information</h2>
-        <p>For questions about these Terms:</p>
-        <p>Email: <a href="mailto:legal@rushmedz.com">legal@rushmedz.com</a><br>
-        Phone: +63 (2) 8888-RUSH<br>
-        Address: 5th Floor, BGC Corporate Center, 28th Street corner 11th Avenue, Bonifacio Global City, Taguig, Metro Manila 1634</p>
-    </div>
-    
+    </section>
+
+    <!-- Terms Content -->
+    <section class="section">
+        <div class="container">
+            <div class="policy-content">
+                <div class="policy-nav">
+                    <h4>Contents</h4>
+                    <ul>
+                        <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+                        <li><a href="#services">2. Our Services</a></li>
+                        <li><a href="#account">3. User Accounts</a></li>
+                        <li><a href="#orders">4. Orders & Payments</a></li>
+                        <li><a href="#prescriptions">5. Prescriptions</a></li>
+                        <li><a href="#telemedicine">6. Telemedicine</a></li>
+                        <li><a href="#delivery">7. Delivery</a></li>
+                        <li><a href="#prohibited">8. Prohibited Activities</a></li>
+                        <li><a href="#liability">9. Limitation of Liability</a></li>
+                        <li><a href="#termination">10. Termination</a></li>
+                        <li><a href="#governing">11. Governing Law</a></li>
+                        <li><a href="#contact-terms">12. Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="policy-text">
+                    <section id="acceptance">
+                        <h2>1. Acceptance of Terms</h2>
+                        <p>Welcome to RushMedz. By accessing or using our mobile applications, website, and services (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Services.</p>
+                        <p>These Terms constitute a legally binding agreement between you and RushMedz Philippines, Inc. ("RushMedz," "we," "us," or "our"). We reserve the right to modify these Terms at any time. Continued use of the Services after changes constitutes acceptance of the modified Terms.</p>
+                    </section>
+                    
+                    <section id="services">
+                        <h2>2. Our Services</h2>
+                        <p>RushMedz provides a technology platform that connects users with:</p>
+                        <ul>
+                            <li>Partner pharmacies for medicine delivery</li>
+                            <li>Healthcare providers for telemedicine consultations</li>
+                            <li>Clinics, hospitals, and laboratories for appointments</li>
+                            <li>Medical supplies and equipment providers</li>
+                        </ul>
+                        <p><strong>Important:</strong> RushMedz is a technology platform and does not provide medical advice, diagnosis, or treatment directly. Medical services are provided by licensed healthcare professionals through our platform.</p>
+                    </section>
+                    
+                    <section id="account">
+                        <h2>3. User Accounts</h2>
+                        
+                        <h3>3.1 Registration</h3>
+                        <p>To use certain features of our Services, you must create an account. You agree to:</p>
+                        <ul>
+                            <li>Provide accurate, current, and complete information</li>
+                            <li>Maintain and update your information</li>
+                            <li>Keep your password secure and confidential</li>
+                            <li>Be responsible for all activities under your account</li>
+                            <li>Notify us immediately of unauthorized access</li>
+                        </ul>
+                        
+                        <h3>3.2 Eligibility</h3>
+                        <p>You must be at least 18 years old to create an account. Users under 18 may use the Services only with parental or guardian consent and supervision.</p>
+                    </section>
+                    
+                    <section id="orders">
+                        <h2>4. Orders & Payments</h2>
+                        
+                        <h3>4.1 Ordering</h3>
+                        <ul>
+                            <li>All orders are subject to availability and confirmation</li>
+                            <li>Prices are displayed in Philippine Pesos (PHP) and include applicable taxes</li>
+                            <li>We reserve the right to refuse or cancel orders at our discretion</li>
+                            <li>Product images are for illustration purposes only</li>
+                        </ul>
+                        
+                        <h3>4.2 Payment</h3>
+                        <ul>
+                            <li>We accept credit/debit cards, e-wallets (GCash, GrabPay, PayMaya), bank transfers, and cash on delivery</li>
+                            <li>Payment is due at the time of order or upon delivery (for COD)</li>
+                            <li>You authorize us to charge your selected payment method</li>
+                        </ul>
+                        
+                        <h3>4.3 Refunds & Returns</h3>
+                        <ul>
+                            <li>Refund requests must be submitted within 24 hours of delivery</li>
+                            <li>Medicines cannot be returned once received (for safety reasons)</li>
+                            <li>Defective or incorrect items will be replaced or refunded</li>
+                            <li>Refunds are processed within 5-7 business days</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="prescriptions">
+                        <h2>5. Prescriptions</h2>
+                        <p>For prescription medicines:</p>
+                        <ul>
+                            <li>A valid prescription from a licensed physician is required</li>
+                            <li>You must upload a clear image of the prescription</li>
+                            <li>Prescriptions are verified by licensed pharmacists before dispensing</li>
+                            <li>We reserve the right to reject prescriptions that appear altered, expired, or suspicious</li>
+                            <li>Prescriptions must comply with FDA and DOH regulations</li>
+                            <li>You must be the patient named in the prescription or their authorized representative</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="telemedicine">
+                        <h2>6. Telemedicine Services</h2>
+                        
+                        <h3>6.1 Scope</h3>
+                        <ul>
+                            <li>Telemedicine consultations are provided by licensed, independent physicians</li>
+                            <li>Consultations are suitable for non-emergency conditions</li>
+                            <li>Doctors may decline to treat if an in-person examination is necessary</li>
+                        </ul>
+                        
+                        <h3>6.2 Emergency Disclaimer</h3>
+                        <p><strong>IMPORTANT:</strong> RushMedz telemedicine is NOT for medical emergencies. If you experience a medical emergency (chest pain, difficulty breathing, severe bleeding, stroke symptoms, etc.), call emergency services (911) or go to the nearest emergency room immediately.</p>
+                        
+                        <h3>6.3 Informed Consent</h3>
+                        <p>By using telemedicine services, you acknowledge that:</p>
+                        <ul>
+                            <li>Virtual consultations have limitations compared to in-person visits</li>
+                            <li>The doctor may not have access to your complete medical history</li>
+                            <li>Technical difficulties may interrupt the consultation</li>
+                            <li>E-prescriptions may not include controlled substances</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="delivery">
+                        <h2>7. Delivery</h2>
+                        <ul>
+                            <li>Delivery times are estimates and not guaranteed</li>
+                            <li>You must provide accurate delivery address and contact information</li>
+                            <li>Someone must be present to receive the delivery</li>
+                            <li>Failed deliveries due to incorrect address or unavailability may incur additional charges</li>
+                            <li>Delivery fees vary by location and order value</li>
+                            <li>Temperature-sensitive items are handled with proper cold chain protocols</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="prohibited">
+                        <h2>8. Prohibited Activities</h2>
+                        <p>You agree NOT to:</p>
+                        <ul>
+                            <li>Use the Services for any illegal purpose</li>
+                            <li>Provide false information or impersonate others</li>
+                            <li>Submit fraudulent prescriptions</li>
+                            <li>Resell products purchased through RushMedz</li>
+                            <li>Attempt to circumvent security measures</li>
+                            <li>Harass, abuse, or threaten other users or staff</li>
+                            <li>Use automated systems to access the Services</li>
+                            <li>Interfere with the proper functioning of the Services</li>
+                            <li>Violate any applicable laws or regulations</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="liability">
+                        <h2>9. Limitation of Liability</h2>
+                        <p>To the maximum extent permitted by law:</p>
+                        <ul>
+                            <li>RushMedz is not liable for actions of independent healthcare providers, pharmacies, or delivery partners</li>
+                            <li>We are not liable for the quality, safety, or efficacy of products sold by partner pharmacies</li>
+                            <li>We are not liable for delays or failures due to circumstances beyond our control</li>
+                            <li>Our total liability shall not exceed the amount you paid for the specific service in question</li>
+                        </ul>
+                        <p>THE SERVICES ARE PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</p>
+                    </section>
+                    
+                    <section id="termination">
+                        <h2>10. Termination</h2>
+                        <p>We may suspend or terminate your account if you:</p>
+                        <ul>
+                            <li>Violate these Terms or any applicable laws</li>
+                            <li>Engage in fraudulent or abusive behavior</li>
+                            <li>Fail to pay for orders or services</li>
+                            <li>Provide false or misleading information</li>
+                        </ul>
+                        <p>You may close your account at any time by contacting customer support. Upon termination, your right to use the Services ceases immediately.</p>
+                    </section>
+                    
+                    <section id="governing">
+                        <h2>11. Governing Law</h2>
+                        <p>These Terms are governed by and construed in accordance with the laws of the Republic of the Philippines. Any disputes arising from these Terms or your use of the Services shall be subject to the exclusive jurisdiction of the courts of Tuguegarao City, Cagayan.</p>
+                    </section>
+                    
+                    <section id="contact-terms">
+                        <h2>12. Contact Us</h2>
+                        <p>If you have questions about these Terms, please contact us:</p>
+                        <div class="contact-info-block">
+                            <p><strong>RushMedz Philippines, Inc.</strong></p>
+                            <p>Legal Department</p>
+                            <p>Unit 2501-A, 25th Floor, RCBC Savings Bank Corporate Center</p>
+                            <p>Pengue, Tuguegarao City, Cagayan 3500</p>
+                            <p>Email: <a href="mailto:legal@rushmedz.ph">legal@rushmedz.ph</a></p>
+                            <p>Phone: 09757477099</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo"><img src="assets/logo.png" alt="RushMedz Logo"><span>RushMedz</span></a>
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/logo.png" alt="RushMedz" class="brand-logo">
+                        <span>RushMedz</span>
+                    </a>
                     <p>Your trusted partner for medical delivery and healthcare services.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    <div class="footer-contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Pengue, Tuguegarao City, Cagayan 3500</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:09757477099">09757477099</a></p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="footer-links"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="careers.html">Careers</a></li><li><a href="partners.html">Partners</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-                <div class="footer-links"><h4>Services</h4><ul><li><a href="services.html#medicine">Medicine Delivery</a></li><li><a href="services.html#telemedicine">Telemedicine</a></li><li><a href="services.html#clinic">Clinic Booking</a></li><li><a href="services.html#lab">Lab Tests</a></li></ul></div>
-                <div class="footer-links"><h4>For Business</h4><ul><li><a href="partners.html#pharmacy">Register Pharmacy</a></li><li><a href="partners.html#clinic">Register Clinic</a></li><li><a href="partners.html#doctor">Join as Doctor</a></li><li><a href="rushmedz-ads.html">RushMedz Ads</a></li></ul></div>
-                <div class="footer-links"><h4>Download Apps</h4><ul><li><a href="download.html#user">RushMedz User</a></li><li><a href="download.html#driver">RushMedz Driver</a></li><li><a href="download.html#merchant">RushMedz Merchant</a></li><li><a href="download.html#doctor">RushMedz Doctor</a></li><li><a href="download.html#clinic">RushMedz Clinic</a></li></ul></div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="partners.html">Partners</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="services.html#medicine">Medicine Delivery</a>
+                        <a href="services.html#telemedicine">Telemedicine</a>
+                        <a href="services.html#clinic">Clinic Booking</a>
+                        <a href="services.html#lab">Lab Tests</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <div class="footer-links">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="cookies.html">Cookie Policy</a>
+                    </div>
+                </div>
             </div>
+            
             <div class="footer-bottom">
-                <div class="footer-legal"><p>&copy; 2026 RushMedz. All rights reserved.</p></div>
-                <div class="footer-legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="cookies.html">Cookie Policy</a></div>
+                <p>&copy; 2026 RushMedz. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                </div>
             </div>
         </div>
     </footer>
-    <script src="js/main.js"></script>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const navbarToggle = document.getElementById('navbarToggle');
+        const navbarMenu = document.getElementById('navbarMenu');
+        
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+            const icon = navbarToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Smooth scroll for policy nav
+        document.querySelectorAll('.policy-nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
 </body>
 </html>

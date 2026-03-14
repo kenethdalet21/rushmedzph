@@ -1,560 +1,453 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Become a Partner - RushMedz</title>
+    <meta name="description" content="Partner with RushMedz - Register your pharmacy, clinic, or practice and reach thousands of customers.">
+    <title>Partners | RushMedz</title>
+    
     <link rel="icon" type="image/png" href="assets/logo.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .partner-type-section {
-            padding: 80px 0;
-        }
-        
-        .partner-type-section:nth-child(even) {
-            background: var(--bg-secondary);
-        }
-        
-        .partner-type-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px;
-        }
-        
-        .partner-benefits {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-bottom: 40px;
-        }
-        
-        .benefit-card {
-            background: white;
-            padding: 32px 24px;
-            border-radius: var(--radius-xl);
-            text-align: center;
-            border: 1px solid var(--gray-100);
-        }
-        
-        .benefit-card i {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 16px;
-        }
-        
-        .benefit-card h4 {
-            margin-bottom: 8px;
-            font-size: 1.125rem;
-        }
-        
-        .benefit-card p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        
-        .partner-stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            margin: 60px 0;
-        }
-        
-        .partner-stat {
-            text-align: center;
-            padding: 32px 16px;
-            background: white;
-            border-radius: var(--radius-xl);
-            border: 1px solid var(--gray-100);
-        }
-        
-        .partner-stat h3 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 8px;
-        }
-        
-        .partner-stat p {
-            color: var(--text-secondary);
-        }
-        
-        .requirements-list {
-            background: white;
-            padding: 40px;
-            border-radius: var(--radius-xl);
-            border: 1px solid var(--gray-100);
-            margin-bottom: 40px;
-        }
-        
-        .requirements-list h4 {
-            margin-bottom: 24px;
-            font-size: 1.25rem;
-        }
-        
-        .requirements-list ul {
-            list-style: none;
-        }
-        
-        .requirements-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--gray-100);
-        }
-        
-        .requirements-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .requirements-list i {
-            color: var(--primary-color);
-            margin-top: 4px;
-        }
-        
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            margin-bottom: 40px;
-        }
-        
-        .process-step {
-            text-align: center;
-            position: relative;
-        }
-        
-        .process-step::after {
-            content: '';
-            position: absolute;
-            top: 40px;
-            right: -12px;
-            width: 24px;
-            height: 2px;
-            background: var(--primary-color);
-        }
-        
-        .process-step:last-child::after {
-            display: none;
-        }
-        
-        .process-number {
-            width: 80px;
-            height: 80px;
-            background: var(--primary-gradient);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 0 auto 16px;
-        }
-        
-        .process-step h4 {
-            margin-bottom: 8px;
-        }
-        
-        .process-step p {
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-        }
-        
-        .faq-section {
-            background: var(--bg-secondary);
-            padding: 80px 0;
-        }
-        
-        @media (max-width: 992px) {
-            .partner-benefits,
-            .partner-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .process-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .process-step::after {
-                display: none;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .partner-benefits,
-            .partner-stats,
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="RushMedz Logo">
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/logo.png" alt="RushMedz" class="brand-logo">
                 <span>RushMedz</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="download.html" class="nav-link">Download Apps</a></li>
-                <li><a href="rushmedz-ads.html" class="nav-link">RushMedz Ads</a></li>
-                <li><a href="partners.html" class="nav-link active">Partners</a></li>
-                <li><a href="careers.html" class="nav-link">Careers</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <a href="download.html" class="btn btn-primary">Get the App</a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="about.html" class="navbar-link">About</a>
+                <a href="services.html" class="navbar-link">Services</a>
+                <a href="download.html" class="navbar-link">Download Apps</a>
+                <a href="rushmedz-ads.html" class="navbar-link">RushMedz Ads</a>
+                <a href="partners.html" class="navbar-link active">Partners</a>
+                <a href="careers.html" class="navbar-link">Careers</a>
+                <a href="contact.html" class="navbar-link">Contact</a>
+            </div>
+            
+            <div class="navbar-actions">
+                <a href="download.html" class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    Download App
+                </a>
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-header">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="RushMedz Logo">
-                <span>RushMedz</span>
-            </a>
-            <button class="close-menu-btn" id="closeMenuBtn">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="mobile-nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="download.html">Download Apps</a></li>
-            <li><a href="rushmedz-ads.html">RushMedz Ads</a></li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Partner with <span class="highlight">RushMedz</span></h1>
-            <p>Join our network and grow your healthcare business</p>
-        </div>
-    </section>
-
-    <!-- Partner as Pharmacy -->
-    <section class="partner-type-section" id="pharmacy">
-        <div class="container">
-            <div class="partner-type-header">
-                <h2>Register Your Pharmacy</h2>
-                <p>Expand your reach and serve thousands of customers online with RushMedz's medicine delivery platform.</p>
-            </div>
-            
-            <div class="partner-benefits">
-                <div class="benefit-card">
-                    <i class="fas fa-users"></i>
-                    <h4>New Customers</h4>
-                    <p>Reach 2M+ active users looking for medicines</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h4>Increase Revenue</h4>
-                    <p>Average 40% sales growth for partner pharmacies</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h4>Digital Storefront</h4>
-                    <p>Professional online presence with zero setup cost</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-motorcycle"></i>
-                    <h4>Delivery Network</h4>
-                    <p>Access our fleet of 3,000+ delivery partners</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-wallet"></i>
-                    <h4>Fast Payouts</h4>
-                    <p>Weekly settlements directly to your bank account</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-headset"></i>
-                    <h4>24/7 Support</h4>
-                    <p>Dedicated account manager and support team</p>
-                </div>
-            </div>
-            
-            <div class="requirements-list">
-                <h4>Requirements</h4>
-                <ul>
-                    <li><i class="fas fa-check"></i> <span>Valid FDA License to Operate (LTO)</span></li>
-                    <li><i class="fas fa-check"></i> <span>PRC-licensed pharmacist on staff</span></li>
-                    <li><i class="fas fa-check"></i> <span>Business permit and DTI/SEC registration</span></li>
-                    <li><i class="fas fa-check"></i> <span>Physical store location</span></li>
-                    <li><i class="fas fa-check"></i> <span>Bank account for payouts</span></li>
-                    <li><i class="fas fa-check"></i> <span>Valid IDs of owner/authorized representative</span></li>
-                </ul>
-            </div>
-            
-            <div class="text-center">
-                <a href="download.html#merchant" class="btn btn-primary">Register Your Pharmacy</a>
+            <div class="page-header-content">
+                <h1>Partner With <span class="text-gradient">RushMedz</span></h1>
+                <p>Join our network of healthcare providers and grow your business by reaching thousands of customers across the Philippines.</p>
             </div>
         </div>
     </section>
 
-    <!-- Partner as Clinic -->
-    <section class="partner-type-section" id="clinic">
-        <div class="container">
-            <div class="partner-type-header">
-                <h2>Register Your Clinic/Hospital</h2>
-                <p>Make your facility accessible to patients seeking appointments and consultations through our platform.</p>
-            </div>
-            
-            <div class="partner-benefits">
-                <div class="benefit-card">
-                    <i class="fas fa-calendar-check"></i>
-                    <h4>More Bookings</h4>
-                    <p>Fill appointment slots with online bookings</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-clock"></i>
-                    <h4>Time Savings</h4>
-                    <p>Reduce phone calls and manual scheduling</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-file-medical"></i>
-                    <h4>Digital Records</h4>
-                    <p>Manage patient appointments and records digitally</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-star"></i>
-                    <h4>Build Reputation</h4>
-                    <p>Showcase your services and collect reviews</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-bell"></i>
-                    <h4>Automated Reminders</h4>
-                    <p>Reduce no-shows with automatic notifications</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-chart-pie"></i>
-                    <h4>Analytics Dashboard</h4>
-                    <p>Track bookings, revenue, and patient insights</p>
-                </div>
-            </div>
-            
-            <div class="requirements-list">
-                <h4>Requirements</h4>
-                <ul>
-                    <li><i class="fas fa-check"></i> <span>DOH License to Operate (LTO)</span></li>
-                    <li><i class="fas fa-check"></i> <span>PhilHealth accreditation (if applicable)</span></li>
-                    <li><i class="fas fa-check"></i> <span>Licensed medical professionals on staff</span></li>
-                    <li><i class="fas fa-check"></i> <span>Business permit and registration documents</span></li>
-                    <li><i class="fas fa-check"></i> <span>List of services and facilities</span></li>
-                    <li><i class="fas fa-check"></i> <span>Professional indemnity insurance</span></li>
-                </ul>
-            </div>
-            
-            <div class="text-center">
-                <a href="download.html#clinic" class="btn btn-primary">Register Your Clinic</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partner as Doctor -->
-    <section class="partner-type-section" id="doctor">
-        <div class="container">
-            <div class="partner-type-header">
-                <h2>Join as a Doctor</h2>
-                <p>Offer telemedicine consultations and reach patients beyond your clinic walls.</p>
-            </div>
-            
-            <div class="partner-benefits">
-                <div class="benefit-card">
-                    <i class="fas fa-laptop-medical"></i>
-                    <h4>Flexible Practice</h4>
-                    <p>Consult from anywhere, set your own schedule</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-money-bill-wave"></i>
-                    <h4>Additional Income</h4>
-                    <p>Earn competitive fees per consultation</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-user-friends"></i>
-                    <h4>Expand Patient Base</h4>
-                    <p>Connect with patients from all over the country</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>Malpractice Coverage</h4>
-                    <p>Professional indemnity insurance included</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-prescription"></i>
-                    <h4>E-Prescribing</h4>
-                    <p>Issue digital prescriptions easily</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h4>CME Credits</h4>
-                    <p>Access to continuing medical education</p>
-                </div>
-            </div>
-            
-            <div class="requirements-list">
-                <h4>Requirements</h4>
-                <ul>
-                    <li><i class="fas fa-check"></i> <span>Valid PRC License (updated)</span></li>
-                    <li><i class="fas fa-check"></i> <span>PTR (Professional Tax Receipt)</span></li>
-                    <li><i class="fas fa-check"></i> <span>S2 License (if applicable for specialists)</span></li>
-                    <li><i class="fas fa-check"></i> <span>Certificate of Good Standing from PMA or specialty society</span></li>
-                    <li><i class="fas fa-check"></i> <span>Valid government ID</span></li>
-                    <li><i class="fas fa-check"></i> <span>Professional biography and credentials</span></li>
-                </ul>
-            </div>
-            
-            <div class="text-center">
-                <a href="download.html#doctor" class="btn btn-primary">Join as a Doctor</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- How to Partner -->
+    <!-- Partner Types Section -->
     <section class="section">
         <div class="container">
-            <div class="text-center section-intro">
-                <h2>How to Get Started</h2>
-                <p>Simple 4-step process to join the RushMedz network</p>
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-handshake"></i>
+                    Partnership Options
+                </span>
+                <h2 class="section-title">How Would You Like to Partner?</h2>
+                <p class="section-description">Whether you're a pharmacy, clinic, or healthcare professional, we have the right partnership for you.</p>
+            </div>
+
+            <div class="partners-grid">
+                <!-- Pharmacy Partner -->
+                <div class="partner-card" id="pharmacy">
+                    <div class="partner-icon" style="background: linear-gradient(135deg, #00B894, #00CEC9);">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Register as Pharmacy</h3>
+                    <p>Join our pharmacy network and serve customers across your area with medicine delivery.</p>
+                    
+                    <ul class="partner-benefits">
+                        <li><i class="fas fa-check-circle"></i> Reach thousands of new customers</li>
+                        <li><i class="fas fa-check-circle"></i> Zero delivery headaches - we handle logistics</li>
+                        <li><i class="fas fa-check-circle"></i> Easy inventory management tools</li>
+                        <li><i class="fas fa-check-circle"></i> Real-time order notifications</li>
+                        <li><i class="fas fa-check-circle"></i> Fast & reliable payouts</li>
+                        <li><i class="fas fa-check-circle"></i> Marketing support & visibility</li>
+                    </ul>
+                    
+                    <div class="partner-requirements">
+                        <h5>Requirements:</h5>
+                        <ul>
+                            <li>Valid FDA License to Operate (LTO)</li>
+                            <li>Licensed Pharmacist on duty</li>
+                            <li>DTI/SEC Registration</li>
+                            <li>BIR Certificate of Registration</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#register" class="btn btn-primary btn-full">
+                        <i class="fas fa-store"></i>
+                        Register Your Pharmacy
+                    </a>
+                </div>
+
+                <!-- Clinic Partner -->
+                <div class="partner-card" id="clinic">
+                    <div class="partner-icon" style="background: linear-gradient(135deg, #0984E3, #74B9FF);">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <h3>Register as Clinic/Hospital</h3>
+                    <p>List your clinic or hospital and let patients book appointments through our platform.</p>
+                    
+                    <ul class="partner-benefits">
+                        <li><i class="fas fa-check-circle"></i> Digital appointment management</li>
+                        <li><i class="fas fa-check-circle"></i> Reduce no-shows with reminders</li>
+                        <li><i class="fas fa-check-circle"></i> Patient management dashboard</li>
+                        <li><i class="fas fa-check-circle"></i> Lab test booking integration</li>
+                        <li><i class="fas fa-check-circle"></i> Telemedicine capabilities</li>
+                        <li><i class="fas fa-check-circle"></i> Revenue analytics & reports</li>
+                    </ul>
+                    
+                    <div class="partner-requirements">
+                        <h5>Requirements:</h5>
+                        <ul>
+                            <li>DOH License to Operate</li>
+                            <li>Licensed medical professionals</li>
+                            <li>DTI/SEC Registration</li>
+                            <li>BIR Certificate of Registration</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#register" class="btn btn-primary btn-full">
+                        <i class="fas fa-building"></i>
+                        Register Your Clinic
+                    </a>
+                </div>
+
+                <!-- Doctor Partner -->
+                <div class="partner-card" id="doctor">
+                    <div class="partner-icon" style="background: linear-gradient(135deg, #FF7675, #FD79A8);">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Join as a Doctor</h3>
+                    <p>Offer telemedicine consultations and grow your practice by reaching patients nationwide.</p>
+                    
+                    <ul class="partner-benefits">
+                        <li><i class="fas fa-check-circle"></i> Flexible working hours</li>
+                        <li><i class="fas fa-check-circle"></i> Set your own consultation rates</li>
+                        <li><i class="fas fa-check-circle"></i> Video, audio & chat consultations</li>
+                        <li><i class="fas fa-check-circle"></i> Issue e-prescriptions instantly</li>
+                        <li><i class="fas fa-check-circle"></i> Build your digital patient base</li>
+                        <li><i class="fas fa-check-circle"></i> Secure patient records access</li>
+                    </ul>
+                    
+                    <div class="partner-requirements">
+                        <h5>Requirements:</h5>
+                        <ul>
+                            <li>Valid PRC License</li>
+                            <li>Board Certification (if specialist)</li>
+                            <li>PTR (for prescription writing)</li>
+                            <li>Stable internet connection</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#register" class="btn btn-primary btn-full">
+                        <i class="fas fa-stethoscope"></i>
+                        Join as Doctor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works for Partners -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-cogs"></i>
+                    Getting Started
+                </span>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-description">Get started with RushMedz in just a few simple steps.</p>
             </div>
             
-            <div class="process-steps">
+            <div class="process-timeline">
                 <div class="process-step">
                     <div class="process-number">1</div>
-                    <h4>Apply Online</h4>
-                    <p>Download the app and fill out the registration form</p>
+                    <div class="process-content">
+                        <h4>Submit Application</h4>
+                        <p>Fill out the registration form with your business details and required documents.</p>
+                    </div>
                 </div>
+                
                 <div class="process-step">
                     <div class="process-number">2</div>
-                    <h4>Submit Documents</h4>
-                    <p>Upload required licenses and certifications</p>
+                    <div class="process-content">
+                        <h4>Verification</h4>
+                        <p>Our team reviews your application and verifies your licenses and credentials.</p>
+                    </div>
                 </div>
+                
                 <div class="process-step">
                     <div class="process-number">3</div>
-                    <h4>Verification</h4>
-                    <p>Our team verifies your documents (1-3 business days)</p>
+                    <div class="process-content">
+                        <h4>Onboarding</h4>
+                        <p>Get trained on our platform, set up your profile, and add your products/services.</p>
+                    </div>
                 </div>
+                
                 <div class="process-step">
                     <div class="process-number">4</div>
-                    <h4>Go Live</h4>
-                    <p>Get onboarded and start serving customers</p>
+                    <div class="process-content">
+                        <h4>Go Live</h4>
+                        <p>Start receiving orders and serving customers through the RushMedz platform!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Partner With Us -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-star"></i>
+                    Why RushMedz
+                </span>
+                <h2 class="section-title">Why Partner With Us?</h2>
+                <p class="section-description">Join over 500+ pharmacies, clinics, and healthcare professionals already growing with RushMedz.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Large Customer Base</h4>
+                    <p>Access thousands of active users looking for healthcare services in your area.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Reliable Logistics</h4>
+                    <p>We handle all deliveries with our trained medical delivery riders.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Easy-to-Use App</h4>
+                    <p>Intuitive dashboard to manage orders, inventory, and track performance.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>Dedicated partner support team to help you anytime you need assistance.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h4>Marketing Support</h4>
+                    <p>Get featured in promotions and campaigns to boost your visibility.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h4>Fast Payouts</h4>
+                    <p>Receive your earnings weekly with multiple payout options available.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Partner Stats -->
-    <section class="section" style="background: var(--bg-secondary);">
+    <section class="section bg-dark">
         <div class="container">
-            <div class="text-center section-intro">
-                <h2>Join Our Growing Network</h2>
-                <p>Trusted by healthcare providers nationwide</p>
-            </div>
-            
-            <div class="partner-stats">
-                <div class="partner-stat">
-                    <h3>5,000+</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="9500">9500+</div>
                     <p>Partner Pharmacies</p>
                 </div>
-                <div class="partner-stat">
-                    <h3>500+</h3>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="200">200+</div>
                     <p>Partner Clinics</p>
                 </div>
-                <div class="partner-stat">
-                    <h3>1,000+</h3>
-                    <p>Licensed Doctors</p>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="1000">1000+</div>
+                    <p>Registered Doctors</p>
                 </div>
-                <div class="partner-stat">
-                    <h3>3,000+</h3>
-                    <p>Delivery Partners</p>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="95">95%</div>
+                    <p>Partner Satisfaction</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq-section">
+    <!-- Registration Form -->
+    <section class="section" id="register">
         <div class="container">
-            <div class="text-center section-intro">
-                <h2>Frequently Asked Questions</h2>
-                <p>Got questions? We've got answers</p>
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-edit"></i>
+                    Get Started
+                </span>
+                <h2 class="section-title">Register as a Partner</h2>
+                <p class="section-description">Fill out the form below and our team will get in touch within 24-48 hours.</p>
             </div>
             
-            <div class="accordion">
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3>Is there any registration fee?</h3>
-                        <i class="fas fa-chevron-down"></i>
+            <div class="form-container">
+                <form class="contact-form" id="partnerForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="partnerType">Partnership Type *</label>
+                            <select id="partnerType" name="partnerType" required>
+                                <option value="">Select partnership type</option>
+                                <option value="pharmacy">Pharmacy</option>
+                                <option value="clinic">Clinic / Hospital</option>
+                                <option value="doctor">Doctor</option>
+                                <option value="laboratory">Laboratory / Diagnostic Center</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="businessName">Business / Full Name *</label>
+                            <input type="text" id="businessName" name="businessName" placeholder="e.g., Mercury Drug - Makati Branch" required>
+                        </div>
                     </div>
-                    <div class="accordion-content">
-                        <p>No, registration is completely free. We only charge a small commission on completed orders/bookings.</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="business@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+63 9XX XXX XXXX" required>
+                        </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3>How much commission does RushMedz charge?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" placeholder="e.g., Makati City" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="province">Province *</label>
+                            <input type="text" id="province" name="province" placeholder="e.g., Metro Manila" required>
+                        </div>
                     </div>
-                    <div class="accordion-content">
-                        <p>Our commission rates vary by service type: 15-20% for pharmacy orders, 10% for clinic bookings, and 20% for telemedicine consultations. All rates are transparent and clearly stated before you join.</p>
+                    
+                    <div class="form-group">
+                        <label for="address">Complete Address *</label>
+                        <input type="text" id="address" name="address" placeholder="Street, Barangay, Building, etc." required>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3>How often will I receive payments?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell us about your business</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Brief description of your services, operating hours, etc."></textarea>
                     </div>
-                    <div class="accordion-content">
-                        <p>Payments are processed weekly, every Monday, for all completed orders/bookings from the previous week. Funds are transferred directly to your registered bank account.</p>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span>I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></span>
+                        </label>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3>Do I need my own delivery fleet?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>No, you can use our delivery network. However, if you have your own delivery team, you can integrate them with our system.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3>Can I set my own prices?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>Yes, as a pharmacy or clinic partner, you have full control over your pricing. We recommend competitive pricing to attract more customers.</p>
-                    </div>
-                </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large btn-full">
+                        <i class="fas fa-paper-plane"></i>
+                        Submit Application
+                    </button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
+    <!-- FAQ Section -->
+    <section class="section bg-light">
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Partner with Us?</h2>
-                <p>Join thousands of healthcare providers growing their business with RushMedz</p>
-                <div class="cta-buttons">
-                    <a href="download.html" class="btn btn-primary">Register Now</a>
-                    <a href="contact.html" class="btn btn-outline">Contact Partnership Team</a>
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-question-circle"></i>
+                    FAQ
+                </span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How much does it cost to become a partner?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Joining RushMedz is completely FREE! We only charge a small commission on successful transactions. No setup fees, no monthly fees, and no hidden charges.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does the approval process take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Once you submit your application with complete documents, our team typically processes applications within 3-5 business days. You'll receive email updates on your application status.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I receive payments?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer multiple payout options including bank transfer, GCash, and PayMaya. Payouts are processed weekly, and you can track all your earnings in real-time through the partner dashboard.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do I need to handle deliveries myself?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No! RushMedz handles all logistics through our trained medical delivery riders. Just prepare the order and our rider will pick it up from your store or clinic.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What support do you provide to partners?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We provide 24/7 partner support via phone, email, and in-app chat. You'll also get a dedicated account manager during onboarding, access to training materials, and regular performance reports.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -565,62 +458,68 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <img src="assets/logo.png" alt="RushMedz Logo">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/logo.png" alt="RushMedz" class="brand-logo">
                         <span>RushMedz</span>
                     </a>
                     <p>Your trusted partner for medical delivery and healthcare services. Making healthcare accessible to everyone, everywhere.</p>
-                    <div class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <div class="footer-contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Pengue, Tuguegarao City, Cagayan 3500</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:09757477099">09757477099</a></p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="footer-links">
+                
+                <div class="footer-column">
                     <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="partners.html">Partners</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
                 </div>
-                <div class="footer-links">
+                
+                <div class="footer-column">
                     <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#medicine">Medicine Delivery</a></li>
-                        <li><a href="services.html#telemedicine">Telemedicine</a></li>
-                        <li><a href="services.html#clinic">Clinic Booking</a></li>
-                        <li><a href="services.html#lab">Lab Tests</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="services.html#medicine">Medicine Delivery</a>
+                        <a href="services.html#telemedicine">Telemedicine</a>
+                        <a href="services.html#clinic">Clinic Booking</a>
+                        <a href="services.html#lab">Lab Tests</a>
+                    </div>
                 </div>
-                <div class="footer-links">
+                
+                <div class="footer-column">
                     <h4>For Business</h4>
-                    <ul>
-                        <li><a href="partners.html#pharmacy">Register Pharmacy</a></li>
-                        <li><a href="partners.html#clinic">Register Clinic</a></li>
-                        <li><a href="partners.html#doctor">Join as Doctor</a></li>
-                        <li><a href="rushmedz-ads.html">RushMedz Ads</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="partners.html#pharmacy">Register Pharmacy</a>
+                        <a href="partners.html#clinic">Register Clinic</a>
+                        <a href="partners.html#doctor">Join as Doctor</a>
+                        <a href="rushmedz-ads.html">RushMedz Ads</a>
+                    </div>
                 </div>
-                <div class="footer-links">
+                
+                <div class="footer-column">
                     <h4>Download Apps</h4>
-                    <ul>
-                        <li><a href="download.html#user">RushMedz User</a></li>
-                        <li><a href="download.html#driver">RushMedz Driver</a></li>
-                        <li><a href="download.html#merchant">RushMedz Merchant</a></li>
-                        <li><a href="download.html#doctor">RushMedz Doctor</a></li>
-                        <li><a href="download.html#clinic">RushMedz Clinic</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="download.html#user">RushMedz User</a>
+                        <a href="download.html#driver">RushMedz Driver</a>
+                        <a href="download.html#merchant">RushMedz Merchant</a>
+                        <a href="download.html#doctor">RushMedz Doctor</a>
+                        <a href="download.html#clinic">RushMedz Clinic</a>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
+                <p>&copy; 2026 RushMedz. All rights reserved.</p>
                 <div class="footer-legal">
-                    <p>&copy; 2026 RushMedz. All rights reserved.</p>
-                </div>
-                <div class="footer-legal-links">
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
                     <a href="cookies.html">Cookie Policy</a>
@@ -629,6 +528,61 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const navbarToggle = document.getElementById('navbarToggle');
+        const navbarMenu = document.getElementById('navbarMenu');
+        
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+            const icon = navbarToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        document.querySelectorAll('.navbar-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarMenu.classList.remove('active');
+                const icon = navbarToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isOpen = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked one if it was closed
+                if (!isOpen) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('partnerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your application! Our team will contact you within 24-48 hours.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
