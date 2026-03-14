@@ -1,438 +1,325 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - RushMedz</title>
+    <meta name="description" content="Contact RushMedz - Get in touch with our team for support, partnerships, or general inquiries.">
+    <title>Contact Us | RushMedz</title>
+    
     <link rel="icon" type="image/png" href="assets/logo.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .contact-section {
-            padding: 80px 0;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 60px;
-        }
-        
-        .contact-info h2 {
-            margin-bottom: 16px;
-        }
-        
-        .contact-info > p {
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-        }
-        
-        .contact-methods {
-            margin-bottom: 40px;
-        }
-        
-        .contact-method {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            margin-bottom: 24px;
-            padding: 20px;
-            background: white;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--gray-100);
-            transition: var(--transition-normal);
-        }
-        
-        .contact-method:hover {
-            box-shadow: var(--shadow-md);
-        }
-        
-        .contact-method-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            flex-shrink: 0;
-        }
-        
-        .contact-method-icon i {
-            font-size: 1.25rem;
-        }
-        
-        .contact-method-info h4 {
-            margin-bottom: 4px;
-            font-size: 1rem;
-        }
-        
-        .contact-method-info p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-        }
-        
-        .contact-method-info a {
-            color: var(--primary-color);
-            font-weight: 500;
-        }
-        
-        .contact-form {
-            background: white;
-            padding: 40px;
-            border-radius: var(--radius-xl);
-            border: 1px solid var(--gray-100);
-        }
-        
-        .contact-form h3 {
-            margin-bottom: 24px;
-            font-size: 1.5rem;
-        }
-        
-        .offices-section {
-            padding: 80px 0;
-            background: var(--bg-secondary);
-        }
-        
-        .offices-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-        
-        .office-card {
-            background: white;
-            padding: 32px;
-            border-radius: var(--radius-xl);
-            border: 1px solid var(--gray-100);
-        }
-        
-        .office-card h4 {
-            margin-bottom: 16px;
-            font-size: 1.25rem;
-        }
-        
-        .office-card p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-        
-        .office-card .office-hours {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid var(--gray-100);
-        }
-        
-        .office-card .office-hours i {
-            color: var(--primary-color);
-        }
-        
-        @media (max-width: 992px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .offices-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="RushMedz Logo">
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/logo.png" alt="RushMedz" class="brand-logo">
                 <span>RushMedz</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="download.html" class="nav-link">Download Apps</a></li>
-                <li><a href="rushmedz-ads.html" class="nav-link">RushMedz Ads</a></li>
-                <li><a href="partners.html" class="nav-link">Partners</a></li>
-                <li><a href="careers.html" class="nav-link">Careers</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <a href="download.html" class="btn btn-primary">Get the App</a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="about.html" class="navbar-link">About</a>
+                <a href="services.html" class="navbar-link">Services</a>
+                <a href="download.html" class="navbar-link">Download Apps</a>
+                <a href="rushmedz-ads.html" class="navbar-link">RushMedz Ads</a>
+                <a href="partners.html" class="navbar-link">Partners</a>
+                <a href="careers.html" class="navbar-link">Careers</a>
+                <a href="contact.html" class="navbar-link active">Contact</a>
+            </div>
+            
+            <div class="navbar-actions">
+                <a href="download.html" class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    Download App
+                </a>
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-header">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="RushMedz Logo">
-                <span>RushMedz</span>
-            </a>
-            <button class="close-menu-btn" id="closeMenuBtn">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="mobile-nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="download.html">Download Apps</a></li>
-            <li><a href="rushmedz-ads.html">RushMedz Ads</a></li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Get in <span class="highlight">Touch</span></h1>
-            <p>We're here to help with any questions or concerns</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Contact Information</h2>
-                    <p>Choose the best way to reach us. Our team is ready to assist you.</p>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <i class="fas fa-headset"></i>
-                            </div>
-                            <div class="contact-method-info">
-                                <h4>Customer Support</h4>
-                                <p>For app issues and order inquiries</p>
-                                <a href="tel:+6328888RUSH">+63 (2) 8888-RUSH</a><br>
-                                <a href="mailto:support@rushmedz.com">support@rushmedz.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div class="contact-method-info">
-                                <h4>Partnership Inquiries</h4>
-                                <p>For pharmacies, clinics, and doctors</p>
-                                <a href="tel:+6328888RUSH">+63 (2) 8888-RUSH</a><br>
-                                <a href="mailto:partners@rushmedz.com">partners@rushmedz.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <i class="fas fa-bullhorn"></i>
-                            </div>
-                            <div class="contact-method-info">
-                                <h4>Advertising & Marketing</h4>
-                                <p>For RushMedz Ads and campaigns</p>
-                                <a href="tel:+6328888RUSH">+63 (2) 8888-RUSH</a><br>
-                                <a href="mailto:ads@rushmedz.com">ads@rushmedz.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div class="contact-method-info">
-                                <h4>Careers</h4>
-                                <p>Join our team</p>
-                                <a href="tel:+6328888RUSH">+63 (2) 8888-RUSH</a><br>
-                                <a href="mailto:careers@rushmedz.com">careers@rushmedz.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <i class="fas fa-newspaper"></i>
-                            </div>
-                            <div class="contact-method-info">
-                                <h4>Media & Press</h4>
-                                <p>For press releases and media inquiries</p>
-                                <a href="mailto:press@rushmedz.com">press@rushmedz.com</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links" style="display: flex; gap: 16px;">
-                        <a href="#" target="_blank" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; background: var(--primary-gradient); color: white; border-radius: 50%; font-size: 1.125rem;"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; background: var(--primary-gradient); color: white; border-radius: 50%; font-size: 1.125rem;"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; background: var(--primary-gradient); color: white; border-radius: 50%; font-size: 1.125rem;"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; background: var(--primary-gradient); color: white; border-radius: 50%; font-size: 1.125rem;"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>Send Us a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject *</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Select a subject</option>
-                                <option value="support">Customer Support</option>
-                                <option value="partnership">Partnership Inquiry</option>
-                                <option value="advertising">Advertising & Marketing</option>
-                                <option value="career">Career Opportunities</option>
-                                <option value="press">Press & Media</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                    </form>
-                </div>
+            <div class="page-header-content">
+                <h1>Get in <span class="text-gradient">Touch</span></h1>
+                <p>We'd love to hear from you. Whether you have a question, feedback, or need support, our team is ready to help.</p>
             </div>
         </div>
     </section>
 
-    <!-- Offices -->
-    <section class="offices-section">
-        <div class="container">
-            <div class="text-center section-intro">
-                <h2>Our Offices</h2>
-                <p>Visit us at any of our locations nationwide</p>
-            </div>
-            
-            <div class="offices-grid">
-                <div class="office-card">
-                    <h4>Metro Manila Head Office</h4>
-                    <p>
-                        <strong>Address:</strong><br>
-                        5th Floor, BGC Corporate Center<br>
-                        28th Street corner 11th Avenue<br>
-                        Bonifacio Global City, Taguig<br>
-                        Metro Manila 1634
-                    </p>
-                    <div class="office-hours">
-                        <i class="fas fa-clock"></i>
-                        <span>Mon-Fri: 8:00 AM - 6:00 PM</span>
-                    </div>
-                </div>
-                
-                <div class="office-card">
-                    <h4>Cebu Regional Office</h4>
-                    <p>
-                        <strong>Address:</strong><br>
-                        3rd Floor, Oakridge Business Park<br>
-                        A.S. Fortuna Street, Mandaue City<br>
-                        Cebu 6014
-                    </p>
-                    <div class="office-hours">
-                        <i class="fas fa-clock"></i>
-                        <span>Mon-Fri: 8:00 AM - 6:00 PM</span>
-                    </div>
-                </div>
-                
-                <div class="office-card">
-                    <h4>Davao Regional Office</h4>
-                    <p>
-                        <strong>Address:</strong><br>
-                        2nd Floor, Abreeza Business Park<br>
-                        J.P. Laurel Avenue, Bajada<br>
-                        Davao City 8000
-                    </p>
-                    <div class="office-hours">
-                        <i class="fas fa-clock"></i>
-                        <span>Mon-Fri: 8:00 AM - 6:00 PM</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
+    <!-- Contact Info Cards -->
     <section class="section">
         <div class="container">
-            <div class="text-center section-intro">
-                <h2>Frequently Asked Questions</h2>
-                <p>Quick answers to common questions</p>
+            <div class="contact-cards-grid">
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Customer Support</h3>
+                    <p>Need help with your order or have questions about our services?</p>
+                    <div class="contact-details">
+                        <a href="tel:09757477099"><i class="fas fa-phone"></i> 09757477099</a>
+                        <a href="mailto:support@rushmedz.ph"><i class="fas fa-envelope"></i> support@rushmedz.ph</a>
+                    </div>
+                    <small>Available 24/7</small>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partnerships</h3>
+                    <p>Interested in partnering with RushMedz as a pharmacy, clinic, or doctor?</p>
+                    <div class="contact-details">
+                        <a href="tel:09757477099"><i class="fas fa-phone"></i> 09757477099</a>
+                        <a href="mailto:partners@rushmedz.ph"><i class="fas fa-envelope"></i> partners@rushmedz.ph</a>
+                    </div>
+                    <small>Mon-Fri, 9AM - 6PM</small>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Media & Press</h3>
+                    <p>For media inquiries, press releases, and interview requests.</p>
+                    <div class="contact-details">
+                        <a href="tel:09757477099"><i class="fas fa-phone"></i> 09757477099</a>
+                        <a href="mailto:media@rushmedz.ph"><i class="fas fa-envelope"></i> media@rushmedz.ph</a>
+                    </div>
+                    <small>Mon-Fri, 9AM - 6PM</small>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Careers</h3>
+                    <p>Looking to join our team? We'd love to hear from you!</p>
+                    <div class="contact-details">
+                        <a href="careers.html"><i class="fas fa-external-link-alt"></i> View Open Positions</a>
+                        <a href="mailto:careers@rushmedz.ph"><i class="fas fa-envelope"></i> careers@rushmedz.ph</a>
+                    </div>
+                    <small>Mon-Fri, 9AM - 6PM</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-form-section">
+                    <div class="section-header left-aligned">
+                        <span class="section-badge">
+                            <i class="fas fa-paper-plane"></i>
+                            Send a Message
+                        </span>
+                        <h2 class="section-title">Contact Form</h2>
+                        <p class="section-description">Fill out the form and we'll get back to you within 24 hours.</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Juan Dela Cruz" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="juan@email.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+63 9XX XXX XXXX">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="support">Customer Support</option>
+                                    <option value="partnership">Partnership Inquiry</option>
+                                    <option value="feedback">Feedback / Suggestion</option>
+                                    <option value="complaint">File a Complaint</option>
+                                    <option value="media">Media / Press Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="orderNumber">Order Number (if applicable)</label>
+                            <input type="text" id="orderNumber" name="orderNumber" placeholder="e.g., RM-2024-12345">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                <span>I agree to the <a href="privacy.html">Privacy Policy</a></span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-map-section">
+                    <div class="office-card">
+                        <h3><i class="fas fa-building"></i> Head Office</h3>
+                        <address>
+                            <p><strong>RushMedz Philippines, Inc.</strong></p>
+                            <p>Pengue, Tuguegarao City</p>
+                            <p>Cagayan, Philippines 3500</p>
+                        </address>
+                        
+                        <div class="office-hours">
+                            <h4><i class="fas fa-clock"></i> Office Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 9:00 AM - 12:00 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Pengue,+Tuguegarao+City,+Cagayan,+Philippines&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            width="100%" 
+                            height="300" 
+                            style="border:0; border-radius: 12px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    
+                    <div class="social-connect">
+                        <h4>Connect With Us</h4>
+                        <div class="social-icons-large">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-question-circle"></i>
+                    Help Center
+                </span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">Quick answers to common questions.</p>
             </div>
             
-            <div class="accordion" style="max-width: 800px; margin: 0 auto;">
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3>How do I track my order?</h3>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I track my order?</span>
                         <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>You can track your order in real-time through the RushMedz app. Go to "My Orders" and tap on the active order to see the live location of your driver and estimated delivery time.</p>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can track your order in real-time through the RushMedz app. Go to "My Orders" and tap on the active order to see live tracking with the rider's location and estimated delivery time.</p>
                     </div>
                 </div>
                 
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3>What are your delivery hours?</h3>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is the delivery time for medicines?</span>
                         <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>Our delivery service operates 24/7 in Metro Manila and major cities. In other areas, delivery hours may vary from 8:00 AM to 10:00 PM. Check the app for availability in your area.</p>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer same-day delivery for orders placed before 8 PM. Express delivery (within 1-2 hours) is available in select areas within Metro Manila. Delivery times may vary based on location and availability.</p>
                     </div>
                 </div>
                 
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3>How do I upload a prescription?</h3>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I cancel or modify my order?</span>
                         <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>In the app, tap "Upload Prescription" from the home screen or when adding prescription medicines to your cart. Take a clear photo of your prescription and submit. Our pharmacists will verify it before processing your order.</p>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can cancel or modify your order within 5 minutes of placing it through the app. After that, please contact our customer support team at 09757477099 for assistance.</p>
                     </div>
                 </div>
                 
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3>What payment methods do you accept?</h3>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you require a prescription for medicines?</span>
                         <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>We accept GCash, PayMaya, credit/debit cards (Visa, Mastercard, Amex), PayPal, and Cash on Delivery (COD). All payment methods are secure and encrypted.</p>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, prescription medicines require a valid prescription from a licensed doctor. You can upload your prescription in the app, or use our telemedicine service to consult with a doctor and get an e-prescription.</p>
                     </div>
                 </div>
                 
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3>How do I become a partner pharmacy?</h3>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
                         <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept multiple payment methods including Credit/Debit cards (Visa, Mastercard), GCash, GrabPay, PayMaya, Bank Transfer, and Cash on Delivery (COD).</p>
                     </div>
-                    <div class="accordion-content">
-                        <p>Download the RushMedz Merchant app and complete the registration form. You'll need to submit your FDA license, business permits, and other required documents. Our team will verify and onboard you within 1-3 business days.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How can I become a RushMedz delivery partner?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Download the RushMedz Driver app, complete the registration form, submit required documents (valid ID, driver's license, NBI clearance), and attend our onboarding session. You can start earning once approved!</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-dark cta-section">
+        <div class="container">
+            <div class="cta-content centered">
+                <h2>Need Immediate Help?</h2>
+                <p>Our customer support team is available 24/7 to assist you.</p>
+                <div class="cta-buttons">
+                    <a href="tel:09757477099" class="btn btn-primary btn-large">
+                        <i class="fas fa-phone"></i>
+                        Call Us Now
+                    </a>
+                    <a href="#" class="btn btn-outline-light btn-large">
+                        <i class="fab fa-facebook-messenger"></i>
+                        Chat on Messenger
+                    </a>
                 </div>
             </div>
         </div>
@@ -443,62 +330,68 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <img src="assets/logo.png" alt="RushMedz Logo">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/logo.png" alt="RushMedz" class="brand-logo">
                         <span>RushMedz</span>
                     </a>
                     <p>Your trusted partner for medical delivery and healthcare services. Making healthcare accessible to everyone, everywhere.</p>
-                    <div class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <div class="footer-contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Pengue, Tuguegarao City, Cagayan 3500</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:09757477099">09757477099</a></p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="footer-links">
+                
+                <div class="footer-column">
                     <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="partners.html">Partners</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
                 </div>
-                <div class="footer-links">
+                
+                <div class="footer-column">
                     <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#medicine">Medicine Delivery</a></li>
-                        <li><a href="services.html#telemedicine">Telemedicine</a></li>
-                        <li><a href="services.html#clinic">Clinic Booking</a></li>
-                        <li><a href="services.html#lab">Lab Tests</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="services.html#medicine">Medicine Delivery</a>
+                        <a href="services.html#telemedicine">Telemedicine</a>
+                        <a href="services.html#clinic">Clinic Booking</a>
+                        <a href="services.html#lab">Lab Tests</a>
+                    </div>
                 </div>
-                <div class="footer-links">
+                
+                <div class="footer-column">
                     <h4>For Business</h4>
-                    <ul>
-                        <li><a href="partners.html#pharmacy">Register Pharmacy</a></li>
-                        <li><a href="partners.html#clinic">Register Clinic</a></li>
-                        <li><a href="partners.html#doctor">Join as Doctor</a></li>
-                        <li><a href="rushmedz-ads.html">RushMedz Ads</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="partners.html#pharmacy">Register Pharmacy</a>
+                        <a href="partners.html#clinic">Register Clinic</a>
+                        <a href="partners.html#doctor">Join as Doctor</a>
+                        <a href="rushmedz-ads.html">RushMedz Ads</a>
+                    </div>
                 </div>
-                <div class="footer-links">
+                
+                <div class="footer-column">
                     <h4>Download Apps</h4>
-                    <ul>
-                        <li><a href="download.html#user">RushMedz User</a></li>
-                        <li><a href="download.html#driver">RushMedz Driver</a></li>
-                        <li><a href="download.html#merchant">RushMedz Merchant</a></li>
-                        <li><a href="download.html#doctor">RushMedz Doctor</a></li>
-                        <li><a href="download.html#clinic">RushMedz Clinic</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="download.html#user">RushMedz User</a>
+                        <a href="download.html#driver">RushMedz Driver</a>
+                        <a href="download.html#merchant">RushMedz Merchant</a>
+                        <a href="download.html#doctor">RushMedz Doctor</a>
+                        <a href="download.html#clinic">RushMedz Clinic</a>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
+                <p>&copy; 2026 RushMedz. All rights reserved.</p>
                 <div class="footer-legal">
-                    <p>&copy; 2026 RushMedz. All rights reserved.</p>
-                </div>
-                <div class="footer-legal-links">
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
                     <a href="cookies.html">Cookie Policy</a>
@@ -507,6 +400,61 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const navbarToggle = document.getElementById('navbarToggle');
+        const navbarMenu = document.getElementById('navbarMenu');
+        
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+            const icon = navbarToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        document.querySelectorAll('.navbar-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarMenu.classList.remove('active');
+                const icon = navbarToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isOpen = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked one if it was closed
+                if (!isOpen) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
