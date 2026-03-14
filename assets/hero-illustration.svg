@@ -1,0 +1,91 @@
+<svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00A86B;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#00D9C0;stop-opacity:0.2"/>
+    </linearGradient>
+    <linearGradient id="heroGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00A86B"/>
+      <stop offset="100%" style="stop-color:#00D9C0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circles -->
+  <circle cx="300" cy="250" r="200" fill="url(#heroGrad1)"/>
+  <circle cx="300" cy="250" r="150" fill="url(#heroGrad1)"/>
+  
+  <!-- Phone mockup -->
+  <rect x="220" y="80" width="160" height="320" rx="20" fill="#1a1a1a"/>
+  <rect x="230" y="95" width="140" height="290" rx="5" fill="white"/>
+  
+  <!-- Phone screen content -->
+  <rect x="240" y="105" width="120" height="30" rx="5" fill="url(#heroGrad2)"/>
+  <text x="255" y="125" font-family="Arial" font-size="12" fill="white" font-weight="bold">RushMedz</text>
+  
+  <!-- Search bar -->
+  <rect x="240" y="145" width="120" height="25" rx="12" fill="#f0f0f0"/>
+  <text x="250" y="162" font-family="Arial" font-size="9" fill="#999">Search medicines...</text>
+  
+  <!-- Category icons -->
+  <circle cx="260" cy="195" r="15" fill="#E8FFF5"/>
+  <text x="255" y="200" font-size="12">💊</text>
+  <circle cx="300" cy="195" r="15" fill="#FFF5E8"/>
+  <text x="295" y="200" font-size="12">🩺</text>
+  <circle cx="340" cy="195" r="15" fill="#F0E8FF"/>
+  <text x="335" y="200" font-size="12">🏥</text>
+  
+  <!-- Product cards -->
+  <rect x="240" y="225" width="55" height="70" rx="5" fill="#f8f8f8"/>
+  <rect x="245" y="230" width="45" height="35" rx="3" fill="#E8FFF5"/>
+  <rect x="245" y="275" width="40" height="6" rx="2" fill="#ddd"/>
+  <rect x="245" y="285" width="25" height="6" rx="2" fill="#00A86B"/>
+  
+  <rect x="305" y="225" width="55" height="70" rx="5" fill="#f8f8f8"/>
+  <rect x="310" y="230" width="45" height="35" rx="3" fill="#FFF5E8"/>
+  <rect x="310" y="275" width="40" height="6" rx="2" fill="#ddd"/>
+  <rect x="310" y="285" width="25" height="6" rx="2" fill="#00A86B"/>
+  
+  <!-- Bottom nav -->
+  <rect x="240" y="355" width="120" height="25" rx="5" fill="#f0f0f0"/>
+  <circle cx="260" cy="367" r="8" fill="#00A86B"/>
+  <circle cx="290" cy="367" r="8" fill="#ddd"/>
+  <circle cx="320" cy="367" r="8" fill="#ddd"/>
+  <circle cx="350" cy="367" r="8" fill="#ddd"/>
+  
+  <!-- Floating elements -->
+  <!-- Delivery rider -->
+  <g transform="translate(420, 150)">
+    <circle cx="30" cy="50" r="40" fill="#FFF5E8"/>
+    <circle cx="30" cy="35" r="15" fill="#FECA57"/>
+    <rect x="15" y="50" width="30" height="25" rx="5" fill="#00A86B"/>
+    <text x="22" y="68" font-size="14" fill="white">🏍️</text>
+  </g>
+  
+  <!-- Medicine box -->
+  <g transform="translate(80, 180)">
+    <circle cx="40" cy="40" r="35" fill="#E8FFF5"/>
+    <rect x="20" y="25" width="40" height="35" rx="5" fill="white" stroke="#00A86B" stroke-width="2"/>
+    <rect x="35" y="30" width="10" height="25" fill="#00A86B"/>
+    <rect x="25" y="38" width="30" height="10" fill="#00A86B"/>
+  </g>
+  
+  <!-- Doctor icon -->
+  <g transform="translate(100, 320)">
+    <circle cx="30" cy="30" r="30" fill="#F0E8FF"/>
+    <circle cx="30" cy="22" r="12" fill="#A55EEA"/>
+    <path d="M10 50 Q30 40 50 50" fill="#A55EEA"/>
+    <circle cx="35" cy="18" r="3" fill="white"/>
+  </g>
+  
+  <!-- Heart pulse -->
+  <g transform="translate(430, 300)">
+    <circle cx="35" cy="35" r="30" fill="#FFE8E8"/>
+    <path d="M15 35 L25 35 L30 20 L40 50 L45 35 L55 35" stroke="#FF6B6B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Small floating icons -->
+  <circle cx="180" cy="120" r="8" fill="#00D9C0" opacity="0.5"/>
+  <circle cx="500" cy="250" r="6" fill="#FF9F43" opacity="0.5"/>
+  <circle cx="140" cy="280" r="5" fill="#5B8DEE" opacity="0.5"/>
+  <circle cx="480" cy="380" r="7" fill="#A55EEA" opacity="0.5"/>
+</svg>

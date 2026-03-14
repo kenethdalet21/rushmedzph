@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RushMedz Ads - Advertise to Healthcare Seekers</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .ads-hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ads-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300A86B' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .ads-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .ads-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-gradient);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .ads-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .ads-hero h1 .highlight {
+            color: var(--primary-color);
+        }
+        
+        .ads-hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .ads-cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .ads-cta-buttons .btn {
+            padding: 16px 32px;
+            font-size: 1rem;
+        }
+        
+        .btn-light {
+            background: white;
+            color: var(--text-primary);
+        }
+        
+        .btn-light:hover {
+            background: var(--gray-100);
+            transform: translateY(-2px);
+        }
+        
+        /* Stats Section */
+        .ads-stats {
+            padding: 60px 0;
+            background: white;
+            margin-top: -40px;
+            position: relative;
+            z-index: 2;
+            border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+        }
+        
+        .ads-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .ads-stat-item {
+            padding: 24px;
+        }
+        
+        .ads-stat-item h3 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+        
+        .ads-stat-item p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        
+        /* Why Advertise */
+        .why-advertise {
+            padding: 100px 0;
+            background: var(--bg-secondary);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header h2 {
+            margin-bottom: 16px;
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        .why-card {
+            background: white;
+            padding: 40px 32px;
+            border-radius: var(--radius-xl);
+            text-align: center;
+            transition: var(--transition-normal);
+            border: 1px solid var(--gray-100);
+        }
+        
+        .why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 168, 107, 0.15);
+        }
+        
+        .why-card-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        
+        .why-card-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .why-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+        
+        .why-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        /* Ad Formats */
+        .ad-formats {
+            padding: 100px 0;
+        }
+        
+        .formats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        
+        .format-card {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 32px;
+            background: white;
+            padding: 32px;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--gray-100);
+            transition: var(--transition-normal);
+            align-items: center;
+        }
+        
+        .format-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+        
+        .format-preview {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .format-preview i {
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+        
+        .format-content h3 {
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+        
+        .format-content p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+        
+        .format-specs {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .format-spec {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            background: var(--gray-50);
+            padding: 4px 12px;
+            border-radius: 50px;
+        }
+        
+        .format-spec i {
+            color: var(--primary-color);
+        }
+        
+        /* Targeting Options */
+        .targeting {
+            padding: 100px 0;
+            background: var(--primary-gradient);
+            color: white;
+        }
+        
+        .targeting .section-header h2,
+        .targeting .section-header p {
+            color: white;
+        }
+        
+        .targeting-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        
+        .targeting-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 32px;
+            border-radius: var(--radius-xl);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition-normal);
+        }
+        
+        .targeting-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+        }
+        
+        .targeting-card i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .targeting-card h4 {
+            color: white;
+            margin-bottom: 12px;
+            font-size: 1.125rem;
+        }
+        
+        .targeting-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 100px 0;
+            background: var(--bg-secondary);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: white;
+            padding: 40px 32px;
+            border-radius: var(--radius-xl);
+            border: 2px solid var(--gray-100);
+            text-align: center;
+            transition: var(--transition-normal);
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .pricing-card:hover {
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        
+        .pricing-card .plan-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+        
+        .pricing-card .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+        
+        .pricing-card .price span {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+        
+        .pricing-card .billing {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 32px;
+        }
+        
+        .pricing-features {
+            text-align: left;
+            margin-bottom: 32px;
+        }
+        
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 0.95rem;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features li i {
+            color: var(--primary-color);
+        }
+        
+        .pricing-card .btn {
+            width: 100%;
+        }
+        
+        /* Success Stories */
+        .success-stories {
+            padding: 100px 0;
+        }
+        
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        .story-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--gray-100);
+            transition: var(--transition-normal);
+        }
+        
+        .story-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+        
+        .story-image {
+            height: 180px;
+            background: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .story-image i {
+            font-size: 4rem;
+            color: var(--gray-300);
+        }
+        
+        .story-content {
+            padding: 24px;
+        }
+        
+        .story-logo {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+        
+        .story-content h4 {
+            margin-bottom: 12px;
+            font-size: 1.125rem;
+        }
+        
+        .story-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+        
+        .story-stats {
+            display: flex;
+            gap: 24px;
+        }
+        
+        .story-stat {
+            text-align: center;
+        }
+        
+        .story-stat strong {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .story-stat span {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        /* CTA Section */
+        .ads-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            text-align: center;
+            color: white;
+        }
+        
+        .ads-cta h2 {
+            color: white;
+            margin-bottom: 16px;
+        }
+        
+        .ads-cta p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .contact-options {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-option {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: white;
+        }
+        
+        .contact-option i {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+        
+        .contact-option .contact-text strong {
+            display: block;
+            font-size: 1rem;
+        }
+        
+        .contact-option .contact-text span {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 992px) {
+            .ads-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .ads-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .why-grid,
+            .pricing-grid,
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .formats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .format-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .targeting-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .ads-stats-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .targeting-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-options {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="RushMedz Logo">
+                <span>RushMedz</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="download.html" class="nav-link">Download Apps</a></li>
+                <li><a href="rushmedz-ads.html" class="nav-link active">RushMedz Ads</a></li>
+                <li><a href="partners.html" class="nav-link">Partners</a></li>
+                <li><a href="careers.html" class="nav-link">Careers</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="download.html" class="btn btn-primary">Get the App</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="RushMedz Logo">
+                <span>RushMedz</span>
+            </a>
+            <button class="close-menu-btn" id="closeMenuBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="download.html">Download Apps</a></li>
+            <li><a href="rushmedz-ads.html">RushMedz Ads</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Ads Hero -->
+    <section class="ads-hero">
+        <div class="container">
+            <span class="ads-badge">
+                <i class="fas fa-bullhorn"></i>
+                Advertising Platform
+            </span>
+            <h1>Reach <span class="highlight">Healthcare Seekers</span><br>When It Matters Most</h1>
+            <p>Connect with millions of users actively looking for medicines, medical supplies, and healthcare services. RushMedz Ads helps your brand stand out in the healthcare marketplace.</p>
+            <div class="ads-cta-buttons">
+                <a href="#pricing" class="btn btn-primary">Start Advertising</a>
+                <a href="#contact" class="btn btn-light">Talk to Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="ads-stats">
+        <div class="container">
+            <div class="ads-stats-grid">
+                <div class="ads-stat-item">
+                    <h3>2M+</h3>
+                    <p>Active Monthly Users</p>
+                </div>
+                <div class="ads-stat-item">
+                    <h3>500K+</h3>
+                    <p>Daily Orders</p>
+                </div>
+                <div class="ads-stat-item">
+                    <h3>3.5x</h3>
+                    <p>Average ROI</p>
+                </div>
+                <div class="ads-stat-item">
+                    <h3>85%</h3>
+                    <p>Ad Recall Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Advertise -->
+    <section class="why-advertise">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Advertise on <span class="highlight">RushMedz</span>?</h2>
+                <p>Reach a highly engaged audience actively searching for healthcare products and services.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>High-Intent Audience</h3>
+                    <p>Connect with users who are actively searching for and ready to purchase healthcare products and services.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <h3>Precision Targeting</h3>
+                    <p>Target by location, health interests, purchase behavior, demographics, and more for maximum relevance.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Measurable Results</h3>
+                    <p>Track impressions, clicks, conversions, and ROI with our comprehensive analytics dashboard.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Brand Safe Environment</h3>
+                    <p>Your ads appear alongside trusted healthcare content in a regulated, brand-safe platform.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Multi-Platform Reach</h3>
+                    <p>Reach users across our User, Merchant, Doctor, and Clinic apps with integrated campaigns.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Dedicated Support</h3>
+                    <p>Get help from our advertising experts to optimize your campaigns and maximize results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Formats -->
+    <section class="ad-formats">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ad Formats That <span class="highlight">Deliver</span></h2>
+                <p>Choose from a variety of high-impact ad formats designed for healthcare marketing.</p>
+            </div>
+            <div class="formats-grid">
+                <div class="format-card">
+                    <div class="format-preview">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="format-content">
+                        <h3>Banner Ads</h3>
+                        <p>Eye-catching banner placements across the app with high visibility on home, search, and category pages.</p>
+                        <div class="format-specs">
+                            <span class="format-spec"><i class="fas fa-expand"></i> 320x50, 728x90</span>
+                            <span class="format-spec"><i class="fas fa-eye"></i> High Visibility</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="format-card">
+                    <div class="format-preview">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="format-content">
+                        <h3>Featured Listings</h3>
+                        <p>Promote your products or services at the top of search results and category pages.</p>
+                        <div class="format-specs">
+                            <span class="format-spec"><i class="fas fa-search"></i> Search Results</span>
+                            <span class="format-spec"><i class="fas fa-shopping-cart"></i> Higher Conversions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="format-card">
+                    <div class="format-preview">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="format-content">
+                        <h3>Video Ads</h3>
+                        <p>Engage users with compelling video content that tells your brand story effectively.</p>
+                        <div class="format-specs">
+                            <span class="format-spec"><i class="fas fa-clock"></i> 15-30 seconds</span>
+                            <span class="format-spec"><i class="fas fa-volume-up"></i> Sound Optional</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="format-card">
+                    <div class="format-preview">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="format-content">
+                        <h3>Push Notifications</h3>
+                        <p>Reach users directly with personalized push notifications for promotions and offers.</p>
+                        <div class="format-specs">
+                            <span class="format-spec"><i class="fas fa-user-check"></i> Opt-in Users</span>
+                            <span class="format-spec"><i class="fas fa-chart-line"></i> High Engagement</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="format-card">
+                    <div class="format-preview">
+                        <i class="fas fa-store-alt"></i>
+                    </div>
+                    <div class="format-content">
+                        <h3>Sponsored Stores</h3>
+                        <p>Get premium placement for your pharmacy or clinic with enhanced store profiles.</p>
+                        <div class="format-specs">
+                            <span class="format-spec"><i class="fas fa-medal"></i> Premium Badge</span>
+                            <span class="format-spec"><i class="fas fa-sort-amount-up"></i> Priority Ranking</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="format-card">
+                    <div class="format-preview">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="format-content">
+                        <h3>Promo Campaigns</h3>
+                        <p>Create exclusive discount campaigns with featured placement and in-app promotions.</p>
+                        <div class="format-specs">
+                            <span class="format-spec"><i class="fas fa-tags"></i> Discount Codes</span>
+                            <span class="format-spec"><i class="fas fa-fire"></i> Flash Sales</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Targeting Options -->
+    <section class="targeting">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced Targeting Options</h2>
+                <p>Reach the right audience with precision targeting capabilities.</p>
+            </div>
+            <div class="targeting-grid">
+                <div class="targeting-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Location</h4>
+                    <p>Target by city, region, or radius around specific locations.</p>
+                </div>
+                <div class="targeting-card">
+                    <i class="fas fa-users"></i>
+                    <h4>Demographics</h4>
+                    <p>Filter by age, gender, and household characteristics.</p>
+                </div>
+                <div class="targeting-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h4>Health Interests</h4>
+                    <p>Target users based on health conditions and interests.</p>
+                </div>
+                <div class="targeting-card">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h4>Purchase Behavior</h4>
+                    <p>Reach based on past purchases and browsing behavior.</p>
+                </div>
+                <div class="targeting-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Time & Day</h4>
+                    <p>Schedule ads for specific times and days of the week.</p>
+                </div>
+                <div class="targeting-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Device Type</h4>
+                    <p>Target specific devices and operating systems.</p>
+                </div>
+                <div class="targeting-card">
+                    <i class="fas fa-redo"></i>
+                    <h4>Retargeting</h4>
+                    <p>Re-engage users who viewed but didn't purchase.</p>
+                </div>
+                <div class="targeting-card">
+                    <i class="fas fa-user-plus"></i>
+                    <h4>Lookalike Audiences</h4>
+                    <p>Find new users similar to your best customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Flexible <span class="highlight">Pricing</span> Plans</h2>
+                <p>Choose a plan that fits your advertising budget and goals.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <p class="plan-desc">Perfect for small businesses</p>
+                    <div class="price">₱5,000<span>/month</span></div>
+                    <p class="billing">Minimum 3-month commitment</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 50,000 impressions</li>
+                        <li><i class="fas fa-check"></i> Banner ads only</li>
+                        <li><i class="fas fa-check"></i> Basic targeting</li>
+                        <li><i class="fas fa-check"></i> Standard analytics</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Professional</h3>
+                    <p class="plan-desc">For growing businesses</p>
+                    <div class="price">₱15,000<span>/month</span></div>
+                    <p class="billing">Minimum 3-month commitment</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 200,000 impressions</li>
+                        <li><i class="fas fa-check"></i> All ad formats</li>
+                        <li><i class="fas fa-check"></i> Advanced targeting</li>
+                        <li><i class="fas fa-check"></i> A/B testing</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p class="plan-desc">For large organizations</p>
+                    <div class="price">Custom</div>
+                    <p class="billing">Tailored to your needs</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited impressions</li>
+                        <li><i class="fas fa-check"></i> Custom ad formats</li>
+                        <li><i class="fas fa-check"></i> Premium targeting</li>
+                        <li><i class="fas fa-check"></i> API access</li>
+                        <li><i class="fas fa-check"></i> Custom reporting</li>
+                        <li><i class="fas fa-check"></i> Dedicated team</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Success <span class="highlight">Stories</span></h2>
+                <p>See how businesses like yours are growing with RushMedz Ads.</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <div class="story-content">
+                        <p class="story-logo">MediCare Pharmacy</p>
+                        <h4>3x Increase in Online Orders</h4>
+                        <p>"RushMedz Ads helped us reach new customers in our area. Our online orders tripled within 3 months."</p>
+                        <div class="story-stats">
+                            <div class="story-stat">
+                                <strong>300%</strong>
+                                <span>Order Growth</span>
+                            </div>
+                            <div class="story-stat">
+                                <strong>4.2x</strong>
+                                <span>ROI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="story-content">
+                        <p class="story-logo">HealthFirst Clinic</p>
+                        <h4>50% More Appointment Bookings</h4>
+                        <p>"The targeted advertising helped us fill appointment slots and grow our patient base significantly."</p>
+                        <div class="story-stats">
+                            <div class="story-stat">
+                                <strong>50%</strong>
+                                <span>More Bookings</span>
+                            </div>
+                            <div class="story-stat">
+                                <strong>2.8x</strong>
+                                <span>ROI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="story-content">
+                        <p class="story-logo">VitaPlus Supplements</p>
+                        <h4>Launched New Product Successfully</h4>
+                        <p>"We used RushMedz Ads to launch our new vitamin line and exceeded our sales targets by 80%."</p>
+                        <div class="story-stats">
+                            <div class="story-stat">
+                                <strong>180%</strong>
+                                <span>Sales Target</span>
+                            </div>
+                            <div class="story-stat">
+                                <strong>5.1x</strong>
+                                <span>ROI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="ads-cta" id="contact">
+        <div class="container">
+            <h2>Ready to <span class="highlight">Grow</span> Your Business?</h2>
+            <p>Get in touch with our advertising team to start reaching healthcare seekers today.</p>
+            <div class="ads-cta-buttons" style="margin-bottom: 40px;">
+                <a href="contact.html" class="btn btn-primary">Start a Campaign</a>
+                <a href="#" class="btn btn-light">Download Media Kit</a>
+            </div>
+            <div class="contact-options">
+                <div class="contact-option">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-text">
+                        <strong>ads@rushmedz.com</strong>
+                        <span>Email our ads team</span>
+                    </div>
+                </div>
+                <div class="contact-option">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-text">
+                        <strong>+63 (2) 8888-RUSH</strong>
+                        <span>Call us directly</span>
+                    </div>
+                </div>
+                <div class="contact-option">
+                    <i class="fas fa-calendar"></i>
+                    <div class="contact-text">
+                        <strong>Schedule a Demo</strong>
+                        <span>Book a call with our team</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo.png" alt="RushMedz Logo">
+                        <span>RushMedz</span>
+                    </a>
+                    <p>Your trusted partner for medical delivery and healthcare services. Making healthcare accessible to everyone, everywhere.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#medicine">Medicine Delivery</a></li>
+                        <li><a href="services.html#telemedicine">Telemedicine</a></li>
+                        <li><a href="services.html#clinic">Clinic Booking</a></li>
+                        <li><a href="services.html#lab">Lab Tests</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>For Business</h4>
+                    <ul>
+                        <li><a href="partners.html#pharmacy">Register Pharmacy</a></li>
+                        <li><a href="partners.html#clinic">Register Clinic</a></li>
+                        <li><a href="partners.html#doctor">Join as Doctor</a></li>
+                        <li><a href="rushmedz-ads.html">RushMedz Ads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Download Apps</h4>
+                    <ul>
+                        <li><a href="download.html#user">RushMedz User</a></li>
+                        <li><a href="download.html#driver">RushMedz Driver</a></li>
+                        <li><a href="download.html#merchant">RushMedz Merchant</a></li>
+                        <li><a href="download.html#doctor">RushMedz Doctor</a></li>
+                        <li><a href="download.html#clinic">RushMedz Clinic</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2026 RushMedz. All rights reserved.</p>
+                </div>
+                <div class="footer-legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

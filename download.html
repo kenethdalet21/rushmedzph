@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Apps - RushMedz</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .download-hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #E8FFF5 0%, #F0F9FF 50%, #FEF3F2 100%);
+            text-align: center;
+        }
+        
+        .download-hero h1 {
+            margin-bottom: 16px;
+        }
+        
+        .download-hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .app-download-section {
+            padding: 80px 0;
+        }
+        
+        .app-download-section.alt {
+            background: var(--bg-secondary);
+        }
+        
+        .app-download-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .app-download-grid.reverse {
+            direction: rtl;
+        }
+        
+        .app-download-grid.reverse > * {
+            direction: ltr;
+        }
+        
+        .app-mockup {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .phone-frame {
+            position: relative;
+            width: 280px;
+            height: 560px;
+            background: #1a1a1a;
+            border-radius: 40px;
+            padding: 15px;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #00A86B 0%, #00D9C0 100%);
+            border-radius: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .phone-screen.user { background: linear-gradient(135deg, #00A86B 0%, #00D9C0 100%); }
+        .phone-screen.driver { background: linear-gradient(135deg, #FF9F43 0%, #FECA57 100%); }
+        .phone-screen.merchant { background: linear-gradient(135deg, #5B8DEE 0%, #7DA8FF 100%); }
+        .phone-screen.doctor { background: linear-gradient(135deg, #A55EEA 0%, #C77DFF 100%); }
+        .phone-screen.clinic { background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%); }
+        
+        .phone-screen i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .phone-screen h3 {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .phone-screen p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            color: white;
+        }
+        
+        .app-download-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .app-download-content > p {
+            font-size: 1.125rem;
+            margin-bottom: 32px;
+        }
+        
+        .app-features {
+            margin-bottom: 32px;
+        }
+        
+        .app-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .app-feature i {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 168, 107, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        
+        .app-feature h4 {
+            margin-bottom: 4px;
+            font-size: 1rem;
+        }
+        
+        .app-feature p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .download-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .store-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 24px;
+            background: #1a1a1a;
+            color: white;
+            border-radius: var(--radius-lg);
+            transition: var(--transition-normal);
+        }
+        
+        .store-btn:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 168, 107, 0.3);
+        }
+        
+        .store-btn i {
+            font-size: 2rem;
+        }
+        
+        .store-btn .store-text {
+            text-align: left;
+        }
+        
+        .store-btn .store-text span {
+            display: block;
+            font-size: 0.7rem;
+            opacity: 0.8;
+        }
+        
+        .store-btn .store-text strong {
+            font-size: 1.1rem;
+        }
+        
+        .qr-section {
+            padding: 80px 0;
+            background: var(--primary-gradient);
+            text-align: center;
+            color: white;
+        }
+        
+        .qr-section h2 {
+            color: white;
+            margin-bottom: 16px;
+        }
+        
+        .qr-section > .container > p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.125rem;
+            margin-bottom: 40px;
+        }
+        
+        .qr-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .qr-card {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-xl);
+            text-align: center;
+        }
+        
+        .qr-card h4 {
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .qr-placeholder {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 16px;
+            background: var(--gray-100);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .qr-card p {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        @media (max-width: 992px) {
+            .app-download-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .app-download-grid.reverse {
+                direction: ltr;
+            }
+            
+            .app-mockup {
+                order: -1;
+            }
+            
+            .phone-frame {
+                width: 240px;
+                height: 480px;
+            }
+            
+            .qr-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .download-buttons {
+                flex-direction: column;
+            }
+            
+            .qr-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .qr-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="RushMedz Logo">
+                <span>RushMedz</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="download.html" class="nav-link active">Download Apps</a></li>
+                <li><a href="rushmedz-ads.html" class="nav-link">RushMedz Ads</a></li>
+                <li><a href="partners.html" class="nav-link">Partners</a></li>
+                <li><a href="careers.html" class="nav-link">Careers</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="download.html" class="btn btn-primary">Get the App</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="RushMedz Logo">
+                <span>RushMedz</span>
+            </a>
+            <button class="close-menu-btn" id="closeMenuBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="download.html">Download Apps</a></li>
+            <li><a href="rushmedz-ads.html">RushMedz Ads</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Download Hero -->
+    <section class="download-hero">
+        <div class="container">
+            <h1>Download <span class="highlight">RushMedz</span> Apps</h1>
+            <p>Choose the app that fits your needs. Whether you're a customer, healthcare provider, or delivery partner, we have the perfect app for you.</p>
+        </div>
+    </section>
+
+    <!-- User App -->
+    <section class="app-download-section" id="user">
+        <div class="container">
+            <div class="app-download-grid">
+                <div class="app-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen user">
+                            <i class="fas fa-user"></i>
+                            <h3>RushMedz User</h3>
+                            <p>Your Health, Delivered</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-download-content">
+                    <h2>RushMedz User</h2>
+                    <p>Order medicines, book consultations, and manage your health from the comfort of your home.</p>
+                    <div class="app-features">
+                        <div class="app-feature">
+                            <i class="fas fa-pills"></i>
+                            <div>
+                                <h4>Order Medicines</h4>
+                                <p>Browse and order prescription and OTC medicines with fast delivery.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-video"></i>
+                            <div>
+                                <h4>Telemedicine Consultations</h4>
+                                <p>Connect with certified doctors via video, audio, or chat.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-calendar-check"></i>
+                            <div>
+                                <h4>Book Appointments</h4>
+                                <p>Schedule visits at clinics, labs, and diagnostic centers.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-truck"></i>
+                            <div>
+                                <h4>Real-time Tracking</h4>
+                                <p>Track your orders live from pharmacy to your doorstep.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="https://play.google.com/store" target="_blank" class="store-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div class="store-text">
+                                <span>GET IT ON</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                        <a href="https://www.apple.com/app-store/" target="_blank" class="store-btn">
+                            <i class="fab fa-apple"></i>
+                            <div class="store-text">
+                                <span>Download on the</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Driver App -->
+    <section class="app-download-section alt" id="driver">
+        <div class="container">
+            <div class="app-download-grid reverse">
+                <div class="app-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen driver">
+                            <i class="fas fa-motorcycle"></i>
+                            <h3>RushMedz Driver</h3>
+                            <p>Deliver Health, Earn More</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-download-content">
+                    <h2>RushMedz Driver</h2>
+                    <p>Join our delivery fleet and earn by delivering healthcare essentials to those who need them.</p>
+                    <div class="app-features">
+                        <div class="app-feature">
+                            <i class="fas fa-wallet"></i>
+                            <div>
+                                <h4>Flexible Earnings</h4>
+                                <p>Work on your schedule and earn competitive rates per delivery.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-route"></i>
+                            <div>
+                                <h4>Optimized Routes</h4>
+                                <p>Smart navigation to help you complete deliveries faster.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <h4>Earnings Dashboard</h4>
+                                <p>Track your daily, weekly, and monthly earnings in real-time.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Insurance Coverage</h4>
+                                <p>Get accident and health insurance while you're on duty.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="https://play.google.com/store" target="_blank" class="store-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div class="store-text">
+                                <span>GET IT ON</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                        <a href="https://www.apple.com/app-store/" target="_blank" class="store-btn">
+                            <i class="fab fa-apple"></i>
+                            <div class="store-text">
+                                <span>Download on the</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merchant App -->
+    <section class="app-download-section" id="merchant">
+        <div class="container">
+            <div class="app-download-grid">
+                <div class="app-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen merchant">
+                            <i class="fas fa-store"></i>
+                            <h3>RushMedz Merchant</h3>
+                            <p>Grow Your Pharmacy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-download-content">
+                    <h2>RushMedz Merchant</h2>
+                    <p>Register your pharmacy or medical supply store and reach thousands of customers in your area.</p>
+                    <div class="app-features">
+                        <div class="app-feature">
+                            <i class="fas fa-store-alt"></i>
+                            <div>
+                                <h4>Digital Storefront</h4>
+                                <p>Create your online pharmacy with easy product management.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-bell"></i>
+                            <div>
+                                <h4>Order Notifications</h4>
+                                <p>Get instant alerts for new orders and manage them efficiently.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-analytics"></i>
+                            <div>
+                                <h4>Sales Analytics</h4>
+                                <p>Track sales, inventory, and customer insights in one place.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <div>
+                                <h4>Fast Payouts</h4>
+                                <p>Receive payments quickly with multiple payout options.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="https://play.google.com/store" target="_blank" class="store-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div class="store-text">
+                                <span>GET IT ON</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                        <a href="https://www.apple.com/app-store/" target="_blank" class="store-btn">
+                            <i class="fab fa-apple"></i>
+                            <div class="store-text">
+                                <span>Download on the</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor App -->
+    <section class="app-download-section alt" id="doctor">
+        <div class="container">
+            <div class="app-download-grid reverse">
+                <div class="app-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen doctor">
+                            <i class="fas fa-user-md"></i>
+                            <h3>RushMedz Doctor</h3>
+                            <p>Practice Medicine Online</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-download-content">
+                    <h2>RushMedz Doctor</h2>
+                    <p>Offer telemedicine consultations, issue digital prescriptions, and grow your practice online.</p>
+                    <div class="app-features">
+                        <div class="app-feature">
+                            <i class="fas fa-laptop-medical"></i>
+                            <div>
+                                <h4>Virtual Consultations</h4>
+                                <p>Conduct video, audio, or chat consultations from anywhere.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-file-prescription"></i>
+                            <div>
+                                <h4>E-Prescriptions</h4>
+                                <p>Issue digital prescriptions that patients can order instantly.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h4>Schedule Management</h4>
+                                <p>Set your availability and manage appointments easily.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-user-friends"></i>
+                            <div>
+                                <h4>Patient Records</h4>
+                                <p>Access patient history and consultation notes securely.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="https://play.google.com/store" target="_blank" class="store-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div class="store-text">
+                                <span>GET IT ON</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                        <a href="https://www.apple.com/app-store/" target="_blank" class="store-btn">
+                            <i class="fab fa-apple"></i>
+                            <div class="store-text">
+                                <span>Download on the</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinic App -->
+    <section class="app-download-section" id="clinic">
+        <div class="container">
+            <div class="app-download-grid">
+                <div class="app-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen clinic">
+                            <i class="fas fa-hospital-alt"></i>
+                            <h3>RushMedz Clinic</h3>
+                            <p>Digitize Your Practice</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-download-content">
+                    <h2>RushMedz Clinic/Hospital</h2>
+                    <p>Register your clinic, hospital, or diagnostic center and manage appointments digitally.</p>
+                    <div class="app-features">
+                        <div class="app-feature">
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <h4>Facility Profile</h4>
+                                <p>Showcase your services, doctors, and facilities to patients.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-clipboard-list"></i>
+                            <div>
+                                <h4>Appointment Management</h4>
+                                <p>Handle bookings, cancellations, and rescheduling seamlessly.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-vials"></i>
+                            <div>
+                                <h4>Lab Test Bookings</h4>
+                                <p>Accept lab test bookings with home sample collection.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-chart-pie"></i>
+                            <div>
+                                <h4>Business Analytics</h4>
+                                <p>Get insights on patient flow, revenue, and performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="https://play.google.com/store" target="_blank" class="store-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div class="store-text">
+                                <span>GET IT ON</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                        <a href="https://www.apple.com/app-store/" target="_blank" class="store-btn">
+                            <i class="fab fa-apple"></i>
+                            <div class="store-text">
+                                <span>Download on the</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Code Section -->
+    <section class="qr-section">
+        <div class="container">
+            <h2>Scan to Download</h2>
+            <p>Use your phone's camera to scan the QR code and download the app instantly.</p>
+            <div class="qr-grid">
+                <div class="qr-card">
+                    <h4>RushMedz User</h4>
+                    <div class="qr-placeholder">
+                        <i class="fas fa-qrcode" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <p>Scan for User App</p>
+                </div>
+                <div class="qr-card">
+                    <h4>RushMedz Driver</h4>
+                    <div class="qr-placeholder">
+                        <i class="fas fa-qrcode" style="font-size: 3rem; color: #FF9F43;"></i>
+                    </div>
+                    <p>Scan for Driver App</p>
+                </div>
+                <div class="qr-card">
+                    <h4>RushMedz Merchant</h4>
+                    <div class="qr-placeholder">
+                        <i class="fas fa-qrcode" style="font-size: 3rem; color: #5B8DEE;"></i>
+                    </div>
+                    <p>Scan for Merchant App</p>
+                </div>
+                <div class="qr-card">
+                    <h4>RushMedz Doctor</h4>
+                    <div class="qr-placeholder">
+                        <i class="fas fa-qrcode" style="font-size: 3rem; color: #A55EEA;"></i>
+                    </div>
+                    <p>Scan for Doctor App</p>
+                </div>
+                <div class="qr-card">
+                    <h4>RushMedz Clinic</h4>
+                    <div class="qr-placeholder">
+                        <i class="fas fa-qrcode" style="font-size: 3rem; color: #FF6B6B;"></i>
+                    </div>
+                    <p>Scan for Clinic App</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo.png" alt="RushMedz Logo">
+                        <span>RushMedz</span>
+                    </a>
+                    <p>Your trusted partner for medical delivery and healthcare services. Making healthcare accessible to everyone, everywhere.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#medicine">Medicine Delivery</a></li>
+                        <li><a href="services.html#telemedicine">Telemedicine</a></li>
+                        <li><a href="services.html#clinic">Clinic Booking</a></li>
+                        <li><a href="services.html#lab">Lab Tests</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>For Business</h4>
+                    <ul>
+                        <li><a href="partners.html#pharmacy">Register Pharmacy</a></li>
+                        <li><a href="partners.html#clinic">Register Clinic</a></li>
+                        <li><a href="partners.html#doctor">Join as Doctor</a></li>
+                        <li><a href="rushmedz-ads.html">RushMedz Ads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Download Apps</h4>
+                    <ul>
+                        <li><a href="#user">RushMedz User</a></li>
+                        <li><a href="#driver">RushMedz Driver</a></li>
+                        <li><a href="#merchant">RushMedz Merchant</a></li>
+                        <li><a href="#doctor">RushMedz Doctor</a></li>
+                        <li><a href="#clinic">RushMedz Clinic</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2026 RushMedz. All rights reserved.</p>
+                </div>
+                <div class="footer-legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
