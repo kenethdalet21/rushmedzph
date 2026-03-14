@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.epharma.ecosystem.service.driverapp.DriverUserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 s -- in com.epharma.ecosystem.service.driverapp.DriverUserServiceTest

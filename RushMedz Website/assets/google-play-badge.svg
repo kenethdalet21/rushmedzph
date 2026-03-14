@@ -1,0 +1,11 @@
+<svg viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg">
+  <rect width="135" height="40" rx="5" fill="#1a1a1a"/>
+  <g fill="white">
+    <!-- Play icon -->
+    <path d="M24.8 20L20 16.5v7l4.8-3.5z"/>
+    <circle cx="22" cy="20" r="8" fill="none" stroke="white" stroke-width="1.5"/>
+    <!-- Text -->
+    <text x="36" y="15" font-family="Arial, sans-serif" font-size="7" font-weight="500">GET IT ON</text>
+    <text x="36" y="27" font-family="Arial, sans-serif" font-size="12" font-weight="600">Google Play</text>
+  </g>
+</svg>

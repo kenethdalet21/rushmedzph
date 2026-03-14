@@ -1,0 +1,12 @@
+com\epharma\ecosystem\controller\doctorapp\DoctorUserControllerTest.class
+com\epharma\ecosystem\service\driverapp\DriverUserServiceTest.class
+com\epharma\ecosystem\controller\driverapp\DriverUserControllerTest.class
+com\epharma\ecosystem\controller\adminapp\AdminUserControllerTest.class
+com\epharma\ecosystem\service\doctorapp\DoctorUserServiceTest.class
+com\epharma\ecosystem\config\TestSecurityConfig.class
+com\epharma\ecosystem\controller\userapp\UserUserControllerTest.class
+com\epharma\ecosystem\controller\PaymentControllerTest.class
+com\epharma\ecosystem\controller\merchantapp\MerchantUserControllerTest.class
+com\epharma\ecosystem\service\adminapp\AdminUserServiceTest.class
+com\epharma\ecosystem\service\merchantapp\MerchantUserServiceTest.class
+com\epharma\ecosystem\service\userapp\UserUserServiceTest.class
