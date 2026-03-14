@@ -2568,6 +2568,30 @@ textarea.form-control {
     margin: 0 auto 2rem;
 }
 
+.ads-hero-stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem 2.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.ads-hero-stats .ads-stat {
+    text-align: center;
+    min-width: 80px;
+}
+
+.ads-hero-buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .ads-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -2584,6 +2608,13 @@ textarea.form-control {
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--primary-light);
+}
+
+.ads-stat-label {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9375rem;
+    margin-top: 0.25rem;
 }
 
 .ads-stat span {
